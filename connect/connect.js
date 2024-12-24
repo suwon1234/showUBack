@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const connection_url = ``;
+const connection_url = `mongodb+srv://app:1234@app.fpnez.mongodb.net/`;
 
 const connect = () => {
   if(process.env.NODE_ENV != "production"){
@@ -14,7 +14,7 @@ const connect = () => {
     .then(( ) => {
       console.log("Connection to MongoDB") //연결 성공
     })
-    .catch(() => {
+    .catch((error) => {
       console.error("Connected fail to MongoDB") //연결 실패
       console.error(error)
     })
