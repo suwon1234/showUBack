@@ -25,7 +25,7 @@ const register = async (req, res) => {
       email : req.body.email,
       password : hashedPassword,
       phone : req.body.phone,
-      name : req.body.name
+      // name : req.body.name
     })
 
     return res.status(201).json({
