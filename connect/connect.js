@@ -14,7 +14,7 @@ const connect = () => {
     .then(( ) => {
       console.log("Connection to MongoDB") //연결 성공
     })
-    .catch(() => {
+    .catch((error) => {
       console.error("Connected fail to MongoDB") //연결 실패
       console.error(error)
     })
