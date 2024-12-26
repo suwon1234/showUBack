@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const connection_url = ``;
+const connection_url = `mongodb+srv://showU:1234@showu.ceinf.mongodb.net/`;
 
 const connect = () => {
   if(process.env.NODE_ENV != "production"){
