@@ -24,7 +24,8 @@ const register = async (req, res) => {
     await User.create({
       email : req.body.email,
       password : hashedPassword,
-      phone : req.body.phone
+      phone : req.body.phone,
+      name : req.body.name
     })
 
     return res.status(201).json({
