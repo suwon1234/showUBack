@@ -70,6 +70,7 @@ const jwtStrategy = async (req, res, next) => {
       user : foundUser
     })
 
+    
     // console.log("foundUser", foundUser)
 
   } catch (error) {
