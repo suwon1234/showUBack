@@ -1,4 +1,4 @@
-import User from "../../models/userSchema.js"
+import User from "../../models/users/userSchema.js"
 import bcrypt from 'bcrypt';
 
 const salt = await bcrypt.genSalt(10)
@@ -25,7 +25,7 @@ const register = async (req, res) => {
       email : req.body.email,
       password : hashedPassword,
       phone : req.body.phone,
-      // name : req.body.name
+      name : req.body.name
     })
 
     return res.status(201).json({
@@ -67,19 +67,20 @@ const login = async (req, res) => {
 
 // 회원정보 수정
 const modify = async (req, res) => {
-  const { email } = req.body
-  const foundUser = await User.foundUser({email : email}).lean()
+  const { email } = req.body;
+  // 회원 정보를 수정한다.
+  const foundUser = await User.findOne({ email : email }).lean();
   if(!foundUser){
     res.status(400).json({
       updateSuccess : false,
-      message : "회원정보를 수정할 수 없습니다"
+      message : "회원정보를 수정할 수 없습니다",
     })
   }else {
     await User.updateOne(foundUser, req.body);
-    const updatedUser = await User.findOne({email : email}).lean()
+    const updatedUser = await User.updateOne({ email : email }).lean();
     res.status(200).json({
       updateSuccess : true,
-      message : "회원수정이 완료되었습니다",
+      message : "회원정보가 수정되었습니다",
       currentUser : updatedUser
     })
   }
@@ -87,8 +88,8 @@ const modify = async (req, res) => {
 
 // 회원 탈퇴
 const remove = async (req, res) => {
-  const {email} = req.body;
-  const foundUser = await User.findOne({email:email}).lean()
+  const { email } = req.body;
+  const foundUser = await User.findOne({ email:email }).lean()
   await User.deleteOne(foundUser)
 
   res.status(200).json({
