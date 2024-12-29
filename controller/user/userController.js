@@ -66,8 +66,8 @@ const login = async (req, res) => {
 }
 
 const modify = async (req, res) => {
-  console.log("req body:", req.body);
-  console.log("req user:", req.user);
+  // console.log("req body:", req.body);
+  // console.log("req user:", req.user);
   const { password, phone } = req.body;
   const { email } = req.user;
 
@@ -102,9 +102,12 @@ const modify = async (req, res) => {
 
 // 회원 탈퇴
 const remove = async (req, res) => {
-  const { email } = req.body;
+  const { email } = req.user;
+  // console.log(req.user)
   const foundUser = await User.findOne({ email : email }).lean()
+  console.log("foundUser:", foundUser)
   const deleteUser = await User.deleteOne(foundUser)
+  console.log("deleteUser:", deleteUser)
 
   res.status(200).json({
     deleteSuccess : true,
