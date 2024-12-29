@@ -65,37 +65,54 @@ const login = async (req, res) => {
 
 }
 
-// 회원정보 수정
 const modify = async (req, res) => {
-  const { email } = req.body;
+  // console.log("req body:", req.body);
+  // console.log("req user:", req.user);
+  const { password, phone } = req.body;
+  const { email } = req.user;
+
   // 회원 정보를 수정한다.
-  const foundUser = await User.findOne({ email : email }).lean();
-  if(!foundUser){
-    res.status(400).json({
-      updateSuccess : false,
-      message : "회원정보를 수정할 수 없습니다",
-    })
-  }else {
-    await User.updateOne(foundUser, req.body);
-    const updatedUser = await User.updateOne({ email : email }).lean();
-    res.status(200).json({
-      updateSuccess : true,
-      message : "회원정보가 수정되었습니다",
-      currentUser : updatedUser
-    })
+  const foundUser = await User.findOne({ email : email }).lean();  
+
+  if (!foundUser) {
+    return res.status(400).json({
+      updateSuccess: false,
+      message: "회원정보를 수정할 수 없습니다",
+    });
+  } else {
+    const hashedPassword = await bcrypt.hash(password, salt);
+    console.log("hashedPassword: ", hashedPassword);
+
+    await User.updateOne(
+      { email : email },  
+      { password: hashedPassword, phone: phone }
+    );
+
+    const updatedUser = await User.findOne({ email : email}).lean();
+
+    return res.status(200).json({
+      updateSuccess: true,
+      message: "회원정보가 수정되었습니다",
+      currentUser: updatedUser,
+    });
   }
-}
+};
+
+
 
 // 회원 탈퇴
 const remove = async (req, res) => {
-  const { email } = req.body;
-  const foundUser = await User.findOne({ email:email }).lean()
-  await User.deleteOne(foundUser)
+  const { email } = req.user;
+  // console.log(req.user)
+  const foundUser = await User.findOne({ email : email }).lean()
+  console.log("foundUser:", foundUser)
+  const deleteUser = await User.deleteOne(foundUser)
+  console.log("deleteUser:", deleteUser)
 
   res.status(200).json({
     deleteSuccess : true,
     message : "회원탈퇴 완료",
-    currentUser : updatedUser
+    currentUser : deleteUser
   })
 }
 

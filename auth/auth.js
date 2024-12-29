@@ -47,20 +47,25 @@ const JWTConfig = {
 
 const JWTVerify = async (jwtPayload, done) => {
   try {
-    console.log(jwtPayload)
+    console.log("JWT Payload:", jwtPayload);
 
-    const foundUser = await User.findOne({email : jwtPayload.email }).lean()
-    if(!foundUser){
-      done(null, false, { reason : "올바르지 않은 인증정보 입니다."})
+    const foundUser = await User.findOne({ email: jwtPayload.email }).lean();
+
+    if (!foundUser) {
+      return done(null, false, { message: "올바르지 않은 인증 정보입니다." });
     }
-    // 만약 유저가 있다면, 유저 정보를 다음 컨트롤러로 보낸다.
-    return done(null, foundUser)
-    
+
+    // 유저가 존재하면 유저 정보 반환
+    return done(null, foundUser);
+
   } catch (error) {
-    console.error("JWTVerify", error)
-    done(error)
+    console.error("JWTVerify Error:", error);
+
+    // 에러 발생 시 처리
+    return done(error);
   }
-}
+};
+
 
 // passport로 전략들을 실행
 const initializePassport = () => {

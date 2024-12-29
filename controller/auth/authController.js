@@ -1,5 +1,7 @@
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
+import bcrypt from 'bcrypt';
+import User from '../../models/users/userSchema.js'
 import passport from 'passport'
 
 dotenv.config()
@@ -70,6 +72,7 @@ const jwtStrategy = async (req, res, next) => {
       user : foundUser
     })
 
+    
     // console.log("foundUser", foundUser)
 
   } catch (error) {
@@ -78,4 +81,42 @@ const jwtStrategy = async (req, res, next) => {
   }
 }
 
-export { localStrategy, jwtStrategy }
+const changePasswordStrategy = async (req, res, next) => {
+  const salt = await bcrypt.genSalt(10)
+
+  const { email, name, password } = req.body;
+  console.log("req.body:", req.body)
+
+  try {
+    const foundUser = await User.findOne({ email : email, name : name }).lean();
+    
+    if(!foundUser){
+      return res.status(404).json({
+        changePwSuccess: false,
+        message : "사용자를 찾을 수 없습니다"
+      })
+    }else{
+      const hashedPassword = await bcrypt.hash(password, salt)
+
+      await User.updateOne(
+        { email : email },  
+        { password: hashedPassword }
+      );
+
+      const updatedUser = await User.findOne({ email : email, name : name }).lean();
+
+      return res.status(200).json({
+        changePwSuccess: true,
+        message: "비밀번호가 성공적으로 변경되었습니다",
+        currentUser: updatedUser
+      });
+    }
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ 
+      message : "서버 오류"
+     })
+  }  
+}
+
+export { localStrategy, jwtStrategy, changePasswordStrategy }
