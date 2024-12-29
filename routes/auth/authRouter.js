@@ -1,6 +1,6 @@
 import express from 'express'
 import passport from 'passport'
-import { localStrategy, jwtStrategy } from '../../controller/auth/authController.js';
+import { localStrategy, jwtStrategy, changePasswordStrategy } from '../../controller/auth/authController.js';
 
 const authRouter = express.Router();
 
@@ -9,5 +9,8 @@ authRouter.post("/local", passport.authenticate('local', {session : false}), loc
 
 // jwt 토큰
 authRouter.post("/jwt", passport.authenticate('jwt', {session : false}), jwtStrategy)
+
+//이메일 인증번호
+authRouter.post("/api/change-password", changePasswordStrategy)
 
 export default authRouter;
