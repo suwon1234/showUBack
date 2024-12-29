@@ -1,12 +1,15 @@
 import express from 'express';
-import { getAllCommunities, createCommunity } from '../../controller/community/communityController.js';
+import { getAllCommunities, createCommunity,seedCommunityData,} from '../../controller/community/communityController.js';
+import communityInfoRouter from './communityInfoRouter.js';
 
 const communityRouter = express.Router();
 
-// 커뮤니티 게시물 전체 조회
+// 커뮤니티 메인
 communityRouter.get('/', getAllCommunities); // /community
-
-// 커뮤니티 게시물 추가
 communityRouter.post('/create', createCommunity); // /community/create
+communityRouter.get('/seed', seedCommunityData); // /community/seed
+
+// 커뮤니티 인포 라우터
+communityRouter.use('/communityInfo', communityInfoRouter);
 
 export default communityRouter;
