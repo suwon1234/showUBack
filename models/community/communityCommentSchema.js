@@ -1,11 +1,12 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model } from "mongoose";
+import { getCurrentTime } from "../../utils/utils.js";
 
-const commentSchema = new Schema({
-  user: { type: Schema.Types.ObjectId, ref: 'User', required: true }, // 사용자 ID
-  postId: { type: Schema.Types.ObjectId, ref: 'Community', required: true }, // 게시물 ID
+const communityCommentSchema = new Schema({
+  postId: { type: Schema.Types.ObjectId, ref: "CommunityInfo", required: true }, // 게시물 ID 참조
+  user: { type: String, required: true }, // 작성자
   content: { type: String, required: true }, // 댓글 내용
-  createdAt: { type: Date, default: Date.now }, // 생성 시간
-  updatedAt: { type: Date, default: Date.now }, // 업데이트 시간
+  createdAt: { type: String, default: getCurrentTime }, // 생성 날짜
+  updatedAt: { type: String, default: getCurrentTime }, // 수정 날짜
 });
 
-export default model('Comment', commentSchema, 'comments');
+export default model("CommunityComment", communityCommentSchema, "communityComments");
