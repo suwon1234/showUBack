@@ -7,6 +7,6 @@ const userRouter = express.Router()
 userRouter.post("/register", register)
 userRouter.post("/login", login)
 userRouter.put("/modify", passport.authenticate('jwt', { session: false }), modify)
-userRouter.delete("/remove", remove)
+userRouter.delete("/remove", passport.authenticate('jwt', { session: false }), remove)
 
 export default userRouter
