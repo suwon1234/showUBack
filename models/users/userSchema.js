@@ -21,7 +21,7 @@ const userSchema = new Schema({
         enum : ['대기', '승인', '거절'],
         default : '대기'
     },
-    upgradeRequestedAt : { type : String, default : null },
+    upgradeRequestedAt : { type : Schema.Types.ObjectId, ref : 'Upgrade' },
     createdAt: { type: String, default: getCurrentTime },
     updatedAt: { type: String, default: getCurrentTime },
 });
