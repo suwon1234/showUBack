@@ -185,30 +185,24 @@ const seedMdProducts = async (req, res) => {
     }
   ];
   
-
-
-  try {
-    // MD 상품 삽입
-    const insertedMdProducts = await Md.insertMany(mdData);
-
-    const productsWithStringId = insertedMdProducts.map(product => ({
-      ...product.toObject(),
-      id: product._id.toString(), 
-    }));
-
-    console.log("경매 상품 데이터가 삽입되었습니다:", productsWithStringId);
-    res.status(201).json({
-      message: "경매 상품 데이터가 성공적으로 삽입되었습니다.",
-      insertedMdProducts: productsWithStringId,
-    });
-  } catch (error) {
-    console.error("경매 상품 삽입 실패:", error.message);
-    res.status(500).json({
-      message: "경매 상품 데이터 삽입 중 오류가 발생했습니다.",
-      error: error.message,
-    });
-  }
+  
+// MD 상품 삽입
+try {
+  const insertedMdProducts = await Md.insertMany(mdData);
+  console.log("MD 상품 데이터가 삽입되었습니다:", insertedMdProducts);
+  res.status(201).json({
+    message: "MD 상품 데이터가 성공적으로 삽입되었습니다.",
+    insertedMdProducts,
+  });
+} catch (error) {
+  console.error("MD 상품 삽입 실패: ", error.message);
+  res.status(500).json({
+    message: "MD 상품 데이터 삽입 중 오류가 발생했습니다.",
+    error: error.message,
+  });
 }
+}
+
 
 // MD 상품 조회
 const getMdProduct = async (req, res) => {
