@@ -14,4 +14,5 @@ communityInfoRouter.get('/seed', seedCommunityInfoData); // /community/community
 communityInfoRouter.get('/:id', getCommunityInfoById); // /community/communityInfo/:id
 communityInfoRouter.post('/:id/comments', addCommentToCommunityInfo); // 댓글 추가
 
+
 export default communityInfoRouter;
