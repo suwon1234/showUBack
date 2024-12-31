@@ -179,6 +179,7 @@ const modifyUpdate = async (req, res) => {
   }
 }
 
+// 등급업 정보 데이터 가져오기
 const upgradeInfo = async (req, res) => {
   // console.log(req.user)
   const { id } = req.params;
@@ -209,4 +210,30 @@ const upgradeInfo = async (req, res) => {
 
 }
 
-export { register, login, modify, remove, upgrade, modifyUpdate, upgradeInfo }
+// 아이디 찾기
+const findId = async (req, res) => {
+  const { name, phone } = req.body
+
+  const foundId = await User.findOne({ name : name, phone : phone }).lean();
+
+  try {
+    if(!foundId){
+      return res.status(400).json({
+        findIdSuccess : false,
+        message : "일치하는 아이디가 없습니다"
+      })
+    }else {
+
+      return res.status(200).json({
+        findIdSuccess : true,
+        message : "일치하는 아이디를 찾았습니다",
+        currentUser : foundId
+      })
+    }
+  } catch (error) {
+    
+  }
+
+}
+
+export { register, login, modify, remove, upgrade, modifyUpdate, upgradeInfo, findId }
