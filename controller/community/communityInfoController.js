@@ -89,7 +89,7 @@ const toggleLike = async (req, res) => {
     try {
     const post = await CommunityLike.findById( req.params.id );
         console.log('Found post:', post);
-        console.log('Post ID :', id )
+        console.log('Post ID :', id );
 
     if (!post) {
       return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
