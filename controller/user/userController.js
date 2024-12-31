@@ -213,8 +213,10 @@ const upgradeInfo = async (req, res) => {
 // 아이디 찾기
 const findId = async (req, res) => {
   const { name, phone } = req.body
+  console.log("req.body", req.body)
 
   const foundId = await User.findOne({ name : name, phone : phone }).lean();
+  console.log("foundId", foundId)
 
   try {
     if(!foundId){
@@ -231,7 +233,10 @@ const findId = async (req, res) => {
       })
     }
   } catch (error) {
-    
+    return res.status(500).json({
+      findIdSuccess : false,
+      message : "아이디 찾기 서버 오류"
+    })
   }
 
 }
