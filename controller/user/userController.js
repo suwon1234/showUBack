@@ -124,12 +124,12 @@ const upgrade = async (req, res) => {
   const { exportName, intro, area, field, total, career, portfolio } = req.body;
   const foundUser = await User.findOne({ email : email }).lean();
 
-  if(foundUser){
-    return res.status(400).json({
-      upgradeSuccess : false,
-      message : "이미 등급업 신청이 완료되었습니다"
-    })
-  }else{
+  // if(foundUser){
+  //   return res.status(400).json({
+  //     upgradeSuccess : false,
+  //     message : "이미 등급업 신청이 완료되었습니다"
+  //   })
+  // }else{
 
     await Upgrade.create({
       exportName : exportName,
@@ -146,7 +146,7 @@ const upgrade = async (req, res) => {
       message : "등급업 신청이 완료되었습니다"
     })
   }
-}
+// }
 
 // 등급업 수정
 const modifyUpdate = async (req, res) => {
