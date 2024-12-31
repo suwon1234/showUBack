@@ -124,12 +124,12 @@ const upgrade = async (req, res) => {
   const { exportName, intro, area, field, total, career, portfolio } = req.body;
   const foundUser = await User.findOne({ email : email }).lean();
 
-  if(foundUser){
-    return res.status(400).json({
-      upgradeSuccess : false,
-      message : "이미 등급업 신청이 완료되었습니다"
-    })
-  }else{
+  // if(foundUser){
+  //   return res.status(400).json({
+  //     upgradeSuccess : false,
+  //     message : "이미 등급업 신청이 완료되었습니다"
+  //   })
+  // }else{
 
     await Upgrade.create({
       exportName : exportName,
@@ -146,7 +146,7 @@ const upgrade = async (req, res) => {
       message : "등급업 신청이 완료되었습니다"
     })
   }
-}
+// }
 
 // 등급업 수정
 const modifyUpdate = async (req, res) => {
@@ -179,6 +179,7 @@ const modifyUpdate = async (req, res) => {
   }
 }
 
+// 등급업 정보 데이터 가져오기
 const upgradeInfo = async (req, res) => {
   // console.log(req.user)
   const { id } = req.params;
@@ -209,4 +210,35 @@ const upgradeInfo = async (req, res) => {
 
 }
 
-export { register, login, modify, remove, upgrade, modifyUpdate, upgradeInfo }
+// 아이디 찾기
+const findId = async (req, res) => {
+  const { name, phone } = req.body
+  console.log("req.body", req.body)
+
+  const foundId = await User.findOne({ name : name, phone : phone }).lean();
+  console.log("foundId", foundId)
+
+  try {
+    if(!foundId){
+      return res.status(400).json({
+        findIdSuccess : false,
+        message : "일치하는 아이디가 없습니다"
+      })
+    }else {
+
+      return res.status(200).json({
+        findIdSuccess : true,
+        message : "일치하는 아이디를 찾았습니다",
+        currentUser : foundId
+      })
+    }
+  } catch (error) {
+    return res.status(500).json({
+      findIdSuccess : false,
+      message : "아이디 찾기 서버 오류"
+    })
+  }
+
+}
+
+export { register, login, modify, remove, upgrade, modifyUpdate, upgradeInfo, findId }
