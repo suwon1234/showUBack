@@ -3,6 +3,7 @@ import { getAllCommunities, createCommunity,seedCommunityData,} from '../../cont
 import communityInfoRouter from './communityInfoRouter.js';
 import commentRouter from './commentRouter.js';
 
+
 const communityRouter = express.Router();
 
 // 커뮤니티 메인
@@ -15,5 +16,6 @@ communityRouter.use('/communityInfo', communityInfoRouter);
 
 // 커뮤니티 댓글 라우터
 communityRouter.use("/comments", commentRouter);
+
 
 export default communityRouter;

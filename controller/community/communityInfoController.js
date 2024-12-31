@@ -79,7 +79,45 @@ const addCommentToCommunityInfo = async (req, res) => {
   }
 };
 
-export { seedCommunityInfoData, getCommunityInfoById, addCommentToCommunityInfo };
+// 좋아요
+const toggleLike = async (req, res) => {
+    const { id } = req.params; // 게시글 ID
+    const { userId } = req.body; // 사용자 ID
+    console.log('like ID:', req.params.id);
+    console.log('User ID:', req.body.userId);
+    
+    try {
+    const post = await CommunityLike.findById( req.params.id );
+        console.log('Found post:', post);
+        console.log('Post ID :', id )
+
+    if (!post) {
+      return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
+    }
+
+    const isLiked = post.likedUsers.includes(userId);
+
+    if (isLiked) {
+      post.likes -= 1;
+      post.likedUsers = post.likedUsers.filter((likedId ) => likedId !== userId);
+    } else {
+      post.likes += 1;
+      post.likedUsers.push(userId);
+    }
+
+    await post.save();
+
+    res.status(200).json({
+      message: isLiked ? '좋아요 취소됨' : '좋아요 추가됨',
+      likes: post.likes,
+    });
+  } catch (error) {
+    console.error('좋아요 처리 중 오류:', error);
+    res.status(500).json({ message: '서버 오류', error: error.message });
+  }
+};
+
+export { seedCommunityInfoData, getCommunityInfoById, addCommentToCommunityInfo,toggleLike };
 
 
 
