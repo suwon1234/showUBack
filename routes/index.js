@@ -7,12 +7,14 @@ import shopRouter from './shop/shopRouter.js';
 import vodRouter from './vod/vodRouter.js';
 import reservationRouter from './reservation/reservationRouter.js';
 import communityRouter from './community/communityRouter.js';
+import dataRouter from './dataRouter.js';
 
 const rootRouter = express.Router();
 
 rootRouter.get("/", index)
 rootRouter.use("/users", userRouter)
 rootRouter.use("/auth", authRouter)
+// rootRouter.use("/all-data", dataRouter)
 rootRouter.use("/community", communityRouter)
 rootRouter.use("/showu", showuRouter)
 rootRouter.use("/shop", shopRouter)
