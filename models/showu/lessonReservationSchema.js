@@ -4,16 +4,14 @@ import { getCurrentTime } from "../../utils/utils.js";
 const lessonReservationSchema = new Schema 
 ({
     index : {type : Number},
-    classId : {type : String, ref : "lessons"},
-    userId : { type : String, ref: "users"},
-    userName :  {type : String, ref: "users"},
+    classId : {type: Schema.Types.ObjectId, ref : "Lesson"},
+    userId : { type: Schema.Types.ObjectId, ref: "User"},
+    userName :  {type: Schema.Types.ObjectId, ref: "User"},
     phoneNumber : { type : String, required : true},
     email : {type : String, required : true},
     memo : {type : String, required : true} ,
     date : {
-        year : {type : String},
-        month : {type : String},
-        day : {type : String}
+        type:Date , required : true
     },
     createAt : {type : String, default : getCurrentTime},
       
