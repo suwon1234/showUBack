@@ -17,6 +17,7 @@ const teamSchema = new Schema ({
     averageSkill : { type : String},
     teamNotice : {type : String},
     userId :{type : String},
+    status: { type: String, enum: ['매칭 완료', '매칭 대기'], default: '매칭 대기' }, //팀 매칭 승인 상태
     count : {type : Number}, 
     likeCount : {type : Number},
     createAt : {type: String, default :getCurrentTime },

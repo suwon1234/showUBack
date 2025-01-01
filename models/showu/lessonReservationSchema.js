@@ -11,9 +11,7 @@ const lessonReservationSchema = new Schema
     email : {type : String, required : true},
     memo : {type : String, required : true} ,
     date : {
-        year : {type : String},
-        month : {type : String},
-        day : {type : String}
+        type:Date , required : true
     },
     createAt : {type : String, default : getCurrentTime},
       
