@@ -12,7 +12,6 @@ const inquirySchema = new Schema({
   createdAt: { type: String, default: getCurrentTime }, // 작성일
   updatedAt: { type: String, default: getCurrentTime }, // 수정/삭제일
   content: { type: String, required: true }, // 문의 내용
-  alarm: { type: String, enum: ["SMS", "메일"], required: true}, // 문의 알람
 });
 
 
