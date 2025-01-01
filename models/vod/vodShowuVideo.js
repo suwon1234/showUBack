@@ -10,6 +10,9 @@ const vodShowuVideoSchema = new Schema({
   category : {type: String,require:true}, // 음악 , 뮤지컬 , 영화
   thumbnail : {type : String,require:true}, // 썸네일 
   vodUser: {type :String,require:true}, //영상을 올린 유저
+  createdAt: { type: String, default: getCurrentTime }, // 생성 시간 <==최신순
+  likes: { type: Number, default: 0 }, // 관심 수
+  likedUsers: { type: Schema.Types.ObjectId , ref : 'User'}, // 좋아요를 누른 사용자 ID 
 }, { timestamps: true }); // 생성 및 수정 시간 자동 기록
 
 
