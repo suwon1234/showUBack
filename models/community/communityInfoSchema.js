@@ -10,8 +10,7 @@ const CommunityInfoSchema = new Schema({
     imageUrl: { type: String, required: true },
     createdAt: { type: String, default: getCurrentTime },
     updatedAt: { type: String, default: getCurrentTime },
-    likes: { type: Number, default: 0 }, // 좋아요 수
-    likedUsers: { type: Schema.Types.ObjectId , ref : 'CommunityInfo'}, // 좋아요를 누른 사용자 ID 
+ 
 },
 
 );
