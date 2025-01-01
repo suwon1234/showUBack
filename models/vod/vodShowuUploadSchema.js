@@ -3,7 +3,7 @@ import { model, Schema } from "mongoose";
 
 
 const vodShowuUploadSchema=new Schema({
-  id : {type:Schema.Types.ObjectId, ref : 'video'}, // 비디오 ID
+  id : {type:Schema.Types.ObjectId, ref : 'vodupload'}, // 비디오 ID
   title : {type:String,require:true}, //제목
   videoUrl : {type :String,require:true},//비디오 경로
   description : {type :String,require:true},//설명

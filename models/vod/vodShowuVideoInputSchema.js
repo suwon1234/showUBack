@@ -2,7 +2,7 @@ import { Schema,model } from "mongoose";
 
 
 const vodShowuVideoInputSchema = new Schema({
-  videoID : {type : String ,require : true}, //해당 영상의 ID
+  videoID : {type:Schema.Types.ObjectId,ref : 'vodupload'}, //해당 영상의 ID
   usersId :{type :Schema.Types.ObjectId, ref : 'User'}, // 자신의 ID 
   myComment : {type : String,require:true}, // 내가 쓴 글
   mycreatedAt: { type: String, default: getCurrentTime }, // 댓글 생성 시간
