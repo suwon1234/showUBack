@@ -2,7 +2,7 @@ import { Schema, model } from "mongoose";
 import { getCurrentTime } from "../../utils/utils.js";
 
 const teamSchema = new Schema ({
-    userId : {type : String, ref :"User"},
+    userId : {type: Schema.Types.ObjectId, ref :"User"},
     teamId : { type : Number},
     teamName : {type : String, unique : true},
     teamThumbnail : {type : String},
