@@ -3,7 +3,7 @@ import { model, Schema } from "mongoose"
 const auctionSchema = new Schema({
   auctionName: { type: String, required: true }, // 상품명
   auctionId: { type: String, required: true }, // 경매 Id
-  category: { type: String, required: true }, // 카테고리
+  category: { type: String, enum: ["전체", "뮤지컬", "영화", "연극"], required: true }, // 카테고리
   time: { type: String, required: true }, // 남은 시간
   count: { type: Number, required: true }, // 입찰 기록
   unit: { type: Number, required: true }, // 입찰 단위
