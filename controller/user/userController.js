@@ -121,6 +121,7 @@ const remove = async (req, res) => {
 const upgrade = async (req, res) => {
   console.log("req.body", req.body)
   const { email } = req.user;
+  console.log("req.body", req.body)
   const { exportName, intro, area, field, total, career, portfolio } = req.body;
   const foundUser = await User.findOne({ email : email }).lean();
 
