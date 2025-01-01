@@ -1,17 +1,20 @@
 import { model, Schema } from "mongoose";
-import { getCurrentTime } from "../../utils/utils";
 
 const cartSchema = new Schema({
-  userId: {
-    email: { type: String, required : true, unique : true },
-    password: { type: String },
-  },
+
   product: {
-      // id: { type: Schema.Types.ObjectId, ref: "Md", required: true }, 
-      name: { type: String, ref: "Md", required: true },
-      price: { type: Number, ref: "Md", required: true }, 
-      // option: { type: String, ref: "Md" },
-      quantity: { type: Number, required: true, default: 1 }, 
+    productName: [
+      { type: Schema.Types.ObjectId, ref: 'Md', required: true }, // MD 상품명
+      { type: Schema.Types.ObjectId, ref: 'Auction', required: true }, // 경매 상품명
+    ],
+    price: { type: Schema.Types.ObjectId, ref: 'Md', required: true }, // MD 가격
+    finalPrice: { type: Schema.Types.ObjectId, ref: 'Auction', required: true }, // 경매 가격
+    option: { type: Schema.Types.ObjectId, ref: 'Md' }, // MD 옵션
+    quantity: { type: Schema.Types.ObjectId, ref: 'Md', required: true, default: 1 }, // MD 수량
+    image: [
+      { type: Schema.Types.ObjectId, ref: 'Md', required: true },
+      { type: Schema.Types.ObjectId, ref: 'Auction', required: true },
+    ]
   }
 });
 
