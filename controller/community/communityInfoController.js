@@ -33,22 +33,26 @@ const seedCommunityInfoData = async (req, res) => {
 // CommunityInfo 데이터 조회
 const getCommunityInfoById = async (req, res) => {
   const { id } = req.params;
-  if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) { 
-    console.error("유효하지 않은 ID가 요청되었습니다:", id); 
+
+  // ID 형식 검증
+  if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+    console.error("유효하지 않은 ID 요청:", id);
     return res.status(400).json({ message: "유효하지 않은 ID 형식입니다." });
   }
 
   try {
+    // 데이터베이스에서 데이터 조회
     const communityInfo = await CommunityInfo.findById(id);
     if (!communityInfo) {
       return res.status(404).json({ message: "게시글을 찾을 수 없습니다." });
     }
-    res.status(201).json(communityInfo);
+    res.status(200).json(communityInfo);
   } catch (error) {
     console.error("데이터 조회 중 오류 발생:", error);
     res.status(500).json({ message: "서버 오류 발생", error: error.message });
   }
 };
+
 
 // 댓글 추가
 const addCommentToCommunityInfo = async (req, res) => {
@@ -89,7 +93,7 @@ const toggleLike = async (req, res) => {
     try {
     const post = await CommunityLike.findById( req.params.id );
         console.log('Found post:', post);
-        console.log('Post ID :', id )
+        console.log('Post ID :', id );
 
     if (!post) {
       return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });

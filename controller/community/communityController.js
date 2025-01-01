@@ -189,7 +189,7 @@ const createCommunity = async (req, res) => {
       author,
       content,
       category,
-      likeCount: 0, 
+      likeCount, 
       createdAt: new Date(), 
       updatedAt: new Date() 
     });
