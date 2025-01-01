@@ -119,11 +119,11 @@ const remove = async (req, res) => {
 
 // 등급업 신청
 const upgrade = async (req, res) => {
-  console.log("req.body", req.body)
-  console.log("req.user", req.user)
+  // console.log("req.body", req.body)
+  // console.log("req.user", req.user)
   const { exportName, intro, area, field, total, career, portfolio } = req.body;
   const foundUser = await User.findOne({ exportNameid : exportName }).lean();
-  console.log("foundUser", foundUser)
+  // console.log("foundUser", foundUser)
 
   if(foundUser){
     return res.status(400).json({
@@ -151,8 +151,8 @@ const upgrade = async (req, res) => {
 
 // 등급업 수정
 const modifyUpdate = async (req, res) => {
-  console.log("req.user", req.user)
-  console.log("req.body", req.body)
+  // console.log("req.user", req.user)
+  // console.log("req.body", req.body)
   const { exportName, intro, area, field, total, career, portfolio } = req.body;
   const foundUser = await Upgrade.findOne({ exportName : exportName }).lean();
   // console.log(foundUser)
@@ -185,7 +185,7 @@ const modifyUpdate = async (req, res) => {
 const upgradeInfo = async (req, res) => {
   // console.log(req.user)
   const { id } = req.params;
-  console.log(req.params)
+  // console.log(req.params)
 
   try {
     const user = await Upgrade.findOne({ exportName : id });
@@ -216,8 +216,11 @@ const upgradeInfo = async (req, res) => {
 const findId = async (req, res) => {
   const { name, phone } = req.body
   console.log("req.body", req.body)
+  
+  const { email } = req.user;
+  console.log("req.user", req.user)
 
-  const foundId = await User.findOne({ name : name, phone : phone }).lean();
+  const foundId = await User.findOne({ email : email }).lean();
   console.log("foundId", foundId)
 
   try {
