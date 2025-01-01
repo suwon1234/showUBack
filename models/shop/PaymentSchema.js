@@ -29,7 +29,7 @@ const paymentSchema = new Schema({
   deliveryFee: { type: Number, default: 3000 }, // 배송비
   discount: { type: Number, default: 0 }, // 할인
   paymentMethod: { type: String, enum: ['신용/체크카드', '무통장입금', '네이버페이', '카카오페이', '토스페이'], required: true },
-  status: { type: String, enum: ['주문완료', '배송중', '배송완료', '환불 처리', '환불 완료'], required: true },
+  status: { type: String, enum: ['주문완료', '배송중', '배송완료', '환불 처리', '환불 완료'], default: '주문완료', required: true },
   paymentAt: { type: String, default: getCurrentTime}, // 결제시간
 });
 
