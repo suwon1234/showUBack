@@ -3,12 +3,12 @@ import { getCurrentTime } from "../../utils/utils.js";
 
 const lessonSchema = new Schema ({
     classId : { type : Number, unique : true}, // 레슨 고유 번호 (자동생성) 인덱스 
-    userId : { type : String, ref :"users"}, // 유저 아이디
-    userName : { type : String, ref : "users"}, //강사 이름
+    userId : { type: Schema.Types.ObjectId, ref :"User"}, // 유저 아이디
+    userName : { type: Schema.Types.ObjectId, ref : "User"}, //강사 이름
     lessonTumbnail : { type : String, required : true}, //썸네일  이미지 경로
     lessonName : { type : String, required : true}, //레슨 이름 
     callTime : { type : String, required: true}, // 응대 가능시간
-    category : { type : String, required : true}, // 레슨 카테고리
+    category : { type : String, enum:["음악", "연기", "마술"], required : true}, // 레슨 카테고리
     lessonAddress : {
         addressSi : { type : String},
         addressGuGun : { type : String},
@@ -33,6 +33,8 @@ const lessonSchema = new Schema ({
     },
 
     etcAnnouncement : { type :String},
+    count : {type : Number}, //조회수
+    likeCount : {type : Number, default : 0}, //좋아요 수
     createAt : {type : String, default : getCurrentTime},
     updateAt : {type : String, default : getCurrentTime},
 })
