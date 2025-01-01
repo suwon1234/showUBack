@@ -12,6 +12,7 @@ const vodShowuUploadSchema=new Schema({
   copyright : {type : String,default : true},//저작권
   videostatus : {type : Number,default : nondisclosure},// 비공개 공개
   user :{type :String,require:true},// 영상을 올리는 유저의 정보
+  createdAt: { type: String, default: getCurrentTime }, // 생성 시간 <==최신순
 })
 
 export default model("VodUpload",vodShowuUploadSchema,"vodupload")
