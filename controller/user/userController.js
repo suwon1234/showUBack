@@ -66,6 +66,7 @@ const login = async (req, res) => {
 
 }
 
+// 회원 정보 수정
 const modify = async (req, res) => {
   // console.log("req body:", req.body);
   // console.log("req user:", req.user);
@@ -215,26 +216,27 @@ const upgradeInfo = async (req, res) => {
 // 아이디 찾기
 const findId = async (req, res) => {
   const { name, phone } = req.body
-  console.log("req.body", req.body)
-  
-  const { email } = req.user;
-  console.log("req.user", req.user)
+  // console.log("req.body", req.body) 
 
-  const foundId = await User.findOne({ email : email }).lean();
-  console.log("foundId", foundId)
+  const foundUser = await User.findOne({ name: name, phone: phone }).lean();
+  // console.log("foundUser", foundUser)
 
   try {
-    if(!foundId){
+    
+    if(!foundUser){
+      console.log("일치하는 아이디가 없습니다")
       return res.status(400).json({
         findIdSuccess : false,
-        message : "일치하는 아이디가 없습니다"
+        message : "일치하는 아이디가 없습니다",
       })
     }else {
+      const { email } = foundUser
+      console.log("일치하는 아이디 :", foundUser)
 
       return res.status(200).json({
         findIdSuccess : true,
         message : "일치하는 아이디를 찾았습니다",
-        currentUser : foundId
+        currentUser : email
       })
     }
   } catch (error) {

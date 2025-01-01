@@ -10,7 +10,7 @@ userRouter.put("/modify", passport.authenticate('jwt', { session: false }), modi
 userRouter.delete("/remove", passport.authenticate('jwt', { session: false }), remove)
 
 //아이디 찾기
-userRouter.post("/find-id", passport.authenticate('jwt', { session: false }), findId)
+userRouter.post("/find-id", findId)
 
 // 등급업 신청
 userRouter.post("/upgrade", passport.authenticate('jwt', { session: false }), upgrade)
