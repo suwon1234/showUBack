@@ -1,6 +1,7 @@
 import { Schema,model } from "mongoose";
 
 const vodShowuVideoSchema = new Schema({
+  id : {type:Schema.Types.ObjectId, ref : 'video'}, // 비디오 ID
   title: { type: String, required: true }, // 제목
   time: { type: String, required: true }, // 시간 정보
   genre: { type: String, required: true }, // 장르
