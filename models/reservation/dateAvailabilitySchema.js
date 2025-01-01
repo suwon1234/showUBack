@@ -1,9 +1,5 @@
 import { model, Schema } from "mongoose";
-
-// 현재 시간 가져오는 함수
-const getCurrentTime = () => {
-  return new Date().toISOString();
-};
+import { getCurrentTime } from "../../utils/utils";
 
 const dateAvailabilitySchema = new Schema({
   spaceId: { type: Schema.Types.ObjectId, ref: "Space", required: false }, // 공간 ID (참조, 옵션)
