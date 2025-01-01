@@ -3,7 +3,7 @@ import { getCurrentTime } from "../../utils/utils.js";
 
 const teamSchema = new Schema ({
     userId : {type: Schema.Types.ObjectId, ref :"User"},
-    teamId : { type : Number},
+    // -teamId : { type : Number},
     teamName : {type : String, unique : true},
     teamThumbnail : {type : String},
     meetDay : {type : String},
