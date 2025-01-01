@@ -2,6 +2,7 @@ import { Schema,model } from "mongoose";
 import { getCurrentTime } from "../../utils/utils.js";
 
 const vodSchema = new Schema({
+  id : {type:Schema.Types.ObjectId, ref : 'vodvideo'}, // 비디오 ID
   title: { type: String, required: true }, // 제목
   time: { type: String, required: true }, // 시간 정보
   genre: { type: String, required: true}, // 장르
