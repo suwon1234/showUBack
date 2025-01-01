@@ -2,6 +2,7 @@ import { Schema , model} from "mongoose";
 import { getCurrentTime } from "../../utils/utils.js";
 
 const CommunityInfoSchema = new Schema({
+
   title: { type: String, required: true },
     description: { type: String, required: true },
     content: { type: String, required: true },
@@ -10,9 +11,7 @@ const CommunityInfoSchema = new Schema({
     createdAt: { type: String, default: getCurrentTime },
     updatedAt: { type: String, default: getCurrentTime },
     likes: { type: Number, default: 0 }, // 좋아요 수
-    likedUsers: [{ type: String }], // 좋아요를 누른 사용자 ID 
-  createdAt: { type: String, default: getCurrentTime },
-  updatedAt: { type: String, default: getCurrentTime },
+    likedUsers: { type: Schema.Types.ObjectId , ref : 'CommunityInfo'}, // 좋아요를 누른 사용자 ID 
 },
 
 );
