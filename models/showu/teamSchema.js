@@ -16,6 +16,8 @@ const teamSchema = new Schema ({
     averageSkill : { type : String},
     teamNotice : {type : String},
     userId :{type : String},
+    count : {type : Number}, 
+    likeCount : {type : Number},
     createAt : {type: String, default :getCurrentTime },
     updateAt : {type : String, default : getCurrentTime},
 })
