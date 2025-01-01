@@ -2,11 +2,11 @@ import { Schema, model } from "mongoose";
 import { getCurrentTime } from "../../utils/utils.js";
 
 const lessonReviweSchema = new Schema ({
-    classId : { type : Number, ref : "Lesson"},
+    classId : { type: Schema.Types.ObjectId, ref : "Lesson"},
     reviews : {
-        userId : { type : String, ref : "User"},
-        name : { type : String, ref :"User"},
-        category : {type : String, ref : "Lesson"},
+        userId : { type: Schema.Types.ObjectId, ref : "User"},
+        name : { type: Schema.Types.ObjectId, ref :"User"},
+        category : {type: Schema.Types.ObjectId, ref : "Lesson"},
         score : {type : Number, default : 5},
         review : {type : String},
         createAt : {type : String, default : getCurrentTime},

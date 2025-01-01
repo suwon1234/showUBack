@@ -2,8 +2,9 @@ import { Schema, model } from "mongoose";
 import { getCurrentTime } from "../../utils/utils.js";
 
 const teamSchema = new Schema ({
-    teamName : {type : String, unique : true},
+    userId : {type : String, ref :"User"},
     teamId : { type : Number},
+    teamName : {type : String, unique : true},
     teamThumbnail : {type : String},
     meetDay : {type : String},
     meetPeriod : {

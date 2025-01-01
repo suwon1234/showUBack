@@ -4,9 +4,9 @@ import { getCurrentTime } from "../../utils/utils.js";
 const lessonReservationSchema = new Schema 
 ({
     index : {type : Number},
-    classId : {type : String, ref : "Lesson"},
-    userId : { type : String, ref: "User"},
-    userName :  {type : String, ref: "User"},
+    classId : {type: Schema.Types.ObjectId, ref : "Lesson"},
+    userId : { type: Schema.Types.ObjectId, ref: "User"},
+    userName :  {type: Schema.Types.ObjectId, ref: "User"},
     phoneNumber : { type : String, required : true},
     email : {type : String, required : true},
     memo : {type : String, required : true} ,

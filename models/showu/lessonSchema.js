@@ -3,8 +3,8 @@ import { getCurrentTime } from "../../utils/utils.js";
 
 const lessonSchema = new Schema ({
     classId : { type : Number, unique : true}, // 레슨 고유 번호 (자동생성) 인덱스 
-    userId : { type : String, ref :"User"}, // 유저 아이디
-    userName : { type : String, ref : "User"}, //강사 이름
+    userId : { type: Schema.Types.ObjectId, ref :"User"}, // 유저 아이디
+    userName : { type: Schema.Types.ObjectId, ref : "User"}, //강사 이름
     lessonTumbnail : { type : String, required : true}, //썸네일  이미지 경로
     lessonName : { type : String, required : true}, //레슨 이름 
     callTime : { type : String, required: true}, // 응대 가능시간
