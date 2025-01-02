@@ -6,6 +6,7 @@ import passport from 'passport';
 
 const mypageRouter = express.Router()
 
+
 // 커뮤니티 댓글 목록 
 communityRouter.post("/comments/user", passport.authenticate('jwt', { session : false }) ,getCommentsByUser);
 
