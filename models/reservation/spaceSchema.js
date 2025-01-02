@@ -16,4 +16,4 @@ const spaceSchema = new Schema({
   updatedAt: { type: String, default: getCurrentTime }, // 수정 시간
 });
 
-export default model("Space", spaceSchema, "space");
+export default model("Space", spaceSchema, "spaces");
