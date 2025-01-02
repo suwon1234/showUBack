@@ -322,6 +322,18 @@ const adminLogin = async (req, res) => {
         name: "사용자10",
         phone: "010-1111-1111"
       },
+      {
+        email: "export2@gmail.com",
+        password: hashedPassword,
+        name: "전문가2",
+        phone: "010-1234-1234"
+      },
+      {
+        email: "export1@gmail.com",
+        password: hashedPassword,
+        name: "전문가1",
+        phone: "010-5678-5678"
+      },
     ];
 
     // 중복된 관리자가 있는지 확인 후 삽입
