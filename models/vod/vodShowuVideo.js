@@ -1,11 +1,11 @@
 import { Schema, model } from "mongoose";
-import { getCurrentTime } from "../../utils/utils";
+import { getCurrentTime } from "../../utils/utils.js";
 
 
 
 
 // 통합된 스키마
-const vodShowuVideeoSchema = new Schema({
+const vodShowuVideoSchema = new Schema({
   title: { type: String, required: true }, // 제목
   videoUrl: { type: String, required: true }, // 비디오 경로
   description: { type: String, required: true }, // 설명
@@ -26,4 +26,4 @@ const vodShowuVideeoSchema = new Schema({
   createdAt: { type: String, default: getCurrentTime } // 생성시간
 }, { timestamps: true }); // 생성 및 수정 시간 자동 기록
 
-export default model("VodShowuVideo", vodShowuVideeoSchema, "vodshowuvideo");
+export default model("VodShowuVideo", vodShowuVideoSchema, "vodshowuvideo");
