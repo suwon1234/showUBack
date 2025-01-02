@@ -1,6 +1,6 @@
-import connect from "../connect/connect.js"; 
-import Md from "./shop/mdSchema.js";
-import Auction from "./shop/auctionSchema.js"
+import connect from '../connect/connect.js'; 
+import Md from './shop/mdSchema.js';
+import Auction from './shop/auctionSchema.js'
 import Community from "./community/communitySchema.js"
 
 connect()
