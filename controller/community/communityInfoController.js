@@ -1,142 +1,98 @@
-import CommunityInfo from "../../models/community/communityInfoSchema.js";
 import Community from "../../models/community/communitySchema.js";
+import CommunityComment from "../../models/community/communityCommentSchema.js";
 
-// 초기 데이터 삽입
-const seedCommunityInfoData = async (req, res) => {
-  try {
-    console.log("기존 데이터를 삭제 중...");
-    await CommunityInfo.deleteMany({});
-
-    // communities 데이터를 가져와 communityInfo에 삽입
-    const communities = await Community.find();
-    const communityInfoData = communities.map((community) => ({
-      _id: community._id, // communities 컬렉션의 _id를 동일하게 사용
-      title: community.title,
-      description: community.description,
-      content : community.content,
-      category: community.category,
-      imageUrl: community.imageUrl,
-      createdAt: community.createdAt,
-      updatedAt: community.updatedAt,
-    }));
-
-    console.log("데이터 삽입을 시작합니다...");
-    const inserted = await CommunityInfo.insertMany(communityInfoData);
-    console.log("삽입된 데이터:", inserted);
-    res.status(201).json(inserted);
-  } catch (error) {
-    console.error("CommunityInfo 데이터 추가 중 오류 발생:", error.message);
-    res.status(500).send(`CommunityInfo 데이터 추가 중 오류 발생: ${error.message}`);
-  }
-};
-
-// CommunityInfo 데이터 조회
-const getCommunityInfoById = async (req, res) => {
+// 커뮤니티 게시물 조회 (상세 정보)
+const getCommunityById = async (req, res) => {
   const { id } = req.params;
 
-  // ID 형식 검증
+  // 유효한 ObjectId인지 확인
   if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
     console.error("유효하지 않은 ID 요청:", id);
     return res.status(400).json({ message: "유효하지 않은 ID 형식입니다." });
   }
 
   try {
-    // 데이터베이스에서 데이터 조회
-    const communityInfo = await CommunityInfo.findById(id);
-    if (!communityInfo) {
+    // Community 데이터 조회
+    const community = await Community.findById(id).populate("UserId", "name email");  // UserId 필드도 가져오기
+
+    if (!community) {
       return res.status(404).json({ message: "게시글을 찾을 수 없습니다." });
     }
-    res.status(200).json(communityInfo);
+
+    res.status(200).json(community);  // 커뮤니티 상세 데이터 반환
   } catch (error) {
     console.error("데이터 조회 중 오류 발생:", error);
     res.status(500).json({ message: "서버 오류 발생", error: error.message });
   }
 };
 
-
-// 댓글 추가
-const addCommentToCommunityInfo = async (req, res) => {
-  const { id } = req.params;
-  const { user, content } = req.body;
-
-  if (!user || !content) {
-    return res.status(400).json({ message: "사용자와 내용을 입력해주세요." });
-  }
-
+// 커뮤니티 목록 조회
+const getAllCommunities = async (req, res) => {
   try {
-    const communityInfo = await CommunityInfo.findById(id);
-    if (!communityInfo) {
-      return res.status(404).json({ message: "게시글을 찾을 수 없습니다." });
-    }
-
-    // 댓글 추가
-    if (!communityInfo.comments) {
-      communityInfo.comments = [];
-    }
-    communityInfo.comments.push({ user, content, date: new Date() });
-    await communityInfo.save();
-
-    res.status(200).json({ message: "댓글이 추가되었습니다.", communityInfo });
+    const communities = await Community.find().populate("UserId", "name email").lean();
+    return res.status(200).json(communities); // 커뮤니티 목록 반환
   } catch (error) {
-    console.error("댓글 추가 중 오류 발생:", error);
+    console.error("커뮤니티 데이터 조회 중 오류 발생:", error);
     res.status(500).json({ message: "서버 오류", error: error.message });
   }
 };
 
-// 좋아요
-const toggleLike = async (req, res) => {
-    const { id } = req.params; // 게시글 ID
-    const { userId } = req.body; // 사용자 ID
-    console.log('like ID:', req.params.id);
-    console.log('User ID:', req.body.userId);
-    
-    try {
-    const post = await CommunityLike.findById( req.params.id );
-        console.log('Found post:', post);
-        console.log('Post ID :', id );
 
-    if (!post) {
-      return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
-    }
+// 댓글 추가
+const addCommentToCommunity = async (req, res) => { 
+  const { id } = req.params;  // Community의 _id
+  const { content } = req.body;
 
-    const isLiked = post.likedUsers.includes(userId);
+  if (!content) {
+    return res.status(400).json({ message: "댓글 내용을 입력해주세요." });
+  }
 
-    if (isLiked) {
-      post.likes -= 1;
-      post.likedUsers = post.likedUsers.filter((likedId ) => likedId !== userId);
-    } else {
-      post.likes += 1;
-      post.likedUsers.push(userId);
-    }
-
-    await post.save();
-
-    res.status(200).json({
-      message: isLiked ? '좋아요 취소됨' : '좋아요 추가됨',
-      likes: post.likes,
+  try {
+    const newComment = new CommunityComment({
+      postId: id,  // Community의 _id 값
+      user: req.user._id,  // JWT에서 가져온 사용자 ID
+      content,
     });
+
+    await newComment.save();
+    res.status(201).json({ message: "댓글이 추가되었습니다.", newComment });
   } catch (error) {
-    console.error('좋아요 처리 중 오류:', error);
-    res.status(500).json({ message: '서버 오류', error: error.message });
+    res.status(500).json({ message: "서버 오류", error: error.message });
   }
 };
 
-export { seedCommunityInfoData, getCommunityInfoById, addCommentToCommunityInfo,toggleLike };
+// 좋아요 기능
+const toggleLike = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const post = await Community.findById(id);
+    if (!post) {
+      return res.status(404).json({ message: "게시글을 찾을 수 없습니다." });
+    }
+
+    const isLiked = post.likedUsers.includes(req.user._id);
+
+    if (isLiked) {
+      post.likes -= 1;
+      post.likedUsers = post.likedUsers.filter((userId) => userId.toString() !== req.user._id.toString());
+    } else {
+      post.likes += 1;
+      post.likedUsers.push(req.user._id);
+    }
+
+    await post.save();
+    res.status(200).json({
+      message: isLiked ? "좋아요 취소됨" : "좋아요 추가됨",
+      likes: post.likes,
+    });
+  } catch (error) {
+    res.status(500).json({ message: "서버 오류", error: error.message });
+  }
+};
+
+export { getCommunityById, addCommentToCommunity, toggleLike , getAllCommunities};
 
 
 
 
-
-
-
-// if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) 관련 ---------------------------------
-
-// MongoDB에서 사용하는 _id 필드는 24자리 16진수 문자열로 구성된 ObjectId여야함
-
-// id.match(/^[0-9a-fA-F]{24}$/):
-// id가 MongoDB ObjectId 형식(24자리 16진수 문자열)인지 확인
-
-// 정규식 설명:
-// ^와 $: 문자열의 시작과 끝.
-// [0-9a-fA-F]: 16진수 문자(09와 af, A~F).
-// {24}: 정확히 24자.
