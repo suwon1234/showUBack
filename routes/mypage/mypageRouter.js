@@ -10,7 +10,7 @@ const mypageRouter = express.Router()
 mypageRouter.post("/my-active/post/:id", passport.authenticate('jwt', { session: false }), myActivePost)
 
 // 찜-MD
-mypageRouter.post("/like/md", passport.authenticate('jwt', { session: false }), likeMd)
+mypageRouter.get("/like/md", passport.authenticate('jwt', { session: false }), likeMd)
 
 
 export default mypageRouter
