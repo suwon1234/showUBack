@@ -30,7 +30,6 @@ const seedMdProducts = async (req, res) => {
       category: "연극", 
       mdName: "베르사유의 장미 키링", 
       price: 17000, 
-      description: "상세 설명4", 
       image: "/images/shop/md/md4.jpg", 
       imageDetail: "/images/shop/md/md4-1.jpg", 
       ishearted: false 
