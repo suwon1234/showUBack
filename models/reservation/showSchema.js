@@ -24,4 +24,4 @@ const showSchema = new Schema({
   updatedAt: { type: String, default: getCurrentTime }, // 수정 시간
 });
 
-export default model("Show", showSchema, "show");
+export default model("Show", showSchema, "shows");
