@@ -1,8 +1,9 @@
-import VodVideo from '../../models/vod/vodSchema.js'
+
+import vodShowuVideo from '../../models/vod/vodShowuVideo.js';
 
 const getAllVideo = async (req, res) => {
     try {
-        const vods = await VodVideo.find(); 
+        const vods = await vodShowuVideo.find(); 
         console.log(vods)
     res.status(200).json(vods);
   } catch (error) {
