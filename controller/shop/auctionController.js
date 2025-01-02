@@ -336,7 +336,7 @@ const seedAuctionProducts = async (req, res) => {
       finalPrice: 0,
       description: "상세 설명24",
       image: "/images/shop/auction/auction24.jpg",
-      imageDetailimageDetail: "/images/shop/auction/auction24-1.jpg",
+      imageDetail: "/images/shop/auction/auction24-1.jpg",
       ishearted: false
     },
     { 
@@ -350,7 +350,7 @@ const seedAuctionProducts = async (req, res) => {
       finalPrice: 0,
       description: "상세 설명25",
       image: "/images/shop/auction/auction25.jpg",
-      imageDetailimageDetail: "/images/shop/auction/auction25-1.jpg",
+      imageDetail: "/images/shop/auction/auction25-1.jpg",
       ishearted: false
     },
     { 
@@ -423,7 +423,6 @@ const seedAuctionProducts = async (req, res) => {
       imageDetail: "/images/shop/auction/auction30-1.jpg",
       ishearted: false
     },
-
   ];
   
 
