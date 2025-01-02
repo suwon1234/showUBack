@@ -1,5 +1,6 @@
 // 커뮤니티 메인
 const communityData = [
+    // 유저 참조
     {
       UserId: "677624c658aa24731b3e37ba",  // 더미 데이터용 아이디 회원 가입된 아이디로 강제 부여
       Writefile: "-",
