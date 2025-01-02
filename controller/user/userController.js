@@ -1,5 +1,5 @@
 import Upgrade from "../../models/users/upgradeSchema.js";
-import User from "../../models/users/userSchema.js"
+import User from "../../models/users/userSchema.js";
 import bcrypt from 'bcrypt';
 
 const salt = await bcrypt.genSalt(10)
@@ -66,6 +66,7 @@ const login = async (req, res) => {
 
 }
 
+// 회원 정보 수정
 const modify = async (req, res) => {
   // console.log("req body:", req.body);
   // console.log("req user:", req.user);
@@ -215,26 +216,27 @@ const upgradeInfo = async (req, res) => {
 // 아이디 찾기
 const findId = async (req, res) => {
   const { name, phone } = req.body
-  console.log("req.body", req.body)
-  
-  const { email } = req.user;
-  console.log("req.user", req.user)
+  // console.log("req.body", req.body) 
 
-  const foundId = await User.findOne({ email : email }).lean();
-  console.log("foundId", foundId)
+  const foundUser = await User.findOne({ name: name, phone: phone }).lean();
+  // console.log("foundUser", foundUser)
 
   try {
-    if(!foundId){
+    
+    if(!foundUser){
+      console.log("일치하는 아이디가 없습니다")
       return res.status(400).json({
         findIdSuccess : false,
-        message : "일치하는 아이디가 없습니다"
+        message : "일치하는 아이디가 없습니다",
       })
     }else {
+      const { email } = foundUser
+      console.log("일치하는 아이디 :", foundUser)
 
       return res.status(200).json({
         findIdSuccess : true,
         message : "일치하는 아이디를 찾았습니다",
-        currentUser : foundId
+        currentUser : email
       })
     }
   } catch (error) {
@@ -246,4 +248,119 @@ const findId = async (req, res) => {
 
 }
 
-export { register, login, modify, remove, upgrade, modifyUpdate, upgradeInfo, findId }
+// 관리자 정보 insert
+const adminLogin = async (req, res) => {
+  try {
+    const password = "test123!"
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    // 관리자 데이터
+    const adminData = [
+      {
+        email: "admin@gmail.com",
+        password: hashedPassword,
+        name : "관리자",
+        role: "admin"
+      },
+      {
+        email: "test1@gmail.com",
+        password: hashedPassword,
+        name: "사용자1",
+        phone: "010-1111-1111"
+      },
+      {
+        email: "test2@gmail.com",
+        password: hashedPassword,
+        name: "사용자2",
+        phone: "010-2222-2222"
+      },
+      {
+        email: "test3@gmail.com",
+        password: hashedPassword,
+        name: "사용자3",
+        phone: "010-3333-3333"
+      },
+      {
+        email: "test4@gmail.com",
+        password: hashedPassword,
+        name: "사용자4",
+        phone: "010-4444-4444"
+      },
+      {
+        email: "test5@gmail.com",
+        password: hashedPassword,
+        name: "사용자5",
+        phone: "010-5555-5555"
+      },
+      {
+        email: "test6@gmail.com",
+        password: hashedPassword,
+        name: "사용자6",
+        phone: "010-6666-6666"
+      },
+      {
+        email: "test7@gmail.com",
+        password: hashedPassword,
+        name: "사용자7",
+        phone: "010-7777-7777"
+      },
+      {
+        email: "test8@gmail.com",
+        password: hashedPassword,
+        name: "사용자8",
+        phone: "010-8888-8888"
+      },
+      {
+        email: "test9@gmail.com",
+        password: hashedPassword,
+        name: "사용자9",
+        phone: "010-9999-9999"
+      },
+      {
+        email: "test10@gmail.com",
+        password: hashedPassword,
+        name: "사용자10",
+        phone: "010-1111-1111"
+      },
+    ];
+
+    // 중복된 관리자가 있는지 확인 후 삽입
+    const existingAdmin = await User.findOne({ email: "admin@gmail.com" });
+    if (existingAdmin) {
+      return res.status(400).json({ message: "관리자가 이미 존재합니다." });
+    }
+
+    await User.create(adminData);
+
+    res.status(201).json({ message: "관리자 계정이 성공적으로 생성되었습니다." });
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "서버 오류. 다시 시도해 주세요." });
+  }
+}
+
+
+// 등급업 신청 내역 불러오기
+const UpgradeAllData = async (req, res) => {
+  try {
+    const upgrades = await Upgrade.find({}).sort({ createdAt : -1 });
+    res.status(200).json({
+      upgrades : upgrades,
+      message : "성공적으로 등급업 신청 내역을 가져왔습니다."
+    })
+  } catch (error) {
+    console.log("UpgradeAllDataError", error)
+    res.status(500).json({message : "서버 오류, 데이터를 가져 올 수 없습니다."})
+    
+  }
+  
+}
+
+
+//등급업 승인(관리자)
+const approveRequests = () => {
+
+}
+
+export { register, login, modify, remove, upgrade, modifyUpdate, upgradeInfo, findId, UpgradeAllData, approveRequests, adminLogin }
