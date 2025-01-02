@@ -1,5 +1,5 @@
 import { model, Schema } from "mongoose";
-import { getCurrentTime } from "../../utils/utils";
+import { getCurrentTime } from "../../utils/utils.js";
 
 const reservationSchema = new Schema({
   id: { type: Number, required: true }, // 고유 ID
@@ -14,4 +14,4 @@ const reservationSchema = new Schema({
   updatedAt: { type: String, default: getCurrentTime }, // 수정 시간
 });
 
-export default model("Reservation", reservationSchema, "reservation");
+export default model("Reservation", reservationSchema, "reservations");
