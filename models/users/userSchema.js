@@ -4,12 +4,12 @@ import { getCurrentTime } from "../../utils/utils.js";
 const userSchema = new Schema({
     email: { type: String, required : true, unique : true },
     password: { type: String },
-    name: { type: String },
+    name: { type: String, required : true },
     phone : { type : String },
     provider : { type : String },
     role : {
         type : String,
-        enum : ['user', 'export'],
+        enum : ['user', 'export', 'admin'], 
         default : 'user'
     },
     isUpgradeRequested : {

@@ -1,4 +1,5 @@
-import VodVideo from '../../models/vod/vodSchema.js';
+import vodShowuVideo from "../../models/vod/vodShowuVideo.js";
+
 
 const getVodId = async (req, res) => {
   const { id } = req.params;
@@ -11,7 +12,7 @@ const getVodId = async (req, res) => {
 
   try {
     // 비디오 정보 조회
-    const vodinfo = await VodVideo.findById(id);
+    const vodinfo = await vodShowuVideo.findById(id);
 
     // 비디오 정보가 없는 경우
     if (!vodinfo) {
