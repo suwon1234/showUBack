@@ -1,18 +1,22 @@
 import express from 'express';
-import {
-    getCommunityInfoById,
-    addCommentToCommunityInfo,
-    seedCommunityInfoData
-} from '../../controller/community/communityInfoController.js';
+import passport from 'passport';
+import { 
+    getCommunityById, 
+    addCommentToCommunity, 
+    toggleLike, 
+} from "../../controller/community/communityInfoController.js";
 
 const communityInfoRouter = express.Router();
 
-// 시드 데이터 삽입
-communityInfoRouter.get('/seed', seedCommunityInfoData); // /community/communityInfo/seed  시드 데이터 삽입용
 
-// 커뮤니티 상세 정보
-communityInfoRouter.get('/:id', getCommunityInfoById); // /community/communityInfo/:id
-communityInfoRouter.post('/:id/comments', addCommentToCommunityInfo); // 댓글 추가
 
+// 커뮤니티 상세 정보 조회
+communityInfoRouter.get('/:id', getCommunityById); // /community/info/:id
+
+// 댓글 추가
+communityInfoRouter.post('/:id/comments', passport.authenticate('jwt', { session: false }), addCommentToCommunity); // /community/info/:id/comments
+
+// 좋아요 토글
+communityInfoRouter.post('/:id/likes', passport.authenticate('jwt', { session: false }), toggleLike); // /community/info/:id/likes
 
 export default communityInfoRouter;
