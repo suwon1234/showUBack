@@ -24,6 +24,7 @@ const teamSchema = new Schema ({
     status: { type: String, enum: ['매칭 완료', '매칭 대기'], default: '매칭 대기' }, //팀 매칭 승인 상태
     count : {type : Number}, 
     likeCount : {type : Number},
+    likeUser : {type: Schema.Types.ObjectId, ref :"User"},
     createAt : {type: String, default :getCurrentTime },
     updateAt : {type : String, default : getCurrentTime},
 })

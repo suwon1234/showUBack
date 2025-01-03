@@ -44,6 +44,7 @@ const lessonSchema = new Schema ({
     },
     count : {type : Number}, //조회수
     likeCount : {type : Number, default : 0}, //좋아요 수
+    likeUser : {type: Schema.Types.ObjectId, ref :"User"},
     createAt : {type : String, default : getCurrentTime},
     updateAt : {type : String, default : getCurrentTime},
 })
