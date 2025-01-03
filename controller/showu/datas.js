@@ -2705,7 +2705,7 @@ const teamListData = [
         //     start : "24-11-16", //팀 활동 시작일
         //     end : { type : Date, required : true }, //팀 활동 종료일
         // },
-        status: "매칭 승인", //팀 매칭 승인 상태
+        status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
@@ -2731,7 +2731,7 @@ const teamListData = [
         //     start : "24-11-16", //팀 활동 시작일
         //     end : { type : Date, required : true }, //팀 활동 종료일
         // },
-        status: "매칭 승인", //팀 매칭 승인 상태
+        status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
@@ -2835,7 +2835,7 @@ const teamListData = [
         //     start : "24-11-16", //팀 활동 시작일
         //     end : { type : Date, required : true }, //팀 활동 종료일
         // },
-        status: "매칭 승인", //팀 매칭 승인 상태
+        status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
@@ -2861,7 +2861,7 @@ const teamListData = [
         //     start : "24-11-16", //팀 활동 시작일
         //     end : { type : Date, required : true }, //팀 활동 종료일
         // },
-        status: "매칭 승인", //팀 매칭 승인 상태
+        status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
@@ -2965,7 +2965,7 @@ const teamListData = [
         //     start : "24-11-16", //팀 활동 시작일
         //     end : { type : Date, required : true }, //팀 활동 종료일
         // },
-        status: "매칭 승인", //팀 매칭 승인 상태
+        status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
@@ -2991,7 +2991,7 @@ const teamListData = [
         //     start : "24-11-16", //팀 활동 시작일
         //     end : { type : Date, required : true }, //팀 활동 종료일
         // },
-        status: "매칭 승인", //팀 매칭 승인 상태
+        status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
@@ -3095,7 +3095,7 @@ const teamListData = [
         //     start : "24-11-16", //팀 활동 시작일
         //     end : { type : Date, required : true }, //팀 활동 종료일
         // },
-        status: "매칭 승인", //팀 매칭 승인 상태
+        status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
@@ -3121,7 +3121,7 @@ const teamListData = [
         //     start : "24-11-16", //팀 활동 시작일
         //     end : { type : Date, required : true }, //팀 활동 종료일
         // },
-        status: "매칭 승인", //팀 매칭 승인 상태
+        status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
