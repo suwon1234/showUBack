@@ -9,7 +9,6 @@ const likeSchema = new Schema({
   likedTicket : { type : Schema.Types.ObjectId, ref : 'Ticket' }, //티켓
   likedMd : { type : Schema.Types.ObjectId, ref : 'Md' }, //MD
   likedAuction : { type : Schema.Types.ObjectId, ref : 'Auction' }, //경매
-  likedCreatedAt : { type: String, default: getCurrentTime }
 })
 
 export default model("Like", likeSchema, "likes")
