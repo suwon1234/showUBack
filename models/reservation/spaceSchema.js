@@ -1,5 +1,6 @@
 import { model, Schema } from "mongoose";
-import { getCurrentTime } from "../../utils/utils";
+import { getCurrentTime } from "../../utils/utils.js";
+
 
 const spaceSchema = new Schema({
   id: { type: Number, required: true }, // 고유 ID
