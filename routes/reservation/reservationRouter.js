@@ -1,13 +1,16 @@
 import express from "express";
 import {
-  seedReservationData,
+  addReservation,
+  getReservedSpaces,
+  getReservedShows,
   getAllReservations,
-} from "../../controller/reservation/reservationController.js";
+} from "../../controllers/reservation/reservationController.js";
 
 const reservationRouter = express.Router();
 
-reservationRouter.post("/seed", seedReservationData); // 초기 데이터 삽입
-reservationRouter.get("/", getAllReservations); // 모든 Reservation 데이터 조회
-// push 위한 변경처리용
+reservationRouter.post("/add", addReservation); // 결제 내역 저장
+reservationRouter.get("/reserved-spaces/:userId", getReservedSpaces); // 유저가 결제한 공간 내역 조회
+reservationRouter.get("/reserved-shows/:userId", getReservedShows); // 유저가 결제한 공연 내역 조회
+reservationRouter.get("/all", getAllReservations); // 모든 예약 내역 조회
 
 export default reservationRouter;
