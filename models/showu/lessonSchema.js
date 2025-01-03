@@ -4,8 +4,8 @@ import { getCurrentTime } from "../../utils/utils.js";
 const lessonSchema = new Schema ({
     id : { type : Number, unique : true}, // 레슨 고유 번호 (자동생성) 인덱스 
     userId : { type: Schema.Types.ObjectId, ref :"User"}, // 유저 아이디
-    userName : { type: Schema.Types.ObjectId, ref : "User"}, //강사 이름
-    lessonTumbnail : { type : String, required : true}, //썸네일  이미지 경로
+    name : { type: Schema.Types.ObjectId, ref : "User"}, //강사 이름
+    lessonThumbnail : { type : String, required : true}, //썸네일  이미지 경로
     lessonName : { type : String, required : true}, //레슨 이름 
     callTime : { type : String, required: true}, // 응대 가능시간
     category : { type : String, enum:["음악", "연기", "마술"], required : true}, // 레슨 카테고리
@@ -31,7 +31,7 @@ const lessonSchema = new Schema ({
       portfolio3 :{ index : {type : Number}, portfolioTitle : { type : String }, portfolioURL : { type : String  }},
       portfolio4 :{ index : {type : Number}, portfolioTitle : { type : String }, portfolioURL : { type : String  }},
     },
-    media : {
+    medias : {
         media1 :  { index : {type : Number}, mediaURL :  { type : String },},
         media2 :  { index : {type : Number}, mediaURL :  { type : String },},
         media3 :  { index : {type : Number}, mediaURL :  { type : String },},
