@@ -5,7 +5,7 @@ const lessonListData = [
     {
         id : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
@@ -20,7 +20,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 14년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -46,8 +45,7 @@ const lessonListData = [
                                 periodMonth : "1년년",
                                 recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
                             },    
-                },
-            ], 
+                }, 
             education : {
                 educationTitle : "중앙대학교 첨단영상대학원",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -116,7 +114,7 @@ const lessonListData = [
     {
         id : 2,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -131,7 +129,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -158,7 +155,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -227,7 +223,7 @@ const lessonListData = [
     {
         id : 3,
         userId :"677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -242,7 +238,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -269,7 +264,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -337,7 +331,7 @@ const lessonListData = [
     {
         id : 4,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -352,7 +346,7 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
+
                     {
                         record1 :
                             {
@@ -379,7 +373,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -444,7 +437,7 @@ const lessonListData = [
     {
         id : 5,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg',
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
@@ -459,7 +452,7 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 14년", //이력
             recode : 
-                [
+
                     {
                         record1 :
                             {
@@ -486,7 +479,6 @@ const lessonListData = [
                                 recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
                             },    
                 },
-            ], 
             education : {
                 educationTitle : "중앙대학교 첨단영상대학원",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -555,7 +547,7 @@ const lessonListData = [
     {
         id : 6,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -570,7 +562,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -597,7 +588,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -666,7 +656,7 @@ const lessonListData = [
     {
         id : 7,
         userId :"677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -681,7 +671,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -708,7 +697,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -776,7 +764,7 @@ const lessonListData = [
     {
         id : 8,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -791,7 +779,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -818,7 +805,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -885,7 +871,7 @@ const lessonListData = [
     {
         id : 9,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
@@ -900,7 +886,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 14년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -927,7 +912,6 @@ const lessonListData = [
                                 recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
                             },    
                 },
-            ], 
             education : {
                 educationTitle : "중앙대학교 첨단영상대학원",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -996,7 +980,7 @@ const lessonListData = [
     {
         id : 10,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -1011,7 +995,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -1038,7 +1021,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -1107,7 +1089,7 @@ const lessonListData = [
     {
         id : 11,
         userId :"677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -1122,7 +1104,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -1149,7 +1130,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -1217,7 +1197,7 @@ const lessonListData = [
     {
         id : 12,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -1232,7 +1212,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -1259,7 +1238,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -1326,7 +1304,7 @@ const lessonListData = [
     {
         id : 13,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail :'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e',
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
@@ -1341,7 +1319,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 14년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -1368,7 +1345,6 @@ const lessonListData = [
                                 recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
                             },    
                 },
-            ], 
             education : {
                 educationTitle : "중앙대학교 첨단영상대학원",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -1437,7 +1413,7 @@ const lessonListData = [
     {
         id : 14,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -1452,7 +1428,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -1479,7 +1454,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -1548,7 +1522,7 @@ const lessonListData = [
     {
         id : 15,
         userId :"677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -1563,7 +1537,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -1590,7 +1563,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -1658,7 +1630,7 @@ const lessonListData = [
     {
         id : 16,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -1673,7 +1645,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -1700,7 +1671,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -1767,7 +1737,7 @@ const lessonListData = [
     {
         id : 17,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
@@ -1782,7 +1752,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 14년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -1809,7 +1778,6 @@ const lessonListData = [
                                 recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
                             },    
                 },
-            ], 
             education : {
                 educationTitle : "중앙대학교 첨단영상대학원",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -1878,7 +1846,7 @@ const lessonListData = [
     {
         id : 18,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -1893,7 +1861,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -1920,7 +1887,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -1989,7 +1955,7 @@ const lessonListData = [
     {
         id : 19,
         userId :"677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2004,7 +1970,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -2031,7 +1996,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -2099,7 +2063,7 @@ const lessonListData = [
     {
         id : 20,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2114,7 +2078,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -2141,7 +2104,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -2208,7 +2170,7 @@ const lessonListData = [
     {
         id : 21,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
@@ -2223,7 +2185,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 14년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -2250,7 +2211,6 @@ const lessonListData = [
                                 recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
                             },    
                 },
-            ], 
             education : {
                 educationTitle : "중앙대학교 첨단영상대학원",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -2319,7 +2279,7 @@ const lessonListData = [
     {
         id : 22,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2334,7 +2294,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -2361,7 +2320,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -2430,7 +2388,7 @@ const lessonListData = [
     {
         id : 23,
         userId :"677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2445,7 +2403,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -2472,7 +2429,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -2540,7 +2496,7 @@ const lessonListData = [
     {
         id : 24,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2555,7 +2511,6 @@ const lessonListData = [
         history : { //경력
             personal : "총 경력 15년", //이력
             recode : 
-                [
                     {
                         record1 :
                             {
@@ -2582,7 +2537,6 @@ const lessonListData = [
                                 recordedSummary : "前) jyp 보컬 트레이너"
                             },    
                 },
-            ], //경력
             education : {
                 educationTitle : "한국예술종합학교",
                 educationPeriod : "2022년 3월 ~ 현재",
@@ -3197,7 +3151,7 @@ const lessonReservationData = [
       id : 1,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3208,7 +3162,7 @@ const lessonReservationData = [
       id : 2,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3219,7 +3173,7 @@ const lessonReservationData = [
       id : 3,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3230,7 +3184,7 @@ const lessonReservationData = [
       id : 4,
       classId : 2,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3241,7 +3195,7 @@ const lessonReservationData = [
       id : 5,
       classId : 2,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3252,7 +3206,7 @@ const lessonReservationData = [
       id : 6,
       classId : 3,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3263,7 +3217,7 @@ const lessonReservationData = [
       id : 7,
       classId : 4,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3274,7 +3228,7 @@ const lessonReservationData = [
       id : 8,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3285,7 +3239,7 @@ const lessonReservationData = [
       id : 9,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3296,7 +3250,7 @@ const lessonReservationData = [
       id : 10,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3307,7 +3261,7 @@ const lessonReservationData = [
       id : 11,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3318,7 +3272,7 @@ const lessonReservationData = [
       id : 12,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3329,7 +3283,7 @@ const lessonReservationData = [
       id : 13,
       classId : 4,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3340,7 +3294,7 @@ const lessonReservationData = [
       id : 14,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3351,7 +3305,7 @@ const lessonReservationData = [
       id : 15,
       classId : 1,
       userId : "677630ae686ab95419a5a1dc",
-      userName : "홍길동",
+      name : "홍길동",
       phoneNumber : "010-9999-9999",
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3362,7 +3316,7 @@ const lessonReservationData = [
         id : 16,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3373,7 +3327,7 @@ const lessonReservationData = [
         id : 17,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3384,7 +3338,7 @@ const lessonReservationData = [
         id : 18,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3395,7 +3349,7 @@ const lessonReservationData = [
         id : 19,
         classId : 2,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3406,7 +3360,7 @@ const lessonReservationData = [
         id : 20,
         classId : 2,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3417,7 +3371,7 @@ const lessonReservationData = [
         id : 21,
         classId : 3,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3428,7 +3382,7 @@ const lessonReservationData = [
         id : 22,
         classId : 4,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3439,7 +3393,7 @@ const lessonReservationData = [
         id : 23,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3450,7 +3404,7 @@ const lessonReservationData = [
         id : 24,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3461,7 +3415,7 @@ const lessonReservationData = [
         id : 25,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3472,7 +3426,7 @@ const lessonReservationData = [
         id : 26,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3483,7 +3437,7 @@ const lessonReservationData = [
         id : 27,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3494,7 +3448,7 @@ const lessonReservationData = [
         id :28,
         classId : 4,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3505,7 +3459,7 @@ const lessonReservationData = [
         id :29,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3516,7 +3470,7 @@ const lessonReservationData = [
         id : 30,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3527,7 +3481,7 @@ const lessonReservationData = [
         id : 31,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3538,7 +3492,7 @@ const lessonReservationData = [
         id : 32,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3549,7 +3503,7 @@ const lessonReservationData = [
         id : 33,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3560,7 +3514,7 @@ const lessonReservationData = [
         id : 34,
         classId : 2,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3571,7 +3525,7 @@ const lessonReservationData = [
         id : 35,
         classId : 2,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3582,7 +3536,7 @@ const lessonReservationData = [
         id : 36,
         classId : 3,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3593,7 +3547,7 @@ const lessonReservationData = [
         id : 37,
         classId : 4,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3604,7 +3558,7 @@ const lessonReservationData = [
         id : 38,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3615,7 +3569,7 @@ const lessonReservationData = [
         id : 39,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3626,7 +3580,7 @@ const lessonReservationData = [
         id : 40,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3637,7 +3591,7 @@ const lessonReservationData = [
         id : 41,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3648,7 +3602,7 @@ const lessonReservationData = [
         id : 42,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3659,7 +3613,7 @@ const lessonReservationData = [
         id : 43,
         classId : 4,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3670,7 +3624,7 @@ const lessonReservationData = [
         id : 44,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3681,7 +3635,7 @@ const lessonReservationData = [
         id : 45,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3692,7 +3646,7 @@ const lessonReservationData = [
         id : 46,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3703,7 +3657,7 @@ const lessonReservationData = [
         id : 47,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3714,7 +3668,7 @@ const lessonReservationData = [
         id : 48,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3725,7 +3679,7 @@ const lessonReservationData = [
         id : 49,
         classId : 2,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3736,7 +3690,7 @@ const lessonReservationData = [
         id : 50,
         classId : 2,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3747,7 +3701,7 @@ const lessonReservationData = [
         id : 51,
         classId : 3,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3758,7 +3712,7 @@ const lessonReservationData = [
         id : 52,
         classId : 4,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3769,7 +3723,7 @@ const lessonReservationData = [
         id : 53,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3780,7 +3734,7 @@ const lessonReservationData = [
         id : 54,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3791,7 +3745,7 @@ const lessonReservationData = [
         id : 55,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3802,7 +3756,7 @@ const lessonReservationData = [
         id : 56,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3813,7 +3767,7 @@ const lessonReservationData = [
         id : 57,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3824,7 +3778,7 @@ const lessonReservationData = [
         id : 58,
         classId : 4,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3835,7 +3789,7 @@ const lessonReservationData = [
         id : 59,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
@@ -3846,7 +3800,7 @@ const lessonReservationData = [
         id : 60,
         classId : 1,
         userId : "677630ae686ab95419a5a1dc",
-        userName : "홍길동",
+        name : "홍길동",
         phoneNumber : "010-9999-9999",
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
