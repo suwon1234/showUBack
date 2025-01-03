@@ -6,7 +6,9 @@ const vodData =[
     time : "121",
     genre :"범죄",
     year : "2017",
-    mainImage : "/images/movie/moive3.jpg"
+    mainImage : "/images/movie/moive3.jpg",
+    likes : 1,
+    likedUsers : "677630ae686ab95419a5a1dc"
   },
   {
     title : "부산행",
@@ -15,7 +17,9 @@ const vodData =[
     time : "118",
     genre :"액션",
     year : "2016",
-    mainImage : "/images/movie/moive4.jpg"
+    mainImage : "/images/movie/moive4.jpg",
+    likes : 1,
+    likedUsers : "677630ae686ab95419a5a1dc"
   },
   {
     title : "수리남",
@@ -24,7 +28,9 @@ const vodData =[
     time : "120",
     genre :"범죄",
     year : "2017",
-    mainImage : "/images/movie/moive5.jpg"
+    mainImage : "/images/movie/moive5.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "스마일",
@@ -33,7 +39,9 @@ const vodData =[
     time : "115",
     genre :"공포",
     year : "2022",
-    mainImage : "/images/movie/moive6.jpg"
+    mainImage : "/images/movie/moive6.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "엑시트",
@@ -42,7 +50,9 @@ const vodData =[
     time : "103",
     genre :"코미디",
     year : "2019",
-    mainImage : "/images/movie/moive7.jpg"
+    mainImage : "/images/movie/moive7.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "영웅",
@@ -51,7 +61,9 @@ const vodData =[
     time : "121",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/movie/moive8.jpg"
+    mainImage : "/images/movie/moive8.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "오디션",
@@ -60,7 +72,9 @@ const vodData =[
     time : "115",
     genre :"공포",
     year : "1999",
-    mainImage : "/images/movie/moive9.jpg"
+    mainImage : "/images/movie/moive9.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "웡카",
@@ -69,7 +83,9 @@ const vodData =[
     time : "121",
     genre :"뮤지컬",
     year : "2023",
-    mainImage : "/images/movie/moive10.jpg"
+    mainImage : "/images/movie/moive10.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "10센치",
@@ -78,7 +94,9 @@ const vodData =[
     time : "3",
     genre :"음악",
     year : "2023",
-    mainImage : "/images/music/music.jpg"
+    mainImage : "/images/music/music.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   
   {
@@ -88,7 +106,9 @@ const vodData =[
     time : "3",
     genre :"음악",
     year : "2020",
-    mainImage : "/images/music/music2.jpg"
+    mainImage : "/images/music/music2.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   
   {
@@ -98,7 +118,9 @@ const vodData =[
     time : "3",
     genre :"음악",
     year : "2021",
-    mainImage : "/images/music/music3.jpg"
+    mainImage : "/images/music/music3.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   
   {
@@ -108,7 +130,9 @@ const vodData =[
     time : "3",
     genre :"음악",
     year : "2024",
-    mainImage : "/images/music/music4.jpg"
+    mainImage : "/images/music/music4.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   
   {
@@ -118,7 +142,9 @@ const vodData =[
     time : "3",
     genre :"음악",
     year : "2022",
-    mainImage : "/images/music/music5.jpg"
+    mainImage : "/images/music/music5.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "다비치",
@@ -127,7 +153,9 @@ const vodData =[
     time : "3",
     genre :"음악",
     year : "2022",
-    mainImage : "/images/music/music6.jpg"
+    mainImage : "/images/music/music6.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "타이틀1",
@@ -136,7 +164,9 @@ const vodData =[
     time : "60",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/community/musical-1.jpg"
+    mainImage : "/images/community/musical-1.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "타이틀2",
@@ -145,7 +175,9 @@ const vodData =[
     time : "60",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/community/musical-2.jpg"
+    mainImage : "/images/community/musical-2.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "타이틀3",
@@ -154,7 +186,9 @@ const vodData =[
     time : "60",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/community/musical-3.jpg"
+    mainImage : "/images/community/musical-3.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "타이틀4",
@@ -163,7 +197,9 @@ const vodData =[
     time : "60",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/community/musical-4.jpg"
+    mainImage : "/images/community/musical-4.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "타이틀5",
@@ -172,7 +208,9 @@ const vodData =[
     time : "60",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/community/musical-5.jpg"
+    mainImage : "/images/community/musical-5.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "타이틀6",
@@ -181,7 +219,9 @@ const vodData =[
     time : "60",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/community/musical-6.jpg"
+    mainImage : "/images/community/musical-6.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "타이틀7",
@@ -190,7 +230,9 @@ const vodData =[
     time : "60",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/community/musical-7.jpg"
+    mainImage : "/images/community/musical-7.jpg",
+    likes : 0,
+    likedUsers : ""
   },
   {
     title : "타이틀8",
@@ -199,7 +241,9 @@ const vodData =[
     time : "60",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/community/musical-8.jpg"
+    mainImage : "/images/community/musical-8.jpg",
+    likes : 0,
+    likedUsers : ""
   }
   
   
@@ -209,25 +253,27 @@ const vodData =[
 const showuvodData=[
 
   {
-    uploaduser : "677624c658aa24731b3e37ba",
+    uploaduser : "677630ae686ab95419a5a1dc ",
     title : "바이올린의 신",
     detail : "신들린 바이올린 연주",
     category : "음악",
     themnail : "/images/themnail/themnail1.jpg",
-    videoUrl : "/video/video1.mp4",
+    videoUrl : "/video/video1",
     videoelement : 0,
     videoelement2 : 0,
     review : "없음",
+    openclose : 0
   },
   {
-    uploaduser : "677624c658aa24731b3e37ba",
+    uploaduser : "677630ae686ab95419a5a1dc ",
     title : "바이올린의 신2",
     detail : "신들린 바이올린 연주2",
     category : "음악",
     themnail : "/images/themnail/themnail2.jpg",
-    videoUrl : "/video/video2.mp4",
+    videoUrl : "/video/video2",
     videoelement : 0,
     videoelement2 : 0,
     review : "없음",
+    openclose : 0
   },
 ]
