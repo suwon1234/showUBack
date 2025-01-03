@@ -1,14 +1,16 @@
 import express from 'express';
-import { getCommentsByUser } from '../../controller/mypage/mypageController.js';
-import communityRouter from '../community/communityRouter.js';
 import passport from 'passport';
+import { myActivePost, likeMd } from '../../controller/mypage/mypageController.js';
 
 
 const mypageRouter = express.Router()
 
 
-// 커뮤니티 댓글 목록 
-communityRouter.post("/comments/user", passport.authenticate('jwt', { session : false }) ,getCommentsByUser);
+// 커뮤니티 작성한 글 목록 
+mypageRouter.post("/my-active/post/:id", passport.authenticate('jwt', { session: false }), myActivePost)
+
+// 찜-MD
+mypageRouter.get("/like/md", passport.authenticate('jwt', { session: false }), likeMd)
 
 
 export default mypageRouter
