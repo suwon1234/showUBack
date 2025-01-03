@@ -2,7 +2,7 @@ import { Schema,model } from "mongoose";
 
 
 const vodShowuVideoInputSchema = new Schema({
-  videoID : {type:Schema.Types.ObjectId,ref : 'VodShowuVideo'}, //해당 영상의 ID
+  videoID : {type:Schema.Types.ObjectId,ref : 'ShowuVideo'}, //해당 영상의 ID
   videoUrl : {type:String,require:true}, // 영상 경로 
   usersId :{type :Schema.Types.ObjectId, ref : 'User'}, // 자신의 ID 
   myComment : {type : String,require:true}, // 내가 쓴 글
