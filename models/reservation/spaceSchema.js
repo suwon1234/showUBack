@@ -1,5 +1,6 @@
 import { model, Schema } from "mongoose";
-import { getCurrentTime } from "../../utils/utils";
+import { getCurrentTime } from "../../utils/utils.js";
+
 
 const spaceSchema = new Schema({
   id: { type: Number, required: true }, // 고유 ID
@@ -9,7 +10,7 @@ const spaceSchema = new Schema({
   pricePerHour: { type: Number, required: true }, // 시간당 가격 (숫자형)
   pricePerDay: { type: Number, required: true }, // 하루 가격 (숫자형)
   img: { type: String, required: true }, // 이미지 URL
-  description: { type: String, required: true }, // 설명
+  description: [{ type: String, required: true }], // 설명
   amenities: [{ type: String, required: true }], // 편의시설
   additionalImages: [{ type: String }], // 추가 이미지 URL 배열
   createdAt: { type: String, default: getCurrentTime }, // 생성 시간
