@@ -9,6 +9,10 @@ import Space from './reservation/spaceSchema.js'
 import Show from './reservation/showSchema.js'
 import Lesson from './showu/lessonSchema.js'
 import Team from './showu/teamSchema.js'
+import Like from './reservation/likeSchema.js';
+import Reservation from './reservation/reservationSchema.js';
+import { format, addDays } from "date-fns";
+import mongoose from 'mongoose';
 
 connect()
 
@@ -1459,6 +1463,89 @@ connect()
 //   },
 // )
 
+// 찜 - likeSchema.js
+// const likeData = await Like.create(
+//   {
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     spaceId: "6777b14b45bae57603a94a02", // 삽입된 Space ObjectId-1
+//     showId: null,
+//     createdAt: new Date().toISOString(),
+//   },
+//   {
+//     user: "677630ae686ab95419a5a1dc",
+//     spaceId: "6777b14b45bae57603a94a03", // 삽입된 Space ObjectId-2
+//     showId: null,
+//     createdAt: new Date().toISOString(),
+//   },
+//   {
+//     user: "677630ae686ab95419a5a1dc",
+//     spaceId: null,
+//     showId: "6777b14b45bae57603a94a08", // 삽입된 Show ObjectId-1
+//     createdAt: new Date().toISOString(),
+//   },
+//   {
+//     user: "677630ae686ab95419a5a1dc",
+//     spaceId: null,
+//     showId: "6777b14b45bae57603a94a0f", // 삽입된 Show ObjectId-2
+//     createdAt: new Date().toISOString(),
+//   },
+// );
+
+// 예약 - reservationSchema.js
+// const now = new Date();
+// const reservationData = await Reservation.create(
+//   {
+//     id: 1,
+//     spaceId: "6777b14b45bae57603a94a02", // 삽입된 Space ObjectId-1
+//     showId: null,
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     reservationDate: format(addDays(now, 1), "yyyy-MM-dd"), // 1일 후 예약 날짜
+//     reservationTime: format(new Date(now.setHours(10, 0)), "HH:mm:ss"), // 10:00 AM
+//     totalAmount: 300000, // 예시 총 금액
+//     discountsApplied: ["Early Bird Discount"], // 예시 적용된 할인 정보
+//     createdAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//     updatedAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//   },
+//   {
+//     id: 2,
+//     spaceId: "6777b14b45bae57603a94a03", // 삽입된 Space ObjectId-2
+//     showId: null,
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     reservationDate: format(addDays(now, 2), "yyyy-MM-dd"), // 2일 후 예약 날짜
+//     reservationTime: format(new Date(now.setHours(14, 0)), "HH:mm:ss"), // 2:00 PM
+//     totalAmount: 450000, // 예시 총 금액
+//     discountsApplied: ["Member Discount"], // 예시 적용된 할인 정보
+//     createdAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//     updatedAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//   },
+//   {
+//     id: 3,
+//     spaceId: null,
+//     showId: "6777b14b45bae57603a94a08", // 삽입된 Show ObjectId-1
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     reservationDate: format(addDays(now, 3), "yyyy-MM-dd"), // 3일 후 예약 날짜
+//     reservationTime: format(new Date(now.setHours(18, 0)), "HH:mm:ss"), // 6:00 PM
+//     totalAmount: 80000, // 예시 총 금액
+//     discountsApplied: ["Holiday Special"], // 예시 적용된 할인 정보
+//     createdAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//     updatedAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//   },
+//   {
+//     id: 4,
+//     spaceId: null,
+//     showId: "6777b14b45bae57603a94a0f", // 삽입된 Show ObjectId-2
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     reservationDate: format(addDays(now, 4), "yyyy-MM-dd"), // 4일 후 예약 날짜
+//     reservationTime: format(new Date(now.setHours(17, 0)), "HH:mm:ss"), // 5:00 PM
+//     totalAmount: 95000, // 예시 총 금액
+//     discountsApplied: ["Student Discount"], // 예시 적용된 할인 정보
+//     createdAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//     updatedAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//   },
+// )
+
+
+
 
 //vodShowuVideo
 // const vodData = await vodShowuVideo.create(
@@ -1740,117 +1827,118 @@ connect()
 // )
 
 const lessonListData = await Lesson.create(
-//   {
-//       id : 1,
-//       userId : "677630ae686ab95419a5a1dc",
-//       userName : "677630ae686ab95419a5a1dc",
-//       lessonTumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
-//       lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
-//       callTime : "오전12시 - 오전12시", 
-//       category : "연기", 
-//       lessonAddress : {
-//           addressSi : "서울시",
-//           addressGuGun : "서초구",
-//           addressDongLi : "",
-//       },
-//       lessonAddressDetail : "서울시 서초구", 
-//       lessonDetail : "끊임없는 기획사 오디션 / 매체 연기 / 영화 제작 및 배우 포트폴리오 전문1개월 마다, 배우 포트폴리오 준비를 위한 단편영화 제작을 함께합니다.", // 레슨 상세설명
-//       history : { //경력
-//           personal : "총 경력 14년", //이력
-//           recode : 
-//               [
-//                   {
-//                       record1 :
-//                           {
-//                               recordIndex : 1,
-//                               recordHistoryTitle : "前) 씨앤씨스쿨 연기학원" ,
-//                               periodDetails : "2017년 7월 ~ 2017년 12월",
-//                               periodMonth : "6개월",
-//                               recordedSummary : "前) 씨앤씨스쿨 연기학원 : 매체 연기강사"
-//                           },
-//                       record2 :
-//                           {
-//                               recordIndex : 2,
-//                               recordHistoryTitle : "前) 평택 대학교 연극영화과 특강" ,
-//                               periodDetails : "2018년 1월 - 2018년 1월",
-//                               periodMonth : "1개월",
-//                               recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
-//                           },
-//                       record3 :
-//                           {
-//                               recordIndex : 3,
-//                               recordHistoryTitle : "前) 기획사 제이티 코리아 엔터테인먼트" ,
-//                               periodDetails : "2015년 1월 - 2015년 12월",
-//                               periodMonth : "1년년",
-//                               recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
-//                           },    
-//               },
-//           ], 
-//           education : {
-//               educationTitle : "중앙대학교 첨단영상대학원",
-//               educationPeriod : "2022년 3월 ~ 현재",
-//               educationSubject : "영화 제작"
-//           } //학력
-//       },
+  {
+      id : 1,
+      userId : "677630ae686ab95419a5a1dc",
+      userName : "677630ae686ab95419a5a1dc",
+      lessonTumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+      lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
+      callTime : "오전12시 - 오전12시", 
+      category : "연기", 
+      lessonAddress : {
+          addressSi : "서울시",
+          addressGuGun : "서초구",
+          addressDongLi : "",
+      },
+      lessonAddressDetail : "서울시 서초구", 
+      lessonDetail : "끊임없는 기획사 오디션 / 매체 연기 / 영화 제작 및 배우 포트폴리오 전문1개월 마다, 배우 포트폴리오 준비를 위한 단편영화 제작을 함께합니다.", // 레슨 상세설명
+      history : { //경력
+          personal : "총 경력 14년", //이력
+          recode : 
+              [
+                  {
+                      record1 :
+                          {
+                              recordIndex : 1,
+                              recordHistoryTitle : "前) 씨앤씨스쿨 연기학원" ,
+                              periodDetails : "2017년 7월 ~ 2017년 12월",
+                              periodMonth : "6개월",
+                              recordedSummary : "前) 씨앤씨스쿨 연기학원 : 매체 연기강사"
+                          },
+                      record2 :
+                          {
+                              recordIndex : 2,
+                              recordHistoryTitle : "前) 평택 대학교 연극영화과 특강" ,
+                              periodDetails : "2018년 1월 - 2018년 1월",
+                              periodMonth : "1개월",
+                              recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
+                          },
+                      record3 :
+                          {
+                              recordIndex : 3,
+                              recordHistoryTitle : "前) 기획사 제이티 코리아 엔터테인먼트" ,
+                              periodDetails : "2015년 1월 - 2015년 12월",
+                              periodMonth : "1년년",
+                              recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
+                          },    
+              },
+          ], 
+          education : {
+              educationTitle : "중앙대학교 첨단영상대학원",
+              educationPeriod : "2022년 3월 ~ 현재",
+              educationSubject : "영화 제작"
+          } //학력
+      },
 
-//   portfolios : {
-//       portfolio1 : {
-//               index : 1,
-//               portfolioTitle : "매채 연기레슨",
-//               portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
-//               },
-//       portfolio2 :{
-//               index : 2, //고유번호
-//               portfolioTitle : "매채 연기레슨",
-//               portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
-//               },
-//       portfolio3 :{
-//               index : 3, //고유번호
-//               portfolioTitle : "매채 연기레슨",
-//               portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
-//               },
-//       portfolio4 :{
-//               index : 4, //고유번호
-//               portfolioTitle : "매채 연기레슨",
-//               portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
-//               },
-//           },
+  portfolios : {
+      portfolio1 : {
+              index : 1,
+              portfolioTitle : "매채 연기레슨",
+              portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+              },
+      portfolio2 :{
+              index : 2, //고유번호
+              portfolioTitle : "매채 연기레슨",
+              portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+              },
+      portfolio3 :{
+              index : 3, //고유번호
+              portfolioTitle : "매채 연기레슨",
+              portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+              },
+      portfolio4 :{
+              index : 4, //고유번호
+              portfolioTitle : "매채 연기레슨",
+              portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+              },
+          },
 
-//   medias : {
-// media1 :  {
-//           index : 1,
-//           mediaURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg'
-//         },
-// media2 :  {
-//           index : 2,
-//           mediaURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg"
-//         },
-// media3 :  {
-//           index : 3,
-//           mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
-//         },
-//        },
+  medias : {
+media1 :  {
+          index : 1,
+          mediaURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg'
+        },
+media2 :  {
+          index : 2,
+          mediaURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg"
+        },
+media3 :  {
+          index : 3,
+          mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+        },
+       },
         
 
-//       etcAnnouncement :{
-//        qna1 : {
-//           index : 1,
-//           question : "서비스가 시작되기 전 어떤 절차고 진행하나요?",
-//           answer : "수업 목적 파악(매체 / 입시 / 무대연기) - 목적에 따른 방향 제시 - 수업 - 제작으로 인한 결과물저 또한 레슨을 받았던 시절에 워낙 까다로운 성격 탓인지 선생님을 수도 없이 바꿔왔습니다. 선생님에 대한 중요성과 고민을 너무 잘 알고 있기에, 수강생 또한 편하게 선생님에 대해 고민해 볼 필요성과 중요성을 알고 있습니다."
-//           },
-//        qna2 : {
-//           index : 2,
-//           question : "어떤 서비스를 전문적으로 제공하나요?",
-//           answer : "연기 교육 → 카메라 모니터링 피드백 → 수강생 역할 오디션 → 제작 스탭 섭외 → 독립영화 촬영 → 감독 및 제작자 섭외 후 피드백 → 영화제 제출 저 또한 레슨을 받았던 시절에 워낙 까다로운 성격 탓인지 선생님을 수도 없이 바꿔왔습니다. 선생님에 대한 중요성과 고민을 너무 잘 알고 있기에, 수강생 또한 편하게 선생님에 대해 고민해 볼 필요성과 중 요성을 알고 있습니다. 그렇기에 수강생만큼 열심히 참여할 것입니다."
-//           }
-//       },
-//       count : 1000, //조회수
-//       likeCount : 200, //좋아요 수
-//       likeUser : "677630ae686ab95419a5a1dc",
+      etcAnnouncement :{
+       qna1 : {
+          index : 1,
+          question : "서비스가 시작되기 전 어떤 절차고 진행하나요?",
+          answer : "수업 목적 파악(매체 / 입시 / 무대연기) - 목적에 따른 방향 제시 - 수업 - 제작으로 인한 결과물저 또한 레슨을 받았던 시절에 워낙 까다로운 성격 탓인지 선생님을 수도 없이 바꿔왔습니다. 선생님에 대한 중요성과 고민을 너무 잘 알고 있기에, 수강생 또한 편하게 선생님에 대해 고민해 볼 필요성과 중요성을 알고 있습니다."
+          },
+       qna2 : {
+          index : 2,
+          question : "어떤 서비스를 전문적으로 제공하나요?",
+          answer : "연기 교육 → 카메라 모니터링 피드백 → 수강생 역할 오디션 → 제작 스탭 섭외 → 독립영화 촬영 → 감독 및 제작자 섭외 후 피드백 → 영화제 제출 저 또한 레슨을 받았던 시절에 워낙 까다로운 성격 탓인지 선생님을 수도 없이 바꿔왔습니다. 선생님에 대한 중요성과 고민을 너무 잘 알고 있기에, 수강생 또한 편하게 선생님에 대해 고민해 볼 필요성과 중 요성을 알고 있습니다. 그렇기에 수강생만큼 열심히 참여할 것입니다."
+          }
+      },
+      count : 1000, //조회수
+      likeCount : 200, //좋아요 수
+      likeUser : "677630ae686ab95419a5a1dc",
+    
       // createAt : {type : String, default : getCurrentTime},
       // updateAt : {type : String, default : getCurrentTime},
 
-  // },
+  },)
 //   {
 //       id : 2,
 //       userId : "677630ae686ab95419a5a1dc",
@@ -4384,35 +4472,35 @@ const lessonListData = await Lesson.create(
 //       // updateAt : {type : String, default : getCurrentTime},
 
 //   },
-)
+// )
 
-const teamListData = await Team.create(
-  {
-      id : 1,
-      userId : "677630ae686ab95419a5a1dc",
-      teamName : "아마추어 연기 연습(분당)",
-      teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
-      category : "연기",
-      meetDay : "월",
-      meetPeriod : {
-          time :"낮",
-          timeDetail : "12시-15시"
-      }, 
-      ages : "20대",
-      gender : "남녀무관",
-      averageSkill :"아마추어",
-      teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-      activityPeriod : {
-          start : "24-11-16", //팀 활동 시작일
-          // end : { type : Date, required : true }, //팀 활동 종료일
-      },
-      status: "매칭 대기", //팀 매칭 승인 상태
-      count : 300, 
-      likeCount : 30,
-      likeUser : "677630ae686ab95419a5a1dc",
-      // createAt : {type: String, default :getCurrentTime },
-      // updateAt : {type : String, default : getCurrentTime},
-  },)
+// const teamListData = await Team.create(
+//   {
+//       id : 1,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(분당)",
+//       teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+//       category : "연기",
+//       meetDay : "월",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"아마추어",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-11-16", //팀 활동 시작일
+//           // end : { type : Date, required : true }, //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       // createAt : {type: String, default :getCurrentTime },
+//       // updateAt : {type : String, default : getCurrentTime},
+//   },)
 
 
 
@@ -4423,5 +4511,7 @@ const teamListData = await Team.create(
 // console.log(showuvodData)
 // console.log(spaceData)
 // console.log(showData)
-// console.log(lessonListData)
-console.log(teamListData)
+console.log(lessonListData)
+// console.log(teamListData)
+// console.log(likeData)
+// console.log(reservationData)
