@@ -12,8 +12,10 @@ const showSchema = new Schema({
     R: { type: String, required: true }, // R석 가격
     S: { type: String, required: true }, // S석 가격
   },
+  type: { type: String, required: true }, // 공연 유형 (예: "일반예매", "추가 좌석 티켓오픈")
   discounts: [{ type: String, required: true }], // 할인 정보
   img: { type: String, required: true }, // 이미지 URL
+  detailImage: { type: String, required: true }, // 상세 이미지 URL 추가
   cast: [
     {
       name: { type: String, required: true }, // 배우 이름
@@ -25,3 +27,4 @@ const showSchema = new Schema({
 });
 
 export default model("Show", showSchema, "shows");
+
