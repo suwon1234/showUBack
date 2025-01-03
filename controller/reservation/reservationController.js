@@ -84,4 +84,26 @@ const getReservedShows = async (req, res) => {
   }
 };
 
-export { addReservation, getReservedSpaces, getReservedShows };
+// 모든 예약 내역 조회 (추가)
+const getAllReservations = async (req, res) => {
+  try {
+    const reservations = await Reservation.find()
+      .populate("spaceId")
+      .populate("showId");
+    res.status(200).json(reservations);
+  } catch (error) {
+    res
+      .status(500)
+      .json({
+        message: "모든 예약 내역 조회 중 오류 발생",
+        error: error.message,
+      });
+  }
+};
+
+export {
+  addReservation,
+  getReservedSpaces,
+  getReservedShows,
+  getAllReservations,
+};
