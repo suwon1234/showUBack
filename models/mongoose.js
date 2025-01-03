@@ -10,7 +10,7 @@ connect()
 
 const communityData = await Community.create(
   {
-    UserId: "677624c658aa24731b3e37ba",  // 더미 데이터용 아이디 회원 가입된 아이디로 강제 부여
+    UserId: "677630ae686ab95419a5a1dc",  // 더미 데이터용 아이디 회원 가입된 아이디로 강제 부여
     Writefile: "-",
     title: "타이틀1",
     category: "뮤지컬",
@@ -19,7 +19,7 @@ const communityData = await Community.create(
     imageUrl: "/images/community/musical-1.jpg",
   },
   {
-    UserId: "677624c658aa24731b3e37ba",
+    UserId: "677630ae686ab95419a5a1dc",
     Writefile: "-",
     title: "타이틀2",
     description: "설명2",
@@ -28,7 +28,7 @@ const communityData = await Community.create(
     imageUrl: "/images/community/show-1.jpg",
   },
   {
-    UserId: "677624c658aa24731b3e37ba",
+    UserId: "677630ae686ab95419a5a1dc",
     Writefile: "-",
     title: "타이틀3",
     description: "설명3",
@@ -37,7 +37,7 @@ const communityData = await Community.create(
     imageUrl: "/images/community/band-1.jpg",
   },
   {
-    UserId: "677624c658aa24731b3e37ba",
+    UserId: "677630ae686ab95419a5a1dc",
     Writefile: "-",
     title: "타이틀4",
     description: "설명4",
@@ -46,7 +46,7 @@ const communityData = await Community.create(
     imageUrl: "/images/community/movie-1.jpg",
   },
   {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀5",
       description: "설명5",
@@ -55,7 +55,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/musical-2.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀6",
       description: "설명6",
@@ -64,7 +64,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/theater-1.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀7",
       description: "설명7",
@@ -73,7 +73,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/musical-3.jpg"
     },
     {
-      UserId:"677624c658aa24731b3e37ba",
+      UserId:"677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀8",
       description: "설명8",
@@ -82,7 +82,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/musical-4.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀9",
       description: "설명9",
@@ -91,7 +91,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/musical-5.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀10",
       description: "설명",
@@ -100,7 +100,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/theater-2.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀11",
       description: "설명",
@@ -109,7 +109,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/theater-3.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀12",
       description: "설명",
@@ -118,7 +118,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/movie-2.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀13",
       description: "설명",
@@ -127,7 +127,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/show-2.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀14",
       description: "설명",
@@ -136,7 +136,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/show-3.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀15",
       description: "설명",
@@ -145,7 +145,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/musical-6.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀16",
       description: "설명",
@@ -154,7 +154,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/movie-3.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀17",
       description: "설명",
@@ -163,7 +163,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/band-2.jpg"
     },
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀18",
       description: "설명",
@@ -173,7 +173,7 @@ const communityData = await Community.create(
     },
     
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀19",
       description: "설명",
@@ -182,7 +182,7 @@ const communityData = await Community.create(
       imageUrl: "/images/community/musical-7.jpg"
     },    
     {
-      UserId: "677624c658aa24731b3e37ba",
+      UserId: "677630ae686ab95419a5a1dc",
       Writefile: "-",
       title: "타이틀20",
       description: "설명",
