@@ -4,7 +4,7 @@ import {
   getReservedSpaces,
   getReservedShows,
   getAllReservations,
-} from "../../controllers/reservation/reservationController.js";
+} from "../../controller/reservation/reservationController.js";
 
 const reservationRouter = express.Router();
 
