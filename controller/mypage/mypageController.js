@@ -1,4 +1,5 @@
 import Community from "../../models/community/communitySchema.js";
+import Auction from "../../models/shop/auctionSchema.js";
 import Md from "../../models/shop/mdSchema.js";
 import Like from "../../models/users/likeSchema.js";
 
@@ -58,4 +59,36 @@ const likeMd = async (req, res) => {
 }
 
 
-export { myActivePost, likeMd }
+// 경매 찜한 상품 내역 불러오기
+const likeAuction= async (req, res) => {
+  const userId = req.user._id;
+  console.log("로그인한 사용자: ", userId)
+
+  try {
+    const likedAuctionList = await Auction.find({ isHearted : userId });
+    console.log("찜한 경매 리스트 : ", likedAuctionList);
+
+     const likedAuction = likedAuctionList.map((like) => ({
+      auctionName : like.auctionName,
+      image : like.image,
+      count : like.count,
+      time : like.time
+     }))
+
+    return res.status(200).json({
+      foundLikeAuctoinSuccess : true,
+      message : "성공적으로 찜한 경매를 가져왔습니다.",
+      likedAuction : likedAuction
+    })
+
+  } catch (error) {
+    return res.status(500).json({
+      foundLikeAuctoinSuccess : false,
+      message : "찜한 경매를 가져오는데 실패했습니다.",
+    })
+    
+  }
+}
+
+
+export { myActivePost, likeMd, likeAuction }

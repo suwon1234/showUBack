@@ -1,6 +1,6 @@
 import express from 'express';
 import passport from 'passport';
-import { myActivePost, likeMd } from '../../controller/mypage/mypageController.js';
+import { myActivePost, likeMd, likeAuction } from '../../controller/mypage/mypageController.js';
 
 
 const mypageRouter = express.Router()
@@ -11,6 +11,8 @@ mypageRouter.post("/my-active/post/:id", passport.authenticate('jwt', { session:
 
 // 찜-MD
 mypageRouter.get("/like/md", passport.authenticate('jwt', { session: false }), likeMd)
+// 찜-경매
+mypageRouter.get("/like/auction", passport.authenticate('jwt', { session : false }), likeAuction)
 
 
 export default mypageRouter
