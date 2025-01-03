@@ -1,7 +1,7 @@
 import { model, Schema } from "mongoose"
 import { getCurrentTime } from "../../utils/utils.js";
 
-const inquirySchema = new Schema({
+const inquiryListSchema = new Schema({
   mdInquiryId: { type: Schema.Types.ObjectId, ref: 'Md' }, // MD 상품Id 참조
   auctionInquiryId: { type: Schema.Types.ObjectId, ref: 'Auction' }, // 경매 상품Id 참조
   title: { type: String, required: true },
@@ -14,4 +14,4 @@ const inquirySchema = new Schema({
 });
 
 
-export default model("Inquiry", inquirySchema, "inquiry");
+export default model("InquiryList", inquiryListSchema, "inquiryList");

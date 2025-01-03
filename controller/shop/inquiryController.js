@@ -1,4 +1,3 @@
-import Inquiry from "../../models/shop/InquirySchema.js";
 import Md from "../../models/shop/mdSchema.js";
 import Auction from "../../models/shop/auctionSchema.js";
 import { getCurrentTime } from "../../utils/utils.js";
