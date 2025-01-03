@@ -8,7 +8,7 @@ import ShowuVideo from './vod/showuVideoSchema.js';
 
 connect()
 
-// await Md.deleteMany()
+// await .deleteMany()
 
 // const communityData = await Community.create(
 //   {
