@@ -2,10 +2,11 @@ import { Schema, model } from "mongoose";
 import { getCurrentTime } from "../../utils/utils.js";
 
 const teamSchema = new Schema ({
+    id : { type : Number},
     userId : {type: Schema.Types.ObjectId, ref :"User"},
-    // -teamId : { type : Number},
     teamName : {type : String, unique : true},
     teamThumbnail : {type : String},
+    category : {type : String},
     meetDay : {type : String},
     meetPeriod : {
 	    time : { type : String},
@@ -17,8 +18,8 @@ const teamSchema = new Schema ({
     averageSkill : { type : String},
     teamNotice : {type : String},
     activityPeriod : {
-        start : { type : Dape, required : true }, //팀 활동 시작일
-        end : { type : Dape, required : true }, //팀 활동 종료일
+        start : { type : Date, required : true }, //팀 활동 시작일
+        end : { type : Date, required : true }, //팀 활동 종료일
       },
     status: { type: String, enum: ['매칭 완료', '매칭 대기'], default: '매칭 대기' }, //팀 매칭 승인 상태
     count : {type : Number}, 
