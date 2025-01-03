@@ -18,8 +18,8 @@ const teamSchema = new Schema ({
     averageSkill : { type : String},
     teamNotice : {type : String},
     activityPeriod : {
-        start : { type : Date, required : true }, //팀 활동 시작일
-        end : { type : Date }, //팀 활동 종료일
+        start : { type : String, required : true }, //팀 활동 시작일
+        end : { type : String }, //팀 활동 종료일
       },
     status: { type: String, enum: ['매칭 완료', '매칭 대기'], default: '매칭 대기' }, //팀 매칭 승인 상태
     count : {type : Number}, 
