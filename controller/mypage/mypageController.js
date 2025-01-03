@@ -121,5 +121,9 @@ const vodSubscript = async (req, res) => {
   }
 }
 
+// 찜한 공간 대여 목록 불러오기
+const likeSpace = () => {
+  
+}
 
-export { myActivePost, likeMd, likeAuction, vodSubscript }
+export { myActivePost, likeMd, likeAuction, vodSubscript, likeSpace }
