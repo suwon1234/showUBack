@@ -1,6 +1,6 @@
 import express from 'express';
 import passport from 'passport';
-import { myActivePost, likeMd, likeAuction } from '../../controller/mypage/mypageController.js';
+import { myActivePost, likeMd, likeAuction, vodSubscript } from '../../controller/mypage/mypageController.js';
 
 
 const mypageRouter = express.Router()
@@ -14,5 +14,7 @@ mypageRouter.get("/like/md", passport.authenticate('jwt', { session: false }), l
 // 찜-경매
 mypageRouter.get("/like/auction", passport.authenticate('jwt', { session : false }), likeAuction)
 
+// vod-구독한 리스트
+mypageRouter.get("/vod/subscript", passport.authenticate('jwt', { session : false }), vodSubscript)
 
 export default mypageRouter
