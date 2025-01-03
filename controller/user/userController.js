@@ -255,86 +255,86 @@ const adminLogin = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     // 관리자 데이터
-    const adminData = [
-      {
-        email: "admin@gmail.com",
-        password: hashedPassword,
-        name : "관리자",
-        role: "admin"
-      },
-      {
-        email: "test1@gmail.com",
-        password: hashedPassword,
-        name: "사용자1",
-        phone: "010-1111-1111"
-      },
-      {
-        email: "test2@gmail.com",
-        password: hashedPassword,
-        name: "사용자2",
-        phone: "010-2222-2222"
-      },
-      {
-        email: "test3@gmail.com",
-        password: hashedPassword,
-        name: "사용자3",
-        phone: "010-3333-3333"
-      },
-      {
-        email: "test4@gmail.com",
-        password: hashedPassword,
-        name: "사용자4",
-        phone: "010-4444-4444"
-      },
-      {
-        email: "test5@gmail.com",
-        password: hashedPassword,
-        name: "사용자5",
-        phone: "010-5555-5555"
-      },
-      {
-        email: "test6@gmail.com",
-        password: hashedPassword,
-        name: "사용자6",
-        phone: "010-6666-6666"
-      },
-      {
-        email: "test7@gmail.com",
-        password: hashedPassword,
-        name: "사용자7",
-        phone: "010-7777-7777"
-      },
-      {
-        email: "test8@gmail.com",
-        password: hashedPassword,
-        name: "사용자8",
-        phone: "010-8888-8888"
-      },
-      {
-        email: "test9@gmail.com",
-        password: hashedPassword,
-        name: "사용자9",
-        phone: "010-9999-9999"
-      },
-      {
-        email: "test10@gmail.com",
-        password: hashedPassword,
-        name: "사용자10",
-        phone: "010-1111-1111"
-      },
-      {
-        email: "export2@gmail.com",
-        password: hashedPassword,
-        name: "전문가2",
-        phone: "010-1234-1234"
-      },
-      {
-        email: "export1@gmail.com",
-        password: hashedPassword,
-        name: "전문가1",
-        phone: "010-5678-5678"
-      },
-    ];
+    // const adminData = [
+    //   {
+    //     email: "admin@gmail.com",
+    //     password: hashedPassword,
+    //     name : "관리자",
+    //     role: "admin"
+    //   },
+    //   {
+    //     email: "test1@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자1",
+    //     phone: "010-1111-1111"
+    //   },
+    //   {
+    //     email: "test2@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자2",
+    //     phone: "010-2222-2222"
+    //   },
+    //   {
+    //     email: "test3@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자3",
+    //     phone: "010-3333-3333"
+    //   },
+    //   {
+    //     email: "test4@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자4",
+    //     phone: "010-4444-4444"
+    //   },
+    //   {
+    //     email: "test5@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자5",
+    //     phone: "010-5555-5555"
+    //   },
+    //   {
+    //     email: "test6@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자6",
+    //     phone: "010-6666-6666"
+    //   },
+    //   {
+    //     email: "test7@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자7",
+    //     phone: "010-7777-7777"
+    //   },
+    //   {
+    //     email: "test8@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자8",
+    //     phone: "010-8888-8888"
+    //   },
+    //   {
+    //     email: "test9@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자9",
+    //     phone: "010-9999-9999"
+    //   },
+    //   {
+    //     email: "test10@gmail.com",
+    //     password: hashedPassword,
+    //     name: "사용자10",
+    //     phone: "010-1111-1111"
+    //   },
+    //   {
+    //     email: "export2@gmail.com",
+    //     password: hashedPassword,
+    //     name: "전문가2",
+    //     phone: "010-1234-1234"
+    //   },
+    //   {
+    //     email: "export1@gmail.com",
+    //     password: hashedPassword,
+    //     name: "전문가1",
+    //     phone: "010-5678-5678"
+    //   },
+    // ];
 
     // 중복된 관리자가 있는지 확인 후 삽입
     const existingAdmin = await User.findOne({ email: "admin@gmail.com" });
