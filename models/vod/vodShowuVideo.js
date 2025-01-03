@@ -16,6 +16,6 @@ const vodShowuVideoSchema = new Schema({
   year: { type: String, required: true }, // 연도
   mainImage: { type: String, required: true }, // 메인 이미지 경로
   createdAt: { type: String, default: getCurrentTime } // 생성시간
-}, { timestamps: true }); // 생성 및 수정 시간 자동 기록
+}, { timestamps: true }); // 생성 및 수정 시간 자동 
 
 export default model("VodShowuVideo", vodShowuVideoSchema, "vodshowuvideo");
