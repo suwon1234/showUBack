@@ -1,4 +1,6 @@
 import Community from "../../models/community/communitySchema.js";
+import Reservation from "../../models/reservation/reservationSchema.js";
+import Space from "../../models/reservation/spaceSchema.js";
 import Auction from "../../models/shop/auctionSchema.js";
 import Md from "../../models/shop/mdSchema.js";
 import VodSubscript from "../../models/vod/vodShowuVideo.js";
@@ -122,7 +124,51 @@ const vodSubscript = async (req, res) => {
 }
 
 // 찜한 공간 대여 목록 불러오기
-const likeSpace = () => {
+const likeSpace = async (req, res) => {
+  const userId = req.user._id
+  // console.log("로그인한 사용자: ", userId)
+
+  try {
+    // 예약대여 좋아요한 상품 리스트
+    const likedReservationList = await Reservation.find({ user : userId })
+    // console.log("예약대여 좋아요한 상품 리스트 : ", likedReservationList)
+    
+    // 좋아요한 공간 대여 정보 id 리스트
+    const spaceIdList = await likedReservationList.map((space) => ({
+      spaceId : space.spaceId
+    }))
+      .filter(item => item.spaceId !== null)
+    // console.log("좋아요한 공간 대여 정보 id 리스트 : ", spaceIdList)
+
+    // spaceId만 가져오기
+    const spaceId = await spaceIdList.map((item) => item.spaceId)
+    
+    // spaceId 일치하는 공간 대여 정보 가져오기
+    const likeSpaceList = await Space.find({ _id: { $in: spaceId }})
+    console.log("spaceId 일치하는 공간 대여 정보 리스트 : ", likeSpaceList)
+
+    // 마이페이지에 필요한 공간 대여 정보
+    const likeSpace = await likeSpaceList.map((like) => ({
+      name : like.name,
+      location : like.location,
+      price : like.price,
+      img : like.img
+    }))
+
+    console.log("마이페이지에 필요한 공간 대여 정보 리스트 : ", likeSpace)
+
+    return res.status(200).json({
+      likeSpaceSuccess : true,
+      message : "성공적으로 찜한 공간 대여 목록을 가져왔습니다",
+      likeSpace : likeSpace
+    })
+    
+  } catch (error) {
+    return res.status(500).json({
+      likeSpaceSuccess : false,
+      message : "찜한 공간 대여 목록을 가져오는데 실패했습니다"
+    })
+  }
   
 }
 
