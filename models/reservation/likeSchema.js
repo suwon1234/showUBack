@@ -1,6 +1,5 @@
 import { model, Schema } from "mongoose";
-import { getCurrentTime } from "../../utils/utils";
-
+import { getCurrentTime } from "../../utils/utils.js";
 
 const likeSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: "User", required: true }, // 사용자 ID (참조)

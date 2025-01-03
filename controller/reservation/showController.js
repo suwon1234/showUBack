@@ -21,6 +21,7 @@ const showData = [
       "S석 청소년할인(본인, 생년월일 증명서류 지참) 30% 할인",
     ],
     img: "https://ticketimage.interpark.com/Play/image/large/24/24014885_p.gif",
+    detailImage: "",
     cast: [
       { name: "박정원", img: "path/to/image1.jpg" },
       { name: "손유동", img: "path/to/image2.jpg" },
@@ -49,6 +50,7 @@ const showData = [
       "학생 할인 30% 할인",
     ],
     img: "https://ticketimage.interpark.com/Play/image/large/24/24016737_p.gif",
+    detailImage:"",
     cast: [
       { name: "김준수", img: "path/to/image1.jpg" },
       { name: "정성화", img: "path/to/image2.jpg" },
