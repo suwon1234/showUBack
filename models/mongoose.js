@@ -3,194 +3,196 @@ import Option from './shop/optionSchema.js'
 import Md from './shop/mdSchema.js';
 import Auction from './shop/auctionSchema.js'
 import Community from "./community/communitySchema.js"
+import VodShowuVideo from "./vod/vodShowuVideo.js"
+import ShowuVideo from './vod/showuVideoSchema.js';
 
 connect()
 
 // await Md.deleteMany()
 
-const communityData = await Community.create(
-  {
-    UserId: "677630ae686ab95419a5a1dc",  // 더미 데이터용 아이디 회원 가입된 아이디로 강제 부여
-    Writefile: "-",
-    title: "타이틀1",
-    category: "뮤지컬",
-    description: "설명1",
-    content: "내용1",
-    imageUrl: "/images/community/musical-1.jpg",
-  },
-  {
-    UserId: "677630ae686ab95419a5a1dc",
-    Writefile: "-",
-    title: "타이틀2",
-    description: "설명2",
-    category: "공연",
-    content: "내용2",
-    imageUrl: "/images/community/show-1.jpg",
-  },
-  {
-    UserId: "677630ae686ab95419a5a1dc",
-    Writefile: "-",
-    title: "타이틀3",
-    description: "설명3",
-    content: "내용3",
-    category: "밴드",
-    imageUrl: "/images/community/band-1.jpg",
-  },
-  {
-    UserId: "677630ae686ab95419a5a1dc",
-    Writefile: "-",
-    title: "타이틀4",
-    description: "설명4",
-    content: "내용4",
-    category: "영화",
-    imageUrl: "/images/community/movie-1.jpg",
-  },
-  {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀5",
-      description: "설명5",
-      content: "내용5",
-      category: "뮤지컬",
-      imageUrl: "/images/community/musical-2.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀6",
-      description: "설명6",
-      content: "내용6",
-      category: "연극",
-      imageUrl: "/images/community/theater-1.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀7",
-      description: "설명7",
-      content: "내용7",
-      category: "뮤지컬",
-      imageUrl: "/images/community/musical-3.jpg"
-    },
-    {
-      UserId:"677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀8",
-      description: "설명8",
-      content: "내용8",
-      category: "뮤지컬",
-      imageUrl: "/images/community/musical-4.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀9",
-      description: "설명9",
-      content: "내용9",
-      category: "뮤지컬",
-      imageUrl: "/images/community/musical-5.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀10",
-      description: "설명",
-      content: "내용",
-      category: "연극",
-      imageUrl: "/images/community/theater-2.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀11",
-      description: "설명",
-      content: "내용",
-      category: "연극",
-      imageUrl: "/images/community/theater-3.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀12",
-      description: "설명",
-      content: "내용",
-      category: "영화",
-      imageUrl: "/images/community/movie-2.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀13",
-      description: "설명",
-      content : "내용",
-      category: "공연",
-      imageUrl: "/images/community/show-2.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀14",
-      description: "설명",
-      content: "내용",
-      category: "공연",
-      imageUrl: "/images/community/show-3.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀15",
-      description: "설명",
-      content: "내용",
-      category: "뮤지컬",
-      imageUrl: "/images/community/musical-6.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀16",
-      description: "설명",
-      content: "내용",
-      category: "영화",
-      imageUrl: "/images/community/movie-3.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀17",
-      description: "설명",
-      content: "내용",
-      category: "밴드",
-      imageUrl: "/images/community/band-2.jpg"
-    },
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀18",
-      description: "설명",
-      content: "내용",
-      category: "공연",
-      imageUrl: "/images/community/show-4.jpg"
-    },
+// const communityData = await Community.create(
+//   {
+//     UserId: "677630ae686ab95419a5a1dc",  // 더미 데이터용 아이디 회원 가입된 아이디로 강제 부여
+//     Writefile: "-",
+//     title: "타이틀1",
+//     category: "뮤지컬",
+//     description: "설명1",
+//     content: "내용1",
+//     imageUrl: "/images/community/musical-1.jpg",
+//   },
+//   {
+//     UserId: "677630ae686ab95419a5a1dc",
+//     Writefile: "-",
+//     title: "타이틀2",
+//     description: "설명2",
+//     category: "공연",
+//     content: "내용2",
+//     imageUrl: "/images/community/show-1.jpg",
+//   },
+//   {
+//     UserId: "677630ae686ab95419a5a1dc",
+//     Writefile: "-",
+//     title: "타이틀3",
+//     description: "설명3",
+//     content: "내용3",
+//     category: "밴드",
+//     imageUrl: "/images/community/band-1.jpg",
+//   },
+//   {
+//     UserId: "677630ae686ab95419a5a1dc",
+//     Writefile: "-",
+//     title: "타이틀4",
+//     description: "설명4",
+//     content: "내용4",
+//     category: "영화",
+//     imageUrl: "/images/community/movie-1.jpg",
+//   },
+//   {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀5",
+//       description: "설명5",
+//       content: "내용5",
+//       category: "뮤지컬",
+//       imageUrl: "/images/community/musical-2.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀6",
+//       description: "설명6",
+//       content: "내용6",
+//       category: "연극",
+//       imageUrl: "/images/community/theater-1.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀7",
+//       description: "설명7",
+//       content: "내용7",
+//       category: "뮤지컬",
+//       imageUrl: "/images/community/musical-3.jpg"
+//     },
+//     {
+//       UserId:"677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀8",
+//       description: "설명8",
+//       content: "내용8",
+//       category: "뮤지컬",
+//       imageUrl: "/images/community/musical-4.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀9",
+//       description: "설명9",
+//       content: "내용9",
+//       category: "뮤지컬",
+//       imageUrl: "/images/community/musical-5.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀10",
+//       description: "설명",
+//       content: "내용",
+//       category: "연극",
+//       imageUrl: "/images/community/theater-2.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀11",
+//       description: "설명",
+//       content: "내용",
+//       category: "연극",
+//       imageUrl: "/images/community/theater-3.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀12",
+//       description: "설명",
+//       content: "내용",
+//       category: "영화",
+//       imageUrl: "/images/community/movie-2.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀13",
+//       description: "설명",
+//       content : "내용",
+//       category: "공연",
+//       imageUrl: "/images/community/show-2.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀14",
+//       description: "설명",
+//       content: "내용",
+//       category: "공연",
+//       imageUrl: "/images/community/show-3.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀15",
+//       description: "설명",
+//       content: "내용",
+//       category: "뮤지컬",
+//       imageUrl: "/images/community/musical-6.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀16",
+//       description: "설명",
+//       content: "내용",
+//       category: "영화",
+//       imageUrl: "/images/community/movie-3.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀17",
+//       description: "설명",
+//       content: "내용",
+//       category: "밴드",
+//       imageUrl: "/images/community/band-2.jpg"
+//     },
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀18",
+//       description: "설명",
+//       content: "내용",
+//       category: "공연",
+//       imageUrl: "/images/community/show-4.jpg"
+//     },
     
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀19",
-      description: "설명",
-      content: "내용",
-      category: "뮤지컬",
-      imageUrl: "/images/community/musical-7.jpg"
-    },    
-    {
-      UserId: "677630ae686ab95419a5a1dc",
-      Writefile: "-",
-      title: "타이틀20",
-      description: "설명",
-      content: "내용",
-      category: "뮤지컬",
-      imageUrl: "/images/community/musical-8.jpg"
-    },  
-  )
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀19",
+//       description: "설명",
+//       content: "내용",
+//       category: "뮤지컬",
+//       imageUrl: "/images/community/musical-7.jpg"
+//     },    
+//     {
+//       UserId: "677630ae686ab95419a5a1dc",
+//       Writefile: "-",
+//       title: "타이틀20",
+//       description: "설명",
+//       content: "내용",
+//       category: "뮤지컬",
+//       imageUrl: "/images/community/musical-8.jpg"
+//     },  
+//   )
 
 
 // // 뉴스 메인
@@ -527,750 +529,750 @@ const communityData = await Community.create(
 // )
 
 // MD 옵션
-const basicOption = await Option.create(
-  {
-    optionName: "기본 옵션",
-    additionalPrice: 0 
-  });
+// const basicOption = await Option.create(
+//   {
+//     optionName: "기본 옵션",
+//     additionalPrice: 0 
+//   });
 
-const specialOption = await Option.create(
-  { 
-    optionName: "기본 옵션 + 증정",
-    additionalPrice: 3000 
-  });
+// const specialOption = await Option.create(
+//   { 
+//     optionName: "기본 옵션 + 증정",
+//     additionalPrice: 3000 
+//   });
 
 
 // MD 상품
-const mdData = await Md.create(
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "연극", 
-    mdName: "베르사유의 장미 프로그램북 스페셜 에디션", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 15000, 
-    image: "/images/shop/md/md1.jpg", 
-    imageDetail: "/images/shop/md/md1-1.jpg", 
-    isHearted : "677630ae686ab95419a5a1dc" 
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "연극", 
-    mdName: "베르사유의 장미 금속 마그넷",
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"],  
-    price: 13000, 
-    image: "/images/shop/md/md2.jpg", 
-    imageDetail: "/images/shop/md/md2-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "연극", 
-    mdName: "베르사유의 장미 고블렛", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 18000, 
-    image: "/images/shop/md/md3.jpg", 
-    imageDetail: "/images/shop/md/md3-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "연극", 
-    mdName: "베르사유의 장미 키링", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 17000, 
-    image: "/images/shop/md/md4.jpg", 
-    imageDetail: "/images/shop/md/md4-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "연극", 
-    mdName: "베르사유의 장미 배지1", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 11000, 
-    image: "/images/shop/md/md5.jpg", 
-    imageDetail: "/images/shop/md/md5-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "연극", 
-    mdName: "베르사유의 장미 배지2", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 11000, 
-    image: "/images/shop/md/md6.jpg", 
-    imageDetail: "/images/shop/md/md6-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "연극", 
-    mdName: "베르사유의 장미 프로그램북 스페셜 에디션", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"],
-    price: 11000, 
-    image: "/images/shop/md/md7.jpg", 
-    imageDetail: "/images/shop/md/md7-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "연극", 
-    mdName: "베르사유의 장미 스트랩 파우치", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 18000, 
-    image: "/images/shop/md/md8.jpg", 
-    imageDetail: "/images/shop/md/md8-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "연극", 
-    mdName: "2025 캘린더", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 12000,  
-    image: "/images/shop/md/md9.jpg", 
-    imageDetail: "/images/shop/md/md9-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "영화", 
-    mdName: "4월은 너의 거짓말 금속 마그넷", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 14000, 
-    image: "/images/shop/md/md10.jpg", 
-    imageDetail: "/images/shop/md/md10-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "영화", 
-    mdName: "4월은 너의 거짓말 배지1", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 12000, 
-    image: "/images/shop/md/md11.jpg", 
-    imageDetail: "/images/shop/md/md11-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "영화", 
-    mdName: "4월은 너의 거짓말 배지2", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"],
-    price: 12000,  
-    image: "/images/shop/md/md12.jpg", 
-    imageDetail: "/images/shop/md/md12-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "영화", 
-    mdName: "4월은 너의 거짓말 배지3", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 12000,  
-    image: "/images/shop/md/md13.jpg", 
-    imageDetail: "/images/shop/md/md13-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "영화", 
-    mdName: "4월은 너의 거짓말 에코백", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 13000, 
-    image: "/images/shop/md/md14.jpg", 
-    imageDetail: "/images/shop/md/md14-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "영화", 
-    mdName: "4월은 너의 거짓말 메시지 엽서", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 10000, 
-    image: "/images/shop/md/md15.jpg", 
-    imageDetail: "/images/shop/md/md15-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "영화", 
-    mdName: "4월은 너의 거짓말 유리컵", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 19000,  
-    image: "/images/shop/md/md16.jpg", 
-    imageDetail: "/images/shop/md/md16-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "영화", 
-    mdName: "4월은 너의 거짓말 대본집", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 13000,  
-    image: "/images/shop/md/md17.jpg", 
-    imageDetail: "/images/shop/md/md17-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "영화", 
-    mdName: "4월은 너의 거짓말 프로그램북", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 12000, 
-    image: "/images/shop/md/md18.jpg", 
-    imageDetail: "/images/shop/md/md18-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 거울 그립톡", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 13000, 
-    image: "/images/shop/md/md19.jpg", 
-    imageDetail: "/images/shop/md/md19-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 마스킹 테이프", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 6000,  
-    image: "/images/shop/md/md20.jpg", 
-    imageDetail: "/images/shop/md/md20-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 글리터 코스터", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 17000,  
-    image: "/images/shop/md/md21.jpg", 
-    imageDetail: "/images/shop/md/md21-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 미니 티켓북", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 18000,  
-    image: "/images/shop/md/md22.jpg", 
-    imageDetail: "/images/shop/md/md22-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 금속 북마크", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 9000, 
-    image: "/images/shop/md/md23.jpg", 
-    imageDetail: "/images/shop/md/md23-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 접이식 우산", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 27000, 
-    image: "/images/shop/md/md24.jpg", 
-    imageDetail: "/images/shop/md/md24-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 앙리 엽서 (고은성VER.)", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 5000,  
-    image: "/images/shop/md/md25.jpg", 
-    imageDetail: "/images/shop/md/md25-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 앙리 엽서 (이해준VER.)", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 5000,  
-    image: "/images/shop/md/md26.jpg", 
-    imageDetail: "/images/shop/md/md26-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 앙리 엽서 (카이VER.)", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 5000,  
-    image: "/images/shop/md/md27.jpg", 
-    imageDetail: "/images/shop/md/md27-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 앙리 렌티큘러 포스터 (고은성VER.)", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 19000,  
-    image: "/images/shop/md/md28.jpg", 
-    imageDetail: "/images/shop/md/md28-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 앙리 렌티큘러 포스터 (이해준VER.)", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 19000, 
-    image: "/images/shop/md/md29.jpg", 
-    imageDetail: "/images/shop/md/md29-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-  { 
-    UserId: "677630ae686ab95419a5a1dc",
-    category: "뮤지컬", 
-    mdName: "프랑켄슈타인 앙리 렌티큘러 포스터 (카이VER.)", 
-    options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
-    price: 19000, 
-    image: "/images/shop/md/md30.jpg", 
-    imageDetail: "/images/shop/md/md30-1.jpg", 
-    isHearted: "677630ae686ab95419a5a1dc"  
-  },
-)
+// const mdData = await Md.create(
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "연극", 
+//     mdName: "베르사유의 장미 프로그램북 스페셜 에디션", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 15000, 
+//     image: "/images/shop/md/md1.jpg", 
+//     imageDetail: "/images/shop/md/md1-1.jpg", 
+//     isHearted : "677630ae686ab95419a5a1dc" 
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "연극", 
+//     mdName: "베르사유의 장미 금속 마그넷",
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"],  
+//     price: 13000, 
+//     image: "/images/shop/md/md2.jpg", 
+//     imageDetail: "/images/shop/md/md2-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "연극", 
+//     mdName: "베르사유의 장미 고블렛", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 18000, 
+//     image: "/images/shop/md/md3.jpg", 
+//     imageDetail: "/images/shop/md/md3-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "연극", 
+//     mdName: "베르사유의 장미 키링", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 17000, 
+//     image: "/images/shop/md/md4.jpg", 
+//     imageDetail: "/images/shop/md/md4-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "연극", 
+//     mdName: "베르사유의 장미 배지1", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 11000, 
+//     image: "/images/shop/md/md5.jpg", 
+//     imageDetail: "/images/shop/md/md5-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "연극", 
+//     mdName: "베르사유의 장미 배지2", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 11000, 
+//     image: "/images/shop/md/md6.jpg", 
+//     imageDetail: "/images/shop/md/md6-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "연극", 
+//     mdName: "베르사유의 장미 프로그램북 스페셜 에디션", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"],
+//     price: 11000, 
+//     image: "/images/shop/md/md7.jpg", 
+//     imageDetail: "/images/shop/md/md7-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "연극", 
+//     mdName: "베르사유의 장미 스트랩 파우치", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 18000, 
+//     image: "/images/shop/md/md8.jpg", 
+//     imageDetail: "/images/shop/md/md8-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "연극", 
+//     mdName: "2025 캘린더", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 12000,  
+//     image: "/images/shop/md/md9.jpg", 
+//     imageDetail: "/images/shop/md/md9-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "영화", 
+//     mdName: "4월은 너의 거짓말 금속 마그넷", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 14000, 
+//     image: "/images/shop/md/md10.jpg", 
+//     imageDetail: "/images/shop/md/md10-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "영화", 
+//     mdName: "4월은 너의 거짓말 배지1", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 12000, 
+//     image: "/images/shop/md/md11.jpg", 
+//     imageDetail: "/images/shop/md/md11-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "영화", 
+//     mdName: "4월은 너의 거짓말 배지2", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"],
+//     price: 12000,  
+//     image: "/images/shop/md/md12.jpg", 
+//     imageDetail: "/images/shop/md/md12-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "영화", 
+//     mdName: "4월은 너의 거짓말 배지3", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 12000,  
+//     image: "/images/shop/md/md13.jpg", 
+//     imageDetail: "/images/shop/md/md13-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "영화", 
+//     mdName: "4월은 너의 거짓말 에코백", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 13000, 
+//     image: "/images/shop/md/md14.jpg", 
+//     imageDetail: "/images/shop/md/md14-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "영화", 
+//     mdName: "4월은 너의 거짓말 메시지 엽서", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 10000, 
+//     image: "/images/shop/md/md15.jpg", 
+//     imageDetail: "/images/shop/md/md15-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "영화", 
+//     mdName: "4월은 너의 거짓말 유리컵", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 19000,  
+//     image: "/images/shop/md/md16.jpg", 
+//     imageDetail: "/images/shop/md/md16-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "영화", 
+//     mdName: "4월은 너의 거짓말 대본집", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 13000,  
+//     image: "/images/shop/md/md17.jpg", 
+//     imageDetail: "/images/shop/md/md17-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "영화", 
+//     mdName: "4월은 너의 거짓말 프로그램북", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 12000, 
+//     image: "/images/shop/md/md18.jpg", 
+//     imageDetail: "/images/shop/md/md18-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 거울 그립톡", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 13000, 
+//     image: "/images/shop/md/md19.jpg", 
+//     imageDetail: "/images/shop/md/md19-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 마스킹 테이프", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 6000,  
+//     image: "/images/shop/md/md20.jpg", 
+//     imageDetail: "/images/shop/md/md20-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 글리터 코스터", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 17000,  
+//     image: "/images/shop/md/md21.jpg", 
+//     imageDetail: "/images/shop/md/md21-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 미니 티켓북", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 18000,  
+//     image: "/images/shop/md/md22.jpg", 
+//     imageDetail: "/images/shop/md/md22-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 금속 북마크", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 9000, 
+//     image: "/images/shop/md/md23.jpg", 
+//     imageDetail: "/images/shop/md/md23-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 접이식 우산", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 27000, 
+//     image: "/images/shop/md/md24.jpg", 
+//     imageDetail: "/images/shop/md/md24-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 앙리 엽서 (고은성VER.)", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 5000,  
+//     image: "/images/shop/md/md25.jpg", 
+//     imageDetail: "/images/shop/md/md25-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 앙리 엽서 (이해준VER.)", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 5000,  
+//     image: "/images/shop/md/md26.jpg", 
+//     imageDetail: "/images/shop/md/md26-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 앙리 엽서 (카이VER.)", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 5000,  
+//     image: "/images/shop/md/md27.jpg", 
+//     imageDetail: "/images/shop/md/md27-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 앙리 렌티큘러 포스터 (고은성VER.)", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 19000,  
+//     image: "/images/shop/md/md28.jpg", 
+//     imageDetail: "/images/shop/md/md28-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 앙리 렌티큘러 포스터 (이해준VER.)", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 19000, 
+//     image: "/images/shop/md/md29.jpg", 
+//     imageDetail: "/images/shop/md/md29-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+//   { 
+//     UserId: "677630ae686ab95419a5a1dc",
+//     category: "뮤지컬", 
+//     mdName: "프랑켄슈타인 앙리 렌티큘러 포스터 (카이VER.)", 
+//     options: ["6776a5c36cfb2b1f9ef110f5", "6776a5c36cfb2b1f9ef110f7"], 
+//     price: 19000, 
+//     image: "/images/shop/md/md30.jpg", 
+//     imageDetail: "/images/shop/md/md30-1.jpg", 
+//     isHearted: "677630ae686ab95419a5a1dc"  
+//   },
+// )
 
 
 // 경매 상품
-const auctionData = await Auction.create(
-  { 
-    category: "연극",
-    auctionName: "베르사유의 장미 프로그램북 스페셜 에디션",
-    auctionId: "111ABC",
-    time: 0,
-    count: 60,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명1",
-    image: "/images/shop/auction/auction1.jpg",
-    imageDetail: "/images/shop/auction/auction1-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "연극",
-    auctionName: "베르사유의 장미 금속 마그넷",
-    auctionId: "112ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명2",
-    image: "/images/shop/auction/auction2.jpg",
-    imageDetail: "/images/shop/auction/auction2-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  {
-    category: "연극",
-    auctionName: "베르사유의 장미 고블렛",
-    auctionId: "113ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명3",
-    image: "/images/shop/auction/auction3.jpg",
-    imageDetail: "/images/shop/auction/auction3-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "연극",
-    auctionName: "베르사유의 장미 키링",
-    auctionId: "114ABC",
-    time: 0,
-    count: 10,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명4",
-    image: "/images/shop/auction/auction4.jpg",
-    imageDetail: "/images/shop/auction/auction4-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "연극",
-    auctionName: "베르사유의 장미 배지1",
-    auctionId: "115ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명5",
-    image: "/images/shop/auction/auction5.jpg",
-    imageDetail: "/images/shop/auction/auction5-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "연극",
-    auctionName: "베르사유의 장미 배지2",
-    auctionId: "116ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명6",
-    image: "/images/shop/auction/auction6.jpg",
-    imageDetail: "/images/shop/auction/auction6-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "연극",
-    auctionName: "베르사유의 장미 배지3",
-    auctionId: "117ABC",
-    time: 0,
-    count: 60,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명7",
-    image: "/images/shop/auction/auction7.jpg",
-    imageDetail: "/images/shop/auction/auction7-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "연극",
-    auctionName: "베르사유의 장미 스트랩 파우치",
-    auctionId: "118ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명8",
-    image: "/images/shop/auction/auction8.jpg",
-    imageDetail: "/images/shop/auction/auction8-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "연극",
-    auctionName: "2025 캘린더",
-    auctionId: "119ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명9",
-    image: "/images/shop/auction/auction9.jpg",
-    imageDetail: "/images/shop/auction/auction9-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "영화",
-    auctionName: "4월은 너의 거짓말 금속 마그넷",
-    auctionId: "120ABC",
-    time: 0,
-    count: 60,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명10",
-    image: "/images/shop/auction/auction10.jpg",
-    imageDetail: "/images/shop/auction/auction10-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "영화",
-    auctionName: "4월은 너의 거짓말 배지1",
-    auctionId: "121ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명11",
-    image: "/images/shop/auction/auction11.jpg",
-    imageDetail: "/images/shop/auction/auction11-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "영화",
-    auctionName: "4월은 너의 거짓말 배지2",
-    auctionId: "123ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명12",
-    image: "/images/shop/auction/auction12.jpg",
-    imageDetail: "/images/shop/auction/auction12-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "영화",
-    auctionName: "4월은 너의 거짓말 배지3",
-    auctionId: "124ABC",
-    time: 0,
-    count: 60,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명13",
-    image: "/images/shop/auction/auction13.jpg",
-    imageDetail: "/images/shop/auction/auction13-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "영화",
-    auctionName: "4월은 너의 거짓말 에코백",
-    auctionId: "125ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명14",
-    image: "/images/shop/auction/auction14.jpg",
-    imageDetail: "/images/shop/auction/auction14-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "영화",
-    auctionName: "4월은 너의 거짓말 메시지 엽서",
-    auctionId: "126ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명15",
-    image: "/images/shop/auction/auction15.jpg",
-    imageDetail: "/images/shop/auction/auction15-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "영화",
-    auctionName: "4월은 너의 거짓말 유리컵",
-    auctionId: "127ABC",
-    time: 0,
-    count: 60,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명16",
-    image: "/images/shop/auction/auction16.jpg",
-    imageDetail: "/images/shop/auction/auction16-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "영화",
-    auctionName: "4월은 너의 거짓말 대본집",
-    auctionId: "128ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명17",
-    image: "/images/shop/auction/auction17.jpg",
-    imageDetail: "/images/shop/auction/auction17-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "영화",
-    auctionName: "4월은 너의 거짓말 프로그램북",
-    auctionId: "129ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명18",
-    image: "/images/shop/auction/auction18.jpg",
-    imageDetail: "/images/shop/auction/auction18-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 거울 그립톡",
-    auctionId: "130ABC",
-    time: 0,
-    count: 60,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명19",
-    image: "/images/shop/auction/auction19.jpg",
-    imageDetail: "/images/shop/auction/auction19-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 마스킹 테이프",
-    auctionId: "131ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명20",
-    image: "/images/shop/auction/auction20.jpg",
-    imageDetail: "/images/shop/auction/auction20-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 글리터 코스터",
-    auctionId: "132ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명21",
-    image: "/images/shop/auction/auction21.jpg",
-    imageDetail: "/images/shop/auction/auction21-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 미니 티켓북",
-    auctionId: "133ABC",
-    time: 0,
-    count: 60,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명22",
-    image: "/images/shop/auction/auction22.jpg",
-    imageDetail: "/images/shop/auction/auction22-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 금속 북마크",
-    auctionId: "134ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명23",
-    image: "/images/shop/auction/auction23.jpg",
-    imageDetail: "/images/shop/auction/auction23-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 접이식 우산",
-    auctionId: "135ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명24",
-    image: "/images/shop/auction/auction24.jpg",
-    imageDetail: "/images/shop/auction/auction24-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 앙리 엽서 (고은성VER.)",
-    auctionId: "136ABC",
-    time: 0,
-    count: 60,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명25",
-    image: "/images/shop/auction/auction25.jpg",
-    imageDetail: "/images/shop/auction/auction25-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 앙리 엽서 (이해준VER.)",
-    auctionId: "137ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명26",
-    image: "/images/shop/auction/auction26.jpg",
-    imageDetail: "/images/shop/auction/auction26-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 앙리 엽서 (카이VER.)",
-    auctionId: "138ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명27",
-    image: "/images/shop/auction/auction27.jpg",
-    imageDetail: "/images/shop/auction/auction27-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 앙리 렌티큘러 포스터 (고은성VER.)",
-    auctionId: "139ABC",
-    time: 0,
-    count: 60,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명28",
-    image: "/images/shop/auction/auction28.jpg",
-    imageDetail: "/images/shop/auction/auction28-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 앙리 렌티큘러 포스터 (이해준VER.)",
-    auctionId: "140ABC",
-    time: 0,
-    count: 88,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명29",
-    image: "/images/shop/auction/auction29.jpg",
-    imageDetail: "/images/shop/auction/auction29-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-  { 
-    category: "뮤지컬",
-    auctionName: "프랑켄슈타인 앙리 렌티큘러 포스터 (카이VER.)",
-    auctionId: "218ABC",
-    time: 0,
-    count: 23,
-    unit: 1000,
-    bid: 0,
-    finalPrice: 0,
-    description: "상세 설명30",
-    image: "/images/shop/auction/auction30.jpg",
-    imageDetail: "/images/shop/auction/auction30-1.jpg",
-    isHearted: "677630ae686ab95419a5a1dc"
-  },
-)
+// const auctionData = await Auction.create(
+//   { 
+//     category: "연극",
+//     auctionName: "베르사유의 장미 프로그램북 스페셜 에디션",
+//     auctionId: "111ABC",
+//     time: 0,
+//     count: 60,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명1",
+//     image: "/images/shop/auction/auction1.jpg",
+//     imageDetail: "/images/shop/auction/auction1-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "연극",
+//     auctionName: "베르사유의 장미 금속 마그넷",
+//     auctionId: "112ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명2",
+//     image: "/images/shop/auction/auction2.jpg",
+//     imageDetail: "/images/shop/auction/auction2-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     category: "연극",
+//     auctionName: "베르사유의 장미 고블렛",
+//     auctionId: "113ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명3",
+//     image: "/images/shop/auction/auction3.jpg",
+//     imageDetail: "/images/shop/auction/auction3-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "연극",
+//     auctionName: "베르사유의 장미 키링",
+//     auctionId: "114ABC",
+//     time: 0,
+//     count: 10,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명4",
+//     image: "/images/shop/auction/auction4.jpg",
+//     imageDetail: "/images/shop/auction/auction4-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "연극",
+//     auctionName: "베르사유의 장미 배지1",
+//     auctionId: "115ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명5",
+//     image: "/images/shop/auction/auction5.jpg",
+//     imageDetail: "/images/shop/auction/auction5-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "연극",
+//     auctionName: "베르사유의 장미 배지2",
+//     auctionId: "116ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명6",
+//     image: "/images/shop/auction/auction6.jpg",
+//     imageDetail: "/images/shop/auction/auction6-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "연극",
+//     auctionName: "베르사유의 장미 배지3",
+//     auctionId: "117ABC",
+//     time: 0,
+//     count: 60,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명7",
+//     image: "/images/shop/auction/auction7.jpg",
+//     imageDetail: "/images/shop/auction/auction7-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "연극",
+//     auctionName: "베르사유의 장미 스트랩 파우치",
+//     auctionId: "118ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명8",
+//     image: "/images/shop/auction/auction8.jpg",
+//     imageDetail: "/images/shop/auction/auction8-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "연극",
+//     auctionName: "2025 캘린더",
+//     auctionId: "119ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명9",
+//     image: "/images/shop/auction/auction9.jpg",
+//     imageDetail: "/images/shop/auction/auction9-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "영화",
+//     auctionName: "4월은 너의 거짓말 금속 마그넷",
+//     auctionId: "120ABC",
+//     time: 0,
+//     count: 60,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명10",
+//     image: "/images/shop/auction/auction10.jpg",
+//     imageDetail: "/images/shop/auction/auction10-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "영화",
+//     auctionName: "4월은 너의 거짓말 배지1",
+//     auctionId: "121ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명11",
+//     image: "/images/shop/auction/auction11.jpg",
+//     imageDetail: "/images/shop/auction/auction11-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "영화",
+//     auctionName: "4월은 너의 거짓말 배지2",
+//     auctionId: "123ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명12",
+//     image: "/images/shop/auction/auction12.jpg",
+//     imageDetail: "/images/shop/auction/auction12-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "영화",
+//     auctionName: "4월은 너의 거짓말 배지3",
+//     auctionId: "124ABC",
+//     time: 0,
+//     count: 60,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명13",
+//     image: "/images/shop/auction/auction13.jpg",
+//     imageDetail: "/images/shop/auction/auction13-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "영화",
+//     auctionName: "4월은 너의 거짓말 에코백",
+//     auctionId: "125ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명14",
+//     image: "/images/shop/auction/auction14.jpg",
+//     imageDetail: "/images/shop/auction/auction14-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "영화",
+//     auctionName: "4월은 너의 거짓말 메시지 엽서",
+//     auctionId: "126ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명15",
+//     image: "/images/shop/auction/auction15.jpg",
+//     imageDetail: "/images/shop/auction/auction15-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "영화",
+//     auctionName: "4월은 너의 거짓말 유리컵",
+//     auctionId: "127ABC",
+//     time: 0,
+//     count: 60,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명16",
+//     image: "/images/shop/auction/auction16.jpg",
+//     imageDetail: "/images/shop/auction/auction16-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "영화",
+//     auctionName: "4월은 너의 거짓말 대본집",
+//     auctionId: "128ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명17",
+//     image: "/images/shop/auction/auction17.jpg",
+//     imageDetail: "/images/shop/auction/auction17-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "영화",
+//     auctionName: "4월은 너의 거짓말 프로그램북",
+//     auctionId: "129ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명18",
+//     image: "/images/shop/auction/auction18.jpg",
+//     imageDetail: "/images/shop/auction/auction18-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 거울 그립톡",
+//     auctionId: "130ABC",
+//     time: 0,
+//     count: 60,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명19",
+//     image: "/images/shop/auction/auction19.jpg",
+//     imageDetail: "/images/shop/auction/auction19-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 마스킹 테이프",
+//     auctionId: "131ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명20",
+//     image: "/images/shop/auction/auction20.jpg",
+//     imageDetail: "/images/shop/auction/auction20-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 글리터 코스터",
+//     auctionId: "132ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명21",
+//     image: "/images/shop/auction/auction21.jpg",
+//     imageDetail: "/images/shop/auction/auction21-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 미니 티켓북",
+//     auctionId: "133ABC",
+//     time: 0,
+//     count: 60,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명22",
+//     image: "/images/shop/auction/auction22.jpg",
+//     imageDetail: "/images/shop/auction/auction22-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 금속 북마크",
+//     auctionId: "134ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명23",
+//     image: "/images/shop/auction/auction23.jpg",
+//     imageDetail: "/images/shop/auction/auction23-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 접이식 우산",
+//     auctionId: "135ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명24",
+//     image: "/images/shop/auction/auction24.jpg",
+//     imageDetail: "/images/shop/auction/auction24-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 앙리 엽서 (고은성VER.)",
+//     auctionId: "136ABC",
+//     time: 0,
+//     count: 60,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명25",
+//     image: "/images/shop/auction/auction25.jpg",
+//     imageDetail: "/images/shop/auction/auction25-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 앙리 엽서 (이해준VER.)",
+//     auctionId: "137ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명26",
+//     image: "/images/shop/auction/auction26.jpg",
+//     imageDetail: "/images/shop/auction/auction26-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 앙리 엽서 (카이VER.)",
+//     auctionId: "138ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명27",
+//     image: "/images/shop/auction/auction27.jpg",
+//     imageDetail: "/images/shop/auction/auction27-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 앙리 렌티큘러 포스터 (고은성VER.)",
+//     auctionId: "139ABC",
+//     time: 0,
+//     count: 60,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명28",
+//     image: "/images/shop/auction/auction28.jpg",
+//     imageDetail: "/images/shop/auction/auction28-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 앙리 렌티큘러 포스터 (이해준VER.)",
+//     auctionId: "140ABC",
+//     time: 0,
+//     count: 88,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명29",
+//     image: "/images/shop/auction/auction29.jpg",
+//     imageDetail: "/images/shop/auction/auction29-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+//   { 
+//     category: "뮤지컬",
+//     auctionName: "프랑켄슈타인 앙리 렌티큘러 포스터 (카이VER.)",
+//     auctionId: "218ABC",
+//     time: 0,
+//     count: 23,
+//     unit: 1000,
+//     bid: 0,
+//     finalPrice: 0,
+//     description: "상세 설명30",
+//     image: "/images/shop/auction/auction30.jpg",
+//     imageDetail: "/images/shop/auction/auction30-1.jpg",
+//     isHearted: "677630ae686ab95419a5a1dc"
+//   },
+// )
 
-console.log(communityData)
-console.log(mdData)
-console.log(auctionData)
+// console.log(communityData)
+// console.log(mdData)
+// console.log(auctionData)
 
 // const spaceData = [
 //   {
@@ -1365,3 +1367,285 @@ console.log(auctionData)
 //     ],
 //   },
 // ];
+
+//vodShowuVideo
+
+// const vodData = await vodShowuVideo.create(
+//   {
+//     title : "범죄도시",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "엄청난 괴력을 자랑하는 형사 마석도와 반장 전일만은 도시를 휘어잡은 신흥범죄조직의 보스 장첸을 비롯한 도시의 범죄조직을 일망타진할 작전을 세우기 시작한다. 형사들과 주민들의 합동작전과 더불어 마석도와 장첸의 일대일 격돌이 펼쳐진다.",
+//     time : "121",
+//     genre :"범죄",
+//     year : "2017",
+//     mainImage : "/images/movie/moive3.jpg",
+//     likes : 1,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "부산행",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "치명적인 바이러스로 인해 긴급재난대피령이 선포된 한국, 현재 유일하게 안전한 도시 부산까지 가는 열차 안에서 각자 사연을 가진 이들이 사랑하는 사람을 좀비와 바이러스로부터 지키기 위한 싸움을 시작하고, 예기치 못한 위험을 마주하게 된다.",
+//     time : "118",
+//     genre :"액션",
+//     year : "2016",
+//     mainImage : "/images/movie/moive4.jpg",
+//     likes : 1,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "수리남",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "남미 국가 수리남을 장악한 무소불위의 마약 대부로 인해 누명을 쓴 한 민간인이 국정원의 비밀 임무를 수락하며 벌어지는 이야기를 그린 영화",
+//     time : "120",
+//     genre :"범죄",
+//     year : "2017",
+//     mainImage : "/images/movie/moive5.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "스마일",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "정신과 의사 로즈는 연이어 자살하는 환자들에게서 공통점을 발견한다. 공포에 질려가는 로즈는 이 비슷한 현상을 비껴간 생존자로부터 저주를 풀기 위한 끔찍한 방법을 듣게 된다.",
+//     time : "115",
+//     genre :"공포",
+//     year : "2022",
+//     mainImage : "/images/movie/moive6.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "엑시트",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "산악 동아리 에이스였지만 대학 졸업 후 계속 백수인 용남은 어머니의 칠순 잔치에서 연회장 직원으로 일하는 산악 동아리 후배 의주를 마주친다. 흥겨운 잔치가 한창일 때, 건물에서 연기가 피어오르고 재난상황이 시작된다. 용남과 의주는 함께 산악 동아리에서 익힌 지식과 기술을 총동원해 모든 사람들을 대피시키며 탈출에 도전한다.",
+//     time : "103",
+//     genre :"코미디",
+//     year : "2019",
+//     mainImage : "/images/movie/moive7.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "영웅",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "대한 제국의 의병 대장 안중근은 하얼빈역에서 조선 침략의 원흉인 이토 히로부미를 향해 주저 없이 방아쇠를 당기지만, 현장에서 체포되어 일본 법정에 서고 만다.",
+//     time : "121",
+//     genre :"뮤지컬",
+//     year : "2022",
+//     mainImage : "/images/movie/moive8.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "오디션",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "아내를 잃고 실의에 빠진 아오야마는 신붓감을 찾는 오디션을 열게 되고 신비한 여인 아사미를 만나게 된다.",
+//     time : "115",
+//     genre :"공포",
+//     year : "1999",
+//     mainImage : "/images/movie/moive9.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "웡카",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "화려한 업적을 이루기 전의 어린 시절, 모험을 떠난 윌리 웡카가 움파룸파 가족을 만나게 된 이야기가 펼쳐진다.",
+//     time : "121",
+//     genre :"뮤지컬",
+//     year : "2023",
+//     mainImage : "/images/movie/moive10.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "10센치",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "10센치 노래",
+//     time : "3",
+//     genre :"음악",
+//     year : "2023",
+//     mainImage : "/images/music/music.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+  
+//   {
+//     title : "BTS 다이너마이트",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "<Dynamite>는 밝고 경쾌한 분위기의 디스코 팝(Disco Pop) 장르로, 팬들을 위한 희망의 메시지를 담았다. 코로나19 사태가 야기한 무력감과 허탈감을 이겨낼 '돌파구'로서 방탄소년단은 데뷔 이래 처음으로 영어로 곡을 소화하는 새로운 도전에 나섰다.",
+//     time : "3",
+//     genre :"음악",
+//     year : "2020",
+//     mainImage : "/images/music/music2.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+  
+//   {
+//     title : "아이브 일레븐",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "'I HAVE = IVE'라는 의미처럼 주체적인 소녀들의 당당한 매력을 담았다. 이는 성장형 그룹의 스토리가 아닌 완성형 그룹의 자신감을 뜻한다.",
+//     time : "3",
+//     genre :"음악",
+//     year : "2021",
+//     mainImage : "/images/music/music3.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+  
+//   {
+//     title : "에이티즈",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "화려한 업적을 이루기 전의 어린 시절, 모험을 떠난 윌리 웡카가 움파룸파 가족을 만나게 된 이야기가 펼쳐진다.",
+//     time : "3",
+//     genre :"음악",
+//     year : "2024",
+//     mainImage : "/images/music/music4.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+  
+//   {
+//     title : "ITZY Boys like you",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "Boys Like You'는 그룹 특유의 당찬 에너지를 가득 실은 노래다. 솔직하고 거침없는 가사에는 배신감을 줬던 성숙하지 못한 상대방에게 다시는 너 같은 Boy에게는 빠지지 않겠다는 경고의 메시지를 담았다.",
+//     time : "3",
+//     genre :"음악",
+//     year : "2022",
+//     mainImage : "/images/music/music5.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "다비치",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "화려한 업적을 이루기 전의 어린 시절, 모험을 떠난 윌리 웡카가 움파룸파 가족을 만나게 된 이야기가 펼쳐진다.",
+//     time : "3",
+//     genre :"음악",
+//     year : "2022",
+//     mainImage : "/images/music/music6.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "타이틀1",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "설명1",
+//     time : "60",
+//     genre :"뮤지컬",
+//     year : "2022",
+//     mainImage : "/images/community/musical-1.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "타이틀2",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "설명2",
+//     time : "60",
+//     genre :"뮤지컬",
+//     year : "2022",
+//     mainImage : "/images/community/musical-2.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "타이틀3",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "설명3",
+//     time : "60",
+//     genre :"뮤지컬",
+//     year : "2022",
+//     mainImage : "/images/community/musical-3.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "타이틀4",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "설명4",
+//     time : "60",
+//     genre :"뮤지컬",
+//     year : "2022",
+//     mainImage : "/images/community/musical-4.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "타이틀5",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "설명5",
+//     time : "60",
+//     genre :"뮤지컬",
+//     year : "2022",
+//     mainImage : "/images/community/musical-5.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "타이틀6",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "설명6",
+//     time : "60",
+//     genre :"뮤지컬",
+//     year : "2022",
+//     mainImage : "/images/community/musical-6.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "타이틀7",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "설명7",
+//     time : "60",
+//     genre :"뮤지컬",
+//     year : "2022",
+//     mainImage : "/images/community/musical-7.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   },
+//   {
+//     title : "타이틀8",
+//     videoUrl : "/video/testplay.mp4",
+//     description : "설명8",
+//     time : "60",
+//     genre :"뮤지컬",
+//     year : "2022",
+//     mainImage : "/images/community/musical-8.jpg",
+//     likes : 0,
+//     likedUsers : "677630ae686ab95419a5a1dc"
+//   }
+  
+// )
+// console.log(vodData)
+
+// const showuvodData = await ShowuVideo.create(
+//   {
+//     uploaduser : "677630ae686ab95419a5a1dc",
+//     title : "바이올린의 신",
+//     detail : "신들린 바이올린 연주",
+//     category : "음악",
+//     themnail : "/images/themnail/themnail1.jpg",
+//     videoUrl : "/video/video1",
+//     videoelement : 0,
+//     videoelement2 : 0,
+//     review : "없음",
+//     openclose : 0
+//   },
+//   {
+//     uploaduser : "677630ae686ab95419a5a1dc",
+//     title : "바이올린의 신2",
+//     detail : "신들린 바이올린 연주2",
+//     category : "음악",
+//     themnail : "/images/themnail/themnail2.jpg",
+//     videoUrl : "/video/video2",
+//     videoelement : 0,
+//     videoelement2 : 0,
+//     review : "없음",
+//     openclose : 0
+//   },
+// )
+
+// console.log(showuvodData)
