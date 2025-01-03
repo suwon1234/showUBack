@@ -107,8 +107,8 @@ const lessonListData = [
         count : 1000, //조회수
         likeCount : 200, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
 
     },
     {
@@ -216,9 +216,8 @@ const lessonListData = [
         count : 7777, 
         likeCount : 157, 
         likeUser : "677630ae686ab95419a5a1dc", 
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
-
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
     },
     {
         id : 3,
@@ -324,8 +323,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
 
     },
     {
@@ -430,8 +429,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
 
     },
     {
@@ -540,8 +539,8 @@ const lessonListData = [
         count : 1000, //조회수
         likeCount : 200, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
 
     },
     {
@@ -649,8 +648,8 @@ const lessonListData = [
         count : 7777, 
         likeCount : 157, 
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
 
     },
     {
@@ -757,8 +756,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
 
     },
     {
@@ -864,8 +863,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
 
     },
     {
@@ -973,8 +972,8 @@ const lessonListData = [
         count : 1000, //조회수
         likeCount : 200, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
 
     },
     {
@@ -1082,8 +1081,8 @@ const lessonListData = [
         count : 7777, 
         likeCount : 157, 
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 17:44:48",
+        updateAt : "2025-01-03 17:44:48",
 
     },
     {
@@ -1190,8 +1189,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -1297,8 +1296,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -1406,8 +1405,8 @@ const lessonListData = [
         count : 1000, //조회수
         likeCount : 200, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -1515,8 +1514,8 @@ const lessonListData = [
         count : 7777, 
         likeCount : 157, 
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -1623,8 +1622,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -1730,8 +1729,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -1839,9 +1838,8 @@ const lessonListData = [
         count : 1000, //조회수
         likeCount : 200, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
-
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
     },
     {
         id : 18,
@@ -1948,8 +1946,8 @@ const lessonListData = [
         count : 7777, 
         likeCount : 157, 
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -2056,8 +2054,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -2163,8 +2161,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -2272,8 +2270,8 @@ const lessonListData = [
         count : 1000, //조회수
         likeCount : 200, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-30 12:44:48",
+        updateAt : "2025-12-30 12:44:48",
 
     },
     {
@@ -2381,9 +2379,8 @@ const lessonListData = [
         count : 7777, 
         likeCount : 157, 
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
-
+        createAt : "2025-12-25 16:44:48",
+        updateAt : "2025-12-25 16:44:48",
     },
     {
         id : 23,
@@ -2489,8 +2486,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-12-25 16:44:48",
+        updateAt : "2025-12-25 16:44:48",
 
     },
     {
@@ -2596,9 +2593,8 @@ const lessonListData = [
         count : 7777, //조회수
         likeCount : 157, //좋아요 수
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type : String, default : getCurrentTime},
-        // updateAt : {type : String, default : getCurrentTime},
-
+        createAt : "2025-12-25 16:44:48",
+        updateAt : "2025-12-25 16:44:48",
     },
 
 
@@ -2629,16 +2625,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"아마추어",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-10", //팀 활동 시작일
+            end : ""
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 16:44:48",
+        updateAt : "2025-03-03 16:44:48",
     },
     {
         id : 2,
@@ -2655,16 +2651,16 @@ const teamListData = [
         gender : "여자",
         averageSkill :"비기너",
         teamNotice : "안녕하십니까, 입시 노래 연습 파트너 구합니다.",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-05", //팀 활동 시작일
+            end :""
+        },
         status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 16:44:48",
+        updateAt : "2025-03-03 16:44:48",
     },
     {
         id : 3,
@@ -2681,16 +2677,16 @@ const teamListData = [
         gender : "남자",
         averageSkill :"프로 준비생",
         teamNotice : "안녕하십니까, 같이 마술  연습할  파트너 구합니다.",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-09", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 16:44:48",
+        updateAt : "2025-03-03 16:44:48",
     },
     {
         id : 4,
@@ -2707,16 +2703,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"프로",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-10", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 16:44:48",
+        updateAt : "2025-03-03 16:44:48",
     },
     {
         id : 5,
@@ -2733,16 +2729,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"프로",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-10", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 16:44:48",
+        updateAt : "2025-03-03 16:44:48",
     },
     {
         id : 6,
@@ -2759,16 +2755,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"아마추어",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-16", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2025-01-03 16:44:48",
+        updateAt : "2025-03-03 16:44:48",
     },
     {
         id : 7,
@@ -2785,16 +2781,16 @@ const teamListData = [
         gender : "여자",
         averageSkill :"비기너",
         teamNotice : "안녕하십니까, 입시 노래 연습 파트너 구합니다.",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-16", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 16:44:48",
+        updateAt : "2024-12-30 16:44:48",
     },
     {
         id : 8,
@@ -2811,16 +2807,16 @@ const teamListData = [
         gender : "남자",
         averageSkill :"프로 준비생",
         teamNotice : "안녕하십니까, 같이 마술  연습할  파트너 구합니다.",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-16", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 16:44:48",
+        updateAt : "2024-12-30 16:44:48",
     },
     {
         id : 9,
@@ -2837,16 +2833,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"프로",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-16", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 16:44:48",
+        updateAt : "2024-12-30 16:44:48",
     },
     {
         id : 10,
@@ -2863,16 +2859,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"프로",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-16", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 16:44:48",
+        updateAt : "2024-12-30 16:44:48",
     },
     {
         id : 11,
@@ -2889,16 +2885,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"초보",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-20", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 16:44:48",
+        updateAt : "2024-12-30 16:44:48",
     },
     {
         id : 12,
@@ -2915,16 +2911,16 @@ const teamListData = [
         gender : "여자",
         averageSkill :"세미프로",
         teamNotice : "안녕하십니까, 입시 노래 연습 파트너 구합니다.",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-22", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 16:44:48",
+        updateAt : "2024-12-30 16:44:48",
     },
     {
         id : 13,
@@ -2941,16 +2937,16 @@ const teamListData = [
         gender : "남자",
         averageSkill :"프로 준비생",
         teamNotice : "안녕하십니까, 같이 마술  연습할  파트너 구합니다.",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-22", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 16:44:48",
+        updateAt : "2024-12-30 16:44:48",
     },
     {
         id : 14,
@@ -2967,16 +2963,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"프로",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-24", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 16:44:48",
+        updateAt : "2024-12-30 16:44:48",
     },
     {
         id : 15,
@@ -2993,16 +2989,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"프로",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-11-24", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 16:44:48",
+        updateAt : "2024-12-30 16:44:48",
     },
     {
         id : 16,
@@ -3019,16 +3015,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"아마추어",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-12-16", //팀 활동 시작일
+            end :"", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
+        updateAt : "2024-12-25 11:44:48",
     },
     {
         id : 17,
@@ -3045,16 +3041,16 @@ const teamListData = [
         gender : "여자",
         averageSkill :"비기너",
         teamNotice : "안녕하십니까, 입시 노래 연습 파트너 구합니다.",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-12-20", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
+        updateAt : "2024-12-25 11:44:48",
     },
     {
         id : 18,
@@ -3071,16 +3067,16 @@ const teamListData = [
         gender : "남자",
         averageSkill :"프로 준비생",
         teamNotice : "안녕하십니까, 같이 마술  연습할  파트너 구합니다.",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-12-21", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 완료", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
+        updateAt : "2024-12-25 11:44:48",
     },
     {
         id : 19,
@@ -3097,16 +3093,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"프로",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-12-25", //팀 활동 시작일
+            end :"", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
+        updateAt : "2024-12-25 11:44:48",
     },
     {
         id : 20,
@@ -3123,16 +3119,16 @@ const teamListData = [
         gender : "남녀무관",
         averageSkill :"프로",
         teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-        // activityPeriod : {
-        //     start : "24-11-16", //팀 활동 시작일
-        //     end : { type : Date, required : true }, //팀 활동 종료일
-        // },
+        activityPeriod : {
+            start : "24-12-", //팀 활동 시작일
+            end : "", //팀 활동 종료일
+        },
         status: "매칭 대기", //팀 매칭 승인 상태
         count : 300, 
         likeCount : 30,
         likeUser : "677630ae686ab95419a5a1dc",
-        // createAt : {type: String, default :getCurrentTime },
-        // updateAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
+        updateAt : "2024-12-25 11:44:48",
     },
 
 
@@ -3156,7 +3152,8 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-15",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2025-01-04 11:44:48",
+
      },
     {
       id : 2,
@@ -3167,7 +3164,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-21",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2025-01-04 11:44:48",
      },
     {
       id : 3,
@@ -3178,7 +3175,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-21",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2025-01-04 11:44:48",
      },
     {
       id : 4,
@@ -3189,7 +3186,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-22",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2025-01-04 11:44:48",
      },
     {
       id : 5,
@@ -3200,7 +3197,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-22",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2025-01-04 11:44:48",
      },
     {
       id : 6,
@@ -3211,7 +3208,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-22",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2025-01-04 11:44:48",
      },
     {
       id : 7,
@@ -3222,7 +3219,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-24",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2025-01-04 11:44:48",
      },
     {
       id : 8,
@@ -3233,7 +3230,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-24",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2025-01-04 11:44:48",
      },
     {
       id : 9,
@@ -3244,7 +3241,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-25",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2025-01-04 11:44:48",
      },
     {
       id : 10,
@@ -3255,7 +3252,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-25",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2024-12-30 11:44:48",
      },
       {
       id : 11,
@@ -3266,7 +3263,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-30",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2024-12-30 11:44:48",
      },
       {
       id : 12,
@@ -3277,7 +3274,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-30",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2024-12-30 11:44:48",
      },
   {
       id : 13,
@@ -3288,7 +3285,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-24",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2024-12-30 11:44:48",
      },
     {
       id : 14,
@@ -3299,7 +3296,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-24",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2024-12-30 11:44:48",
      },
     {
       id : 15,
@@ -3310,7 +3307,7 @@ const lessonReservationData = [
       email : "test123@gmail.com",
       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
       date : "2025-01-25",
-      createAt : {type : String, default : getCurrentTime},
+      createAt : "2024-12-30 11:44:48",
      },
      {
         id : 16,
@@ -3321,7 +3318,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-15",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
       {
         id : 17,
@@ -3332,7 +3329,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-21",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
       {
         id : 18,
@@ -3343,7 +3340,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-21",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
       {
         id : 19,
@@ -3354,7 +3351,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-22",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
       {
         id : 20,
@@ -3365,7 +3362,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-22",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
       {
         id : 21,
@@ -3376,7 +3373,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-22",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
       {
         id : 22,
@@ -3387,7 +3384,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
       {
         id : 23,
@@ -3398,7 +3395,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
       {
         id : 24,
@@ -3409,7 +3406,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-25",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
       {
         id : 25,
@@ -3420,7 +3417,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-25",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
         {
         id : 26,
@@ -3431,7 +3428,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-30",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-30 11:44:48",
        },
         {
         id : 27,
@@ -3442,7 +3439,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-30",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
     {
         id :28,
@@ -3453,7 +3450,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id :29,
@@ -3464,7 +3461,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 30,
@@ -3475,7 +3472,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-25",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
        {
         id : 31,
@@ -3486,7 +3483,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-15",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 32,
@@ -3497,7 +3494,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-21",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 33,
@@ -3508,7 +3505,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-21",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 34,
@@ -3519,7 +3516,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-22",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 35,
@@ -3530,7 +3527,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-22",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 36,
@@ -3541,7 +3538,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-22",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 37,
@@ -3552,7 +3549,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 38,
@@ -3563,7 +3560,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 39,
@@ -3574,7 +3571,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-25",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 40,
@@ -3585,7 +3582,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-25",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
         {
         id : 41,
@@ -3596,7 +3593,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-30",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
         {
         id : 42,
@@ -3607,7 +3604,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-30",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
     {
         id : 43,
@@ -3618,7 +3615,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 44,
@@ -3629,7 +3626,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 45,
@@ -3640,7 +3637,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-25",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
        {
         id : 46,
@@ -3651,7 +3648,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-15",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-25 11:44:48",
        },
       {
         id : 47,
@@ -3662,7 +3659,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-21",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 48,
@@ -3673,7 +3670,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-21",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 49,
@@ -3684,7 +3681,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-22",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 50,
@@ -3695,7 +3692,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-22",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 51,
@@ -3706,7 +3703,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-22",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 52,
@@ -3717,7 +3714,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 53,
@@ -3728,7 +3725,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 54,
@@ -3739,7 +3736,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-25",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 55,
@@ -3750,7 +3747,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-25",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
         {
         id : 56,
@@ -3761,7 +3758,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-30",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
         {
         id : 57,
@@ -3772,7 +3769,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-30",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
     {
         id : 58,
@@ -3783,7 +3780,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 59,
@@ -3794,7 +3791,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-24",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
       {
         id : 60,
@@ -3805,7 +3802,7 @@ const lessonReservationData = [
         email : "test123@gmail.com",
         memo : "안녕하세요 레슨관련 문의 남깁니다." ,
         date : "2025-01-25",
-        createAt : {type : String, default : getCurrentTime},
+        createAt : "2024-12-22 11:44:48",
        },
        
     ]
