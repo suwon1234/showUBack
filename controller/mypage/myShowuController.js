@@ -1,8 +1,9 @@
+import Lesson from "../../models/showu/lessonSchema.js";
 import Team from "../../models/showu/teamSchema.js";
 
 const getMyTeamMatching = async (req, res) => {
   const userId = req.user._id;
-  console.log("로그인한 사용자 id : ", userId)
+  // console.log("로그인한 사용자 id : ", userId)
   // const { status } = req.params;
   // console.log("req.query", res.params)
 
@@ -29,8 +30,8 @@ const getMyTeamMatching = async (req, res) => {
     }))
       .filter((item) => item.status === "매칭 대기")
 
-    console.log("마이페이지에 필요한 팀 매칭 완료 정보 리스트 :", myCompletedTeamsList)
-    console.log("마이페이지에 필요한 팀 매칭 대기 정보 리스트 :", myWaitingTeamsTeamList)
+    // console.log("마이페이지에 필요한 팀 매칭 완료 정보 리스트 :", myCompletedTeamsList)
+    // console.log("마이페이지에 필요한 팀 매칭 대기 정보 리스트 :", myWaitingTeamsTeamList)
     
     return res.status(200).json({
       teamMatchingSuccess : true,
@@ -49,7 +50,36 @@ const getMyTeamMatching = async (req, res) => {
   }
 }
 
-export { getMyTeamMatching }
+// 개설한 레슨 목록 가져오기
+const getMyLesson = async (req, res) => {
+  const userId = req.user;
+  // console.log("로그인한 사용자 : ", userId)
+
+  try {
+    const lessonList = await Lesson.find({ userId : userId })
+    // console.log("로그인한 사용자와 일치하는 레슨 개설 리스트 : ", lessonList)
+
+    const myLesson = await lessonList.map((lesson) => ({
+      lessonThumbnail : lesson.lessonThumbnail,
+      lessonName : lesson.lessonName
+    }))
+    // console.log("마이페이지에 필요한 개설한 레슨 목록 : ", myLesson)
+
+    return res.status(200).json({
+      lessonSuccess : true,
+      message : "개설한 레슨 목록을 성공적으로 가져왔습니다.",
+      myLesson : myLesson
+    })
+  } catch (error) {
+    return res.status(500).json({
+      lessonSuccess : false,
+      message : "개설한 레슨 목록을 가져오는데 실패했습니다."
+    })
+  }
+
+}
+
+export { getMyTeamMatching, getMyLesson }
 
 
 

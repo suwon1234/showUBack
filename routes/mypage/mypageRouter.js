@@ -7,7 +7,7 @@ import myShowuRouter from './myShowuRouter.js';
 const mypageRouter = express.Router()
 
 //팀매칭
-mypageRouter.use("/myTeam", myShowuRouter)
+mypageRouter.use("/showu", myShowuRouter)
 
 // 활동 정보 
 mypageRouter.use("/my-active", myActiveRouter)
