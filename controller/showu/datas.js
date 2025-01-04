@@ -3372,7 +3372,7 @@ const lessonReservationData = [
        },
       {
         id : 21,
-        classId : 3,
+        classId : '677950aa4793c615ee8eb4b1', 
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3383,7 +3383,7 @@ const lessonReservationData = [
        },
       {
         id : 22,
-        classId : 4,
+        classId : '677950aa4793c615ee8eb4ad',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3405,7 +3405,7 @@ const lessonReservationData = [
        },
       {
         id : 24,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4b1', 
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3438,7 +3438,7 @@ const lessonReservationData = [
        },
         {
         id : 27,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4b1',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3449,7 +3449,7 @@ const lessonReservationData = [
        },
     {
         id :28,
-        classId : 4,
+        classId : '677950aa4793c615ee8eb4ae',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3471,7 +3471,7 @@ const lessonReservationData = [
        },
       {
         id : 30,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4b1',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3482,7 +3482,7 @@ const lessonReservationData = [
        },
        {
         id : 31,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4ac',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3515,7 +3515,7 @@ const lessonReservationData = [
        },
       {
         id : 34,
-        classId : 2,
+        classId : '677950aa4793c615ee8eb4ac',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3581,7 +3581,7 @@ const lessonReservationData = [
        },
       {
         id : 40,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4ac',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3592,7 +3592,7 @@ const lessonReservationData = [
        },
         {
         id : 41,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4b1',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3603,7 +3603,7 @@ const lessonReservationData = [
        },
         {
         id : 42,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4ac',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3625,7 +3625,7 @@ const lessonReservationData = [
        },
       {
         id : 44,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4b1',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3636,7 +3636,7 @@ const lessonReservationData = [
        },
       {
         id : 45,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4b1',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3658,7 +3658,7 @@ const lessonReservationData = [
        },
       {
         id : 47,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4ac',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3680,7 +3680,7 @@ const lessonReservationData = [
        },
       {
         id : 49,
-        classId : 2,
+        classId : '677950aa4793c615ee8eb4ad',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3702,7 +3702,7 @@ const lessonReservationData = [
        },
       {
         id : 51,
-        classId : 3,
+        classId : '677950aa4793c615ee8eb4ae',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3713,7 +3713,7 @@ const lessonReservationData = [
        },
       {
         id : 52,
-        classId : 4,
+        classId : '677950aa4793c615ee8eb4ac',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3746,7 +3746,7 @@ const lessonReservationData = [
        },
       {
         id : 55,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4ae',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
@@ -3768,7 +3768,7 @@ const lessonReservationData = [
        },
         {
         id : 57,
-        classId : 1,
+        classId : '677950aa4793c615ee8eb4ae',
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
         phoneNumber : "010-9999-9999",
