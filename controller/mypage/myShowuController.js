@@ -1,3 +1,4 @@
+import LessonResevation from "../../models/showu/lessonReservationSchema.js";
 import Lesson from "../../models/showu/lessonSchema.js";
 import Team from "../../models/showu/teamSchema.js";
 
@@ -81,8 +82,39 @@ const getMyLesson = async (req, res) => {
 
 
 // 레슨 상담내역 불러오기
-const getlessonreservation = () => {
-  
+const getlessonreservation = async (req, res) => {
+  const userId = req.user;
+  console.log("로그인한 사용자 id : ", userId)
+
+  try {
+    const reservationList = await LessonResevation.find({ userId : userId })
+    console.log("로그인한 사용자와 일치하는 상담 내역 리스트 : ", reservationList)
+
+    const myLessonReservationList = await reservationList.map((lesson) => ({
+      id : lesson.id,
+      phoneNumber : lesson.phoneNumber,
+      email : lesson.email
+    }))
+      .sort(function(a, b){
+        return a.id - b.id; //id값 오름차순 정렬
+      })
+
+    console.log("마이페이지에 필요한 레슨 상담 내역 정보 리스트: ", myLessonReservationList)
+
+    return res.status(200).json({
+      LessonResevationSuccess : true,
+      message : "상담 내역을 성공적으로 가져왔습니다",
+      myLessonReservationList : myLessonReservationList
+    })
+    
+  } catch (error) {
+
+    return res.status(200).json({
+      LessonResevationSuccess : false,
+      message : "상담내역을 가져오는데 실패했습니다",
+    })
+
+  }
 }
 
 export { getMyTeamMatching, getMyLesson, getlessonreservation }

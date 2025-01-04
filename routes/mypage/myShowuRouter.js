@@ -1,6 +1,6 @@
 import express from 'express';
 import passport from 'passport';
-import { getMyLesson, getMyTeamMatching } from '../../controller/mypage/myShowuController.js';
+import { getMyLesson, getMyTeamMatching, getlessonreservation } from '../../controller/mypage/myShowuController.js';
 
 const myShowuRouter = express.Router()
 
