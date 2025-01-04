@@ -64,7 +64,7 @@ const getMyLesson = async (req, res) => {
       lessonThumbnail : lesson.lessonThumbnail,
       lessonName : lesson.lessonName
     }))
-    // console.log("마이페이지에 필요한 개설한 레슨 목록 : ", myLesson)
+    console.log("마이페이지에 필요한 개설한 레슨 목록 : ", myLesson)
 
     return res.status(200).json({
       lessonSuccess : true,
