@@ -6,7 +6,7 @@ const lessonListData = [
         id : 1,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+        lessonThumbnail : "/images/showu/acting/acting1.jpg",
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
         category : "연기", 
@@ -57,37 +57,37 @@ const lessonListData = [
         portfolio1 : {
                 index : 1,
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : "/images/showu/acting/portfolio1.jpg" // 포트폴리오 
                 },
         portfolio2 :{
                 index : 2, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                portfolioURL : "/images/showu/music/portfolio2.jpg" // 포트폴리오 
                 },
         portfolio3 :{
                 index : 3, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : "/images/showu/magic/portfolio3.jpg" // 포트폴리오 
                 },
         portfolio4 :{
                 index : 4, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : "/images/showu/music/portfolio2.jpg" // 포트폴리오 
                 },
             },
 
     medias : {
 	media1 :  {
             index : 1,
-            mediaURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg'
+            mediaURL : '/images/showu/acting/acting4.jpg'
         	},
 	media2 :  {
             index : 2,
-            mediaURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg"
+            mediaURL : "/images/showu/acting/acting5.jpg"
         	},
 	media3 :  {
             index : 3,
-            mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+            mediaURL : '/images/showu/acting/acting2.jpg'
         	},
          },
           
@@ -115,7 +115,7 @@ const lessonListData = [
         id : 2,
         userId : "677630ae686ab95419a5a1dc",
         name : "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+        lessonThumbnail : "/images/showu/music/music1.jpg",
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -165,38 +165,38 @@ const lessonListData = [
         portfolios : { 
             portfolio1 :{
                     index : 1,
-                    portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg'// 포트폴리오 
+                    portfolioTitle : "매채 음악레슨",
+                    portfolioURL : '/images/showu/music/music6.jpg'// 포트폴리오 
                     },
             portfolio2 :{
                     index : 2, 
-                    portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg' // 포트폴리오 
+                    portfolioTitle : "매채 음악레슨",
+                    portfolioURL : '/images/showu/music/music8.jpg' // 포트폴리오 
                     },
             portfolio3 :{
                     index : 3, 
-                    portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg' // 포트폴리오 
+                    portfolioTitle : "매채 음악레슨",
+                    portfolioURL : '/images/showu/music/music10.jpg' // 포트폴리오 
                     },
             portfolio4 :{
                     index : 4, 
-                    portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340' // 포트폴리오 
+                    portfolioTitle : "매채 음악레슨",
+                    portfolioURL : '/images/showu/music/portfolio2.jpg' // 포트폴리오 
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    mediaURL : '/images/showu/music/portfolio7.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL :'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg'
+                    mediaURL :'/images/showu/music/music4.jpg'
             },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    mediaURL : '/images/showu/music/portfolio5.jpg'
                     },
         },
 
@@ -223,7 +223,7 @@ const lessonListData = [
         id : 3,
         userId :"677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+        lessonThumbnail : '/images/showu/magic/magic1.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -274,37 +274,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/magic/magic1.jpg'
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg' // 포트폴리오 
+                    portfolioURL : '/images/showu/magic/portfolio6.jpg' // 포트폴리오 
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg' // 포트폴리오 
+                    portfolioURL :'/images/showu/music/music10.jpg' // 포트폴리오 
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg'// 포트폴리오 
+                    portfolioURL : '/images/showu/music/portfolio5.jpg'// 포트폴리오 
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    mediaURL : '/images/showu/music/music2.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    mediaURL :'/images/showu/music/music9.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg'
+                    mediaURL : '/images/showu/music/portfolio2.jpg'
                     },
         },
 
@@ -331,7 +331,7 @@ const lessonListData = [
         id : 4,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+        lessonThumbnail : '/images/showu/magic/portfolio1.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -383,35 +383,35 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                    portfolioURL : '/images/showu/music/music4.jpg' // 포트폴리오 
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg',
+                    portfolioURL : '/images/showu/music/music8.jpg',
                     index : 3, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg' // 포트폴리오 
+                    portfolioURL : '/images/showu/music/portfolio3.jpg' // 포트폴리오 
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                    portfolioURL : '/images/showu/music/music1.jpg' // 포트폴리오 
                     },
                 },
 
         medias : 
         {media1 :  {
                 index : 1,
-                mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                mediaURL : '/images/showu/music/portfolio3.jpg'
                 },
         media2 :  {
                 index : 2,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+                mediaURL : '/images/showu/music/music10.jpg'
                 },
         media3 :  {
                 index : 3,
-                mediaURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg'
+                mediaURL : '/images/showu/music/portfolio8.jpg'
        },
     },
          etcAnnouncement :{
@@ -437,7 +437,7 @@ const lessonListData = [
         id : 5,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg',
+        lessonThumbnail : '/images/showu/acting/portfolio4.jpg',
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
         category : "연기", 
@@ -489,37 +489,37 @@ const lessonListData = [
         portfolio1 : {
                 index : 1,
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : 'https://cdn.mhns.co.kr/news/photo/202411/703708_806763_3039.jpg'
+                portfolioURL : '/images/showu/acting/acting5.jpg'
                 },
         portfolio2 :{
                 index : 2, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/magic/magic4.jpg' // 포트폴리오 
                 },
         portfolio3 :{
                 index : 3, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/music/music9.jpg' // 포트폴리오 
                 },
         portfolio4 :{
                 index : 4, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/music/portfolio3.jpg' // 포트폴리오 
                 },
             },
 
     medias : {
 	media1 :  {
             index : 1,
-            mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+            mediaURL : '/images/showu/magic/portfolio4.jpg'
         	},
 	media2 :  {
             index : 2,
-            mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+            mediaURL : '/images/showu/music/music5.jpg'
              },
 	media3 :  {
             index : 3,
-            mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+            mediaURL : '/images/showu/music/music9.jpg'
         	},
          },
           
@@ -547,7 +547,7 @@ const lessonListData = [
         id : 6,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+        lessonThumbnail : '/images/showu/magic/portfolio3.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -598,37 +598,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                    portfolioURL : '/images/showu/magic/portfolio6.jpg' // 포트폴리오 
                     },
             portfolio2 :{
                     index : 2, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832' // 포트폴리오 
+                    portfolioURL : '/images/showu/music/portfolio2.jpg' // 포트폴리오 
                     },
             portfolio3 :{
                     index : 3, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                    portfolioURL : '/images/showu/magic/portfolio5.jpg' // 포트폴리오 
                     },
             portfolio4 :{
                     index : 4, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832' // 포트폴리오 
+                    portfolioURL : '/images/showu/magic/portfolio1.jpg' // 포트폴리오 
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+                    mediaURL : '/images/showu/acting/portfolio2.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL :'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+                    mediaURL :'/images/showu/magic/portfolio4.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    mediaURL : '/images/showu/music/portfolio5.jpg'
                     },
         },
 
@@ -656,10 +656,10 @@ const lessonListData = [
         id : 7,
         userId :"677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+        lessonThumbnail :'/images/showu/music/music1.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
-        category : "음악", // 레슨 카테고리
+        category : "마술", // 레슨 카테고리
         lessonAddress : {
             addressSi : "서울시",
             addressGuGun : "광진구",
@@ -707,37 +707,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg'// 포트폴리오 
+                    portfolioURL : '/images/showu/magic/magic1.jpg'// 포트폴리오 
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/magic/magic6.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/magic/magic4.jpg'
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL :'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL :'/images/showu/magic/magic2.jpg'
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg'
+                    mediaURL : '/images/showu/magic/portfolio6.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg"
+                    mediaURL :'/images/showu/magic/portfolio3.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    mediaURL : '/images/showu/magic/portfolio5.jpg'
                     },
         },
 
@@ -764,7 +764,7 @@ const lessonListData = [
         id : 8,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+        lessonThumbnail :'/images/showu/music/music1.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -815,37 +815,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg'
+                    portfolioURL : '/images/showu/music/music2.jpg'
             },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg'
+                    portfolioURL : '/images/showu/music/music3.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/music/music4.jpg'
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/music/music5.jpg'
                     },
                 },
 
         medias : 
         {media1 :  {
                 index : 1,
-                mediaURL : 'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg'
+                mediaURL : '/images/showu/music/music6.jpg'
                 },
         media2 :  {
                 index : 2,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                mediaURL : '/images/showu/music/music7.jpg'
                 },
         media3 :  {
                 index : 3,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                mediaURL : '/images/showu/music/music8.jpg'
                 },
        },
          etcAnnouncement :{
@@ -871,7 +871,7 @@ const lessonListData = [
         id : 9,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+        lessonThumbnail : '/images/showu/acting/acting1.jpg',
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
         category : "연기", 
@@ -922,37 +922,37 @@ const lessonListData = [
         portfolio1 : {
                 index : 1,
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/acting/acting2.jpg' // 포트폴리오 
                 },
         portfolio2 :{
                 index : 2, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/acting/acting4.jpg' // 포트폴리오 
                 },
         portfolio3 :{
                 index : 3, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/acting/portfolio4.jpg' // 포트폴리오 
                 },
         portfolio4 :{
                 index : 4, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL :'/images/showu/acting/acting3.jpg' // 포트폴리오 
                 },
             },
 
     medias : {
 	media1 :  {
             index : 1,
-            mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+            mediaURL : '/images/showu/acting/portfolio3.jpg'
         	},
 	media2 :  {
             index : 2,
-            mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+            mediaURL : '/images/showu/acting/portfolio2.jpg'
         	},
 	media3 :  {
             index : 3,
-            mediaURL :'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg'
+            mediaURL :'/images/showu/acting/portfolio1.jpg'
         	},
          },
           
@@ -980,10 +980,11 @@ const lessonListData = [
         id : 10,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+        lessonThumbnail : '/images/showu/magic/magic1.jpg'
+,
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
-        category : "음악", // 레슨 카테고리
+        category : "마술", // 레슨 카테고리
         lessonAddress : {
             addressSi : "서울시",
             addressGuGun : "강남구",
@@ -1031,37 +1032,42 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                    portfolioURL : '/images/showu/magic/magic2.jpg'
+ // 포트폴리오 
                     },
             portfolio2 :{
                     index : 2, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL : '/images/showu/magic/magic3.jpg'
+
                     },
             portfolio3 :{
                     index : 3, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/magic/magic6.jpg'
+
                     },
             portfolio4 :{
                     index : 4, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                    portfolioURL : '/images/showu/magic/magic5.jpg'
+// 포트폴리오 
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                    mediaURL : '/images/showu/magic/magic4.jpg'
+
                     },
             media2 :  {
                     index : 2,
-                    mediaURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg"
+                    mediaURL : '/images/showu/magic/portfolio1.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL :'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    mediaURL :'/images/showu/magic/portfolio6.jpg'
                     },
         },
 
@@ -1089,7 +1095,7 @@ const lessonListData = [
         id : 11,
         userId :"677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+        lessonThumbnail : '/images/showu/music/music1.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -1140,37 +1146,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832' 
+                    portfolioURL : '/images/showu/music/music10.jpg' 
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/music/music9.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg'
+                    portfolioURL : '/images/showu/music/music2.jpg'
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/music/music5.jpg'
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    mediaURL : '/images/showu/music/music7.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    mediaURL : '/images/showu/music/music3.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    mediaURL :'/images/showu/music/music6.jpg'
                     },
         },
 
@@ -1197,7 +1203,7 @@ const lessonListData = [
         id : 12,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+        lessonThumbnail : '/images/showu/music/music10.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -1248,37 +1254,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg'
+                    portfolioURL : '/images/showu/music/music9.jpg'
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                    portfolioURL : '/images/showu/music/music8.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2024/11/13/2024111342327016c231ad269ad65a1016a167213f05929a.jpg'
+                    portfolioURL : '/images/showu/music/music7.jpg'
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                    portfolioURL : '/images/showu/music/music6.jpg' // 포트폴리오 
                     },
                 },
 
         medias : 
         {media1 :  {
                 index : 1,
-                mediaURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg"
+                mediaURL : '/images/showu/music/music5.jpg'
                 },
         media2 :  {
                 index : 2,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                mediaURL : '/images/showu/music/music4.jpg'
                 },
         media3 :  {
                 index : 3,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                mediaURL : '/images/showu/music/music3.jpg'
                 },
        },
          etcAnnouncement :{
@@ -1304,10 +1310,10 @@ const lessonListData = [
         id : 13,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail :'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e',
+        lessonThumbnail :'/images/showu/music/music2.jpg',
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
-        category : "연기", 
+        category : "마술", 
         lessonAddress : {
             addressSi : "서울시",
             addressGuGun : "서초구",
@@ -1355,37 +1361,37 @@ const lessonListData = [
         portfolio1 : {
                 index : 1,
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/magic/portfolio1.jpg' // 포트폴리오 
                 },
         portfolio2 :{
                 index : 2, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/magic/portfolio3.jpg' // 포트폴리오 
                 },
         portfolio3 :{
                 index : 3, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/magic/portfolio4.jpg' // 포트폴리오 
                 },
         portfolio4 :{
                 index : 4, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/magic/portfolio2.jpg' // 포트폴리오 
                 },
             },
 
     medias : {
 	media1 :  {
             index : 1,
-            mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+            mediaURL : '/images/showu/magic/portfolio5.jpg'
         	},
 	media2 :  {
             index : 2,
-            mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+            mediaURL : '/images/showu/magic/portfolio6.jpg'
         	},
 	media3 :  {
             index : 3,
-            mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+            mediaURL : '/images/showu/magic/magic1.jpg'
         	},
          },
           
@@ -1413,7 +1419,7 @@ const lessonListData = [
         id : 14,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        lessonThumbnail : '/images/showu/acting/acting1.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -1464,37 +1470,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                    portfolioURL :'/images/showu/music/portfolio1.jpg'
                     },
             portfolio2 :{
                     index : 2, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/music/portfolio3.jpg'
                     },
             portfolio3 :{
                     index : 3, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                    portfolioURL : '/images/showu/music/portfolio5.jpg'
                     },
             portfolio4 :{
                     index : 4, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL : '/images/showu/music/portfolio7.jpg'
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL :'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    mediaURL :'/images/showu/music/portfolio9.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL : 'https://www.sfac.or.kr/upload/daumeditor/4759535f-a0d9-444a-afde-de4a71a48a85.png'
+                    mediaURL : '/images/showu/music/portfolio8.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    mediaURL : '/images/showu/music/portfolio7.jpg'
                     },
         },
 
@@ -1522,10 +1528,10 @@ const lessonListData = [
         id : 15,
         userId :"677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
-        lessonName : "쇼팽피아노", //레슨 이름 
+        lessonThumbnail : '/images/showu/magic/portfolio6.jpg',
+        lessonName : "마술을 꿈꾸는 사람들", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
-        category : "음악", // 레슨 카테고리
+        category : "마술", // 레슨 카테고리
         lessonAddress : {
             addressSi : "서울시",
             addressGuGun : "광진구",
@@ -1573,37 +1579,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                    portfolioURL : '/images/showu/magic/portfolio4.jpg' // 포트폴리오 
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL : '/images/showu/magic/portfolio2.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : "https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg" // 포트폴리오 
+                    portfolioURL :'/images/showu/magic/portfolio1.jpg' // 포트폴리오 
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                    portfolioURL : '/images/showu/magic/portfolio3.jpg'
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://www.sfac.or.kr/upload/daumeditor/4759535f-a0d9-444a-afde-de4a71a48a85.png'
+                    mediaURL : '/images/showu/magic/portfolio5.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                    mediaURL : '/images/showu/magic/magic6.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                    mediaURL : '/images/showu/magic/magic2.jpg'
                     },
         },
 
@@ -1630,7 +1636,7 @@ const lessonListData = [
         id : 16,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+        lessonThumbnail :'/images/showu/music/music1.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -1681,37 +1687,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/music/music3.jpg'
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL :'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL :'/images/showu/music/music10.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL : '/images/showu/music/music5.jpg'
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.sfac.or.kr/upload/daumeditor/4759535f-a0d9-444a-afde-de4a71a48a85.png' // 포트폴리오 
+                    portfolioURL : '/images/showu/music/music7.jpg' // 포트폴리오 
                     },
                 },
 
         medias : 
         {media1 :  {
                 index : 1,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                mediaURL : '/images/showu/music/music9.jpg'
                 },
         media2 :  {
                 index : 2,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+                mediaURL : '/images/showu/music/music8.jpg'
                 },
         media3 :  {
                 index : 3,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                mediaURL : '/images/showu/music/music2.jpg'
                 },
        },
          etcAnnouncement :{
@@ -1737,10 +1743,10 @@ const lessonListData = [
         id : 17,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+        lessonThumbnail :'/images/showu/magic/portfolio6.jpg',
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
-        category : "연기", 
+        category : "마술", 
         lessonAddress : {
             addressSi : "서울시",
             addressGuGun : "서초구",
@@ -1788,37 +1794,37 @@ const lessonListData = [
         portfolio1 : {
                 index : 1,
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : 'https://www.sfac.or.kr/upload/daumeditor/4759535f-a0d9-444a-afde-de4a71a48a85.png' // 포트폴리오 
+                portfolioURL : '/images/showu/magic/portfolio4.jpg' // 포트폴리오 
                 },
         portfolio2 :{
                 index : 2, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/magic/magic6.jpg' // 포트폴리오 
                 },
         portfolio3 :{
                 index : 3, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/magic/magic5.jpg' // 포트폴리오 
                 },
         portfolio4 :{
                 index : 4, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/magic/magic4.jpg' // 포트폴리오 
                 },
             },
 
     medias : {
 	media1 :  {
             index : 1,
-            mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+            mediaURL : '/images/showu/magic/magic3.jpg'
         	},
 	media2 :  {
             index : 2,
-            mediaURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+            mediaURL : '/images/showu/magic/magic2.jpg'
         	},
 	media3 :  {
             index : 3,
-            mediaURL : 'https://www.sfac.or.kr/upload/daumeditor/4759535f-a0d9-444a-afde-de4a71a48a85.png'
+            mediaURL : '/images/showu/magic/magic1.jpg'
         	},
          },
           
@@ -1845,10 +1851,10 @@ const lessonListData = [
         id : 18,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
-        lessonName : "쇼팽피아노", //레슨 이름 
+        lessonThumbnail : '/images/showu/magic/magic6.jpg',
+        lessonName : "마술배우기", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
-        category : "음악", // 레슨 카테고리
+        category : "마술", // 레슨 카테고리
         lessonAddress : {
             addressSi : "서울시",
             addressGuGun : "강남구",
@@ -1896,37 +1902,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL : '/images/showu/magic/magic2.jpg'
                     },
             portfolio2 :{
                     index : 2, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    portfolioURL :'/images/showu/magic/magic1.jpg'
             },
             portfolio3 :{
                     index : 3, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.sfac.or.kr/upload/daumeditor/4759535f-a0d9-444a-afde-de4a71a48a85.png' // 포트폴리오 
+                    portfolioURL : '/images/showu/magic/magic5.jpg' // 포트폴리오 
                     },
             portfolio4 :{
                     index : 4, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    portfolioURL : '/images/showu/magic/magic4.jpg'
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    mediaURL : '/images/showu/magic/magic3.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    mediaURL : '/images/showu/magic/magic2.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://www.sfac.or.kr/upload/daumeditor/4759535f-a0d9-444a-afde-de4a71a48a85.png'
+                    mediaURL : '/images/showu/magic/portfolio6.jpg'
                     },
         },
 
@@ -1954,10 +1960,10 @@ const lessonListData = [
         id : 19,
         userId :"677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
-        lessonName : "쇼팽피아노", //레슨 이름 
+        lessonThumbnail : '/images/showu/acting/portfolio1.jpg',
+        lessonName : "마술 당신도 할 수 있습니다.", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
-        category : "음악", // 레슨 카테고리
+        category : "마술", // 레슨 카테고리
         lessonAddress : {
             addressSi : "서울시",
             addressGuGun : "광진구",
@@ -2005,37 +2011,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                    portfolioURL : '/images/showu/acting/portfolio4.jpg'
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL : '/images/showu/acting/portfolio3.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                    portfolioURL : '/images/showu/acting/portfolio2.jpg'
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/magic/portfolio1.jpg'
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    mediaURL :'/images/showu/magic/portfolio4.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL :'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    mediaURL :'/images/showu/magic/portfolio3.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+                    mediaURL : '/images/showu/magic/portfolio2.jpg'
                     },
         },
 
@@ -2062,7 +2068,7 @@ const lessonListData = [
         id : 20,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+        lessonThumbnail :'/images/showu/music/music8.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -2113,37 +2119,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'  
+                    portfolioURL : '/images/showu/music/music4.jpg' 
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL : '/images/showu/music/music2.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/music/music1.jpg'
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340' 
+                    portfolioURL : '/images/showu/music/portfolio2.jpg'
                     },
                 },
 
         medias : 
         {media1 :  {
                 index : 1,
-                mediaURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                mediaURL : '/images/showu/music/portfolio4.jpg'
                 },
         media2 :  {
                 index : 2,
-                mediaURL :'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832'
+                mediaURL :'/images/showu/music/portfolio8.jpg'
                 },
         media3 :  {
                 index : 3,
-                mediaURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                mediaURL : '/images/showu/music/portfolio10.jpg'
                 },
        },
          etcAnnouncement :{
@@ -2169,7 +2175,7 @@ const lessonListData = [
         id : 21,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        lessonThumbnail : '/images/showu/acting/acting1.jpg',
         lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
         callTime : "오전12시 - 오전12시", 
         category : "연기", 
@@ -2220,37 +2226,37 @@ const lessonListData = [
         portfolio1 : {
                 index : 1,
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/acting/acting2.jpg' // 포트폴리오 
                 },
         portfolio2 :{
                 index : 2, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL :'/images/showu/acting/acting3.jpg' // 포트폴리오 
                 },
         portfolio3 :{
                 index : 3, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL : '/images/showu/acting/acting4.jpg' // 포트폴리오 
                 },
         portfolio4 :{
                 index : 4, //고유번호
                 portfolioTitle : "매채 연기레슨",
-                portfolioURL : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832" // 포트폴리오 
+                portfolioURL :'/images/showu/acting/portfolio1.jpg' // 포트폴리오 
                 },
             },
 
     medias : {
 	media1 :  {
             index : 1,
-            mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+            mediaURL : '/images/showu/acting/portfolio2.jpg'
         	},
 	media2 :  {
             index : 2,
-            mediaURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+            mediaURL : '/images/showu/acting/portfolio4.jpg'
         	},
 	media3 :  {
             index : 3,
-            mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+            mediaURL : '/images/showu/acting/acting5.jpg'
         	},
          },
           
@@ -2278,7 +2284,7 @@ const lessonListData = [
         id : 22,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        lessonThumbnail : '/images/showu/music/music1.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -2329,37 +2335,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832' // 포트폴리오 
+                    portfolioURL : '/images/showu/music/music2.jpg' // 포트폴리오 
                     },
             portfolio2 :{
                     index : 2, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL : '/images/showu/music/music3.jpg'
                     },
             portfolio3 :{
                     index : 3, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMDNfMjI3%2FMDAxNzI3OTI1NjE4MDk3.wJMdo4KwESnxJkeiHjH7fsy_xNSikNjVRAV6HoQGRVIg.ua_xRjCOR-vJfRk4uhkDBvJ46laHp7TtMSCkZ3nrJP4g.JPEG%2F2025_%25B6%25F3%25C0%25CE%25BE%25F7_%25BF%25C0%25B5%25F0%25BC%25C7_%25B0%25F8%25B0%25ED_%25BD%25E6%25B3%25D7%25C0%25CF-03.jpg&type=a340'
+                    portfolioURL : '/images/showu/music/music4.jpg'
             },
             portfolio4 :{
                     index : 4, 
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL :'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832' // 포트폴리오 
+                    portfolioURL :'/images/showu/music/portfolio10.jpg' // 포트폴리오 
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+                    mediaURL : '/images/showu/music/portfolio9.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    mediaURL : '/images/showu/music/portfolio8.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    mediaURL : '/images/showu/music/portfolio7.jpg'
                     },
         },
 
@@ -2386,7 +2392,7 @@ const lessonListData = [
         id : 23,
         userId :"677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+        lessonThumbnail : '/images/showu/music/portfolio1.jpg',
         lessonName : "쇼팽피아노", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
         category : "음악", // 레슨 카테고리
@@ -2437,37 +2443,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832' // 포트폴리오 
+                    portfolioURL : '/images/showu/music/portfolio10.jpg' // 포트폴리오 
                     },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "음악 레슨",
-                    portfolioURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    portfolioURL : '/images/showu/music/portfolio9.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MTNfMTM1%2FMDAxNjQ5ODE1ODc3MzQ1.3BHjoHCANe4WycbNHeJ613_qjysx_fb-z41o9_M8l1Yg.zv5Ku68OApU8lzmDQF5SQ6OmRubdjgdQ-8A83VT5MH4g.JPEG.ellychoux%2F1.jpg&type=sc960_832' // 포트폴리오 
+                    portfolioURL : '/images/showu/music/portfolio8.jpg' // 포트폴리오 
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "음악 강좌",
-                    portfolioURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    portfolioURL : '/images/showu/music/portfolio7.jpg'
                     },
         },
 
         medias : {
             media1 :  {
                     index : 1,
-                    mediaURL :'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832'
+                    mediaURL :'/images/showu/music/portfolio6.jpg'
                     },
             media2 :  {
                     index : 2,
-                    mediaURL : 'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e'
+                    mediaURL : '/images/showu/music/portfolio5.jpg'
                     },
             media3 :  {
                     index : 3,
-                    mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+                    mediaURL : '/images/showu/music/portfolio4.jpg'
                     },
         },
 
@@ -2494,10 +2500,10 @@ const lessonListData = [
         id : 24,
         userId : "677630ae686ab95419a5a1dc",
         name :  "677630ae686ab95419a5a1dc",
-        lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
-        lessonName : "쇼팽피아노", //레슨 이름 
+        lessonThumbnail : '/images/showu/magic/magic1.jpg',
+        lessonName : "재밌는 마술교실", //레슨 이름 
         callTime : "오전12시 - 오전12시", // 응대 가능시간
-        category : "음악", // 레슨 카테고리
+        category : "마술", // 레슨 카테고리
         lessonAddress : {
             addressSi : "서울시",
             addressGuGun : "강남구",
@@ -2545,37 +2551,37 @@ const lessonListData = [
             portfolio1 :{
                     index : 1,
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    portfolioURL : '/images/showu/magic/magic3.jpg'
             },
             portfolio2 :{
                     index : 2, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+                    portfolioURL : '/images/showu/magic/magic5.jpg'
                     },
             portfolio3 :{
                     index : 3, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                    portfolioURL : '/images/showu/magic/magic6.jpg'
                     },
             portfolio4 :{
                     index : 4, //고유번호
                     portfolioTitle : "매채 연기레슨",
-                    portfolioURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832' // 포트폴리오 
+                    portfolioURL : '/images/showu/magic/portfolio6.jpg' // 포트폴리오 
                     },
                 },
 
         medias : 
         {media1 :  {
                 index : 1,
-                mediaURL : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg'
+                mediaURL : '/images/showu/magic/portfolio4.jpg'
                 },
         media2 :  {
                 index : 2,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEwMjFfMTMz%2FMDAxNzI5NDk1OTk1MDQw.9fH3RyIqD9YCMMM59QwBRYCEhdr9JQuRAr2_rRydmj0g.HQk8bunSa_na6JavgvSdjVeHjCis0V1BtZFdUp-P0jog.PNG%2F1.png&type=a340'
+                mediaURL : '/images/showu/magic/portfolio3.jpg'
                 },
         media3 :  {
                 index : 3,
-                mediaURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832'
+                mediaURL : '/images/showu/magic/portfolio1.jpg'
                 },
        },
          etcAnnouncement :{
@@ -2614,7 +2620,7 @@ const teamListData = [
         id : 1,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(분당)",
-        teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+        teamThumbnail :'/images/showu/acting/portfolio3.jpg',
         category : "연기",
         meetDay : "월",
         meetPeriod : {
@@ -2640,7 +2646,7 @@ const teamListData = [
         id : 2,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "보컬 연습",
-        teamThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg',
+        teamThumbnail : '/images/showu/music/music5.jpg',
         category : "음악",
         meetDay : "화",
         meetPeriod : {
@@ -2666,7 +2672,7 @@ const teamListData = [
         id : 3,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "마술 연습",
-        teamThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+        teamThumbnail : '/images/showu/magic/portfolio6.jpg',
         category : "마술",
         meetDay : "목",
         meetPeriod : {
@@ -2692,7 +2698,7 @@ const teamListData = [
         id : 4,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(서울)",
-        teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        teamThumbnail :'/images/showu/acting/portfolio3.jpg',
         category : "연기",
         meetDay : "토",
         meetPeriod : {
@@ -2718,7 +2724,7 @@ const teamListData = [
         id : 5,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(서울)",
-        teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        teamThumbnail : '/images/showu/acting/portfolio3.jpg',
         category : "연기",
         meetDay : "토",
         meetPeriod : {
@@ -2744,7 +2750,7 @@ const teamListData = [
         id : 6,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(분당)",
-        teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+        teamThumbnail : '/images/showu/music/portfolio2.jpg',
         category : "연기",
         meetDay : "월",
         meetPeriod : {
@@ -2770,7 +2776,7 @@ const teamListData = [
         id : 7,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "보컬 연습",
-        teamThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg',
+        teamThumbnail : '/images/showu/magic/portfolio6.jpg',
         category : "음악",
         meetDay : "화",
         meetPeriod : {
@@ -2796,7 +2802,7 @@ const teamListData = [
         id : 8,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "마술 연습",
-        teamThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+        teamThumbnail : '/images/showu/magic/magic5.jpg',
         category : "마술",
         meetDay : "목",
         meetPeriod : {
@@ -2822,7 +2828,7 @@ const teamListData = [
         id : 9,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(서울)",
-        teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        teamThumbnail : '/images/showu/magic/portfolio3.jpg',
         category : "연기",
         meetDay : "토",
         meetPeriod : {
@@ -2848,7 +2854,7 @@ const teamListData = [
         id : 10,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(서울)",
-        teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        teamThumbnail : '/images/showu/acting/acting4.jpg',
         category : "연기",
         meetDay : "토",
         meetPeriod : {
@@ -2874,7 +2880,7 @@ const teamListData = [
         id : 11,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(분당)",
-        teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+        teamThumbnail :'/images/showu/music/portfolio2.jpg',
         category : "연기",
         meetDay : "금",
         meetPeriod : {
@@ -2900,7 +2906,7 @@ const teamListData = [
         id : 12,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "보컬 연습",
-        teamThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg',
+        teamThumbnail : '/images/showu/music/music6.jpg',
         category : "음악",
         meetDay : "일",
         meetPeriod : {
@@ -2926,7 +2932,7 @@ const teamListData = [
         id : 13,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "마술 연습",
-        teamThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+        teamThumbnail : '/images/showu/magic/portfolio6.jpg',
         category : "마술",
         meetDay : "수",
         meetPeriod : {
@@ -2952,7 +2958,7 @@ const teamListData = [
         id : 14,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(서울)",
-        teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        teamThumbnail :'/images/showu/music/portfolio2.jpg',
         category : "연기",
         meetDay : "일",
         meetPeriod : {
@@ -2978,7 +2984,7 @@ const teamListData = [
         id : 15,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(서울)",
-        teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        teamThumbnail : '/images/showu/music/portfolio4.jpg',
         category : "연기",
         meetDay : "토",
         meetPeriod : {
@@ -3004,7 +3010,7 @@ const teamListData = [
         id : 16,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(분당)",
-        teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+        teamThumbnail : '/images/showu/music/portfolio1.jpg',
         category : "연기",
         meetDay : "월",
         meetPeriod : {
@@ -3030,7 +3036,7 @@ const teamListData = [
         id : 17,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "보컬 연습",
-        teamThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg',
+        teamThumbnail : '/images/showu/acting/portfolio2.jpg',
         category : "음악",
         meetDay : "화",
         meetPeriod : {
@@ -3056,7 +3062,7 @@ const teamListData = [
         id : 18,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "마술 연습",
-        teamThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+        teamThumbnail : '/images/showu/acting/acting4.jpg',
         category : "마술",
         meetDay : "수",
         meetPeriod : {
@@ -3082,7 +3088,7 @@ const teamListData = [
         id : 19,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(서울)",
-        teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        teamThumbnail : '/images/showu/music/portfolio1.jpg',
         category : "연기",
         meetDay : "토",
         meetPeriod : {
@@ -3108,7 +3114,7 @@ const teamListData = [
         id : 20,
         userId : "677630ae686ab95419a5a1dc",
         teamName : "아마추어 연기 연습(서울)",
-        teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+        teamThumbnail : '/images/showu/magic/portfolio6.jpg',
         category : "연기",
         meetDay : "수",
         meetPeriod : {
