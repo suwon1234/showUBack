@@ -1,22 +1,22 @@
 import express from 'express';
-import passport from 'passport';
-import { myActivePost, likeMd, likeAuction, vodSubscript, likeSpace } from '../../controller/mypage/mypageController.js';
-
+import likeRouter from './likeRouter.js';
+import myActiveRouter from './myActiveRoter.js';
+import myVodRouter from './myVodRouter.js';
+import myShowuRouter from './myShowuRouter.js';
 
 const mypageRouter = express.Router()
 
+//팀매칭
+mypageRouter.use("/myTeam", myShowuRouter)
 
-// 커뮤니티 작성한 글 목록 
-mypageRouter.post("/my-active/post", passport.authenticate('jwt', { session: false }), myActivePost)
+// 활동 정보 
+mypageRouter.use("/my-active", myActiveRouter)
 
-// 찜-MD
-mypageRouter.get("/like/md", passport.authenticate('jwt', { session: false }), likeMd)
-// 찜-경매
-mypageRouter.get("/like/auction", passport.authenticate('jwt', { session : false }), likeAuction)
-// 찜-공간대여
-mypageRouter.get("/like/space", passport.authenticate('jwt', { session : false }), likeSpace)
+//찜
+mypageRouter.use("/like", likeRouter)
 
-// vod-구독한 리스트
-mypageRouter.get("/vod/subscript", passport.authenticate('jwt', { session : false }), vodSubscript)
+// vod
+mypageRouter.use("/vod", myVodRouter)
+
 
 export default mypageRouter
