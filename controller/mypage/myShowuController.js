@@ -79,7 +79,13 @@ const getMyLesson = async (req, res) => {
 
 }
 
-export { getMyTeamMatching, getMyLesson }
+
+// 레슨 상담내역 불러오기
+const getlessonreservation = () => {
+  
+}
+
+export { getMyTeamMatching, getMyLesson, getlessonreservation }
 
 
 
