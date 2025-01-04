@@ -1,12 +1,11 @@
 import MdInquiry from "../../models/shop/mdInquirySchema.js";  // inquiry 스키마 임포트
 
-// 문의 등록 처리 함수
+// 문의 등록 
 const createInquiry = async (req, res) => {
   try {
     const { type, form, title, content, selectedAlarm, isAgreed, mdName, category, } = req.body;
     // const userName = req.user.name;
     
-    // 필수 항목 
     if (!type || !form || !title || !content || !isAgreed) {
       return res.status(400).json({ message: "모든 필드를 입력해주세요." });
     }
@@ -37,7 +36,6 @@ const createInquiry = async (req, res) => {
 // 문의 내역 조회
 const getInquiryList = async (req, res) => {
   try {
-    // 문의 내역 조회 
     const inquiryList = await MdInquiry.find().sort({ createdAt: -1 });
 
     return res.status(200).json({ inquiryList });
@@ -72,7 +70,7 @@ const updateInquiry = async (req, res) => {
     const { id } = req.params; 
     const updateData = req.body;
 
-    // 문의 수정(몽고 DB)
+    // 문의 수정(DB)
     const updatedInquiry = await MdInquiry.findByIdAndUpdate(id, updateData, {
       new: true, 
       runValidators: true, 
@@ -96,7 +94,7 @@ const deleteInquiry = async (req, res) => {
   try {
     const { id } = req.params; 
 
-    // 문의 삭제(몽고 DB)
+    // 문의 삭제(DB)
     const deletedInquiry = await MdInquiry.findByIdAndDelete(id);
 
     if (!deletedInquiry) {
