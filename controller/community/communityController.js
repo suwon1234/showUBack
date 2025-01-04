@@ -24,6 +24,8 @@ const getCommunityById = async (req, res) => {
   }
 };
 
+
+
 // 커뮤니티 게시물 목록 조회
 const getAllCommunities = async (req, res) => {
   try {
@@ -33,6 +35,8 @@ const getAllCommunities = async (req, res) => {
     res.status(500).json({ message: "서버 오류", error: error.message });
   }
 };
+
+
 
 // 댓글 추가
 const addCommentToCommunity = async (req, res) => {
@@ -51,11 +55,25 @@ const addCommentToCommunity = async (req, res) => {
     });
 
     await newComment.save();
+
+    const post = await Community.findById(id);
+    if (!post) {
+      return res.status(404).json({ message: "게시글을 찾을 수 없습니다." });
+    }
+
+    // 댓글 ID를 게시글에 추가
+    post.comments.push(newComment._id);
+    await post.save();
+
     res.status(201).json({ message: "댓글이 추가되었습니다.", comment: newComment });
   } catch (error) {
+    console.error("댓글 추가 오류:", error);
     res.status(500).json({ message: "서버 오류", error: error.message });
   }
 };
+
+
+
 
 // 좋아요 토글
 const toggleLike = async (req, res) => {
@@ -67,24 +85,30 @@ const toggleLike = async (req, res) => {
       return res.status(404).json({ message: "게시글을 찾을 수 없습니다." });
     }
 
-    const isLiked = post.likedUsers.includes(req.user._id);
+    const userId = req.user._id; // 현재 요청한 사용자의 ID
+
+    // 사용자가 이미 좋아요를 눌렀는지 확인
+    const isLiked = post.likedUsers.includes(userId);
 
     if (isLiked) {
+      // 좋아요 취소
+      post.likedUsers = post.likedUsers.filter((user) => user.toString() !== userId.toString());
       post.likes -= 1;
-      post.likedUsers = post.likedUsers.filter((userId) => userId.toString() !== req.user._id.toString());
+      await post.save();
+      return res.status(200).json({ message: "좋아요가 취소되었습니다.", likes: post.likes });
     } else {
+      // 좋아요 추가
+      post.likedUsers.push(userId);
       post.likes += 1;
-      post.likedUsers.push(req.user._id);
+      await post.save();
+      return res.status(200).json({ message: "좋아요가 반영되었습니다.", likes: post.likes });
     }
-
-    await post.save();
-    res.status(200).json({
-      message: isLiked ? "좋아요 취소됨" : "좋아요 추가됨",
-      likes: post.likes,
-    });
   } catch (error) {
-    res.status(500).json({ message: "서버 오류", error: error.message });
+    console.error("좋아요 처리 오류:", error);
+    res.status(500).json({ message: "서버 오류가 발생했습니다.", error: error.message });
   }
 };
+
+
 
 export { getCommunityById, getAllCommunities, addCommentToCommunity, toggleLike };

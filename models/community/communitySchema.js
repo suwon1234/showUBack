@@ -14,7 +14,7 @@ const communitySchema = new Schema({
   imageUrl: { type: String,  required: true },
   description: { type: String, required: true },
   likes: { type: Number, default: 0 }, // 좋아요 수
-  likedUsers: { type: Schema.Types.ObjectId , ref : 'User'}, // 좋아요를 누른 사용자 ID 
+  likedUsers: [{ type: Schema.Types.ObjectId , ref : 'User'}], // 좋아요를 누른 사용자 ID 
 });
 
 
