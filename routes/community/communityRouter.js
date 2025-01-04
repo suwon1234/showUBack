@@ -10,13 +10,13 @@ import {
 const communityRouter = express.Router();
 
 // 커뮤니티 목록 조회
-communityRouter.get('/', getAllCommunities); // GET /community
+communityRouter.get('/', getAllCommunities); // community
 
-// 커뮤니티 상세 정보 조회 (기존 경로)
-communityRouter.get('/:id', getCommunityById); // GET /community/:id
+// 커뮤니티 상세 정보 조회
+// communityRouter.get('/:id', getCommunityById); // community/:id
 
-// 커뮤니티 상세 정보 조회 (추가 경로)
-communityRouter.get('/communityInfo/:id', getCommunityById); // GET /community/communityInfo/:id
+// 커뮤니티 상세 정보 조회 
+communityRouter.get('/communityInfo/:id', getCommunityById); // community/communityInfo/:id
 
 // 댓글 추가
 communityRouter.post('/:id/comments', passport.authenticate('jwt', { session: false }), addCommentToCommunity);
