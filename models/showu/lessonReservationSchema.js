@@ -3,7 +3,7 @@ import { getCurrentTime } from "../../utils/utils.js";
 
 const lessonReservationSchema = new Schema 
 ({
-    id : {type : number},
+    id : {type : Number},
     classId : {type: Schema.Types.ObjectId, ref : "Lesson"},
     userId : { type: Schema.Types.ObjectId, ref: "User"},
     name :  {type: Schema.Types.ObjectId, ref: "User"},

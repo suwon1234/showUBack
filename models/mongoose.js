@@ -9,6 +9,11 @@ import Space from './reservation/spaceSchema.js'
 import Show from './reservation/showSchema.js'
 import Lesson from './showu/lessonSchema.js'
 import Team from './showu/teamSchema.js'
+import Like from './reservation/likeSchema.js';
+import Reservation from './reservation/reservationSchema.js';
+import { format, addDays } from "date-fns";
+import mongoose from 'mongoose';
+import LessonResevation from './showu/lessonReservationSchema.js';
 
 connect()
 
@@ -1459,6 +1464,89 @@ connect()
 //   },
 // )
 
+// 찜 - likeSchema.js
+// const likeData = await Like.create(
+//   {
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     spaceId: "6777b14b45bae57603a94a02", // 삽입된 Space ObjectId-1
+//     showId: null,
+//     createdAt: new Date().toISOString(),
+//   },
+//   {
+//     user: "677630ae686ab95419a5a1dc",
+//     spaceId: "6777b14b45bae57603a94a03", // 삽입된 Space ObjectId-2
+//     showId: null,
+//     createdAt: new Date().toISOString(),
+//   },
+//   {
+//     user: "677630ae686ab95419a5a1dc",
+//     spaceId: null,
+//     showId: "6777b14b45bae57603a94a08", // 삽입된 Show ObjectId-1
+//     createdAt: new Date().toISOString(),
+//   },
+//   {
+//     user: "677630ae686ab95419a5a1dc",
+//     spaceId: null,
+//     showId: "6777b14b45bae57603a94a0f", // 삽입된 Show ObjectId-2
+//     createdAt: new Date().toISOString(),
+//   },
+// );
+
+// 예약 - reservationSchema.js
+// const now = new Date();
+// const reservationData = await Reservation.create(
+//   {
+//     id: 1,
+//     spaceId: "6777b14b45bae57603a94a02", // 삽입된 Space ObjectId-1
+//     showId: null,
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     reservationDate: format(addDays(now, 1), "yyyy-MM-dd"), // 1일 후 예약 날짜
+//     reservationTime: format(new Date(now.setHours(10, 0)), "HH:mm:ss"), // 10:00 AM
+//     totalAmount: 300000, // 예시 총 금액
+//     discountsApplied: ["Early Bird Discount"], // 예시 적용된 할인 정보
+//     createdAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//     updatedAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//   },
+//   {
+//     id: 2,
+//     spaceId: "6777b14b45bae57603a94a03", // 삽입된 Space ObjectId-2
+//     showId: null,
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     reservationDate: format(addDays(now, 2), "yyyy-MM-dd"), // 2일 후 예약 날짜
+//     reservationTime: format(new Date(now.setHours(14, 0)), "HH:mm:ss"), // 2:00 PM
+//     totalAmount: 450000, // 예시 총 금액
+//     discountsApplied: ["Member Discount"], // 예시 적용된 할인 정보
+//     createdAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//     updatedAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//   },
+//   {
+//     id: 3,
+//     spaceId: null,
+//     showId: "6777b14b45bae57603a94a08", // 삽입된 Show ObjectId-1
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     reservationDate: format(addDays(now, 3), "yyyy-MM-dd"), // 3일 후 예약 날짜
+//     reservationTime: format(new Date(now.setHours(18, 0)), "HH:mm:ss"), // 6:00 PM
+//     totalAmount: 80000, // 예시 총 금액
+//     discountsApplied: ["Holiday Special"], // 예시 적용된 할인 정보
+//     createdAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//     updatedAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//   },
+//   {
+//     id: 4,
+//     spaceId: null,
+//     showId: "6777b14b45bae57603a94a0f", // 삽입된 Show ObjectId-2
+//     user: "677630ae686ab95419a5a1dc", // 홍길동 회원의 ID
+//     reservationDate: format(addDays(now, 4), "yyyy-MM-dd"), // 4일 후 예약 날짜
+//     reservationTime: format(new Date(now.setHours(17, 0)), "HH:mm:ss"), // 5:00 PM
+//     totalAmount: 95000, // 예시 총 금액
+//     discountsApplied: ["Student Discount"], // 예시 적용된 할인 정보
+//     createdAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//     updatedAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
+//   },
+// )
+
+
+
 
 //vodShowuVideo
 // const vodData = await vodShowuVideo.create(
@@ -1739,12 +1827,14 @@ connect()
 //   },
 // )
 
-const lessonListData = await Lesson.create(
+
+// 레슨 데이터 - lessonSchema.js
+// const lessonListData = await Lesson.create(
 //   {
 //       id : 1,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "677630ae686ab95419a5a1dc",
-//       lessonTumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+//       name :  "677630ae686ab95419a5a1dc",
+//       lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
 //       lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
 //       callTime : "오전12시 - 오전12시", 
 //       category : "연기", 
@@ -1758,7 +1848,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 14년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -1784,8 +1873,7 @@ const lessonListData = await Lesson.create(
 //                               periodMonth : "1년년",
 //                               recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
 //                           },    
-//               },
-//           ], 
+//               }, 
 //           education : {
 //               educationTitle : "중앙대학교 첨단영상대학원",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -1847,14 +1935,14 @@ const lessonListData = await Lesson.create(
 //       count : 1000, //조회수
 //       likeCount : 200, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-      // createAt : {type : String, default : getCurrentTime},
-      // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 
-  // },
+//   },
 //   {
 //       id : 2,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name : "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -1869,7 +1957,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -1896,7 +1983,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -1958,14 +2044,13 @@ const lessonListData = await Lesson.create(
 //       count : 7777, 
 //       likeCount : 157, 
 //       likeUser : "677630ae686ab95419a5a1dc", 
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
-
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 //   },
 //   {
 //       id : 3,
 //       userId :"677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -1980,7 +2065,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -2007,7 +2091,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -2068,14 +2151,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 
 //   },
 //   {
 //       id : 4,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2090,7 +2173,7 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
+
 //                   {
 //                       record1 :
 //                           {
@@ -2117,7 +2200,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -2175,14 +2257,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 
 //   },
 //   {
 //       id : 5,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202411211101244741412.jpg',
 //       lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
 //       callTime : "오전12시 - 오전12시", 
@@ -2197,7 +2279,7 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 14년", //이력
 //           recode : 
-//               [
+
 //                   {
 //                       record1 :
 //                           {
@@ -2224,7 +2306,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
 //                           },    
 //               },
-//           ], 
 //           education : {
 //               educationTitle : "중앙대학교 첨단영상대학원",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -2286,14 +2367,14 @@ const lessonListData = await Lesson.create(
 //       count : 1000, //조회수
 //       likeCount : 200, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 
 //   },
 //   {
 //       id : 6,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2308,7 +2389,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -2335,7 +2415,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -2397,14 +2476,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, 
 //       likeCount : 157, 
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 
 //   },
 //   {
 //       id : 7,
 //       userId :"677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2419,7 +2498,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -2446,7 +2524,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -2507,14 +2584,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 
 //   },
 //   {
 //       id : 8,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2529,7 +2606,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -2556,7 +2632,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -2616,14 +2691,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 
 //   },
 //   {
 //       id : 9,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
 //       lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
 //       callTime : "오전12시 - 오전12시", 
@@ -2638,7 +2713,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 14년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -2665,7 +2739,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
 //                           },    
 //               },
-//           ], 
 //           education : {
 //               educationTitle : "중앙대학교 첨단영상대학원",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -2727,14 +2800,14 @@ const lessonListData = await Lesson.create(
 //       count : 1000, //조회수
 //       likeCount : 200, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 
 //   },
 //   {
 //       id : 10,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2749,7 +2822,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -2776,7 +2848,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -2838,14 +2909,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, 
 //       likeCount : 157, 
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-01-03 17:44:48",
+//       updateAt : "2025-01-03 17:44:48",
 
 //   },
 //   {
 //       id : 11,
 //       userId :"677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2860,7 +2931,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -2887,7 +2957,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -2948,14 +3017,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 12,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -2970,7 +3039,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -2997,7 +3065,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -3057,14 +3124,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 13,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail :'https://www.sac.or.kr/site/main/file/image/uu/7867438c5b71479c9620edecd609801e',
 //       lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
 //       callTime : "오전12시 - 오전12시", 
@@ -3079,7 +3146,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 14년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -3106,7 +3172,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
 //                           },    
 //               },
-//           ], 
 //           education : {
 //               educationTitle : "중앙대학교 첨단영상대학원",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -3168,14 +3233,14 @@ const lessonListData = await Lesson.create(
 //       count : 1000, //조회수
 //       likeCount : 200, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 14,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -3190,7 +3255,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -3217,7 +3281,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -3279,14 +3342,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, 
 //       likeCount : 157, 
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 15,
 //       userId :"677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -3301,7 +3364,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -3328,7 +3390,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -3389,14 +3450,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 16,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -3411,7 +3472,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -3438,7 +3498,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -3498,14 +3557,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 17,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
 //       lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
 //       callTime : "오전12시 - 오전12시", 
@@ -3520,7 +3579,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 14년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -3547,7 +3605,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
 //                           },    
 //               },
-//           ], 
 //           education : {
 //               educationTitle : "중앙대학교 첨단영상대학원",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -3609,14 +3666,13 @@ const lessonListData = await Lesson.create(
 //       count : 1000, //조회수
 //       likeCount : 200, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
-
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 //   },
 //   {
 //       id : 18,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -3631,7 +3687,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -3658,7 +3713,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -3720,14 +3774,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, 
 //       likeCount : 157, 
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 19,
 //       userId :"677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -3742,7 +3796,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -3769,7 +3822,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -3830,14 +3882,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 20,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -3852,7 +3904,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -3879,7 +3930,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -3939,14 +3989,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 21,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
 //       lessonName : " 씬앤컷 SCENE & CUT : 설대봉 디렉터", 
 //       callTime : "오전12시 - 오전12시", 
@@ -3961,7 +4011,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 14년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -3988,7 +4037,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) 평택대학교 연극영화과(G.F.A) : 매체 연기 특강"
 //                           },    
 //               },
-//           ], 
 //           education : {
 //               educationTitle : "중앙대학교 첨단영상대학원",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -4050,14 +4098,14 @@ const lessonListData = await Lesson.create(
 //       count : 1000, //조회수
 //       likeCount : 200, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-30 12:44:48",
+//       updateAt : "2025-12-30 12:44:48",
 
 //   },
 //   {
 //       id : 22,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -4072,7 +4120,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -4099,7 +4146,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -4161,14 +4207,13 @@ const lessonListData = await Lesson.create(
 //       count : 7777, 
 //       likeCount : 157, 
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
-
+//       createAt : "2025-12-25 16:44:48",
+//       updateAt : "2025-12-25 16:44:48",
 //   },
 //   {
 //       id : 23,
 //       userId :"677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -4183,7 +4228,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -4210,7 +4254,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -4271,14 +4314,14 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-25 16:44:48",
+//       updateAt : "2025-12-25 16:44:48",
 
 //   },
 //   {
 //       id : 24,
 //       userId : "677630ae686ab95419a5a1dc",
-//       userName : "홍길동",
+//       name :  "677630ae686ab95419a5a1dc",
 //       lessonThumbnail : "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
 //       lessonName : "쇼팽피아노", //레슨 이름 
 //       callTime : "오전12시 - 오전12시", // 응대 가능시간
@@ -4293,7 +4336,6 @@ const lessonListData = await Lesson.create(
 //       history : { //경력
 //           personal : "총 경력 15년", //이력
 //           recode : 
-//               [
 //                   {
 //                       record1 :
 //                           {
@@ -4320,7 +4362,6 @@ const lessonListData = await Lesson.create(
 //                               recordedSummary : "前) jyp 보컬 트레이너"
 //                           },    
 //               },
-//           ], //경력
 //           education : {
 //               educationTitle : "한국예술종합학교",
 //               educationPeriod : "2022년 3월 ~ 현재",
@@ -4380,39 +4421,1203 @@ const lessonListData = await Lesson.create(
 //       count : 7777, //조회수
 //       likeCount : 157, //좋아요 수
 //       likeUser : "677630ae686ab95419a5a1dc",
-//       // createAt : {type : String, default : getCurrentTime},
-//       // updateAt : {type : String, default : getCurrentTime},
+//       createAt : "2025-12-25 16:44:48",
+//       updateAt : "2025-12-25 16:44:48",
+//   },)
 
+
+//  teamData - teamSchema.js
+// const teamListData = await Team.create(
+//   {
+//       id : 1,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(분당)",
+//       teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+//       category : "연기",
+//       meetDay : "월",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"아마추어",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-11-10", //팀 활동 시작일
+//           end : "25-11-10"
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2025-01-03 16:44:48",
+//       updateAt : "2025-03-03 16:44:48",
 //   },
-)
+//   {
+//       id : 2,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "보컬 연습",
+//       teamThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg',
+//       category : "음악",
+//       meetDay : "화",
+//       meetPeriod : {
+//           time :"오후",
+//           timeDetail : "15시-20시"
+//       }, 
+//       ages : "10대",
+//       gender : "여자",
+//       averageSkill :"비기너",
+//       teamNotice : "안녕하십니까, 입시 노래 연습 파트너 구합니다.",
+//       activityPeriod : {
+//           start : "24-11-05", //팀 활동 시작일
+//           end : "25-11-10"
+//       },
+//       status: "매칭 완료", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2025-01-03 16:44:48",
+//       updateAt : "2025-03-03 16:44:48",
+//   },
+//   {
+//       id : 3,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "마술 연습",
+//       teamThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+//       category : "마술",
+//       meetDay : "목",
+//       meetPeriod : {
+//           time :"저녘",
+//           timeDetail : "20시 이후"
+//       }, 
+//       ages : "20대",
+//       gender : "남자",
+//       averageSkill :"프로 준비생",
+//       teamNotice : "안녕하십니까, 같이 마술  연습할  파트너 구합니다.",
+//       activityPeriod : {
+//           start : "24-11-09", //팀 활동 시작일
+//           end : "25-11-10"//팀 활동 종료일
+//       },
+//       status: "매칭 완료", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2025-01-03 16:44:48",
+//       updateAt : "2025-03-03 16:44:48",
+//   },
+//   {
+//       id : 4,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(서울)",
+//       teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+//       category : "연기",
+//       meetDay : "토",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"프로",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-11-10", //팀 활동 시작일
+//           end : "25-11-10" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2025-01-03 16:44:48",
+//       updateAt : "2025-03-03 16:44:48",
+//   },
+//   {
+//       id : 5,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(서울)",
+//       teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+//       category : "연기",
+//       meetDay : "토",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"프로",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-11-10", //팀 활동 시작일
+//           end : "25-11-10" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2025-01-03 16:44:48",
+//       updateAt : "2025-03-03 16:44:48",
+//   },
+//   {
+//       id : 6,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(분당)",
+//       teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+//       category : "연기",
+//       meetDay : "월",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"아마추어",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-11-16", //팀 활동 시작일
+//           end : "25-06-10" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2025-01-03 16:44:48",
+//       updateAt : "2025-03-03 16:44:48",
+//   },
+//   {
+//       id : 7,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "보컬 연습",
+//       teamThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg',
+//       category : "음악",
+//       meetDay : "화",
+//       meetPeriod : {
+//           time :"오후",
+//           timeDetail : "15시-20시"
+//       }, 
+//       ages : "10대",
+//       gender : "여자",
+//       averageSkill :"비기너",
+//       teamNotice : "안녕하십니까, 입시 노래 연습 파트너 구합니다.",
+//       activityPeriod : {
+//           start : "24-11-16", //팀 활동 시작일
+//           end : "25-06-10" //팀 활동 종료일
+//       },
+//       status: "매칭 완료", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-30 16:44:48",
+//       updateAt : "2024-12-30 16:44:48",
+//   },
+//   {
+//       id : 8,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "마술 연습",
+//       teamThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+//       category : "마술",
+//       meetDay : "목",
+//       meetPeriod : {
+//           time :"저녘",
+//           timeDetail : "20시 이후"
+//       }, 
+//       ages : "20대",
+//       gender : "남자",
+//       averageSkill :"프로 준비생",
+//       teamNotice : "안녕하십니까, 같이 마술  연습할  파트너 구합니다.",
+//       activityPeriod : {
+//           start : "24-11-16", //팀 활동 시작일
+//           end : "25-06-10" //팀 활동 종료일
+//       },
+//       status: "매칭 완료", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-30 16:44:48",
+//       updateAt : "2024-12-30 16:44:48",
+//   },
+//   {
+//       id : 9,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(서울)",
+//       teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+//       category : "연기",
+//       meetDay : "토",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"프로",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-11-16", //팀 활동 시작일
+//           end : "25-06-10" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-30 16:44:48",
+//       updateAt : "2024-12-30 16:44:48",
+//   },
+//   {
+//       id : 10,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(서울)",
+//       teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+//       category : "연기",
+//       meetDay : "토",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       },
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"프로",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-11-16", //팀 활동 시작일
+//           end : "25-06-10" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-30 16:44:48",
+//       updateAt : "2024-12-30 16:44:48",
+//   },
+//   {
+//       id : 11,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(분당)",
+//       teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+//       category : "연기",
+//       meetDay : "금",
+//       meetPeriod : {
+//           time :"아침",
+//           timeDetail : "12시 이전"
+//       }, 
+//       ages : "40대",
+//       gender : "남녀무관",
+//       averageSkill :"초보",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-06-20", //팀 활동 시작일
+//           end : "24-11-15" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-30 16:44:48",
+//       updateAt : "2024-12-30 16:44:48",
+//   },
+//   {
+//       id : 12,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "보컬 연습",
+//       teamThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg',
+//       category : "음악",
+//       meetDay : "일",
+//       meetPeriod : {
+//           time :"오후",
+//           timeDetail : "15시-20시"
+//       }, 
+//       ages : "10대",
+//       gender : "여자",
+//       averageSkill :"세미프로",
+//       teamNotice : "안녕하십니까, 입시 노래 연습 파트너 구합니다.",
+//       activityPeriod : {
+//           start : "24-06-20", //팀 활동 시작일
+//           end : "24-11-15" //팀 활동 종료일
+//       },
+//       status: "매칭 완료", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-30 16:44:48",
+//       updateAt : "2024-12-30 16:44:48",
+//   },
+//   {
+//       id : 13,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "마술 연습",
+//       teamThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+//       category : "마술",
+//       meetDay : "수",
+//       meetPeriod : {
+//           time :"오후",
+//           timeDetail : "15시-20시"
+//       }, 
+//       ages : "20대",
+//       gender : "남자",
+//       averageSkill :"프로 준비생",
+//       teamNotice : "안녕하십니까, 같이 마술  연습할  파트너 구합니다.",
+//       activityPeriod : {
+//           start : "24-06-20", //팀 활동 시작일
+//           end : "24-11-15" //팀 활동 종료일
+//       },
+//       status: "매칭 완료", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-30 16:44:48",
+//       updateAt : "2024-12-30 16:44:48",
+//   },
+//   {
+//       id : 14,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(서울)",
+//       teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+//       category : "연기",
+//       meetDay : "일",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"프로",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-06-20", //팀 활동 시작일
+//           end : "24-11-15" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-30 16:44:48",
+//       updateAt : "2024-12-30 16:44:48",
+//   },
+//   {
+//       id : 15,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(서울)",
+//       teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+//       category : "연기",
+//       meetDay : "토",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"프로",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-06-20", //팀 활동 시작일
+//           end : "24-11-15" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-30 16:44:48",
+//       updateAt : "2024-12-30 16:44:48",
+//   },
+//   {
+//       id : 16,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(분당)",
+//       teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
+//       category : "연기",
+//       meetDay : "월",
+//       meetPeriod : {
+//           time :"오후",
+//           timeDetail : "15시-20시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"아마추어",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-06-20", //팀 활동 시작일
+//           end : "24-11-15" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-25 11:44:48",
+//       updateAt : "2024-12-25 11:44:48",
+//   },
+//   {
+//       id : 17,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "보컬 연습",
+//       teamThumbnail : 'https://www.contestkorea.com/admincenter/files/meet/202402221229386112816.jpg',
+//       category : "음악",
+//       meetDay : "화",
+//       meetPeriod : {
+//           time :"오후",
+//           timeDetail : "15시-20시"
+//       }, 
+//       ages : "10대",
+//       gender : "여자",
+//       averageSkill :"비기너",
+//       teamNotice : "안녕하십니까, 입시 노래 연습 파트너 구합니다.",
+//       activityPeriod : {
+//           start : "24-06-20", //팀 활동 시작일
+//           end : "24-11-15" //팀 활동 종료일
+//       },
+//       status: "매칭 완료", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-25 11:44:48",
+//       updateAt : "2024-12-25 11:44:48",
+//   },
+//   {
+//       id : 18,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "마술 연습",
+//       teamThumbnail : "https://image.yes24.com/themusical//fileStorage/ThemusicalAdmin/Editor/2023/3/6/2023030608848049b0a190b643e3d519a3ef380a07b95f06.jpg",
+//       category : "마술",
+//       meetDay : "수",
+//       meetPeriod : {
+//           time :"저녘",
+//           timeDetail : "20시 이후"
+//       }, 
+//       ages : "20대",
+//       gender : "남자",
+//       averageSkill :"프로 준비생",
+//       teamNotice : "안녕하십니까, 같이 마술  연습할  파트너 구합니다.",
+//       activityPeriod : {
+//           start : "24-06-20", //팀 활동 시작일
+//           end : "24-11-15" //팀 활동 종료일
+//       },
+//       status: "매칭 완료", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-25 11:44:48",
+//       updateAt : "2024-12-25 11:44:48",
+//   },
+//   {
+//       id : 19,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(서울)",
+//       teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+//       category : "연기",
+//       meetDay : "토",
+//       meetPeriod : {
+//           time :"오후",
+//           timeDetail : "15시-20시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"프로",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-07-20", //팀 활동 시작일
+//           end : "24-12-15" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-25 11:44:48",
+//       updateAt : "2024-12-25 11:44:48",
+//   },
+//   {
+//       id : 20,
+//       userId : "677630ae686ab95419a5a1dc",
+//       teamName : "아마추어 연기 연습(서울)",
+//       teamThumbnail : "https://www.contestkorea.com/admincenter/files/meet/202412042146561163027.jpg",
+//       category : "연기",
+//       meetDay : "수",
+//       meetPeriod : {
+//           time :"낮",
+//           timeDetail : "12시-15시"
+//       }, 
+//       ages : "20대",
+//       gender : "남녀무관",
+//       averageSkill :"프로",
+//       teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 할 상대역 구하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
+//       activityPeriod : {
+//           start : "24-07-20", //팀 활동 시작일
+//           end : "24-12-15" //팀 활동 종료일
+//       },
+//       status: "매칭 대기", //팀 매칭 승인 상태
+//       count : 300, 
+//       likeCount : 30,
+//       likeUser : "677630ae686ab95419a5a1dc",
+//       createAt : "2024-12-25 11:44:48",
+//       updateAt : "2024-12-25 11:44:48",
+//   },)
 
-const teamListData = await Team.create(
-  {
-      id : 1,
-      userId : "677630ae686ab95419a5a1dc",
-      teamName : "아마추어 연기 연습(분당)",
-      teamThumbnail : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTZfOTIg%2FMDAxNzA4MDg4OTY2NjA0.Vypp3YxHr665oBOcQW5G1P6ULXRkoujYZ8V7_sjFZPkg.x61htAdeLDt42bOqwhn00ktO92NBE0-qCjEbIqQHTWYg.JPEG.rmflsxl6032%2FScreenshot%25A3%25DF20240216%25A3%25DF220835%25A3%25DFInstagram.jpg&type=sc960_832",
-      category : "연기",
-      meetDay : "월",
-      meetPeriod : {
-          time :"낮",
-          timeDetail : "12시-15시"
-      }, 
-      ages : "20대",
-      gender : "남녀무관",
-      averageSkill :"아마추어",
-      teamNotice : "안녕하십니까, 분당에서 취미로 연기 연습 하고 있습니다. 현재 5먕 정도 모여서 서로 연기 봐주면서 진행하고 있습니다 .",
-      activityPeriod : {
-          start : "24-11-16", //팀 활동 시작일
-          // end : { type : Date, required : true }, //팀 활동 종료일
-      },
-      status: "매칭 대기", //팀 매칭 승인 상태
-      count : 300, 
-      likeCount : 30,
-      likeUser : "677630ae686ab95419a5a1dc",
-      // createAt : {type: String, default :getCurrentTime },
-      // updateAt : {type : String, default : getCurrentTime},
-  },)
+
+// lessonReservationData - lessonReservationSchema.js
+// const lessonReservationData = await LessonResevation.create(
+//   {
+//     id : 1,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-15",
+//     createAt : "2025-01-04 11:44:48",
+
+//    },
+//   {
+//     id : 2,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-21",
+//     createAt : "2025-01-04 11:44:48",
+//    },
+//   {
+//     id : 3,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-21",
+//     createAt : "2025-01-04 11:44:48",
+//    },
+//   {
+//     id : 4,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-22",
+//     createAt : "2025-01-04 11:44:48",
+//    },
+//   {
+//     id : 5,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-22",
+//     createAt : "2025-01-04 11:44:48",
+//    },
+//   {
+//     id : 6,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-22",
+//     createAt : "2025-01-04 11:44:48",
+//    },
+//   {
+//     id : 7,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-24",
+//     createAt : "2025-01-04 11:44:48",
+//    },
+//   {
+//     id : 8,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-24",
+//     createAt : "2025-01-04 11:44:48",
+//    },
+//   {
+//     id : 9,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-25",
+//     createAt : "2025-01-04 11:44:48",
+//    },
+//   {
+//     id : 10,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-25",
+//     createAt : "2024-12-30 11:44:48",
+//    },
+//     {
+//     id : 11,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-30",
+//     createAt : "2024-12-30 11:44:48",
+//    },
+//     {
+//     id : 12,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-30",
+//     createAt : "2024-12-30 11:44:48",
+//    },
+// {
+//     id : 13,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-24",
+//     createAt : "2024-12-30 11:44:48",
+//    },
+//   {
+//     id : 14,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-24",
+//     createAt : "2024-12-30 11:44:48",
+//    },
+//   {
+//     id : 15,
+//     classId : "677837f4d4609cca232141c1",
+//     userId : "677630ae686ab95419a5a1dc",
+//     name :  "677630ae686ab95419a5a1dc",
+//     phoneNumber : "010-9999-9999",
+//     email : "test123@gmail.com",
+//     memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//     date : "2025-01-25",
+//     createAt : "2024-12-30 11:44:48",
+//    },
+//    {
+//       id : 16,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-15",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//     {
+//       id : 17,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-21",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//     {
+//       id : 18,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-21",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//     {
+//       id : 19,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-22",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//     {
+//       id : 20,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-22",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//     {
+//       id : 21,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-22",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//     {
+//       id : 22,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//     {
+//       id : 23,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//     {
+//       id : 24,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-25",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//     {
+//       id : 25,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-25",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//       {
+//       id : 26,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-30",
+//       createAt : "2024-12-30 11:44:48",
+//      },
+//       {
+//       id : 27,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-30",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//   {
+//       id :28,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id :29,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 30,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-25",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//      {
+//       id : 31,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-15",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 32,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-21",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 33,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-21",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 34,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-22",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 35,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-22",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 36,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-22",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 37,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 38,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 39,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-25",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 40,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-25",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//       {
+//       id : 41,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-30",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//       {
+//       id : 42,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-30",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//   {
+//       id : 43,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 44,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 45,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-25",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//      {
+//       id : 46,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-15",
+//       createAt : "2024-12-25 11:44:48",
+//      },
+//     {
+//       id : 47,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-21",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 48,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-21",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 49,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-22",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 50,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-22",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 51,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-22",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 52,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 53,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 54,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-25",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 55,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-25",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//       {
+//       id : 56,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-30",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//       {
+//       id : 57,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-30",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//   {
+//       id : 58,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 59,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-24",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+//     {
+//       id : 60,
+//       classId : "677837f4d4609cca232141c1",
+//       userId : "677630ae686ab95419a5a1dc",
+//       name :  "677630ae686ab95419a5a1dc",
+//       phoneNumber : "010-9999-9999",
+//       email : "test123@gmail.com",
+//       memo : "안녕하세요 레슨관련 문의 남깁니다." ,
+//       date : "2025-01-25",
+//       createAt : "2024-12-22 11:44:48",
+//      },
+     
+//     )
+
+
+
 
 
 
@@ -4424,4 +5629,8 @@ const teamListData = await Team.create(
 // console.log(spaceData)
 // console.log(showData)
 // console.log(lessonListData)
-console.log(teamListData)
+// console.log(teamListData)
+// console.log(lessonReservationData)
+// console.log(teamListData)
+// console.log(likeData)
+// console.log(reservationData)
