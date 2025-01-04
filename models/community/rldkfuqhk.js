@@ -1,109 +1,78 @@
-// 뉴스 인포
-const newsInfoData = [
+// 오디션 인포
+const auditionInfoData = [
+    {
+      image: '/images/auditionInfo/audition-info-musical-7.jpg',
+      title: "뮤지컬 팬텀 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-musical-11.jpg',
+      title: "뮤지컬 루카스 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-musical-4.jpg',
+      title: "뮤지컬 베르사유의 장미 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-musical-8.jpg',
+      title: "뮤지컬 웃는남자 오디션",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-musical-12.jpg',
+      title: "뮤지컬 로보카 폴리 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-theater-4.jpg',
+      title: "연극 너에게로 가는 길 오디션 공고",
+    },
+    {
+      image: '/images/audition/audition-musical-9.jpg',
+      title: "뮤지컬 빌리엘리어트 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-musical-5.jpg',
+      title: "뮤지컬 한복 입은 남자 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-musical-6.jpg',
+      title: "뮤지컬 마타하리 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-theater-6.jpg',
+      title: "연극 베를리너 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-musical-1.jpg',
+      title: "브로드웨이 42번가 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-theater-1.jpg',
+      title: "연극 햄릿 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-musical-10.jpg',
+      title: "뮤지컬 명성황후 아역 오디션 공고",
+    },
+    {
+      image: '/images/audition/audition-musical-3.jpg',
+      title: "연극 the cell 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-musical-2.jpg',
+      title: "물랑루즈 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-theater-2.jpg',
+      title: "연극 로스트 오디션 공고",
+    },
+    {
+      image: '/images/audition/audition-theater-7.jpg',
+      title: "연극 렛미인 오디션 공고",
+    },
+    {
+      image: '/images/auditionInfo/audition-info-theater-5.jpg',
+      title: "연극 분홍립스틱 오디션 공고",
+    },
 
-    {
-      title: "CJ 뮤지컬의 대표작 물랑루즈",
-      description: "CJ 뮤지컬의 대표작 물랑루즈",
-      imageUrl: "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/moulinrouge-musical-poster.jpg?v=1678248215",
-      content: `막이 오르는 순간, 위대한 사랑이 시작된다! 1899년 파리, 
-                ‘물랑루즈’에서 벌어지는 거부할 수 없는 운명과 위대한 사랑 이야기.`
-    },
-    {
-      title: "뮤지컬 '킹키부츠",
-      description: "뮤지컬 킹키부츠",
-      imageUrl: "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
-      content: "뮤지컬 '킹키부츠'가 공연을 시작합니다",
-    },
-    {
-      title: "영화 위키드 PART1.",
-      imageUrl: "https://img.sbs.co.kr/newimg/news/20241121/202009760_1280.jpg",
-      content: "영화 위키드 PART1.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
   ];
 
 
@@ -112,4 +81,4 @@ const newsInfoData = [
 
 
 
-  
+

@@ -1,29 +1,32 @@
 import News from "../../models/news/newsSchema.js";
 
-// 뉴스 전체 목록 조회
-const getAllNews = async (req, res) => {
+
+
+// 전체 뉴스 목록 가져오기 (NewsMain)
+export const getAllNews = async (req, res) => {
   try {
-    const news = await News.find(); 
+    const news = await News.find({}, "title category description imageUrl"); // 필요한 필드만 가져옴
     res.status(200).json(news);
   } catch (error) {
-    res.status(500).json({ message: "서버 오류가 발생했습니다.", error: error.message });
+    res.status(500).json({ message: "뉴스 데이터를 가져오는 중 오류가 발생했습니다.", error: error.message });
   }
 };
 
-// 특정 뉴스 조회
-const getNewsById = async (req, res) => {
+// 특정 뉴스 데이터 가져오기 (News)
+export const getNewsById = async (req, res) => {
   const { id } = req.params;
 
+  if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+    return res.status(400).json({ message: "유효하지 않은 ID 형식입니다." });
+  }
+
   try {
-    const news = await News.findById(id);
+    const news = await News.findById(id, "title description content imageUrl"); // 필요한 필드만
     if (!news) {
       return res.status(404).json({ message: "뉴스를 찾을 수 없습니다." });
     }
     res.status(200).json(news);
   } catch (error) {
-    res.status(500).json({ message: "서버 오류가 발생했습니다.", error: error.message });
+    res.status(500).json({ message: "뉴스 데이터를 가져오는 중 오류가 발생했습니다.", error: error.message });
   }
 };
-
-
-export { getAllNews, getNewsById };
