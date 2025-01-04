@@ -5,235 +5,129 @@ const newsData = [
     {
       title: "CJ 뮤지컬의 대표작 물랑루즈",
       category: "뮤지컬",
-      description: "뉴스 설명1",
-      imageUrl: "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/moulinrouge-musical-poster.jpg?v=1678248215",
+      description: "주크박스 뮤지컬의 대명사 물랑루즈의 세계로!",
+      imageUrl: "/images/news/musical-10.jpg",
     },
     {
-      title: "뉴스 타이틀2",
+      title: "뮤지컬 베르테르",
       category: "뮤지컬",
-      description: "뉴스 설명2",
-      imageUrl: "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
+      description: "뮤지컬 베르테르",
+      imageUrl: "/images/news/musical-1.jpg",
     },
     {
-      title: "뉴스 타이틀3",
+      title: "영화 위키드",
       category: "영화",
       description: "뉴스 설명3",
-      imageUrl: "https://img.sbs.co.kr/newimg/news/20241121/202009760_1280.jpg",
+      imageUrl: "/images/news/movie-1.jpg",
     },
     {
-      title: "뉴스 타이틀4",
+      title: "데이식스 고척콘",
       category: "밴드",
       description: "뉴스 설명4",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg"
+      imageUrl: "/images/news/band-1.jpg"
     },
     {
-      title: "뉴스 타이틀5",
+      title: "뮤지컬 시라노",
       category: "뮤지컬",
       description: "뉴스 설명5",
-      imageUrl: "https://web-cf-image.cjenm.com/crop/204x294/public/share/metamng/programs/02_FeaturedContents_detail_poster_660x950_1663231642146.jpg?v=1676454555"
+      imageUrl: "/images/news/musical-2.jpg"
     },
     {
-      title: "뉴스 타이틀6",
+      title: "연극 우리 별",
       category: "연극",
       description: "뉴스 설명6",
-      imageUrl: "https://search.pstatic.net/common?quality=90&direct=true&src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5041%2F2024%2F11%2F29%2F0001014154_001_20241129122612985.jpg"
+      imageUrl: "/images/news/theater-1.jpg"
     },
     {
-      title: "뉴스 타이틀7",
+      title: "울고 싶을 땐 시네마 천국",
       category: "영화",
       description: "뉴스 설명7",
-      imageUrl: "https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20111222_69%2F1324540063006G6LQ4_JPEG%2Fmovie_image.jpg"
+      imageUrl: "/images/news/movie-2.jpg"
     },
     {
-      title: "뉴스 타이틀8",
+      title: "딥 퍼플 역시 레전드 밴드",
       category: "밴드",
       description: "뉴스 설명8",
-      imageUrl: "https://ticketimage.interpark.com/Play/image/large/24/24014487_p.gif"
+      imageUrl: "/images/news/band-2.jpg"
     },
     {
-      title: "뉴스 타이틀9",
+      title: "해리포터와 마법사의 돌",
       category: "영화",
       description: "뉴스 설명9",
-      imageUrl: "https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20111222_122%2F13245071685017jMJu_JPEG%2Fmovie_image.jpg"
+      imageUrl: "/images/news/movie-3.jpg"
     },
     {
-      title: "뉴스 타이틀10",
+      title: "킹키!",
       category: "뮤지컬",
       description: "뉴스 설명10",
-      imageUrl: "https://ticket7.bscc.or.kr/Down/Perf/202305/%ED%8F%AC%EC%8A%A4%ED%84%B0_4.jpg"
+      imageUrl: "/images/news/musical-3.jpg"
     },
     {
-      title: "뉴스 타이틀11",
+      title: "하울의 움직이는 성",
       category: "영화",
       description: "뉴스 설명11",
-      imageUrl: "https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20111222_109%2F1324542413119OftfB_JPEG%2Fmovie_image.jpg"
+      imageUrl: "/images/news/movie-4.jpg"
     },
     {
-      title: "뉴스 타이틀12",
+      title: "스미노 하야토 피아노 리사이틀",
       category: "공연",
       description: "뉴스 설명12",
-      imageUrl: "https://www.snart.or.kr/upload/image/20241122/929BD91AA2FA4CDF882D358A8C97F463.gif" 
+      imageUrl: "/images/news/show-1.jpg" 
     },
     {
-      title: "뉴스 타이틀13",
+      title: "밴드 데이식스",
       category: "밴드",
       description: "뉴스 설명13",
-      imageUrl: "https://search.pstatic.net/common?type=a&size=3000&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2FprofileImg%2Fab43feac-a2bf-429e-8164-ff52d70e40ee.jpg"
+      imageUrl: "/images/news/band-3.jpg"
     },
     {
-      title: "뉴스 타이틀14",
+      title: "뮤지컬 데스노트",
       category: "뮤지컬",
       description: "뉴스 설명14",
-      imageUrl: "https://search.pstatic.net/common?quality=90&direct=true&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjExMjFfNTQg%2FMDAxNjY5MDQxNjk3MDQx.oMs1Vhm6kztVBy_qXDtJHn1l8ZN2eGnhX4sBdSaYQ0Eg.K6LPVxEER7qvLcTfFYPwsdRj7jqgP5nNf3xONdQ1Gi8g.PNG.jixiah%2Fimage.png" 
+      imageUrl: "/images/news/musical-4.jpg" 
     },
     {
-      title: "뉴스 타이틀15",
+      title: "뮤지컬 웨스트 사이드 스토리",
       category: "뮤지컬",
       description: "뉴스 설명15",
-      imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDExMjFfMTgg%2FMDAxNzMyMTQ5NDQwNjU5.lkleZf810S6M6N4aXSdPbElskjMrMIwwGfS-6w_g-Hog._A2GoufbWz_5XWcn8VJzRtb9SuJf2RGxfSaVBFdyW94g.JPEG%2FIMG_6549.jpg&type=sc960_832"
+      imageUrl: "/images/news/musical-5.jpg"
     },
     {
-      title: "뉴스 타이틀16",
-      category: "밴드",
+      title: "유진아.. 뮤지컬 종의 기원",
+      category: "뮤지컬",
       description: "뉴스 설명16",
-      imageUrl: "https://storageciggallery.addons.business/12201/cig-cozy-gallery-5482tuy-Matias-Feliu-hd.jpg?c=00"
+      imageUrl: "/images/news/musical-8.jpg"
     },
     {
-      title: "뉴스 타이틀17",
+      title: "최고의 헤드윅은?",
       category: "뮤지컬",
       description: "뉴스 설명17",
-      imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMDlfMjAz%2FMDAxNzA0NzgwNTM4OTIw.OKTTgD7XqIhTaBwa7szMAZLqjmn5JGB4e_UZt_zIKskg.ggCfsRYtMM_YYzKPv3yxk00sMkc55tumqZ-MS40x3M0g.JPEG.hunimoya%2FScreenshot%25A3%25DF20240109%25A3%25AD150720%25A3%25DFSamsung_Internet.jpg&type=sc960_832"
+      imageUrl: "/images/news/musical-6.jpg"
     },
     {
-      title: "뉴스 타이틀18",
+      title: "지크수가 또!",
       category: "뮤지컬",
       description: "뉴스 설명18",
-      imageUrl: "https://www.shownote.com/Down/Perf/202401/HWG_poster_390x555_1.jpg"
+      imageUrl: "/images/news/musical-7.jpg"
     },
     {
-      title: "뉴스 타이틀19",
+      title: "빛과 소리",
       category: "공연",
       description: "뉴스 설명19",
-      imageUrl: "https://ticketimage.interpark.com/Play/image/large/24/24010664_p.gif"
+      imageUrl: "/images/news/show-3.jpg"
     },
     {
-      title: "뉴스 타이틀20",
+      title: "연극 곰스크로 가는 기차",
       category: "연극",
       description: "뉴스 설명20",
-      imageUrl: "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEyMDFfOTAg%2FMDAxNzMzMDI4NTkwMjY3.oIYgOOuztRGmU8MueWjel7xyxMdEHZi7dEllZFe58EUg.cjpLGiSRFYABq-kHgJEfWRDHn1drTUeLg6IQXwzf0ugg.JPEG%2FKakaoTalk_20241201_131912153.jpg&type=sc960_832"
+      imageUrl: "/images/news/theater-2.jpg"
     },
   ];
 
 
 
 
-// 뉴스 인포
-const newsInfoData = [
 
-    {
-      title: "CJ 뮤지컬의 대표작 물랑루즈",
-      description: "CJ 뮤지컬의 대표작 물랑루즈",
-      imageUrl: "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/moulinrouge-musical-poster.jpg?v=1678248215",
-      content: `막이 오르는 순간, 위대한 사랑이 시작된다! 1899년 파리, 
-                ‘물랑루즈’에서 벌어지는 거부할 수 없는 운명과 위대한 사랑 이야기.`
-    },
-    {
-      title: "뮤지컬 '킹키부츠",
-      description: "뮤지컬 킹키부츠",
-      imageUrl: "https://web-cf-image.cjenm.com/crop/520x748/public/share/metamng/programs/contentsdetailposterkinkybootsthemusical.jpg?v=1721176871",
-      content: "뮤지컬 '킹키부츠'가 공연을 시작합니다",
-    },
-    {
-      title: "영화 위키드 PART1.",
-      imageUrl: "https://img.sbs.co.kr/newimg/news/20241121/202009760_1280.jpg",
-      content: "영화 위키드 PART1.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-    {
-      title: "데이식스 아이돌 밴드 최초로 고척돔에서 콘서트 열다!",
-      imageUrl: "https://cdn.mhns.co.kr/news/photo/202411/703781_806904_2732.jpg",
-      content: "데이식스가 아이돌 밴드 최초로 고척돔에서 콘서트를 엽니다.",
-    },
-  ];
 
 
 
@@ -352,7 +246,7 @@ const newsInfoData = [
   ];
 
 
-  
+
   // 오디션 인포
   const auditionInfoData = [
     {
