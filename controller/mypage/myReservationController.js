@@ -67,16 +67,18 @@ const getTicketsDetail = async (req, res) => {
     // console.log("ticketId만 가져오기 : ", ticketId)
 
     const myTicketList = await Show.find({ _id : { $in : ticketId }, id: id})
-    // console.log("티켓 아이디, id params와 일치하는 정보 리스트 : ", myTicketList)
+    console.log("티켓 아이디, id params와 일치하는 정보 리스트 : ", myTicketList)
 
     const resTicketList = await myTicketList.map((ticket) => ({
       name : ticket.name,
       venue : ticket.venue,
       dates : ticket.dates,
       img : ticket.img,
-      id : ticket.id
+      id : ticket.id,
+      price : ticket.price,
+      createdAt : ticket.createdAt
     }))
-    console.log("마이페이지에 필요한 티켓 예매 내역 정보 리스트 : ", resTicketList)
+    // console.log("마이페이지에 필요한 티켓 예매 내역 정보 리스트 : ", resTicketList)
 
     return res.status(200).json({
       ticketsuccess : true,
