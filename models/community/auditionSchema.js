@@ -13,4 +13,4 @@ const auditionSchema = new Schema({
 
 });
 
-export default model("audition", auditionSchema, "Audition");
+export default model("Audition", auditionSchema, "audition");
