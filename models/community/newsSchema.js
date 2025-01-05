@@ -16,4 +16,4 @@ const newsSchema = new Schema({
     // likedUsers: [{ type: Schema.Types.ObjectId , ref : 'User'}], // 좋아요를 누른 사용자 ID 
 });
 
-export default model("news", newsSchema, "News");
+export default model("News", newsSchema, "news");
