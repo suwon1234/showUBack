@@ -1,17 +1,26 @@
-import express from 'express';
-import passport from 'passport';
+import express from "express";
+import passport from "passport";
 import { 
   getCommunityById, 
-  addCommentToCommunity, 
-  toggleLike, 
-  getAllCommunities 
+  getAllCommunities, 
+  toggleLike,
 } from "../../controller/community/communityController.js";
 
-import {
-  createCommunityPost,
-  getAllCommunityPosts,
-  uploadFile, 
-} from "../../controller/community/writeController.js";
+import { 
+  addComment, 
+  deleteComment, 
+  getCommentsByPostId 
+} from "../../controller/community/commentController.js";
+
+import { 
+  createCommunityPost, 
+  getAllCommunityPosts, 
+  uploadFile 
+} from "../../controller/community/writeController.js"
+
+import newsRouter, {
+
+} from "../community/newsRouter.js"
 
 
 const communityRouter = express.Router();
@@ -26,7 +35,11 @@ communityRouter.get('/:id', getCommunityById); // community/:id
 // communityRouter.get('/communityInfo/:id', getCommunityById); // community/communityInfo/:id
 
 // 댓글 추가
-communityRouter.post('/:id/comments', passport.authenticate('jwt', { session: false }), addCommentToCommunity);
+communityRouter.get("/:id/comments", getCommentsByPostId);
+communityRouter.post("/:id/comments", passport.authenticate("jwt", { session: false }), addComment);
+
+// 댓글 삭제
+communityRouter.delete("/comments/:commentId", passport.authenticate("jwt", { session: false }), deleteComment);
 
 // 좋아요 토글
 communityRouter.post('/:id/likes', passport.authenticate('jwt', { session: false }), toggleLike);
@@ -40,6 +53,8 @@ communityRouter.get('/all', getAllCommunityPosts);
 // 파일 업로드
 communityRouter.post("/upload", uploadFile); 
 
+// 뉴스 라우터 연결
+communityRouter.use("/newsMain", newsRouter); // /community/newsMain
 
 
 
