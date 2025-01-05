@@ -3,18 +3,16 @@ import CommunityComment from "../../models/community/communityCommentSchema.js";
 // 댓글 추가
 const addComment = async (req, res) => {
   const { id } = req.params; // 게시물 ID
-  const { content } = req.body; // 댓글 내용
+  const { content } = req.body;
 
-  if (!content || content.trim() === "") {
+  if (!content) {
     return res.status(400).json({ message: "댓글 내용을 입력해주세요." });
   }
 
   try {
-    const userId = req.user._id;
-
     const newComment = new CommunityComment({
       postId: id,
-      user: userId,
+      user: req.user._id,
       content,
     });
 
@@ -24,9 +22,11 @@ const addComment = async (req, res) => {
 
     res.status(201).json({ message: "댓글이 추가되었습니다.", comment: savedComment });
   } catch (error) {
-    res.status(500).json({ message: "서버 오류 발생", error: error.message });
+    res.status(500).json({ message: "댓글 추가 중 오류 발생", error: error.message });
   }
 };
+
+
 
 // 댓글 삭제
 const deleteComment = async (req, res) => {
