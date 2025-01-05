@@ -1,9 +1,12 @@
 import express from "express";
-import { seedAuditionData, getAllAuditions } from "../../controller/audition/auditionController.js";
+import { getAllAuditions, getAuditionById } from "../../controller/audition/auditionController.js";
 
 const auditionRouter = express.Router();
 
-auditionRouter.get("/seed", seedAuditionData); // community/audition/seed
+// 전체 오디션 목록 
 auditionRouter.get("/", getAllAuditions);
+
+// 특정 오디션 정보
+auditionRouter.get('/:id', getAuditionById);
 
 export default auditionRouter;
