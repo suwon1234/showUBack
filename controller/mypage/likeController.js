@@ -2,6 +2,8 @@ import Reservation from "../../models/reservation/reservationSchema.js";
 import Space from "../../models/reservation/spaceSchema.js";
 import Auction from "../../models/shop/auctionSchema.js";
 import Md from "../../models/shop/mdSchema.js";
+import Lesson from "../../models/showu/lessonSchema.js";
+import Team from "../../models/showu/teamSchema.js";
 
 //md 좋아요한 상품 가져오기
 const likeMd = async (req, res) => {
@@ -115,4 +117,66 @@ const likeSpace = async (req, res) => {
   }
   
 }
-export { likeMd, likeAuction, likeSpace }
+
+
+// 찜한 팀 목록 가져오기
+const likeTeam = async (req, res) => {
+  const userId = req.user._id;
+
+  try {
+    const likeList = await Team.find({ likeUser : userId })
+    console.log("유저가 좋아요한 팀 매칭 리스트 : ", likeList)
+
+    const myLikeTeam = await likeList.map((team) => ({
+      teamName : team.teamName,
+      category : team.category,
+      teamNotice : team.teamNotice,
+      teamThumbnail : team.teamThumbnail
+    }))
+
+    console.log("마이페이지에 필요한 좋아요 팀 매칭 정보 : ", myLikeTeam)
+
+    return res.status(200).json({
+      likeTeamSuccess : true,
+      message : "찜한 팀 목록을 성공적으로 가져왔습니다",
+      myLikeTeam : myLikeTeam
+    })
+  } catch (error) {
+    return res.status(500).json({
+      likeTeamSuccess : false,
+      message : "찜한 팀 목록을 가져오는데 실패했습니다"
+    })
+    
+  }  
+}
+
+const likeLesson = async (req, res) => {
+  const userId = req.user._id;
+
+  try {
+    const likeList = await Lesson.find({ likeUser : userId })
+    console.log("유저가 좋아요한 레슨 리스트 : ", likeList)
+
+    const myLikeLesson = await likeList.map((lesson) => ({
+      lessonName : lesson.lessonName,
+      category : lesson.category,
+      lessonThumbnail : lesson.lessonThumbnail
+    }))
+
+    console.log("마이페이지에 필요한 좋아요 레슨 정보 : ", myLikeLesson)
+
+    return res.status(200).json({
+      likeTeamSuccess : true,
+      message : "찜한 레슨 목록을 성공적으로 가져왔습니다",
+      myLikeLesson : myLikeLesson
+    })
+  } catch (error) {
+    return res.status(500).json({
+      likeTeamSuccess : false,
+      message : "찜한 레슨 목록을 가져오는데 실패했습니다"
+    })
+    
+  } 
+}
+
+export { likeMd, likeAuction, likeSpace, likeTeam, likeLesson }
