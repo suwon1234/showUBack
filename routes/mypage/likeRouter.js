@@ -1,6 +1,6 @@
 import express from 'express';
 import passport from 'passport';
-import { likeAuction, likeLesson, likeMd, likeSpace, likeTeam } from '../../controller/mypage/likeController.js';
+import { likeAuction, likeLesson, likeMd, likeSpace, likeTeam, likeTicket } from '../../controller/mypage/likeController.js';
 
 const likeRouter = express.Router()
 
@@ -14,5 +14,8 @@ likeRouter.get("/space", passport.authenticate('jwt', { session : false }), like
 likeRouter.get("/team", passport.authenticate('jwt', { session : false }), likeTeam)
 // 찜-레슨 '/my/like/lesson'
 likeRouter.get("/lesson", passport.authenticate('jwt', { session : false }), likeLesson)
+// 찜-티켓 '/my/like/ticket'
+likeRouter.get("/ticket", passport.authenticate('jwt', { session : false }), likeTicket)
+
 
 export default likeRouter

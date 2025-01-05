@@ -1,4 +1,5 @@
 import Reservation from "../../models/reservation/reservationSchema.js";
+import Show from "../../models/reservation/showSchema.js";
 import Space from "../../models/reservation/spaceSchema.js";
 import Auction from "../../models/shop/auctionSchema.js";
 import Md from "../../models/shop/mdSchema.js";
@@ -179,4 +180,52 @@ const likeLesson = async (req, res) => {
   } 
 }
 
-export { likeMd, likeAuction, likeSpace, likeTeam, likeLesson }
+const likeTicket = async (req, res) => {
+  const userId = req.user._id
+  // console.log("로그인한 사용자: ", userId)
+
+  try {
+    // 예약대여 좋아요한 상품 리스트
+    const likedReservationList = await Reservation.find({ user : userId })
+    // console.log("예약대여 좋아요한 상품 리스트 : ", likedReservationList)
+    
+    // 좋아요한 공간 대여 정보 id 리스트
+    const showIdList = await likedReservationList.map((space) => ({
+      showId : space.showId
+    }))
+      .filter(item => item.showId !== null)
+    // console.log("좋아요한 티켓 정보 id 리스트 : ", showIdList)
+
+    // showId만 가져오기
+    const showId = await showIdList.map((item) => item.showId)
+    
+    // showId 일치하는 티켓 정보 가져오기
+    const likeTicketList = await Show.find({ _id: { $in: showId }})
+    console.log("spaceId 일치하는 공간 대여 정보 리스트 : ", likeTicketList)
+
+    // 마이페이지에 필요한 공간 대여 정보
+    const likeTicket = await likeTicketList.map((like) => ({
+      name : like.name,
+      venue : like.venue,
+      dates : like.dates,
+      img : like.img,
+      id : like.id
+    }))
+
+    console.log("마이페이지에 필요한 공간 대여 정보 리스트 : ", likeTicket)
+
+    return res.status(200).json({
+      likeSpaceSuccess : true,
+      message : "성공적으로 찜한 공간 대여 목록을 가져왔습니다",
+      likeTicket : likeTicket
+    })
+    
+  } catch (error) {
+    return res.status(500).json({
+      likeSpaceSuccess : false,
+      message : "찜한 공간 대여 목록을 가져오는데 실패했습니다"
+    })
+  }
+}
+
+export { likeMd, likeAuction, likeSpace, likeTeam, likeLesson, likeTicket }
