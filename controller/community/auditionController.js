@@ -1,30 +1,35 @@
 import Audition from "../../models/audition/auditionSchema.js";
 
 
-// 초기 데이터 삽입
-const seedAuditionData = async (req, res) => {
-  try {
-    console.log("기존 데이터를 삭제 중...");
-    await Audition.deleteMany({});
-    console.log("새 데이터를 삽입 중...");
-    const inserted = await Audition.insertMany(auditionData);
-    console.log("삽입된 데이터:", inserted);
-    res.status(201).json({ message: "Audition 데이터가 성공적으로 추가되었습니다!", inserted });
-  } catch (error) {
-    console.error("Audition 데이터 추가 중 오류 발생:", error);
-    res.status(500).json({ message: "Audition 데이터 추가 중 오류 발생", error: error.message });
-  }
-};
-
-// 전체 오디션 데이터 조회
+// 전체 오디션 목록
 const getAllAuditions = async (req, res) => {
   try {
-    const auditions = await Audition.find();
+    const auditions = await Audition.find({}, "title category description imageUrl"); // 필요한 필드만 선택
     res.status(200).json(auditions);
   } catch (error) {
-    console.error("오디션 데이터 조회 중 오류 발생:", error);
-    res.status(500).json({ message: "오디션 데이터 조회 중 오류 발생", error: error.message });
+    console.error("오디션 목록 조회 중 오류 발생:", error);
+    res.status(500).json({ message: "오디션 목록 조회 중 오류 발생", error: error.message });
   }
 };
 
-export { seedAuditionData, getAllAuditions };
+// 특정 오디션 정보
+const getAuditionById = async (req, res) => {
+  const { id } = req.params;
+
+  if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
+    return res.status(400).json({ message: "유효하지 않은 ID 형식입니다." });
+  }
+
+  try {
+    const audition = await Audition.findById(id, "title category description imageUrl createdAt updatedAt"); // 필요한 필드만 선택
+    if (!audition) {
+      return res.status(404).json({ message: "오디션을 찾을 수 없습니다." });
+    }
+    res.status(200).json(audition);
+  } catch (error) {
+    console.error("오디션 정보 조회 중 오류 발생:", error);
+    res.status(500).json({ message: "오디션 정보 조회 중 오류 발생", error: error.message });
+  }
+};
+
+export { getAllAuditions, getAuditionById };

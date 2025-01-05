@@ -3,7 +3,7 @@ import News from "../../models/news/newsSchema.js";
 
 
 // 전체 뉴스 목록 가져오기 (NewsMain)
-export const getAllNews = async (req, res) => {
+const getAllNews = async (req, res) => {
   try {
     const news = await News.find({}, "title category description imageUrl"); // 필요한 필드만 가져옴
     res.status(200).json(news);
@@ -13,7 +13,7 @@ export const getAllNews = async (req, res) => {
 };
 
 // 특정 뉴스 데이터 가져오기 (News)
-export const getNewsById = async (req, res) => {
+const getNewsById = async (req, res) => {
   const { id } = req.params;
 
   if (!id || !id.match(/^[0-9a-fA-F]{24}$/)) {
@@ -30,3 +30,5 @@ export const getNewsById = async (req, res) => {
     res.status(500).json({ message: "뉴스 데이터를 가져오는 중 오류가 발생했습니다.", error: error.message });
   }
 };
+
+export {getAllNews, getNewsById};
