@@ -1,5 +1,5 @@
 import { model, Schema } from "mongoose";
-import { getCurrentTime } from "../../utils/utils";
+import { getCurrentTime } from "../../utils/utils.js";
 
 
 const auditionSchema = new Schema({
