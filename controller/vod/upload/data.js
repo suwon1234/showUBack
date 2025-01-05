@@ -6,7 +6,7 @@ const vodData =[
     time : "121",
     genre :"범죄",
     year : "2017",
-    mainImage : "/images/movie/moive3.jpg",
+    mainImage : "/images/movie/movie3.jpg",
     likes : 1,
     likedUsers : "677630ae686ab95419a5a1dc"
   },
@@ -17,7 +17,7 @@ const vodData =[
     time : "118",
     genre :"액션",
     year : "2016",
-    mainImage : "/images/movie/moive4.jpg",
+    mainImage : "/images/movie/movie4.jpg",
     likes : 1,
     likedUsers : "677630ae686ab95419a5a1dc"
   },
@@ -28,7 +28,7 @@ const vodData =[
     time : "120",
     genre :"범죄",
     year : "2017",
-    mainImage : "/images/movie/moive5.jpg",
+    mainImage : "/images/movie/movie5.jpg",
     likes : 0,
     likedUsers : ""
   },
@@ -39,7 +39,7 @@ const vodData =[
     time : "115",
     genre :"공포",
     year : "2022",
-    mainImage : "/images/movie/moive6.jpg",
+    mainImage : "/images/movie/movie6.jpg",
     likes : 0,
     likedUsers : ""
   },
@@ -50,7 +50,7 @@ const vodData =[
     time : "103",
     genre :"코미디",
     year : "2019",
-    mainImage : "/images/movie/moive7.jpg",
+    mainImage : "/images/movie/movie7.jpg",
     likes : 0,
     likedUsers : ""
   },
@@ -61,7 +61,7 @@ const vodData =[
     time : "121",
     genre :"뮤지컬",
     year : "2022",
-    mainImage : "/images/movie/moive8.jpg",
+    mainImage : "/images/movie/movie8.jpg",
     likes : 0,
     likedUsers : ""
   },
@@ -72,7 +72,7 @@ const vodData =[
     time : "115",
     genre :"공포",
     year : "1999",
-    mainImage : "/images/movie/moive9.jpg",
+    mainImage : "/images/movie/movie9.jpg",
     likes : 0,
     likedUsers : ""
   },
@@ -83,7 +83,7 @@ const vodData =[
     time : "121",
     genre :"뮤지컬",
     year : "2023",
-    mainImage : "/images/movie/moive10.jpg",
+    mainImage : "/images/movie/movie10.jpg",
     likes : 0,
     likedUsers : ""
   },

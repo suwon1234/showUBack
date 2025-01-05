@@ -27,4 +27,40 @@ const getVodId = async (req, res) => {
   }
 };
 
-export { getVodId };
+// 관심 비관심심
+const getVodLikes =async(req,res)=>{
+  const { id } = req.params;
+
+  try {
+
+    const vodinfo = await vodShowuVideo.findById(id); 
+
+    if (!vodinfo) {
+      return res.status(404).json({ message: "오류" });
+    }
+    if (!Array.isArray(vodinfo.likedUsers)) {
+      vodinfo.likedUsers = [];
+    }
+    const pushLike = vodinfo.likedUsers.includes(req.user._id)
+    if(pushLike){
+      vodinfo.likes-=1
+      vodinfo.likedUsers = vodinfo.likedUsers.filter((userId) => userId.toString() !== req.user._id.toString());
+    }
+    else{
+      vodinfo.likes+=1
+      pushLike.push(req.user._id)
+    }
+    await vodinfo.save();
+    res.status(200).json({
+      message: isLiked ? "관심 취소" : "관심 추가",
+      likes: vodinfo.likes,
+    });
+
+    res.status(200).json({ likes: vodinfo.likes });
+  } catch (error) {
+    console.error("데이터 조회 중 오류 발생:", error);
+    res.status(500).json({ message: "서버 오류 발생", error: error.message });
+  }
+};
+
+export { getVodId,getVodLikes};
