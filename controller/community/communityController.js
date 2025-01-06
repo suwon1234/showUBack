@@ -36,6 +36,55 @@ const getAllCommunities = async (req, res) => {
   }
 };
 
+// 삭제
+export const deleteCommunityPost = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ message: '사용자가 인증되지 않았습니다.' });
+  }
+
+  const { id } = req.params;
+
+  try {
+    const post = await Community.findOneAndDelete({ _id: id, userId: req.user._id });
+    if (!post) {
+      return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
+    }
+
+    res.status(200).json({ message: '게시글이 삭제되었습니다.' });
+  } catch (error) {
+    console.error('게시글 삭제 중 오류:', error);
+    res.status(500).json({ message: '서버 오류' });
+  }
+};
+
+// 수정
+export const updateCommunityPost = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ message: '사용자가 인증되지 않았습니다.' });
+  }
+
+  const { id } = req.params;
+  const { title, content, category } = req.body;
+
+  try {
+    const post = await Community.findOneAndUpdate(
+      { _id: id, userId: req.user._id },
+      { title, content, category },
+      { new: true }
+    );
+
+    if (!post) {
+      return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
+    }
+
+    res.status(200).json({ message: '게시글이 수정되었습니다.', post });
+  } catch (error) {
+    console.error('게시글 수정 중 오류:', error);
+    res.status(500).json({ message: '서버 오류' });
+  }
+};
+
+
 
 
 // 댓글 추가

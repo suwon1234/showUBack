@@ -52,6 +52,7 @@ export const getAllWritePosts = async (req, res) => {
   }
 };
 
+
 // 특정 임시 저장 글 가져오기
 export const getWritePostById = async (req, res) => {
   if (!req.user) {
@@ -136,14 +137,43 @@ const uploadFile = (req, res) => {
   
 
 // 커뮤니티 글 작성
+// const createCommunityPost = async (req, res) => {
+//   if (!req.user) {
+//     return res.status(401).json({ message: "사용자가 인증되지 않았습니다." });
+//   }
+
+//   const { title, category  } = req.body;
+
+//   if (!title || !category ) {
+//     return res.status(400).json({ message: "모든 필드를 입력해주세요." });
+//   }
+
+//   try {
+//     const newPost = new Community({
+//       userId: req.user._id, // 인증된 사용자 ID
+//       title,
+//       category,
+//     });
+
+//     await newPost.save();
+//     res.status(201).json({ message: "게시글이 작성되었습니다.", post: newPost });
+//   } catch (error) {
+//     console.error("게시글 작성 중 오류:", error);
+//     res.status(500).json({ message: "서버 오류" });
+//   }
+// };
+
+
+
+// communityController.js
 const createCommunityPost = async (req, res) => {
   if (!req.user) {
     return res.status(401).json({ message: "사용자가 인증되지 않았습니다." });
   }
 
-  const { title, category  } = req.body;
+  const { title, category, content } = req.body;
 
-  if (!title || !category ) {
+  if (!title || !category || !content) {
     return res.status(400).json({ message: "모든 필드를 입력해주세요." });
   }
 
@@ -152,15 +182,19 @@ const createCommunityPost = async (req, res) => {
       userId: req.user._id, // 인증된 사용자 ID
       title,
       category,
+      content,
+      createdAt: new Date().toISOString(),
     });
 
     await newPost.save();
+
     res.status(201).json({ message: "게시글이 작성되었습니다.", post: newPost });
   } catch (error) {
     console.error("게시글 작성 중 오류:", error);
     res.status(500).json({ message: "서버 오류" });
   }
 };
+
 
 
 
@@ -177,13 +211,14 @@ const createCommunityPost = async (req, res) => {
 
 const getAllCommunityPosts = async (req, res) => {
   try {
-    const posts = await Community.find().sort({ createdAt: -1 });
+    const posts = await Community.find().sort({ createdAt: -1 }); // 최신순으로 정렬
     res.status(200).json(posts); // 작성된 모든 글 반환
   } catch (error) {
     console.error("커뮤니티 글 가져오기 중 오류:", error);
     res.status(500).json({ message: "커뮤니티 데이터를 가져오는 데 실패했습니다." });
   }
 };
+
 
 
 

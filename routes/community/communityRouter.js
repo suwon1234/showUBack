@@ -4,6 +4,8 @@ import {
   getCommunityById, 
   getAllCommunities, 
   toggleLike,
+  deleteCommunityPost,
+  updateCommunityPost,
 } from "../../controller/community/communityController.js";
 
 import { 
@@ -28,8 +30,7 @@ const communityRouter = express.Router();
 // 커뮤니티 목록 조회
 communityRouter.get('/', getAllCommunities); // community
 
-// 커뮤니티 상세 정보 조회
-communityRouter.get('/:id', getCommunityById); // community/:id
+
 
 // 커뮤니티 상세 정보 조회 
 // communityRouter.get('/communityInfo/:id', getCommunityById); // community/communityInfo/:id
@@ -45,12 +46,26 @@ communityRouter.delete("/comments/:commentId", passport.authenticate("jwt", { se
 // 좋아요 토글
 communityRouter.post('/:id/likes', passport.authenticate('jwt', { session: false }), toggleLike);
 
-// 글 작성
-communityRouter.post('/create',passport.authenticate('jwt', { session: false }), createCommunityPost);
 
 
-// 커뮤니티 글 가져오기
+// 커뮤니티 글 작성
+communityRouter.post('/create', passport.authenticate('jwt', { session: false }), createCommunityPost);
+
+// // 커뮤니티 글 목록 가져오기
+// communityRouter.get('/all', passport.authenticate('jwt', { session: false }), getAllCommunityPosts);
 communityRouter.get('/all', getAllCommunityPosts);
+
+
+// 커뮤니티 글 삭제
+communityRouter.delete('/delete/:id', passport.authenticate('jwt', { session: false }), deleteCommunityPost);
+
+// 게시글 수정
+communityRouter.put('/update/:id', passport.authenticate('jwt', { session: false }), updateCommunityPost);
+
+// 특정 게시글 가져오기
+communityRouter.get('/post/:id', passport.authenticate('jwt', { session: false }), getCommunityById);
+// 커뮤니티 상세 정보 조회
+communityRouter.get('/:id', getCommunityById); // community/:id
 
 // 파일 업로드
 communityRouter.post("/upload", uploadFile); 
@@ -61,3 +76,6 @@ communityRouter.use("/newsMain", newsRouter); // /community/newsMain
 
 
 export default communityRouter;
+
+
+
