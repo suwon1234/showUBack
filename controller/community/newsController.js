@@ -1,16 +1,19 @@
-import News from "../../models/news/newsSchema.js";
+import News from "../../models/community/newsSchema.js"
+import NewsInfo from "../../models/community/newsInfoSchema.js"
 
 
 
 // 전체 뉴스 목록 가져오기 (NewsMain)
 const getAllNews = async (req, res) => {
-  try {
-    const news = await News.find({}, "title category description imageUrl"); // 필요한 필드만 가져옴
-    res.status(200).json(news);
-  } catch (error) {
-    res.status(500).json({ message: "뉴스 데이터를 가져오는 중 오류가 발생했습니다.", error: error.message });
-  }
-};
+    try {
+      const news = await News.find({}, "title category description imageUrl"); 
+      console.log("Fetched News Data:", news);
+      res.status(200).json(news);
+    } catch (error) {
+      res.status(500).json({ message: "뉴스 데이터 오류 발생", error: error.message });
+    }
+  };
+
 
 // 특정 뉴스 데이터 가져오기 (News)
 const getNewsById = async (req, res) => {
@@ -21,14 +24,15 @@ const getNewsById = async (req, res) => {
   }
 
   try {
-    const news = await News.findById(id, "title description content imageUrl"); // 필요한 필드만
+    const news = await News.findById(id).populate("info"); // info 필드 포함
     if (!news) {
       return res.status(404).json({ message: "뉴스를 찾을 수 없습니다." });
     }
     res.status(200).json(news);
   } catch (error) {
-    res.status(500).json({ message: "뉴스 데이터를 가져오는 중 오류가 발생했습니다.", error: error.message });
+    res.status(500).json({ message: "뉴스 상세 데이터 오류 발생", error: error.message });
   }
 };
+  
 
 export {getAllNews, getNewsById};
