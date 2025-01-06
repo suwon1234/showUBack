@@ -44,10 +44,13 @@ const login = async (req, res) => {
   const validPassword = await bcrypt.compare(password, foundUser.password)
 
   if(!foundUser){
-    return res.status(409).json("회원이 아닙니다")
+    return res.status(401).json({
+      loginSuccess : false,
+      message : "회원이 아닙니다"
+    })
   }else{
     if(!validPassword){
-      return res.status(409).json({
+      return res.status(404).json({
         loginSuccess : false,
         message : "이메일 또는 비밀번호를 확인해 주세요"
       })

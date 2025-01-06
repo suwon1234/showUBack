@@ -3,6 +3,7 @@ import passport from 'passport'
 import { localStrategy, jwtStrategy, changePasswordStrategy } from '../../controller/auth/authController.js';
 
 const authRouter = express.Router();
+const clientURL = "http://localhost:3000/main"
 
 // 로컬 로그인
 authRouter.post("/local", passport.authenticate('local', {session : false}), localStrategy)
@@ -12,5 +13,13 @@ authRouter.post("/jwt", passport.authenticate('jwt', {session : false}), jwtStra
 
 //이메일 인증번호
 authRouter.post("/api/change-password", changePasswordStrategy)
+
+// 구글 소셜 로그인
+authRouter.get("/google", passport.authenticate('google', {session : false, scope : ['profile', 'email']}))
+authRouter.get("/google/callback", passport.authenticate('google', { session :false, failureRedirect : clientURL }), (req, res) => {
+  // console.log("passport로 소셜 로그인 완료!", req.user)
+  const { jwtToken } = req.user;
+  return res.redirect(`${clientURL}?jwtToken=${jwtToken}`)
+})
 
 export default authRouter;
