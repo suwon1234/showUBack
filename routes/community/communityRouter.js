@@ -38,6 +38,7 @@ communityRouter.get('/:id', getCommunityById); // community/:id
 communityRouter.get("/:id/comments", getCommentsByPostId);
 communityRouter.post("/:id/comments", passport.authenticate("jwt", { session: false }), addComment);
 
+
 // 댓글 삭제
 communityRouter.delete("/comments/:commentId", passport.authenticate("jwt", { session: false }), deleteComment);
 
