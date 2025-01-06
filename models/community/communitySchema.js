@@ -1,9 +1,8 @@
 import { Schema, model } from "mongoose";
 import { getCurrentTime } from "../../utils/utils.js";
 
-// Community 스키마
+
 const communitySchema = new Schema({
-  // UserId: { type: Schema.Types.ObjectId, ref: "User" }, // 글쓰기 작성자
   UserId: { type: Schema.Types.ObjectId, ref: "User" }, // 글쓰기 작성자
   Writefile : { type: String, required: false }, // 글쓰기 파일
   title: { type: String, required: true },
@@ -17,9 +16,6 @@ const communitySchema = new Schema({
   likes: { type: Number, default: 0 }, // 좋아요 수
   likedUsers: [{ type: Schema.Types.ObjectId , ref : 'User'}], // 좋아요를 누른 사용자 ID 
 });
-
-
-
 
 
 export default model("Community", communitySchema, "communities");
