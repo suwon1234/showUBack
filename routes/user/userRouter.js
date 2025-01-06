@@ -1,5 +1,5 @@
 import express from 'express';
-import { register, login, remove, modify, upgrade, modifyUpdate, upgradeInfo, findId, UpgradeAllData, approveRequests, adminLogin } from '../../controller/user/userController.js';
+import { register, login, remove, modify, upgrade, modifyUpdate, upgradeInfo, findId, UpgradeAllData, approveRequests, adminLogin, updatePicture } from '../../controller/user/userController.js';
 import passport from 'passport';
 
 const userRouter = express.Router()
@@ -28,5 +28,8 @@ userRouter.post("/admin/login", adminLogin)
 userRouter.get("/admin/all-data", passport.authenticate('jwt', { session: false }), UpgradeAllData)
 // 등급업 승인 (관리자)
 userRouter.put("/admin/approve-requests/:requestId", passport.authenticate('jwt', { session: false }), approveRequests)
+
+// 프로필 변경
+userRouter.post("/picture", passport.authenticate('jwt', { session: false }), updatePicture)
 
 export default userRouter

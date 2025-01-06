@@ -1,6 +1,7 @@
 import Upgrade from "../../models/users/upgradeSchema.js";
 import User from "../../models/users/userSchema.js";
 import bcrypt from 'bcrypt';
+import path from 'path';
 
 const salt = await bcrypt.genSalt(10)
 
@@ -258,88 +259,6 @@ const adminLogin = async (req, res) => {
     const password = "test123!"
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    // 관리자 데이터
-    // const adminData = [
-    //   {
-    //     email: "admin@gmail.com",
-    //     password: hashedPassword,
-    //     name : "관리자",
-    //     role: "admin"
-    //   },
-    //   {
-    //     email: "test1@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자1",
-    //     phone: "010-1111-1111"
-    //   },
-    //   {
-    //     email: "test2@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자2",
-    //     phone: "010-2222-2222"
-    //   },
-    //   {
-    //     email: "test3@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자3",
-    //     phone: "010-3333-3333"
-    //   },
-    //   {
-    //     email: "test4@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자4",
-    //     phone: "010-4444-4444"
-    //   },
-    //   {
-    //     email: "test5@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자5",
-    //     phone: "010-5555-5555"
-    //   },
-    //   {
-    //     email: "test6@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자6",
-    //     phone: "010-6666-6666"
-    //   },
-    //   {
-    //     email: "test7@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자7",
-    //     phone: "010-7777-7777"
-    //   },
-    //   {
-    //     email: "test8@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자8",
-    //     phone: "010-8888-8888"
-    //   },
-    //   {
-    //     email: "test9@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자9",
-    //     phone: "010-9999-9999"
-    //   },
-    //   {
-    //     email: "test10@gmail.com",
-    //     password: hashedPassword,
-    //     name: "사용자10",
-    //     phone: "010-1111-1111"
-    //   },
-    //   {
-    //     email: "export2@gmail.com",
-    //     password: hashedPassword,
-    //     name: "전문가2",
-    //     phone: "010-1234-1234"
-    //   },
-    //   {
-    //     email: "export1@gmail.com",
-    //     password: hashedPassword,
-    //     name: "전문가1",
-    //     phone: "010-5678-5678"
-    //   },
-    // ];
-
     // 중복된 관리자가 있는지 확인 후 삽입
     const existingAdmin = await User.findOne({ email: "admin@gmail.com" });
     if (existingAdmin) {
@@ -379,4 +298,31 @@ const approveRequests = () => {
 
 }
 
-export { register, login, modify, remove, upgrade, modifyUpdate, upgradeInfo, findId, UpgradeAllData, approveRequests, adminLogin }
+// 프로필 변경
+const updatePicture = async (req, res) => {
+  const { email } = req.user;
+
+  const uploadFolder = "uploads/profiles";
+  // console.log("req.file", req.file)
+  const relativePath = path.join(uploadFolder, req.file.filename).replaceAll("\\", "/")
+
+  // mongDb에 저장
+  // 유저를 찾는다
+  const foundUser = await User.findOne({ email : email }).lean();
+  // console.log("foundUser", foundUser)
+
+  // 유저를 .updateOne(foundUser, {picture})
+  const updatedPicture = await User.updateOne(
+    { email : email },
+    { picture : relativePath }
+  )
+
+  console.log("updatedPicture", updatedPicture)
+
+  res.status(200).json({
+    message : "업로드 완료",
+    filePath : `/${relativePath}`
+  })
+}
+
+export { register, login, modify, remove, upgrade, modifyUpdate, upgradeInfo, findId, UpgradeAllData, approveRequests, adminLogin, updatePicture }
