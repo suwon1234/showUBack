@@ -22,4 +22,19 @@ authRouter.get("/google/callback", passport.authenticate('google', { session :fa
   return res.redirect(`${clientURL}?jwtToken=${jwtToken}`)
 })
 
+
+// 카카오 로그인
+authRouter.get("/kakao", passport.authenticate('kakao', { session : false }))
+authRouter.get("/kakao/callback", passport.authenticate('kakao', { session : false, failureRedirect : clientURL }), (req, res) => {
+  const { jwtToken } = req.user;
+  return res.redirect(`${clientURL}?jwtToken=${jwtToken}`)
+})
+
+// 네이버 로그인
+authRouter.get("/naver", passport.authenticate('naver', { session : false }))
+authRouter.get("/naver/callback", passport.authenticate('naver', { session : false, failureRedirect : clientURL }), (req, res) => {
+  const { jwtToken } = req.user;
+  return res.redirect(`${clientURL}?jwtToken=${jwtToken}`)
+})
+
 export default authRouter;

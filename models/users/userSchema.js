@@ -7,6 +7,7 @@ const userSchema = new Schema({
     name: { type: String, required : true },
     phone : { type : String },
     provider : { type : String },
+    picture : { type : String },
     role : {
         type : String,
         enum : ['user', 'export', 'admin'], 
