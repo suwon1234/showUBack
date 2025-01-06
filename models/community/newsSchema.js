@@ -4,8 +4,8 @@ import { getCurrentTime } from "../../utils/utils.js";
 const newsSchema = new Schema({
     title: { type: String, required: true },
     category: { type: String, enum: ["전체", "공연", "뮤지컬", "영화", "연극", "밴드"], required: false },
-    description: { type: String, required: false },
-    content: { type: String, default: "내용이 없습니다." },
+    description: { type: String },
+    content: { type: String },
     imageUrl: { type: String, required: true },
     createdAt: { type: String, default: getCurrentTime },
     updatedAt: { type: String, default: getCurrentTime },

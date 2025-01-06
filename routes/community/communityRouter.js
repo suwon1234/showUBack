@@ -45,7 +45,8 @@ communityRouter.delete("/comments/:commentId", passport.authenticate("jwt", { se
 communityRouter.post('/:id/likes', passport.authenticate('jwt', { session: false }), toggleLike);
 
 // 글 작성
-communityRouter.post('/create', createCommunityPost);
+communityRouter.post('/create',passport.authenticate('jwt', { session: false }), createCommunityPost);
+
 
 // 커뮤니티 글 가져오기
 communityRouter.get('/all', getAllCommunityPosts);

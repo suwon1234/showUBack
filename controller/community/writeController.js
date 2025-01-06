@@ -1,7 +1,77 @@
 import multer from "multer";
 import Community from "../../models/community/communitySchema.js";
+import Write from "../../models/community/writeSchema.js";
 import fs from "fs";
 import path from "path";
+
+// 글 임시 저장
+const saveToWrite = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ message: "사용자가 인증되지 않았습니다." });
+  }
+
+  const { title, category, content, writeFile } = req.body; // writeFile 추가
+
+  if (!title || !category || !content) {
+    return res.status(400).json({ message: "모든 필드를 입력해주세요." });
+  }
+
+  try {
+    const newWrite = new Write({
+      userId: req.user._id,
+      title,
+      category,
+      content,
+      writeFile, // 첨부 파일 URL 저장
+      createdAt: new Date().toISOString(),
+    });
+
+    const savedWrite = await newWrite.save();
+
+    res.status(201).json({ message: "임시 저장되었습니다.", post: savedWrite });
+  } catch (error) {
+    console.error("임시 저장 중 오류:", error);
+    res.status(500).json({ message: "서버 오류" });
+  }
+};
+
+
+
+// 모든 임시 저장 글 가져오기
+export const getAllWritePosts = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ message: "사용자가 인증되지 않았습니다." });
+  }
+
+  try {
+    const posts = await Write.find({ userId: req.user._id }).sort({ createdAt: -1 }); // 작성자의 글만 반환
+    res.status(200).json(posts);
+  } catch (error) {
+    console.error("임시 저장 글 가져오기 중 오류:", error);
+    res.status(500).json({ message: "임시 저장 글을 가져오는 데 실패했습니다." });
+  }
+};
+
+// 특정 임시 저장 글 가져오기
+export const getWritePostById = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ message: "사용자가 인증되지 않았습니다." });
+  }
+
+  const { id } = req.params;
+
+  try {
+    const post = await Write.findOne({ _id: id, userId: req.user._id });
+    if (!post) {
+      return res.status(404).json({ message: "글을 찾을 수 없습니다." });
+    }
+
+    res.status(200).json(post);
+  } catch (error) {
+    console.error("임시 저장 글 가져오기 중 오류:", error);
+    res.status(500).json({ message: "글을 가져오는 데 실패했습니다." });
+  }
+};
 
 // 파일 크기 제한
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
@@ -71,9 +141,9 @@ const createCommunityPost = async (req, res) => {
     return res.status(401).json({ message: "사용자가 인증되지 않았습니다." });
   }
 
-  const { title, category } = req.body;
+  const { title, category  } = req.body;
 
-  if (!title || !category) {
+  if (!title || !category ) {
     return res.status(400).json({ message: "모든 필드를 입력해주세요." });
   }
 
@@ -117,4 +187,6 @@ const getAllCommunityPosts = async (req, res) => {
 
 
 
-export { createCommunityPost, getAllCommunityPosts, uploadFile };
+
+
+export { createCommunityPost, getAllCommunityPosts, uploadFile,saveToWrite };
