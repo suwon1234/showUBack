@@ -27,15 +27,21 @@ const communityRouter = express.Router();
 // 커뮤니티 라우터
 communityRouter.get("/", getAllCommunities);
 communityRouter.get("/:id/comments", getCommentsByPostId);
+
 communityRouter.post("/:id/comments", passport.authenticate("jwt", { session: false }), addComment);
+
 communityRouter.delete("/comments/:commentId", passport.authenticate("jwt", { session: false }), deleteComment);
+
 communityRouter.post("/:id/likes", passport.authenticate("jwt", { session: false }), toggleLike);
 communityRouter.post("/create", passport.authenticate("jwt", { session: false }), createCommunityPost);
-communityRouter.get("/all", getAllCommunityPosts);
-communityRouter.delete("/delete/:id", passport.authenticate("jwt", { session: false }), deleteCommunityPost);
-communityRouter.put("/update/:id", passport.authenticate("jwt", { session: false }), updateCommunityPost);
-communityRouter.get("/post/:id", passport.authenticate("jwt", { session: false }), getCommunityById);
 
+communityRouter.get("/all", getAllCommunityPosts);
+
+communityRouter.delete("/delete/:id", passport.authenticate("jwt", { session: false }), deleteCommunityPost);
+
+communityRouter.put("/update/:id", passport.authenticate("jwt", { session: false }), updateCommunityPost);
+
+communityRouter.get("/post/:id", passport.authenticate("jwt", { session: false }), getCommunityById);
 
 communityRouter.post("/upload", uploadFile);
 
