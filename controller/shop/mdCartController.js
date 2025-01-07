@@ -34,7 +34,7 @@ const getMdCartItems = async (req, res) => {
 // 장바구니에 상품 추가
 const addToMdCart = async (req, res) => {
   const { productId, quantity } = req.body;
-  const userId = req.userId; 
+  // const userId = req.userId; 
 
   try {
     let cartItem = await Cart.findOne({ userId, mdProduct: productId });
@@ -67,10 +67,12 @@ const addToMdCart = async (req, res) => {
 // 장바구니에서 상품 삭제
 const removeFromMdCart = async (req, res) => {
   try {
-    const { mdProductId } = req.params;
-    const userId = req.userId;
+    // const { mdProductId } = req.params;
+    const { mdProductId } = req.body;
+    // const userId = req.userId;
 
-    const deletedItem = await MdCart.findOneAndDelete({ mdProduct: mdProductId, userId });
+    // const deletedItem = await MdCart.findOneAndDelete({ mdProduct: mdProductId, userId });
+    const deletedItem = await MdCart.findOneAndDelete({ mdName: mdProductId, userId });
     
     if (!deletedItem) {
       return res.status(404).send('MD 상품이 장바구니에서 삭제되지 않았습니다.');
