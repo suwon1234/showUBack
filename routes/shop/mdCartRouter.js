@@ -6,7 +6,8 @@ const mdCartRouter = express.Router();
 
 mdCartRouter.get('/', getMdCartItems);
 mdCartRouter.post('/', addToMdCart);
-mdCartRouter.delete('/:id', removeFromMdCart);
+// mdCartRouter.delete('/:id', removeFromMdCart);
+mdCartRouter.delete('/', removeFromMdCart);
 mdCartRouter.put('/', updateMdCartQuantity);
 
 export default mdCartRouter;
