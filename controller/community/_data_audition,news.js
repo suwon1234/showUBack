@@ -12,7 +12,7 @@ const newsData = await News.create(
   description: "뮤지컬 베르테르",
   imageUrl: "/images/news/musical-1.jpg",
 },
-{
+{ 
   title: "영화 위키드 PART1.",
   category: "영화",
   description: "위키드가 영화로!",
