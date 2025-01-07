@@ -1,8 +1,8 @@
 import express from 'express';
-import { getAllNews, getNewsById } from "../../controller/news/newsController.js";
+import { getAllNews, getNewsById } from '../../controller/community/newsController.js';
+
 
 const newsRouter = express.Router();
-
 
 
 // 뉴스 전체 목록 조회

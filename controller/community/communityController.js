@@ -36,6 +36,55 @@ const getAllCommunities = async (req, res) => {
   }
 };
 
+// 삭제
+export const deleteCommunityPost = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ message: '사용자가 인증되지 않았습니다.' });
+  }
+
+  const { id } = req.params;
+
+  try {
+    const post = await Community.findOneAndDelete({ _id: id, userId: req.user._id });
+    if (!post) {
+      return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
+    }
+
+    res.status(200).json({ message: '게시글이 삭제되었습니다.' });
+  } catch (error) {
+    console.error('게시글 삭제 중 오류:', error);
+    res.status(500).json({ message: '서버 오류' });
+  }
+};
+
+// 수정
+export const updateCommunityPost = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ message: '사용자가 인증되지 않았습니다.' });
+  }
+
+  const { id } = req.params;
+  const { title, content, category } = req.body;
+
+  try {
+    const post = await Community.findOneAndUpdate(
+      { _id: id, userId: req.user._id },
+      { title, content, category },
+      { new: true }
+    );
+
+    if (!post) {
+      return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
+    }
+
+    res.status(200).json({ message: '게시글이 수정되었습니다.', post });
+  } catch (error) {
+    console.error('게시글 수정 중 오류:', error);
+    res.status(500).json({ message: '서버 오류' });
+  }
+};
+
+
 
 
 // 댓글 추가
@@ -77,7 +126,14 @@ const addCommentToCommunity = async (req, res) => {
 
 // 좋아요 토글
 const toggleLike = async (req, res) => {
+  console.log("인증된 사용자:", req.user); // 디버깅: req.user 확인
+
   const { id } = req.params;
+  const userId = req.user?._id; // 인증된 사용자 ID
+
+  if (!userId) {
+    return res.status(401).json({ message: "인증 실패: 사용자 정보를 가져올 수 없습니다." });
+  }
 
   try {
     const post = await Community.findById(id);
@@ -85,24 +141,21 @@ const toggleLike = async (req, res) => {
       return res.status(404).json({ message: "게시글을 찾을 수 없습니다." });
     }
 
-    const userId = req.user._id; // 현재 요청한 사용자의 ID
-
-    // 사용자가 이미 좋아요를 눌렀는지 확인
     const isLiked = post.likedUsers.includes(userId);
 
     if (isLiked) {
-      // 좋아요 취소
       post.likedUsers = post.likedUsers.filter((user) => user.toString() !== userId.toString());
       post.likes -= 1;
-      await post.save();
-      return res.status(200).json({ message: "좋아요가 취소되었습니다.", likes: post.likes });
     } else {
-      // 좋아요 추가
       post.likedUsers.push(userId);
       post.likes += 1;
-      await post.save();
-      return res.status(200).json({ message: "좋아요가 반영되었습니다.", likes: post.likes });
     }
+
+    await post.save();
+    return res.status(200).json({
+      message: isLiked ? "좋아요가 취소되었습니다." : "좋아요가 반영되었습니다.",
+      likes: post.likes,
+    });
   } catch (error) {
     console.error("좋아요 처리 오류:", error);
     res.status(500).json({ message: "서버 오류가 발생했습니다.", error: error.message });

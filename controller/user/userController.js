@@ -122,8 +122,9 @@ const remove = async (req, res) => {
 const upgrade = async (req, res) => {
   // console.log("req.body", req.body)
   // console.log("req.user", req.user)
-  const { exportName, intro, area, field, total, career, portfolio } = req.body;
-  const foundUser = await User.findOne({ exportNameid : exportName }).lean();
+  const userId = req.user._id;
+  const { intro, area, field, total, career, portfolio } = req.body;
+  const foundUser = await Upgrade.findOne({ exportName : userId }).lean();
   // console.log("foundUser", foundUser)
 
   if(foundUser){
@@ -134,7 +135,7 @@ const upgrade = async (req, res) => {
   }else{
 
     await Upgrade.create({
-      exportName : exportName,
+      exportName : userId,
       intro : intro,
       area : area,
       field : field,
