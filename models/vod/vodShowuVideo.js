@@ -10,7 +10,7 @@ const vodShowuVideoSchema = new Schema({
   videoUrl: { type: String, required: true }, // 비디오 경로
   description: { type: String, required: true }, // 줄거리
   likes: { type: Number, default: 0 }, // 관심 수
-  likedUsers: { type: Schema.Types.ObjectId, ref: 'User' }, // 좋아요를 누른 사용자 ID
+  likedUsers: [{ type: Schema.Types.ObjectId, ref: 'User' }], // 좋아요를 누른 사용자 ID
   time: { type: String, required: true }, // 시간 정보
   genre: { type: String, required: true }, // 장르
   year: { type: String, required: true }, // 연도
