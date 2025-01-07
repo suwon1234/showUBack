@@ -58,6 +58,7 @@ const getUniqueFileName = (originalName, uploadFolder) => {
 const upload = multer({
   storage : multer.diskStorage({
     destination(req, file, done){
+      console.log(req.path)
       done(null, path.join(__dirname, "./uploads/profiles")) // 이미지 저장 경로 설정
     },
     filename(req, file, done){
