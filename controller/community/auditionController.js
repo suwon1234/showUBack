@@ -1,4 +1,4 @@
-import Audition from "../../models/audition/auditionSchema.js";
+import Audition from "../../models/community/auditionSchema.js"
 
 
 // 전체 오디션 목록
