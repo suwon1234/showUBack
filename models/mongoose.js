@@ -19,6 +19,7 @@ import Audition from './community/auditionSchema.js';
 import NewsInfo from './community/newsInfoSchema.js';
 import MdCart from './shop/mdCartSchema.js';
 import TicketEvent from './reservation/ticketEventSchema.js';
+import AuditionInfo from './community/auditionInfoSchema.js';
 
 connect()
 
@@ -458,7 +459,7 @@ connect()
 //     description: '뮤지컬 <루카스> 오디션',
 //   },
 //   {
-//     image: '뮤지컬',
+//     category: '뮤지컬',
 //     imageUrl: '/images/auditionInfo/audition-info-musical-4.jpg',
 //     title: 'EMK MUSIAL COMPANY',
 //     description: '뮤지컬 <베르사유의 장미> 오디션',
@@ -557,8 +558,8 @@ connect()
 
 
 
-// // 오디션 인포
-// const auditionInfoData = [
+// 오디션 인포
+// const auditionInfoData = await AuditionInfo.create(
 //   {
 //     imageUrl: '/images/auditionInfo/audition-info-musical-7.jpg',
 //     title: "뮤지컬 팬텀 오디션 공고",
@@ -631,8 +632,7 @@ connect()
 //     imageUrl: '/images/auditionInfo/audition-info-theater-5.jpg',
 //     title: "연극 분홍립스틱 오디션 공고",
 //   },
-
-// ];
+// )
 
 // MD 옵션
 // const basicOption = await Option.create(
@@ -6259,6 +6259,7 @@ connect()
 // console.log(reservationData)
 // console.log(newsData)
 // console.log(newsInfoData)
-// console.log(auditionData)
+console.log(auditionData)
 // console.log(mdCartData)
 // console.log(ticketEventData)
+// console.log(auditionInfoData)
