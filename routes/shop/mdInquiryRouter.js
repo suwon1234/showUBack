@@ -3,7 +3,7 @@ import passport from 'passport'
 import { createInquiry, getInquiryList, getInquiryDetail, updateInquiry, deleteInquiry } from '../../controller/shop/mdInquiryController.js';
 
 const mdInquiryRouter = express.Router();
-const authenticateJWT = passport.authenticate('jwt', { session: false });
+// const authenticateJWT = passport.authenticate('jwt', { session: false });
 
 mdInquiryRouter.post('/', createInquiry) // 문의 내역 작성
 mdInquiryRouter.get('/list', getInquiryList) // 문의 목록
