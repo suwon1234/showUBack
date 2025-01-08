@@ -4,7 +4,7 @@ import {
   getAllTicketEvents,
   getAllShows,
   getAllSpaces,
-} from "../../controllers/reservation/eventsController.js";
+} from "../../controller/reservation/eventsController.js";
 
 const router = express.Router();
 
