@@ -1,4 +1,4 @@
-import MdInquiry from "../../models/shop/mdInquirySchema.js";  // inquiry 스키마 임포트
+import MdInquiry from "../../models/shop/mdInquirySchema.js";  
 
 // 문의 등록 
 const createInquiry = async (req, res) => {

@@ -18,6 +18,7 @@ import News from './community/newsSchema.js';
 import Audition from './community/auditionSchema.js';
 import NewsInfo from './community/newsInfoSchema.js';
 import MdCart from './shop/mdCartSchema.js';
+import TicketEvent from './reservation/ticketEventSchema.js';
 
 connect()
 
@@ -209,128 +210,128 @@ connect()
 
 
 // 뉴스 메인
-const newsData = await News.create(
-  {
-    title: "CJ 뮤지컬의 대표작 물랑루즈",
-    category: "뮤지컬",
-    description: "주크박스 뮤지컬의 대명사 물랑루즈의 세계로!",
-    imageUrl: "/images/news/musical-10.jpg",
-  },
-  {
-    title: "뮤지컬 베르테르",
-    category: "뮤지컬",
-    description: "뮤지컬 베르테르",
-    imageUrl: "/images/news/musical-1.jpg",
-  },
-  {
-    title: "영화 위키드 PART1.",
-    category: "영화",
-    description: "위키드가 영화로!",
-    imageUrl: "/images/news/movie-1.jpg",
-  },
-  {
-    title: "데이식스 고척콘",
-    category: "밴드",
-    description: "데!이!식!스!웰!컴!투더!쇼!",
-    imageUrl: "/images/news/band-1.jpg",
-  },
-  {
-    title: "뮤지컬 시라노",
-    category: "뮤지컬",
-    description: "로맨티스트 시라노 아아,,",
-    imageUrl: "/images/news/musical-2.jpg",
-  },
-  {
-    title: "우리 별",
-    category: "연극",
-    description: "연극 우리 별",
-    imageUrl: "/images/news/theater-1.jpg",
-  },
-  {
-    title: "시네마 천국",
-    category: "영화",
-    description: "울고 싶을 땐 시네마 천국",
-    imageUrl: "/images/news/movie-2.jpg",
-  },
-  {
-    title: "딥 퍼플 역시 레전드 밴드",
-    category: "밴드",
-    description: "burn!!!!!",
-    imageUrl: "/images/news/band-2.jpg",
-  },
-  {
-    title: "해리포터와 마법사의 돌",
-    category: "영화",
-    description: "해리포터 시리즈의 시작",
-    imageUrl: "/images/news/movie-3.jpg",
-  },
-  {
-    title: "뮤지컬 킹키 부츠",
-    category: "뮤지컬",
-    description: "킹키하라!",
-    imageUrl: "/images/news/musical-3.jpg",
-  },
-  {
-    title: "하울의 움직이는 성",
-    category: "영화",
-    description: "지브리 하면 떠오르는 영화!",
-    imageUrl: "/images/news/movie-4.jpg",
+// const newsData = await News.create(
+//   {
+//     title: "CJ 뮤지컬의 대표작 물랑루즈",
+//     category: "뮤지컬",
+//     description: "주크박스 뮤지컬의 대명사 물랑루즈의 세계로!",
+//     imageUrl: "/images/news/musical-10.jpg",
+//   },
+//   {
+//     title: "뮤지컬 베르테르",
+//     category: "뮤지컬",
+//     description: "뮤지컬 베르테르",
+//     imageUrl: "/images/news/musical-1.jpg",
+//   },
+//   {
+//     title: "영화 위키드 PART1.",
+//     category: "영화",
+//     description: "위키드가 영화로!",
+//     imageUrl: "/images/news/movie-1.jpg",
+//   },
+//   {
+//     title: "데이식스 고척콘",
+//     category: "밴드",
+//     description: "데!이!식!스!웰!컴!투더!쇼!",
+//     imageUrl: "/images/news/band-1.jpg",
+//   },
+//   {
+//     title: "뮤지컬 시라노",
+//     category: "뮤지컬",
+//     description: "로맨티스트 시라노 아아,,",
+//     imageUrl: "/images/news/musical-2.jpg",
+//   },
+//   {
+//     title: "우리 별",
+//     category: "연극",
+//     description: "연극 우리 별",
+//     imageUrl: "/images/news/theater-1.jpg",
+//   },
+//   {
+//     title: "시네마 천국",
+//     category: "영화",
+//     description: "울고 싶을 땐 시네마 천국",
+//     imageUrl: "/images/news/movie-2.jpg",
+//   },
+//   {
+//     title: "딥 퍼플 역시 레전드 밴드",
+//     category: "밴드",
+//     description: "burn!!!!!",
+//     imageUrl: "/images/news/band-2.jpg",
+//   },
+//   {
+//     title: "해리포터와 마법사의 돌",
+//     category: "영화",
+//     description: "해리포터 시리즈의 시작",
+//     imageUrl: "/images/news/movie-3.jpg",
+//   },
+//   {
+//     title: "뮤지컬 킹키 부츠",
+//     category: "뮤지컬",
+//     description: "킹키하라!",
+//     imageUrl: "/images/news/musical-3.jpg",
+//   },
+//   {
+//     title: "하울의 움직이는 성",
+//     category: "영화",
+//     description: "지브리 하면 떠오르는 영화!",
+//     imageUrl: "/images/news/movie-4.jpg",
   
-  },
-  {
-    title: "스미노 하야토 피아노 리사이틀",
-    category: "공연",
-    description: "피아노 연주회",
-    imageUrl: "/images/news/show-1.jpg" ,
-  },
-  {
-    title: "밴드 데이식스",
-    category: "밴드",
-    description: "걷잡을 수 없이 스르륵 녹아내려요",
-    imageUrl: "/images/news/band-3.jpg",
-  },
-  {
-    title: "뮤지컬 데스노트",
-    category: "뮤지컬",
-    description: "DEATH NOTE",
-    imageUrl: "/images/news/musical-4.jpg" ,
-  },
-  {
-    title: "뮤지컬 웨스트 사이드 스토리",
-    category: "뮤지컬",
-    description: "싸워라!(짝) 싸워라!(짝)",
-    imageUrl: "/images/news/musical-5.jpg",
-  },
-  {
-    title: "뮤지컬 종의 기원",
-    category: "뮤지컬",
-    description: "그 종의 기원 말고 재밌는 종의 기원",
-    imageUrl: "/images/news/musical-8.jpg",
-  },
-  {
-    title: "최고의 헤드윅은?",
-    category: "뮤지컬",
-    description: "셋 다 잘생겼는데 어떡하라고, 오또카라고, 어뜨카라고...",
-    imageUrl: "/images/news/musical-6.jpg",
-  },
-  {
-    title: "지크수가 또!",
-    category: "뮤지컬",
-    description: "Jesus..!",
-    imageUrl: "/images/news/musical-7.jpg",
-  },
-  {
-    title: "빛과 소리",
-    category: "공연",
-    description: "빛과 소리",
-    imageUrl: "/images/news/show-3.jpg",
-  },
-  {
-    title: "연극 곰스크로 가는 기차",
-    category: "연극",
-    description: "곰스크로 가는 기차",
-    imageUrl: "/images/news/theater-2.jpg",
-  },)
+//   },
+//   {
+//     title: "스미노 하야토 피아노 리사이틀",
+//     category: "공연",
+//     description: "피아노 연주회",
+//     imageUrl: "/images/news/show-1.jpg" ,
+//   },
+//   {
+//     title: "밴드 데이식스",
+//     category: "밴드",
+//     description: "걷잡을 수 없이 스르륵 녹아내려요",
+//     imageUrl: "/images/news/band-3.jpg",
+//   },
+//   {
+//     title: "뮤지컬 데스노트",
+//     category: "뮤지컬",
+//     description: "DEATH NOTE",
+//     imageUrl: "/images/news/musical-4.jpg" ,
+//   },
+//   {
+//     title: "뮤지컬 웨스트 사이드 스토리",
+//     category: "뮤지컬",
+//     description: "싸워라!(짝) 싸워라!(짝)",
+//     imageUrl: "/images/news/musical-5.jpg",
+//   },
+//   {
+//     title: "뮤지컬 종의 기원",
+//     category: "뮤지컬",
+//     description: "그 종의 기원 말고 재밌는 종의 기원",
+//     imageUrl: "/images/news/musical-8.jpg",
+//   },
+//   {
+//     title: "최고의 헤드윅은?",
+//     category: "뮤지컬",
+//     description: "셋 다 잘생겼는데 어떡하라고, 오또카라고, 어뜨카라고...",
+//     imageUrl: "/images/news/musical-6.jpg",
+//   },
+//   {
+//     title: "지크수가 또!",
+//     category: "뮤지컬",
+//     description: "Jesus..!",
+//     imageUrl: "/images/news/musical-7.jpg",
+//   },
+//   {
+//     title: "빛과 소리",
+//     category: "공연",
+//     description: "빛과 소리",
+//     imageUrl: "/images/news/show-3.jpg",
+//   },
+//   {
+//     title: "연극 곰스크로 가는 기차",
+//     category: "연극",
+//     description: "곰스크로 가는 기차",
+//     imageUrl: "/images/news/theater-2.jpg",
+//   },)
   
 
 
@@ -1947,6 +1948,219 @@ const newsData = await News.create(
 //     updatedAt: format(now, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"),
 //   },
 // )
+
+const ticketEventData = await TicketEvent.create(
+  {
+    id: 1,
+    name: "2025 연극 <세일즈맨의 죽음>",
+    date: "2025-01-30",
+    type: "일반예매",
+    img: "/images/reservation/expect1.gif",
+  },
+  {
+    id: 2,
+    name: "뮤지컬 <썬데이>",
+    date: "2025-02-10",
+    type: "단독판매",
+    img: "/images/reservation/expect2.gif",
+  },
+  {
+    id: 3,
+    name: "뮤지컬 <탐정 케이>",
+    date: "2025-02-12",
+    type: "일반예매",
+    img: "/images/reservation/expect3.gif",
+  },
+  {
+    id: 4,
+    name: "뮤지컬 <어제의 시는 내일의 노래가 될 수 있을까>",
+    date: "2025-02-14",
+    type: "단독판매",
+    img: "/images/reservation/expect4.gif",
+  },
+  {
+    id: 5,
+    name: "뮤지컬 <어느 60대 노부부 이야기>",
+    date: "2025-02-16",
+    type: "일반예매",
+    img: "/images/reservation/expect5.gif",
+  },
+  {
+    id: 6,
+    name: "뮤지컬 <시카고>",
+    date: "2025-02-18",
+    type: "단독판매",
+    img: "/images/reservation/expect6.gif",
+  },
+  {
+    id: 7,
+    name: "블랙코미디 연극 <죽은시인의 사회>",
+    date: "2025-02-20",
+    type: "일반예매",
+    img: "/images/reservation/expect7.gif",
+  },
+  {
+    id: 8,
+    name: "좀비연극 <오마이갓>",
+    date: "2025-02-22",
+    type: "단독판매",
+    img: "/images/reservation/expect8.gif",
+  },
+  {
+    id: 9,
+    name: "연극 <너의 목소리가 들려>",
+    date: "2025-02-24",
+    type: "일반예매",
+    img: "/images/reservation/expect9.gif",
+  },
+  {
+    id: 10,
+    name: "웃음작렬연극 <런투패밀리>",
+    date: "2025-02-26",
+    type: "단독판매",
+    img: "/images/reservation/expect10.gif",
+  },
+  {
+    id: 11,
+    name: "연극 <쉬어매드니스>",
+    date: "2025-02-28",
+    type: "일반예매",
+    img: "/images/reservation/expect11.gif",
+  },
+  {
+    id: 12,
+    name: "연극 <테베랜드>",
+    date: "2025-03-02",
+    type: "단독판매",
+    img: "/images/reservation/expect12.gif",
+  },
+  {
+    id: 13,
+    name: "연극 <바닷마을 다이어리>",
+    date: "2025-03-04",
+    type: "일반예매",
+    img: "/images/reservation/expect13.gif",
+  },
+  {
+    id: 14,
+    name: "연극 <붉은 낙엽>",
+    date: "2025-03-06",
+    type: "단독판매",
+    img: "/images/reservation/expect14.gif",
+  },
+  {
+    id: 15,
+    name: "행오버",
+    date: "2025-03-08",
+    type: "일반예매",
+    img: "/images/reservation/expect15.gif",
+  },
+  {
+    id: 16,
+    name: "연극 애나엑스 <ANNA X>",
+    date: "2025-04-13",
+    type: "단독판매",
+    img: "/images/reservation/expect16.gif",
+  },
+  {
+    id: 17,
+    name: "연극 <꽃의 비밀>",
+    date: "2025-05-26",
+    type: "일반예매",
+    img: "/images/reservation/expect17.gif",
+  },
+  {
+    id: 18,
+    name: "연극 <타인의 삶>",
+    date: "2025-06-12",
+    type: "단독판매",
+    img: "/images/reservation/expect18.gif",
+  },
+  {
+    id: 19,
+    name: "연극 <시나브로>",
+    date: "2025-06-20",
+    type: "일반예매",
+    img: "/images/reservation/expect19.gif",
+  },
+  {
+    id: 20,
+    name: "연극 <모비딕>",
+    date: "2025-07-19",
+    type: "단독판매",
+    img: "/images/reservation/expect20.gif",
+  },
+  {
+    id: 21,
+    name: "뮤직드라마 <불편한 편의점>",
+    date: "2025-08-16",
+    type: "일반예매",
+    img: "/images/reservation/expect21.gif",
+  },
+  {
+    id: 22,
+    name: "연극 <마음>",
+    date: "2025-09-04",
+    type: "단독판매",
+    img: "/images/reservation/expect22.gif",
+  },
+  {
+    id: 23,
+    name: "연극 <벚꽃동산>",
+    date: "2025-10-15",
+    type: "일반예매",
+    img: "/images/reservation/expect23.gif",
+  },
+  {
+    id: 24,
+    name: "연극 <비누향기>",
+    date: "2025-10-21",
+    type: "단독판매",
+    img: "/images/reservation/expect24.gif",
+  },
+  {
+    id: 25,
+    name: "뮤지컬 <그해 여름>",
+    date: "2025-11-12",
+    type: "일반예매",
+    img: "/images/reservation/expect25.gif",
+  },
+  {
+    id: 26,
+    name: "뮤지컬 <글루미 선데이>",
+    date: "2025-11-25",
+    type: "단독판매",
+    img: "/images/reservation/expect26.gif",
+  },
+  {
+    id: 27,
+    name: "연극 <연극 라면>",
+    date: "2025-12-01",
+    type: "일반예매",
+    img: "/images/reservation/expect27.gif",
+  },
+  {
+    id: 28,
+    name: "연극 <너의 목소리가 들려>",
+    date: "2025-12-09",
+    type: "단독판매",
+    img: "/images/reservation/expect28.gif",
+  },
+  {
+    id: 29,
+    name: "연극 <올모스트메인>",
+    date: "2025-12-20",
+    type: "일반예매",
+    img: "/images/reservation/expect29.gif",
+  },
+  {
+    id: 30,
+    name: "연극 <사춘기 메들리>",
+    date: "2025-12-31",
+    type: "단독판매",
+    img: "/images/reservation/expect30.gif",
+  },
+)
 
 
 
@@ -6043,7 +6257,8 @@ const newsData = await News.create(
 // console.log(lessonReservationData)
 // console.log(likeData)
 // console.log(reservationData)
-console.log(newsData)
+// console.log(newsData)
 // console.log(newsInfoData)
 // console.log(auditionData)
 // console.log(mdCartData)
+console.log(ticketEventData)
