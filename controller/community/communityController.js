@@ -125,11 +125,46 @@ const addCommentToCommunity = async (req, res) => {
 
 
 // 좋아요 토글
-const toggleLike = async (req, res) => {
-  console.log("인증된 사용자:", req.user); // 디버깅: req.user 확인
+// const toggleLike = async (req, res) => {
+//   console.log("인증된 사용자:", req.user); // 디버깅: req.user 확인
 
+//   const { id } = req.params;
+//   const userId = req.user?._id; // 인증된 사용자 ID
+
+//   if (!userId) {
+//     return res.status(401).json({ message: "인증 실패: 사용자 정보를 가져올 수 없습니다." });
+//   }
+
+//   try {
+//     const post = await Community.findById(id);
+//     if (!post) {
+//       return res.status(404).json({ message: "게시글을 찾을 수 없습니다." });
+//     }
+
+//     const isLiked = post.likedUsers.includes(userId);
+
+//     if (isLiked) {
+//       post.likedUsers = post.likedUsers.filter((user) => user.toString() !== userId.toString());
+//       post.likes -= 1;
+//     } else {
+//       post.likedUsers.push(userId);
+//       post.likes += 1;
+//     }
+
+//     await post.save();
+//     return res.status(200).json({
+//       message: isLiked ? "좋아요가 취소되었습니다." : "좋아요가 반영되었습니다.",
+//       likes: post.likes,
+//     });
+//   } catch (error) {
+//     console.error("좋아요 처리 오류:", error);
+//     res.status(500).json({ message: "서버 오류가 발생했습니다.", error: error.message });
+//   }
+// };
+
+const toggleLike = async (req, res) => {
   const { id } = req.params;
-  const userId = req.user?._id; // 인증된 사용자 ID
+  const userId = req.user?._id;
 
   if (!userId) {
     return res.status(401).json({ message: "인증 실패: 사용자 정보를 가져올 수 없습니다." });
@@ -141,7 +176,7 @@ const toggleLike = async (req, res) => {
       return res.status(404).json({ message: "게시글을 찾을 수 없습니다." });
     }
 
-    const isLiked = post.likedUsers.includes(userId);
+    const isLiked = post.likedUsers.some((user) => user.toString() === userId.toString());
 
     if (isLiked) {
       post.likedUsers = post.likedUsers.filter((user) => user.toString() !== userId.toString());
@@ -152,9 +187,11 @@ const toggleLike = async (req, res) => {
     }
 
     await post.save();
-    return res.status(200).json({
+
+    res.status(200).json({
       message: isLiked ? "좋아요가 취소되었습니다." : "좋아요가 반영되었습니다.",
       likes: post.likes,
+      isLiked: !isLiked,
     });
   } catch (error) {
     console.error("좋아요 처리 오류:", error);
