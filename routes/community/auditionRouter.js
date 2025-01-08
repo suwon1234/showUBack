@@ -1,5 +1,7 @@
 import express from "express";
-import { getAllAuditions, getAuditionById } from "../../controller/audition/auditionController.js";
+import { getAllAuditions, getAuditionById } from "../../controller/community/auditionController.js";
+
+
 
 const auditionRouter = express.Router();
 
