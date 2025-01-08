@@ -19,6 +19,7 @@ import Audition from './community/auditionSchema.js';
 import NewsInfo from './community/newsInfoSchema.js';
 import MdCart from './shop/mdCartSchema.js';
 import TicketEvent from './reservation/ticketEventSchema.js';
+import AuditionInfo from './community/auditionInfoSchema.js';
 
 connect()
 
@@ -458,7 +459,7 @@ connect()
 //     description: '뮤지컬 <루카스> 오디션',
 //   },
 //   {
-//     image: '뮤지컬',
+//     category: '뮤지컬',
 //     imageUrl: '/images/auditionInfo/audition-info-musical-4.jpg',
 //     title: 'EMK MUSIAL COMPANY',
 //     description: '뮤지컬 <베르사유의 장미> 오디션',
@@ -557,8 +558,8 @@ connect()
 
 
 
-// // 오디션 인포
-// const auditionInfoData = [
+// 오디션 인포
+// const auditionInfoData = await AuditionInfo.create(
 //   {
 //     imageUrl: '/images/auditionInfo/audition-info-musical-7.jpg',
 //     title: "뮤지컬 팬텀 오디션 공고",
@@ -631,8 +632,7 @@ connect()
 //     imageUrl: '/images/auditionInfo/audition-info-theater-5.jpg',
 //     title: "연극 분홍립스틱 오디션 공고",
 //   },
-
-// ];
+// )
 
 // MD 옵션
 // const basicOption = await Option.create(
@@ -1949,218 +1949,218 @@ connect()
 //   },
 // )
 
-const ticketEventData = await TicketEvent.create(
-  {
-    id: 1,
-    name: "2025 연극 <세일즈맨의 죽음>",
-    date: "2025-01-30",
-    type: "일반예매",
-    img: "/images/reservation/expect1.gif",
-  },
-  {
-    id: 2,
-    name: "뮤지컬 <썬데이>",
-    date: "2025-02-10",
-    type: "단독판매",
-    img: "/images/reservation/expect2.gif",
-  },
-  {
-    id: 3,
-    name: "뮤지컬 <탐정 케이>",
-    date: "2025-02-12",
-    type: "일반예매",
-    img: "/images/reservation/expect3.gif",
-  },
-  {
-    id: 4,
-    name: "뮤지컬 <어제의 시는 내일의 노래가 될 수 있을까>",
-    date: "2025-02-14",
-    type: "단독판매",
-    img: "/images/reservation/expect4.gif",
-  },
-  {
-    id: 5,
-    name: "뮤지컬 <어느 60대 노부부 이야기>",
-    date: "2025-02-16",
-    type: "일반예매",
-    img: "/images/reservation/expect5.gif",
-  },
-  {
-    id: 6,
-    name: "뮤지컬 <시카고>",
-    date: "2025-02-18",
-    type: "단독판매",
-    img: "/images/reservation/expect6.gif",
-  },
-  {
-    id: 7,
-    name: "블랙코미디 연극 <죽은시인의 사회>",
-    date: "2025-02-20",
-    type: "일반예매",
-    img: "/images/reservation/expect7.gif",
-  },
-  {
-    id: 8,
-    name: "좀비연극 <오마이갓>",
-    date: "2025-02-22",
-    type: "단독판매",
-    img: "/images/reservation/expect8.gif",
-  },
-  {
-    id: 9,
-    name: "연극 <너의 목소리가 들려>",
-    date: "2025-02-24",
-    type: "일반예매",
-    img: "/images/reservation/expect9.gif",
-  },
-  {
-    id: 10,
-    name: "웃음작렬연극 <런투패밀리>",
-    date: "2025-02-26",
-    type: "단독판매",
-    img: "/images/reservation/expect10.gif",
-  },
-  {
-    id: 11,
-    name: "연극 <쉬어매드니스>",
-    date: "2025-02-28",
-    type: "일반예매",
-    img: "/images/reservation/expect11.gif",
-  },
-  {
-    id: 12,
-    name: "연극 <테베랜드>",
-    date: "2025-03-02",
-    type: "단독판매",
-    img: "/images/reservation/expect12.gif",
-  },
-  {
-    id: 13,
-    name: "연극 <바닷마을 다이어리>",
-    date: "2025-03-04",
-    type: "일반예매",
-    img: "/images/reservation/expect13.gif",
-  },
-  {
-    id: 14,
-    name: "연극 <붉은 낙엽>",
-    date: "2025-03-06",
-    type: "단독판매",
-    img: "/images/reservation/expect14.gif",
-  },
-  {
-    id: 15,
-    name: "행오버",
-    date: "2025-03-08",
-    type: "일반예매",
-    img: "/images/reservation/expect15.gif",
-  },
-  {
-    id: 16,
-    name: "연극 애나엑스 <ANNA X>",
-    date: "2025-04-13",
-    type: "단독판매",
-    img: "/images/reservation/expect16.gif",
-  },
-  {
-    id: 17,
-    name: "연극 <꽃의 비밀>",
-    date: "2025-05-26",
-    type: "일반예매",
-    img: "/images/reservation/expect17.gif",
-  },
-  {
-    id: 18,
-    name: "연극 <타인의 삶>",
-    date: "2025-06-12",
-    type: "단독판매",
-    img: "/images/reservation/expect18.gif",
-  },
-  {
-    id: 19,
-    name: "연극 <시나브로>",
-    date: "2025-06-20",
-    type: "일반예매",
-    img: "/images/reservation/expect19.gif",
-  },
-  {
-    id: 20,
-    name: "연극 <모비딕>",
-    date: "2025-07-19",
-    type: "단독판매",
-    img: "/images/reservation/expect20.gif",
-  },
-  {
-    id: 21,
-    name: "뮤직드라마 <불편한 편의점>",
-    date: "2025-08-16",
-    type: "일반예매",
-    img: "/images/reservation/expect21.gif",
-  },
-  {
-    id: 22,
-    name: "연극 <마음>",
-    date: "2025-09-04",
-    type: "단독판매",
-    img: "/images/reservation/expect22.gif",
-  },
-  {
-    id: 23,
-    name: "연극 <벚꽃동산>",
-    date: "2025-10-15",
-    type: "일반예매",
-    img: "/images/reservation/expect23.gif",
-  },
-  {
-    id: 24,
-    name: "연극 <비누향기>",
-    date: "2025-10-21",
-    type: "단독판매",
-    img: "/images/reservation/expect24.gif",
-  },
-  {
-    id: 25,
-    name: "뮤지컬 <그해 여름>",
-    date: "2025-11-12",
-    type: "일반예매",
-    img: "/images/reservation/expect25.gif",
-  },
-  {
-    id: 26,
-    name: "뮤지컬 <글루미 선데이>",
-    date: "2025-11-25",
-    type: "단독판매",
-    img: "/images/reservation/expect26.gif",
-  },
-  {
-    id: 27,
-    name: "연극 <연극 라면>",
-    date: "2025-12-01",
-    type: "일반예매",
-    img: "/images/reservation/expect27.gif",
-  },
-  {
-    id: 28,
-    name: "연극 <너의 목소리가 들려>",
-    date: "2025-12-09",
-    type: "단독판매",
-    img: "/images/reservation/expect28.gif",
-  },
-  {
-    id: 29,
-    name: "연극 <올모스트메인>",
-    date: "2025-12-20",
-    type: "일반예매",
-    img: "/images/reservation/expect29.gif",
-  },
-  {
-    id: 30,
-    name: "연극 <사춘기 메들리>",
-    date: "2025-12-31",
-    type: "단독판매",
-    img: "/images/reservation/expect30.gif",
-  },
-)
+// const ticketEventData = await TicketEvent.create(
+//   {
+//     id: 1,
+//     name: "2025 연극 <세일즈맨의 죽음>",
+//     date: "2025-01-30",
+//     type: "일반예매",
+//     img: "/images/reservation/expect1.gif",
+//   },
+//   {
+//     id: 2,
+//     name: "뮤지컬 <썬데이>",
+//     date: "2025-02-10",
+//     type: "단독판매",
+//     img: "/images/reservation/expect2.gif",
+//   },
+//   {
+//     id: 3,
+//     name: "뮤지컬 <탐정 케이>",
+//     date: "2025-02-12",
+//     type: "일반예매",
+//     img: "/images/reservation/expect3.gif",
+//   },
+//   {
+//     id: 4,
+//     name: "뮤지컬 <어제의 시는 내일의 노래가 될 수 있을까>",
+//     date: "2025-02-14",
+//     type: "단독판매",
+//     img: "/images/reservation/expect4.gif",
+//   },
+//   {
+//     id: 5,
+//     name: "뮤지컬 <어느 60대 노부부 이야기>",
+//     date: "2025-02-16",
+//     type: "일반예매",
+//     img: "/images/reservation/expect5.gif",
+//   },
+//   {
+//     id: 6,
+//     name: "뮤지컬 <시카고>",
+//     date: "2025-02-18",
+//     type: "단독판매",
+//     img: "/images/reservation/expect6.gif",
+//   },
+//   {
+//     id: 7,
+//     name: "블랙코미디 연극 <죽은시인의 사회>",
+//     date: "2025-02-20",
+//     type: "일반예매",
+//     img: "/images/reservation/expect7.gif",
+//   },
+//   {
+//     id: 8,
+//     name: "좀비연극 <오마이갓>",
+//     date: "2025-02-22",
+//     type: "단독판매",
+//     img: "/images/reservation/expect8.gif",
+//   },
+//   {
+//     id: 9,
+//     name: "연극 <너의 목소리가 들려>",
+//     date: "2025-02-24",
+//     type: "일반예매",
+//     img: "/images/reservation/expect9.gif",
+//   },
+//   {
+//     id: 10,
+//     name: "웃음작렬연극 <런투패밀리>",
+//     date: "2025-02-26",
+//     type: "단독판매",
+//     img: "/images/reservation/expect10.gif",
+//   },
+//   {
+//     id: 11,
+//     name: "연극 <쉬어매드니스>",
+//     date: "2025-02-28",
+//     type: "일반예매",
+//     img: "/images/reservation/expect11.gif",
+//   },
+//   {
+//     id: 12,
+//     name: "연극 <테베랜드>",
+//     date: "2025-03-02",
+//     type: "단독판매",
+//     img: "/images/reservation/expect12.gif",
+//   },
+//   {
+//     id: 13,
+//     name: "연극 <바닷마을 다이어리>",
+//     date: "2025-03-04",
+//     type: "일반예매",
+//     img: "/images/reservation/expect13.gif",
+//   },
+//   {
+//     id: 14,
+//     name: "연극 <붉은 낙엽>",
+//     date: "2025-03-06",
+//     type: "단독판매",
+//     img: "/images/reservation/expect14.gif",
+//   },
+//   {
+//     id: 15,
+//     name: "행오버",
+//     date: "2025-03-08",
+//     type: "일반예매",
+//     img: "/images/reservation/expect15.gif",
+//   },
+//   {
+//     id: 16,
+//     name: "연극 애나엑스 <ANNA X>",
+//     date: "2025-04-13",
+//     type: "단독판매",
+//     img: "/images/reservation/expect16.gif",
+//   },
+//   {
+//     id: 17,
+//     name: "연극 <꽃의 비밀>",
+//     date: "2025-05-26",
+//     type: "일반예매",
+//     img: "/images/reservation/expect17.gif",
+//   },
+//   {
+//     id: 18,
+//     name: "연극 <타인의 삶>",
+//     date: "2025-06-12",
+//     type: "단독판매",
+//     img: "/images/reservation/expect18.gif",
+//   },
+//   {
+//     id: 19,
+//     name: "연극 <시나브로>",
+//     date: "2025-06-20",
+//     type: "일반예매",
+//     img: "/images/reservation/expect19.gif",
+//   },
+//   {
+//     id: 20,
+//     name: "연극 <모비딕>",
+//     date: "2025-07-19",
+//     type: "단독판매",
+//     img: "/images/reservation/expect20.gif",
+//   },
+//   {
+//     id: 21,
+//     name: "뮤직드라마 <불편한 편의점>",
+//     date: "2025-08-16",
+//     type: "일반예매",
+//     img: "/images/reservation/expect21.gif",
+//   },
+//   {
+//     id: 22,
+//     name: "연극 <마음>",
+//     date: "2025-09-04",
+//     type: "단독판매",
+//     img: "/images/reservation/expect22.gif",
+//   },
+//   {
+//     id: 23,
+//     name: "연극 <벚꽃동산>",
+//     date: "2025-10-15",
+//     type: "일반예매",
+//     img: "/images/reservation/expect23.gif",
+//   },
+//   {
+//     id: 24,
+//     name: "연극 <비누향기>",
+//     date: "2025-10-21",
+//     type: "단독판매",
+//     img: "/images/reservation/expect24.gif",
+//   },
+//   {
+//     id: 25,
+//     name: "뮤지컬 <그해 여름>",
+//     date: "2025-11-12",
+//     type: "일반예매",
+//     img: "/images/reservation/expect25.gif",
+//   },
+//   {
+//     id: 26,
+//     name: "뮤지컬 <글루미 선데이>",
+//     date: "2025-11-25",
+//     type: "단독판매",
+//     img: "/images/reservation/expect26.gif",
+//   },
+//   {
+//     id: 27,
+//     name: "연극 <연극 라면>",
+//     date: "2025-12-01",
+//     type: "일반예매",
+//     img: "/images/reservation/expect27.gif",
+//   },
+//   {
+//     id: 28,
+//     name: "연극 <너의 목소리가 들려>",
+//     date: "2025-12-09",
+//     type: "단독판매",
+//     img: "/images/reservation/expect28.gif",
+//   },
+//   {
+//     id: 29,
+//     name: "연극 <올모스트메인>",
+//     date: "2025-12-20",
+//     type: "일반예매",
+//     img: "/images/reservation/expect29.gif",
+//   },
+//   {
+//     id: 30,
+//     name: "연극 <사춘기 메들리>",
+//     date: "2025-12-31",
+//     type: "단독판매",
+//     img: "/images/reservation/expect30.gif",
+//   },
+// )
 
 
 
@@ -6259,6 +6259,7 @@ const ticketEventData = await TicketEvent.create(
 // console.log(reservationData)
 // console.log(newsData)
 // console.log(newsInfoData)
-// console.log(auditionData)
+console.log(auditionData)
 // console.log(mdCartData)
-console.log(ticketEventData)
+// console.log(ticketEventData)
+// console.log(auditionInfoData)
