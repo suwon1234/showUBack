@@ -1,16 +1,8 @@
 import express from "express";
-import {
-  addReservation,
-  getReservedSpaces,
-  getReservedShows,
-  getAllReservations,
-} from "../../controller/reservation/reservationController.js";
+import eventsRouter from "./eventsRouter.js"; // eventsRouter 가져오기
 
 const reservationRouter = express.Router();
 
-reservationRouter.post("/add", addReservation); // 결제 내역 저장
-reservationRouter.get("/reserved-spaces/:userId", getReservedSpaces); // 유저가 결제한 공간 내역 조회
-reservationRouter.get("/reserved-shows/:userId", getReservedShows); // 유저가 결제한 공연 내역 조회
-reservationRouter.get("/all", getAllReservations); // 모든 예약 내역 조회
+reservationRouter.use("/", eventsRouter); // /reservation 경로에 이벤트 라우터 연결
 
 export default reservationRouter;
