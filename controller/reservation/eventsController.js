@@ -7,6 +7,7 @@ export const getTicketEventById = async (req, res) => {
   try {
     const { id } = req.params;
     const event = await TicketEvent.findById(id);
+    // 아이디를 못찾음
     if (!event) {
       return res.status(404).json({ message: "이벤트를 찾을 수 없습니다." });
     }
