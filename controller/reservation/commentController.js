@@ -45,15 +45,15 @@ const deleteComment = async (req, res) => {
 };
 
 // 모든 댓글 조회
-const getComments = async (req, res) => {
-  try {
-    const comments = await Comment.find();
-    res.status(200).json(comments);
-  } catch (error) {
-    res
-      .status(500)
-      .json({ message: "댓글 조회 중 오류 발생", error: error.message });
-  }
-};
+// const getComments = async (req, res) => {
+//   try {
+//     const comments = await Comment.find();
+//     res.status(200).json(comments);
+//   } catch (error) {
+//     res
+//       .status(500)
+//       .json({ message: "댓글 조회 중 오류 발생", error: error.message });
+//   }
+// };
 
-export { addComment, updateComment, deleteComment, getComments };
+export { addComment, updateComment, deleteComment };
