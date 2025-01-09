@@ -1,6 +1,6 @@
 import express from 'express';
 import passport from 'passport';
-import { register, login, remove, modify, upgrade, modifyUpdate, upgradeInfo, findId, UpgradeAllData, approveRequests, adminLogin, updatePicture } from '../../controller/user/userController.js';
+import { register, login, remove, modify, findId, UpgradeAllData, approveRequests, adminLogin, updatePicture } from '../../controller/user/userController.js';
 
 const userRouter = express.Router()
 
@@ -15,12 +15,6 @@ userRouter.delete("/remove", passport.authenticate('jwt', { session: false }), r
 
 //아이디 찾기
 userRouter.post("/find-id", findId)
-
-// 등급업 신청
-userRouter.post("/upgrade", passport.authenticate('jwt', { session: false }), upgrade)
-userRouter.get("/upgrade/:id", passport.authenticate('jwt', { session: false }), upgradeInfo)
-// 등급업 수정
-userRouter.put("/upgrade/modify/:id", modifyUpdate)
 
 // 관리자 로그인
 userRouter.post("/admin/login", adminLogin)
