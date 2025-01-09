@@ -207,7 +207,7 @@ const updatePicture = async (req, res) => {
   const { email } = req.user;
 
   const uploadFolder = "uploads/profiles";
-  // console.log("req.file", req.file)
+  console.log("req.file", req.file)
   const relativePath = path.join(uploadFolder, req.file.filename).replaceAll("\\", "/")
 
   // mongDb에 저장

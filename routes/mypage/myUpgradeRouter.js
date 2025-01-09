@@ -38,7 +38,7 @@ const upload = multer({
   storage : multer.diskStorage({
     destination(req, file, done){
       console.log(req.path)
-      done(null, path.join(__dirname, "./uploads/upGradeFiles")) // 이미지 저장 경로 설정
+      done(null, path.join(__dirname, "../../uploads/upGradeFiles")) // 이미지 저장 경로 설정
     },
     filename(req, file, done){
       const uniqueFileName = getUniqueFileName(file.originalname, uploadFolder)
@@ -51,7 +51,7 @@ const myUpgradeRouter = express.Router();
 const upgradeFileUploadMiddleWare = upload.single('file');
 
 
-createUploadFolder(path.join(__dirname, "./uploads/upGradeFiles"));
+createUploadFolder(path.join(__dirname, "../../uploads/upGradeFiles"));
 
 // 등급업 신청
 myUpgradeRouter.post("/create", passport.authenticate('jwt', { session : false }), upgradeFileUploadMiddleWare, upgrade)
