@@ -4,6 +4,7 @@ import myActiveRouter from './myActiveRoter.js';
 import myVodRouter from './myVodRouter.js';
 import myShowuRouter from './myShowuRouter.js';
 import myReservationRouter from './myReservationRouter.js';
+import myUpgradeRouter from './myUpgradeRouter.js';
 
 const mypageRouter = express.Router()
 
@@ -21,6 +22,9 @@ mypageRouter.use("/like", likeRouter)
 
 // vod
 mypageRouter.use("/vod", myVodRouter)
+
+//등급업
+mypageRouter.use("/up-grade", myUpgradeRouter)
 
 
 export default mypageRouter
