@@ -7,7 +7,8 @@ const userSchema = new Schema({
     name: { type: String, required : true },
     phone : { type : String },
     provider : { type : String },
-    picture : { type : String },
+    picture : { type : String }, //프로필 이미지
+    file : { type : String }, //등급업 신청 포트폴리오 파일
     role : {
         type : String,
         enum : ['user', 'export', 'admin'], 
