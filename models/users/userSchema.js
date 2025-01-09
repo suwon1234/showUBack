@@ -8,7 +8,7 @@ const userSchema = new Schema({
     phone : { type : String },
     provider : { type : String },
     picture : { type : String }, //프로필 이미지
-    files : { type : String }, //등급업 신청 포트폴리오 파일
+    file : { type : String }, //등급업 신청 포트폴리오 파일
     role : {
         type : String,
         enum : ['user', 'export', 'admin'], 
