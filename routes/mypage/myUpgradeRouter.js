@@ -58,7 +58,7 @@ myUpgradeRouter.post("/create", passport.authenticate('jwt', { session : false }
 // 등급업 신청 데이터 불러오기
 myUpgradeRouter.get("/create/:id", passport.authenticate('jwt', { session : false }), upgradeInfo)
 // 등급업 수정
-myUpgradeRouter.put("/modify/:id", modifyUpdate)
+myUpgradeRouter.put("/modify/:id", upgradeFileUploadMiddleWare, modifyUpdate)
 
 // 등급업 신청 파일 첨부
 // myUpgradeRouter.post("/files", passport.authenticate('jwt', { session: false }), uploadMiddleware,  uploadFiles)

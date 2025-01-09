@@ -77,8 +77,13 @@ const upgradeInfo = async (req, res) => {
 const modifyUpdate = async (req, res) => {
   // console.log("req.user", req.user)
   // console.log("req.body", req.body)
-  const { exportName, intro, area, field, total, career, portfolio } = req.body;
+  const { exportName, intro, area, field, total, career, file } = req.body;
+
   const foundUser = await Upgrade.findOne({ exportName : exportName }).lean();
+  const uploadFolder = "uploads/upGradeFiles";
+  
+  console.log("req.files", req)
+  const relativePath = path.join(uploadFolder, req.file.filename).replaceAll("\\", "/")
   // console.log(foundUser)
   // console.log('Export Name:', exportName);
 
@@ -91,7 +96,14 @@ const modifyUpdate = async (req, res) => {
 
     await Upgrade.updateOne(
       { exportName : exportName },  
-      { intro : intro, area : area, field : field, total : total, career : career, portfolio : portfolio }
+      { 
+        intro : intro, 
+        area : area, 
+        field : field, 
+        total : total, 
+        career : career, 
+        file : relativePath
+      }
     );
 
     const updatedUpgrade = await Upgrade.findOne({ exportName : exportName }).lean();
@@ -101,6 +113,7 @@ const modifyUpdate = async (req, res) => {
       modifySuccess: true,
       message: "등급업 정보가 수정되었습니다",
       currentUser: updatedUpgrade,
+      filePath : `/${relativePath}`
     });
   }
 }
