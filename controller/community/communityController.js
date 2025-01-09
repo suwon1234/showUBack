@@ -121,6 +121,13 @@ const addCommentToCommunity = async (req, res) => {
   }
 };
 
+// 댓글 수정
+
+const editCommentToCommunity = async (req, res) => {
+  
+}
+
+
 
 
 
