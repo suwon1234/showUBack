@@ -26,8 +26,6 @@ const addComment = async (req, res) => {
   }
 };
 
-
-
 // 댓글 삭제
 const deleteComment = async (req, res) => {
   const { commentId } = req.params;
