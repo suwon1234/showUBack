@@ -73,7 +73,6 @@ const updateInquiry = async (req, res) => {
     // 문의 수정(DB)
     const updatedInquiry = await AuctionInquiry.findByIdAndUpdate(id, updateData, {
       new: true, 
-      runValidators: true, 
     });
 
     if (!updatedInquiry) {
