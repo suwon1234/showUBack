@@ -91,4 +91,38 @@ const getCommentsByPostId = async (req, res) => {
   }
 };
 
-export { addComment, deleteComment, getCommentsByPostId, getCommunityWithComments };
+// 댓글 수정 
+const updateComment = async (req, res) => {
+  const { commentId } = req.params;
+  const { content } = req.body;
+
+  if (!content || !content.trim()) {
+    return res.status(400).json({ message: "수정할 내용을 입력해주세요." });
+  }
+
+  try {
+    const comment = await CommunityComment.findById(commentId);
+    if (!comment) {
+      return res.status(404).json({ message: "댓글을 찾을 수 없습니다." });
+    }
+
+    // 권한 확인
+    if (comment.user.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ message: "수정 권한이 없습니다." });
+    }
+
+    // 댓글 수정
+    comment.content = content;
+    comment.updatedAt = new Date();
+    const updatedComment = await comment.save();
+
+    res.status(200).json(updatedComment);
+  } catch (error) {
+    res.status(500).json({ message: "댓글 수정 중 오류 발생", error: error.message });
+  }
+};
+
+
+
+
+export { addComment, deleteComment, getCommentsByPostId, getCommunityWithComments, updateComment };

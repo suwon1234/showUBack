@@ -12,7 +12,8 @@ import {
   addComment, 
   deleteComment, 
   getCommentsByPostId, 
-  getCommunityWithComments
+  getCommunityWithComments,
+  updateComment
 } from "../../controller/community/commentController.js";
 
 import { 
@@ -49,7 +50,7 @@ communityRouter.get("/post/:id", passport.authenticate("jwt", { session: false }
 // 댓글
 // communityRouter.get("/:id/comments", getCommentsByPostId);
 communityRouter.post("/:id/comments", passport.authenticate("jwt", { session: false }), addComment);
-// communityRouter.put("/comments/:commentId", passport.authenticate("jwt", { session: false }), updateComment);
+communityRouter.put("/comments/:commentId", passport.authenticate("jwt", { session: false }), updateComment);
 communityRouter.delete("/comments/:commentId", passport.authenticate("jwt", { session: false }), deleteComment);
 
 
