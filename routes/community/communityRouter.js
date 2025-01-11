@@ -11,7 +11,8 @@ import {
 import { 
   addComment, 
   deleteComment, 
-  getCommentsByPostId 
+  getCommentsByPostId, 
+  getCommunityWithComments
 } from "../../controller/community/commentController.js";
 
 import { 
@@ -24,6 +25,7 @@ import newsRouter from "../community/newsRouter.js";
 import auditionRouter from "./auditionRouter.js";
 
 const communityRouter = express.Router();
+
 
 // 커뮤니티 라우터
 communityRouter.get("/", getAllCommunities);
@@ -45,7 +47,16 @@ communityRouter.put("/update/:id", passport.authenticate("jwt", { session: false
 
 communityRouter.get("/post/:id", passport.authenticate("jwt", { session: false }), getCommunityById);
 
+// 댓글
+communityRouter.get("/:id/comments", getCommentsByPostId);
+communityRouter.post("/:id/comments", passport.authenticate("jwt", { session: false }), addComment);
+communityRouter.delete("/comments/:commentId", passport.authenticate("jwt", { session: false }), deleteComment);
+
+
 communityRouter.post("/upload", uploadFile);
+
+// 게시물과 댓글 함께 반환
+communityRouter.get("/:id/details", getCommunityWithComments); 
 
 // 뉴스 라우터 연결
 communityRouter.use("/newsMain", newsRouter);
