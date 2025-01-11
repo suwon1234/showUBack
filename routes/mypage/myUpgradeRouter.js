@@ -5,7 +5,6 @@ import multer from 'multer';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-// import { createMulter } from '../../multerConfig.js';
 
 // ES Modules에서 __dirname 설정
 const __filename = fileURLToPath(import.meta.url);
@@ -38,13 +37,20 @@ const upload = multer({
   storage : multer.diskStorage({
     destination(req, file, done){
       console.log(req.path)
-      done(null, path.join(__dirname, "../../uploads/upGradeFiles")) // 이미지 저장 경로 설정
+      const uploadPath = path.join(__dirname, "../../uploads/upGradeFiles");
+      console.log(`Saving file to: ${uploadPath}`);
+      done(null, uploadPath) // 이미지 저장 경로 설정
     },
     filename(req, file, done){
-      const uniqueFileName = getUniqueFileName(file.originalname, uploadFolder)
+      // 파일 이름을 UTF-8로 변환
+      const originalName = Buffer.from(file.originalname, 'latin1').toString('utf8');
+      const uniqueFileName = getUniqueFileName(originalName, uploadFolder)
       done(null, uniqueFileName) //파일 이름을 설정
     }
-  })
+  }),
+  limits: {
+    fileSize: 10 * 1024 * 1024, // 10MB 제한
+  },
 })
 
 const myUpgradeRouter = express.Router();

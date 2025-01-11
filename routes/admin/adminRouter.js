@@ -1,9 +1,9 @@
 import express from 'express';
 import passport from 'passport';
-import { UpgradeAllData } from '../../controller/admin/adminController.js';
+import upgradRouter from './upgradRouter.js';
 
 const adminRouter = express.Router();
 
-adminRouter.get("/all-data", passport.authenticate('jwt', { session: false }), UpgradeAllData)
+adminRouter.use("/upgrade", upgradRouter)
 
 export default adminRouter;
