@@ -180,26 +180,9 @@ const adminLogin = async (req, res) => {
 }
 
 
-// 등급업 신청 내역 불러오기
-const UpgradeAllData = async (req, res) => {
-  try {
-    const upgrades = await Upgrade.find({}).sort({ createdAt : -1 });
-    res.status(200).json({
-      upgrades : upgrades,
-      message : "성공적으로 등급업 신청 내역을 가져왔습니다."
-    })
-  } catch (error) {
-    console.log("UpgradeAllDataError", error)
-    res.status(500).json({message : "서버 오류, 데이터를 가져 올 수 없습니다."})
-    
-  }
-  
-}
-
-
 //등급업 승인(관리자)
-const approveRequests = () => {
-
+const approveRequests = async (req, res) => {
+  
 }
 
 // 프로필 변경
@@ -229,4 +212,4 @@ const updatePicture = async (req, res) => {
   })
 }
 
-export { register, login, modify, remove, findId, UpgradeAllData, approveRequests, adminLogin, updatePicture }
+export { register, login, modify, remove, findId, approveRequests, adminLogin, updatePicture }

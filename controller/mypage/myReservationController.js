@@ -52,7 +52,6 @@ const getTicketsDetail = async (req, res) => {
   const { id } = req.params;
   console.log("id", id)
   const userId = req.user;
-  
 
   try {
     const resesrvationList = await Reservation.find({ user : userId })
