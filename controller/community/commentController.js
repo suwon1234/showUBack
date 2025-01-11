@@ -1,3 +1,5 @@
+// 커뮤니티 댓글 컨트롤러
+
 import Community from "../../models/community/communitySchema.js";
 import CommunityComment from "../../models/community/communityCommentSchema.js";
 

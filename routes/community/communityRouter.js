@@ -42,14 +42,14 @@ communityRouter.get("/all", getAllCommunityPosts);
 
 communityRouter.delete("/delete/:id", passport.authenticate("jwt", { session: false }), deleteCommunityPost);
 
-
 communityRouter.put("/update/:id", passport.authenticate("jwt", { session: false }), updateCommunityPost);
 
 communityRouter.get("/post/:id", passport.authenticate("jwt", { session: false }), getCommunityById);
 
 // 댓글
-communityRouter.get("/:id/comments", getCommentsByPostId);
+// communityRouter.get("/:id/comments", getCommentsByPostId);
 communityRouter.post("/:id/comments", passport.authenticate("jwt", { session: false }), addComment);
+// communityRouter.put("/comments/:commentId", passport.authenticate("jwt", { session: false }), updateComment);
 communityRouter.delete("/comments/:commentId", passport.authenticate("jwt", { session: false }), deleteComment);
 
 
