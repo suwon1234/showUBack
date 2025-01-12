@@ -3,7 +3,6 @@ import { getCurrentTime } from "../../utils/utils.js";
 
 
 const spaceSchema = new Schema({
-  id: { type: Number, required: true }, // 고유 ID
   name: { type: String, required: true }, // 공간 이름
   location: { type: String, required: true }, // 위치
   price: { type: String, required: true }, // 가격
