@@ -2,7 +2,6 @@ import { model, Schema } from "mongoose";
 import { getCurrentTime } from "../../utils/utils.js";
 
 const showSchema = new Schema({
-  id: { type: Number, required: true }, // 고유 ID
   name: { type: String, required: true }, // 공연 이름
   venue: { type: String, required: true }, // 공연 장소
   dates: { type: String, required: true }, // 공연 날짜 범위
@@ -15,7 +14,6 @@ const showSchema = new Schema({
   type: { type: String, required: true }, // 공연 유형 (예: "일반예매", "추가 좌석 티켓오픈")
   discounts: [{ type: String, required: true }], // 할인 정보
   img: { type: String, required: true }, // 이미지 URL
-  detailImage: { type: String, required: true }, // 상세 이미지 URL 추가
   cast: [
     {
       name: { type: String, required: true }, // 배우 이름
@@ -24,6 +22,8 @@ const showSchema = new Schema({
   ], // 출연 배우 정보
   createdAt: { type: String, default: getCurrentTime }, // 생성 시간
   updatedAt: { type: String, default: getCurrentTime }, // 수정 시간
+  detailImage: { type: String, required: true }, // 상세 이미지 URL 추가
+  times: [{ type: String, required: true }], // 공연 시간 정보
 });
 
 export default model("Show", showSchema, "shows");

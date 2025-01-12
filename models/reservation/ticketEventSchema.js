@@ -3,7 +3,6 @@ import { getCurrentTime } from "../../utils/utils.js";
 
 
 const ticketEventSchema = new Schema({
-  id: { type: Number, required: true }, // 고유 ID
   name: { type: String, required: true }, // 이벤트 이름
   date: { type: String, required: true }, // 이벤트 날짜
   type: { type: String, required: true }, // 이벤트 유형 (예: "일반예매")
