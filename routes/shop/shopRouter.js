@@ -8,6 +8,8 @@ import mdCartRouter from './mdCartRouter.js';
 import mdInquiryRouter from './mdInquiryRouter.js';
 import auctionInquiryRouter from './auctionInquiryRouter.js';
 import mdPaymentRouter from './mdPaymentRouter.js';
+import passport from 'passport';
+import { addToLike, getLike, removeFromLike } from '../../controller/shop/mdController.js';
 
 const shopRouter = express.Router();
 
@@ -17,6 +19,7 @@ shopRouter.use("/auction/inquiry", auctionInquiryRouter) //shop/auction/inquiry
 shopRouter.use("/md/cart", mdCartRouter) // shop/md/cart 
 shopRouter.use("/md/payment", mdPaymentRouter); //shop/md/payment
 shopRouter.use("/auction", auctionRouter); // /shop/auction
+
 
 
 export default shopRouter;
