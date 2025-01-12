@@ -47,6 +47,10 @@ communityRouter.put("/update/:id", passport.authenticate("jwt", { session: false
 
 communityRouter.get("/post/:id", passport.authenticate("jwt", { session: false }), getCommunityById);
 
+communityRouter.get("/post/:id", getCommunityById); // 특정 글 조회
+
+
+
 // 댓글
 // communityRouter.get("/:id/comments", getCommentsByPostId);
 communityRouter.post("/:id/comments", passport.authenticate("jwt", { session: false }), addComment);

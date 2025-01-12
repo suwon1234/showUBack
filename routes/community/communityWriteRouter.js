@@ -27,7 +27,7 @@ router.get("/posts", getAllCommunityPosts);
 // 특정 커뮤니티 글 조회
 router.get(
   "/posts/:id",
-  passport.authenticate("jwt", { session: false }),
+  // passport.authenticate("jwt", { session: false }),
   getCommunityPostById
 );
 
@@ -44,5 +44,7 @@ router.delete(
   passport.authenticate("jwt", { session: false }),
   deleteCommunityPost
 );
+
+
 
 export default router;
