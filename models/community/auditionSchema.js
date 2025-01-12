@@ -8,8 +8,8 @@ const auditionSchema = new Schema({
     description: { type: String, required: false }, 
     imageUrl: { type: String, required: true }, // 이미지 URL
     createdAt: { type: String, default: getCurrentTime }, 
-    updatedAt: { type: String, default: getCurrentTime }  
-
+    updatedAt: { type: String, default: getCurrentTime },  
+    // infoId: { type: Schema.Types.ObjectId, ref: "AuditionInfo" } // AuditionInfo 참조
 
 });
 
