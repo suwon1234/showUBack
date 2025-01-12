@@ -50,7 +50,6 @@ communityRouter.get("/post/:id", passport.authenticate("jwt", { session: false }
 communityRouter.get("/post/:id", getCommunityById); // 특정 글 조회
 
 
-
 // 댓글
 // communityRouter.get("/:id/comments", getCommentsByPostId);
 communityRouter.post("/:id/comments", passport.authenticate("jwt", { session: false }), addComment);
@@ -71,7 +70,7 @@ communityRouter.use("/audition", auditionRouter);
 
 
 // 커뮤니티 상세 정보 조회
-communityRouter.get('/:id', getCommunityById); // community/:id
+communityRouter.get('/:id', getCommunityById); 
 
 // 파일 업로드
 communityRouter.post("/upload", uploadFile); 
