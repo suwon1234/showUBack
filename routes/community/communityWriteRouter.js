@@ -14,7 +14,7 @@ const router = express.Router();
 // 파일 업로드 라우트
 router.post("/upload", uploadFile);
 
-// 커뮤니티 글 작성 (JWT 인증 필요)
+// 커뮤니티 글 작성 
 router.post(
   "/create",
   passport.authenticate("jwt", { session: false }),
@@ -27,7 +27,7 @@ router.get("/posts", getAllCommunityPosts);
 // 특정 커뮤니티 글 조회
 router.get(
   "/posts/:id",
-  passport.authenticate("jwt", { session: false }),
+  // passport.authenticate("jwt", { session: false }),
   getCommunityPostById
 );
 
@@ -44,5 +44,7 @@ router.delete(
   passport.authenticate("jwt", { session: false }),
   deleteCommunityPost
 );
+
+
 
 export default router;
