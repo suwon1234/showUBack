@@ -2,7 +2,7 @@ import express from "express";
 import {
   seedDateAvailabilityData,
   getAllDateAvailabilities,
-} from "../../controllers/reservation/dateAvailabilityController.js";
+} from "../../controller/reservation/dateAvailabilityController.js";
 
 const dateAvailabilityRouter = express.Router();
 
