@@ -12,8 +12,9 @@ import {
   getCommunityPostById,
   updateCommunityPost,
   deleteCommunityPost,
+  uploadFile
 } from "../controllers/writeController.js";
-import { uploadFile } from "../controllers/writeController.js";
+
 
 // __dirname 설정
 const __filename = fileURLToPath(import.meta.url);
@@ -33,7 +34,7 @@ const upload = multer({
     },
     filename: (req, file, cb) => {
       const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1e9)}`;
-      const originalName = Buffer.from(file.originalname, "latin1").toString("utf8");
+      const originalName = Buffer.from(file.originalname, "latin1").toString("utf-8");
       cb(null, `${uniqueSuffix}-${originalName}`);
     },
   }),
@@ -54,6 +55,8 @@ const writeRouter = express.Router();
 const uploadMiddleware = upload.single("file");
 
 writeRouter.post("/upload", uploadMiddleware, uploadFile);
+
+
 
 // 커뮤니티 글 작성
 writeRouter.post(
