@@ -1,5 +1,6 @@
 import { model, Schema } from "mongoose";
 import { getCurrentTime } from "../../utils/utils.js";
+import mongoose from "mongoose";
 
 const showSchema = new Schema({
   name: { type: String, required: true }, // 공연 이름
@@ -24,6 +25,8 @@ const showSchema = new Schema({
   updatedAt: { type: String, default: getCurrentTime }, // 수정 시간
   detailImage: { type: String, required: true }, // 상세 이미지 URL 추가
   times: [{ type: String, required: true }], // 공연 시간 정보
+  hearts: [{ type: mongoose.Types.ObjectId, ref: "Like" }],
+  comments: [{ type: mongoose.Types.ObjectId, ref: "Comment" }]
 });
 
 export default model("Show", showSchema, "shows");
