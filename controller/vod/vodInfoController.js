@@ -70,15 +70,15 @@ const getlikestatus = async (req, res) => {
   }
 
   try {
-    // 비디오 정보 조회
+
     const vodinfo = await vodShowuVideo.findById(id);
 
-    // 비디오 정보가 없는 경우
+ 
     if (!vodinfo) {
       return res.status(404).json({ message: "영화를 찾을 수 없습니다." });
     }
 
-    // 좋아요 상태 확인
+   
     if (!Array.isArray(vodinfo.likedUsers)) {
       vodinfo.likedUsers = [];
     }
@@ -90,5 +90,6 @@ const getlikestatus = async (req, res) => {
     res.status(500).json({ message: "서버 오류 발생", error: error.message });
   }
 };
+
 
 export { getVodId, getVodLikes ,getlikestatus};
