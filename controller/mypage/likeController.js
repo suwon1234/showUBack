@@ -1,3 +1,4 @@
+import Like from "../../models/reservation/likeSchema.js";
 import Reservation from "../../models/reservation/reservationSchema.js";
 import Show from "../../models/reservation/showSchema.js";
 import Space from "../../models/reservation/spaceSchema.js";
@@ -77,7 +78,7 @@ const likeSpace = async (req, res) => {
 
   try {
     // 예약대여 좋아요한 상품 리스트
-    const likedReservationList = await Reservation.find({ user : userId })
+    const likedReservationList = await Like.find({ user : userId })
     // console.log("예약대여 좋아요한 상품 리스트 : ", likedReservationList)
     
     // 좋아요한 공간 대여 정보 id 리스트
@@ -182,16 +183,16 @@ const likeLesson = async (req, res) => {
 
 const likeTicket = async (req, res) => {
   const userId = req.user._id
-  // console.log("로그인한 사용자: ", userId)
+  console.log("로그인한 사용자: ", userId)
 
   try {
     // 예약대여 좋아요한 상품 리스트
-    const likedReservationList = await Reservation.find({ user : userId })
+    const likedReservationList = await Like.find({ user : userId })
     // console.log("예약대여 좋아요한 상품 리스트 : ", likedReservationList)
     
-    // 좋아요한 공간 대여 정보 id 리스트
-    const showIdList = await likedReservationList.map((space) => ({
-      showId : space.showId
+    // 좋아요한 티켓 정보 id 리스트
+    const showIdList = await likedReservationList.map((ticket) => ({
+      showId : ticket.showId
     }))
       .filter(item => item.showId !== null)
     // console.log("좋아요한 티켓 정보 id 리스트 : ", showIdList)
@@ -201,9 +202,9 @@ const likeTicket = async (req, res) => {
     
     // showId 일치하는 티켓 정보 가져오기
     const likeTicketList = await Show.find({ _id: { $in: showId }})
-    console.log("spaceId 일치하는 공간 대여 정보 리스트 : ", likeTicketList)
+    console.log("showId 일치하는 공간 대여 정보 리스트 : ", likeTicketList)
 
-    // 마이페이지에 필요한 공간 대여 정보
+    // 마이페이지에 필요한 티켓 예매 정보
     const likeTicket = await likeTicketList.map((like) => ({
       name : like.name,
       venue : like.venue,
@@ -212,18 +213,18 @@ const likeTicket = async (req, res) => {
       id : like.id
     }))
 
-    console.log("마이페이지에 필요한 공간 대여 정보 리스트 : ", likeTicket)
+    console.log("마이페이지에 필요한 티켓 예매 정보 리스트 : ", likeTicket)
 
     return res.status(200).json({
       likeSpaceSuccess : true,
-      message : "성공적으로 찜한 공간 대여 목록을 가져왔습니다",
+      message : "성공적으로 찜한 티켓 예매 목록을 가져왔습니다",
       likeTicket : likeTicket
     })
     
   } catch (error) {
     return res.status(500).json({
       likeSpaceSuccess : false,
-      message : "찜한 공간 대여 목록을 가져오는데 실패했습니다"
+      message : "찜한 티켓 예매 목록을 가져오는데 실패했습니다"
     })
   }
 }
