@@ -209,4 +209,4 @@ const updatePicture = async (req, res) => {
   })
 }
 
-export { register, login, modify, remove, findId, approveRequests, adminLogin, updatePicture }
+export { register, login, modify, remove, findId, adminLogin, updatePicture }
