@@ -1,16 +1,27 @@
 import express from "express";
 import {
   addComment,
-  updateComment,
+  editComment,
   deleteComment,
-  getComments,
 } from "../../controller/reservation/commentController.js";
+import passport from "passport";
 
 const commentRouter = express.Router();
 
-commentRouter.post("/", addComment); // 댓글 추가
-commentRouter.put("/", updateComment); // 댓글 수정
-commentRouter.delete("/", deleteComment); // 댓글 삭제
-commentRouter.get("/", getComments); // 모든 댓글 조회
+commentRouter.post(
+  "/performingShows/:id/comments",
+  passport.authenticate("jwt", { session: false }),
+  addComment
+);
+commentRouter.put(
+  "/performingShows/:id/comments/:commentId",
+  passport.authenticate("jwt", { session: false }),
+  editComment
+);
+commentRouter.delete(
+  "/performingShows/:id/comments/:commentId",
+  passport.authenticate("jwt", { session: false }),
+  deleteComment
+);
 
 export default commentRouter;
