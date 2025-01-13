@@ -11,6 +11,9 @@ const autcionInquirySchema = new Schema({
   mdName: { type: String }, // 상품명
   category: { type: String, default: 'auction' }, // 카테고리
   createdAt:  {type: String, default: getCurrentTime }, // 문의 작성 시간
+},
+{
+  timestamps: true, // createdAt, updatedAt
 });
 
 
