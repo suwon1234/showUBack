@@ -1,4 +1,3 @@
-
 import express from "express";
 import passport from "passport";
 import multer from "multer";
@@ -12,9 +11,8 @@ import {
   getCommunityPostById,
   updateCommunityPost,
   deleteCommunityPost,
-  uploadFile
+  uploadFile,
 } from "../controllers/writeController.js";
-
 
 // __dirname 설정
 const __filename = fileURLToPath(import.meta.url);
@@ -37,7 +35,7 @@ const upload = multer({
       const originalName = Buffer.from(file.originalname, "latin1").toString("utf-8");
       cb(null, `${uniqueSuffix}-${originalName}`);
     },
-  }),//
+  }),
   limits: { fileSize: 5 * 1024 * 1024 }, // 파일 크기 제한: 5MB
   fileFilter: (req, file, cb) => {
     const allowedTypes = ["image/jpeg", "image/png", "image/gif"];
@@ -51,18 +49,14 @@ const upload = multer({
 
 const writeRouter = express.Router();
 
-// 파일 업로드 미들웨어
-const uploadMiddleware = upload.single("file");
-
-writeRouter.post("/upload", uploadMiddleware, uploadFile);
-
-
+// 파일 업로드 라우터
+writeRouter.post("/upload", upload.single("file"), uploadFile);
 
 // 커뮤니티 글 작성
 writeRouter.post(
   "/create",
   passport.authenticate("jwt", { session: false }),
-  uploadMiddleware, 
+  upload.single("file"),
   createCommunityPost
 );
 
@@ -76,7 +70,7 @@ writeRouter.get("/posts/:id", getCommunityPostById);
 writeRouter.put(
   "/posts/:id",
   passport.authenticate("jwt", { session: false }),
-  uploadMiddleware, // 파일 업로드 미들웨어 추가
+  upload.single("file"),
   updateCommunityPost
 );
 
@@ -88,4 +82,3 @@ writeRouter.delete(
 );
 
 export default writeRouter;
-
