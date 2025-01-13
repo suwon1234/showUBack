@@ -2,12 +2,12 @@ import express from "express";
 import { toggleLike } from "../../controller/reservation/likeController.js";
 import passport from "passport";
 
-const router = express.Router();
+const likeRouter = express.Router();
 
-router.post(
+likeRouter.post(
   "/performingShows/:id/likes",
   passport.authenticate("jwt", { session: false }),
   toggleLike
 );
 
-export default router;
+export default likeRouter;

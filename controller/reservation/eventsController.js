@@ -50,10 +50,26 @@ export const getShowById = async (req, res) => {
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "유효하지 않은 ID 형식입니다." });
     }
-    const show = await Show.findById(id);
+    const show = await Show.findById(id).populate([
+      {
+        path: "comments",
+        populate: {
+          path: "user",
+          select: "name",
+        },
+      },
+      {
+        path: "hearts",
+        populate: {
+          path: "user",
+          select: "name",
+        },
+      },
+    ]);
     if (!show) {
       return res.status(404).json({ message: "쇼를 찾을 수 없습니다." });
     }
+    console.log("Fetched Show:", show); // 콘솔 로그 추가
     res.status(200).json(show);
   } catch (error) {
     console.error("쇼를 가져오는 중 오류 발생:", error);
@@ -62,7 +78,6 @@ export const getShowById = async (req, res) => {
       .json({ message: "쇼를 가져오는 중 오류 발생", error: error.message });
   }
 };
-
 
 // 모든 공연 가져오기
 export const getAllShows = async (req, res) => {
