@@ -66,13 +66,8 @@ userRouter.delete("/remove", passport.authenticate('jwt', { session: false }), r
 //아이디 찾기
 userRouter.post("/find-id", findId)
 
-//관리자
-// userRouter.use("/admin", adminRouter)
-
 // 관리자 로그인
 userRouter.post("/admin/login", adminLogin)
-// 등급업 신청 내역 불러오기
-// userRouter.get("/admin/all-data", passport.authenticate('jwt', { session: false }), UpgradeAllData)
 
 
 
