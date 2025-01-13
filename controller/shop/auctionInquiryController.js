@@ -64,22 +64,25 @@ const getInquiryDetail = async (req, res) => {
 };
 
 
-// 문의 수정 
+// 문의 수정
 const updateInquiry = async (req, res) => {
   try {
-    const { id } = req.params; 
-    const updateData = req.body;
+    const { id } = req.params;
+    const { content } = req.body;
 
-    // 문의 수정(DB)
-    const updatedInquiry = await AuctionInquiry.findByIdAndUpdate(id, updateData, {
-      new: true, 
-    });
+    const updatedInquiry = await AuctionInquiry.findByIdAndUpdate(
+      id,
+      {
+        content,
+      },
+      { new: true } 
+    );
 
     if (!updatedInquiry) {
       return res.status(404).json({ message: "해당 문의를 찾을 수 없습니다." });
     }
 
-    // 수정 성공
+    console.log("Updated Inquiry:", updatedInquiry);  
     return res.status(200).json({ message: "문의가 성공적으로 수정되었습니다.", inquiry: updatedInquiry });
   } catch (error) {
     console.error("문의 수정 오류:", error);

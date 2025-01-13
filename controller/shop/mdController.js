@@ -1,5 +1,5 @@
 import Md from '../../models/shop/mdSchema.js';
-import Like from '../../models/users/likeSchema.js';
+// import Like from '../../models/users/likeSchema.js';
 
 const seedMdProducts = async (req, res) => {
   
