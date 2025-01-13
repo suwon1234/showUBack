@@ -1,4 +1,35 @@
 import Community from "../../models/community/communitySchema.js";
+import multer from "multer";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Multer 설정
+const uploadFolder = path.join(__dirname, "../../../uploads/communityWrites");
+const upload = multer({
+  storage: multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, uploadFolder);
+    },
+    filename: (req, file, cb) => {
+      const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1e9)}`;
+      const originalName = Buffer.from(file.originalname, "latin1").toString("utf-8");
+      cb(null, `${uniqueSuffix}-${originalName}`);
+    },
+  }),
+  limits: { fileSize: 5 * 1024 * 1024 }, // 파일 크기 제한: 5MB
+  fileFilter: (req, file, cb) => {
+    const allowedTypes = ["image/jpeg", "image/png", "image/gif"];
+    if (allowedTypes.includes(file.mimetype)) {
+      cb(null, true);
+    } else {
+      cb(new Error("이미지 파일만 업로드 가능합니다."));
+    }
+  },
+}).single("file");
+
 
 // 글 작성 핸들러
 const createCommunityPost = async (req, res) => {
@@ -42,32 +73,46 @@ export const uploadFile = (req, res) => {
 
 // 모든 글 가져오기
 const getAllCommunityPosts = async (req, res) => {
-  let { page = 1, limit = 10 } = req.query;
+  // Multer 처리
+  upload(req, res, async (err) => {
+    if (err) {
+      console.error("파일 업로드 오류:", err);
+      return res.status(400).json({ message: "파일 업로드 오류", error: err.message });
+    }
 
-  page = Math.max(parseInt(page), 1); 
-  limit = Math.min(Math.max(parseInt(limit), 1), 100); 
+    const fileUrl = req.file ? `/uploads/communityWrites/${req.file.filename}` : null;
 
-  const skip = (page - 1) * limit;
+    let { page = 1, limit = 10 } = req.query;
 
-  try {
-    const posts = await Community.find()
-      .sort({ createdAt: -1 })
-      .skip(skip)
-      .limit(limit);
+    page = Math.max(parseInt(page), 1);
+    limit = Math.min(Math.max(parseInt(limit), 1), 100);
 
-    const totalPosts = await Community.countDocuments();
-    res.status(200).json({
-      success: true,
-      posts,
-      totalPosts,
-      totalPages: Math.ceil(totalPosts / limit),
-      currentPage: page,
-    });
-  } catch (error) {
-    console.error("모든 게시물 가져오기 오류:", error);
-    res.status(500).json({ success: false, message: "커뮤니티 데이터를 가져오는 데 실패했습니다." });
-  }
+    const skip = (page - 1) * limit;
+
+    try {
+      const posts = await Community.find()
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit);
+
+      const totalPosts = await Community.countDocuments();
+
+      res.status(200).json({
+        success: true,
+        posts,
+        totalPosts,
+        totalPages: Math.ceil(totalPosts / limit),
+        currentPage: page,
+        fileUploaded: fileUrl, 
+      });
+    } catch (error) {
+      console.error("모든 게시물 가져오기 오류:", error);
+      res.status(500).json({ success: false, message: "커뮤니티 데이터를 가져오는 데 실패했습니다." });
+    }
+  });
 };
+
+
 
 // 특정 글 조회 핸들러
 const getCommunityPostById = async (req, res) => {
