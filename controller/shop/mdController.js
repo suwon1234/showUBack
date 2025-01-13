@@ -1,249 +1,7 @@
 import Md from '../../models/shop/mdSchema.js';
+// import Like from '../../models/users/likeSchema.js';
 
 const seedMdProducts = async (req, res) => {
-  const mdData = [
-    { 
-      category: "연극", 
-      mdName: "베르사유의 장미 프로그램북 스페셜 에디션", 
-      price: 15000, 
-      image: "/images/shop/md/md1.jpg", 
-      imageDetail: "/images/shop/md/md1-1.jpg", 
-      ishearted: false,
-    },
-    { 
-      category: "연극", 
-      mdName: "베르사유의 장미 금속 마그넷", 
-      price: 13000, 
-      image: "/images/shop/md/md2.jpg", 
-      imageDetail: "/images/shop/md/md2-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "연극", 
-      mdName: "베르사유의 장미 고블렛", 
-      price: 18000, 
-      image: "/images/shop/md/md3.jpg", 
-      imageDetail: "/images/shop/md/md3-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "연극", 
-      mdName: "베르사유의 장미 키링", 
-      price: 17000, 
-      image: "/images/shop/md/md4.jpg", 
-      imageDetail: "/images/shop/md/md4-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "연극", 
-      mdName: "베르사유의 장미 배지1", 
-      price: 11000, 
-      image: "/images/shop/md/md5.jpg", 
-      imageDetail: "/images/shop/md/md5-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "연극", 
-      mdName: "베르사유의 장미 배지2", 
-      price: 11000, 
-      image: "/images/shop/md/md6.jpg", 
-      imageDetail: "/images/shop/md/md6-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "연극", 
-      mdName: "베르사유의 장미 프로그램북 스페셜 에디션", 
-      price: 11000, 
-      image: "/images/shop/md/md7.jpg", 
-      imageDetail: "/images/shop/md/md7-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "연극", 
-      mdName: "베르사유의 장미 스트랩 파우치", 
-      price: 18000, 
-      image: "/images/shop/md/md8.jpg", 
-      imageDetail: "/images/shop/md/md8-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "연극", 
-      nammdNamee: "2025 캘린더", 
-      price: 12000,  
-      image: "/images/shop/md/md9.jpg", 
-      imageDetail: "/images/shop/md/md9-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "영화", 
-      mdName: "4월은 너의 거짓말 금속 마그넷", 
-      price: 14000, 
-      image: "/images/shop/md/md10.jpg", 
-      imageDetail: "/images/shop/md/md10-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "영화", 
-      mdName: "4월은 너의 거짓말 배지1", 
-      price: 12000, 
-      image: "/images/shop/md/md11.jpg", 
-      imageDetail: "/images/shop/md/md11-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "영화", 
-      mdName: "4월은 너의 거짓말 배지2", 
-      price: 12000,  
-      image: "/images/shop/md/md12.jpg", 
-      imageDetail: "/images/shop/md/md12-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "영화", 
-      mdName: "4월은 너의 거짓말 배지3", 
-      price: 12000,  
-      image: "/images/shop/md/md13.jpg", 
-      imageDetail: "/images/shop/md/md13-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "영화", 
-      mdName: "4월은 너의 거짓말 에코백", 
-      price: 13000, 
-      image: "/images/shop/md/md14.jpg", 
-      imageDetail: "/images/shop/md/md14-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "영화", 
-      mdName: "4월은 너의 거짓말 메시지 엽서", 
-      price: 10000, 
-      image: "/images/shop/md/md15.jpg", 
-      imageDetail: "/images/shop/md/md15-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "영화", 
-      mdName: "4월은 너의 거짓말 유리컵", 
-      price: 19000,  
-      image: "/images/shop/md/md16.jpg", 
-      imageDetail: "/images/shop/md/md16-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "영화", 
-      mdName: "4월은 너의 거짓말 대본집", 
-      price: 13000,  
-      image: "/images/shop/md/md17.jpg", 
-      imageDetail: "/images/shop/md/md17-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "영화", 
-      mdName: "4월은 너의 거짓말 프로그램북", 
-      price: 12000, 
-      image: "/images/shop/md/md18.jpg", 
-      imageDetail: "/images/shop/md/md18-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 거울 그립톡", 
-      price: 13000, 
-      image: "/images/shop/md/md19.jpg", 
-      imageDetail: "/images/shop/md/md19-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 마스킹 테이프", 
-      price: 6000,  
-      image: "/images/shop/md/md20.jpg", 
-      image_detail: "/images/shop/md/md20-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 글리터 코스터", 
-      price: 17000,  
-      image: "/images/shop/md/md21.jpg", 
-      imageDetail: "/images/shop/md/md21-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 미니 티켓북", 
-      price: 18000,  
-      image: "/images/shop/md/md22.jpg", 
-      imageDetail: "/images/shop/md/md22-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 금속 북마크", 
-      price: 9000, 
-      image: "/images/shop/md/md23.jpg", 
-      imageDetail: "/images/shop/md/md23-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 접이식 우산", 
-      price: 27000, 
-      image: "/images/shop/md/md24.jpg", 
-      imageDetail: "/images/shop/md/md24-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 앙리 엽서 (고은성VER.)", 
-      price: 5000,  
-      image: "/images/shop/md/md25.jpg", 
-      imageDetail: "/images/shop/md/md25-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 앙리 엽서 (이해준VER.)", 
-      price: 5000,  
-      image: "/images/shop/md/md26.jpg", 
-      imageDetail: "/images/shop/md/md26-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 앙리 엽서 (카이VER.)", 
-      price: 5000,  
-      image: "/images/shop/md/md27.jpg", 
-      imageDetail: "/images/shop/md/md27-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 앙리 렌티큘러 포스터 (고은성VER.)", 
-      price: 19000,  
-      image: "/images/shop/md/md28.jpg", 
-      imageDetail: "/images/shop/md/md28-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 앙리 렌티큘러 포스터 (이해준VER.)", 
-      price: 19000, 
-      image: "/images/shop/md/md29.jpg", 
-      imageDetail: "/images/shop/md/md29-1.jpg", 
-      ishearted: false 
-    },
-    { 
-      category: "뮤지컬", 
-      mdName: "프랑켄슈타인 앙리 렌티큘러 포스터 (카이VER.)", 
-      price: 19000, 
-      image: "/images/shop/md/md30.jpg", 
-      imageDetail: "/images/shop/md/md30-1.jpg", 
-      ishearted: false 
-    },
-  ];
-  
   
 // MD 상품 삽입
 try {
@@ -293,4 +51,61 @@ const getMdProductById = async (req, res) => {
   }
 };
 
-export { seedMdProducts, getMdProduct, getMdProductById };
+// MD 상품 마이페이지 찜 추가
+const addToLike = async (req, res) => {
+  const { userId, productId } = req.body;
+
+  if (!userId || !productId) {
+    return res.status(400).json({ message: "userId 또는 productId가 없습니다." });
+  }
+
+  try {
+    const existingLike = await Like.findOne({ user: userId, likeMd: productId });
+    if (existingLike) {
+      return res.status(400).json({ message: "이미 찜한 상품입니다!" });
+    }
+
+    const like = new Like({
+      user: userId,
+      likeMd: productId,
+    });
+
+    await like.save();
+    res.status(200).json({ message: "상품이 찜 목록에 추가되었습니다!" });
+  } catch (error) {
+    console.error("찜 목록 추가 오류: ", error);
+    res.status(500).json({ message: "서버 오류" });
+  }
+};
+
+// MD 상품 마이페이지 찜 목록에서 제거
+const removeFromLike = async (req, res) => {
+  const { userId, productId } = req.body;
+
+  try {
+    const like = await Like.findOneAndDelete({ user: userId, likeMd: productId})
+    if(!like) {
+      return res.status(400).json({ message: "찜 목록에 해당 상품이 존재하지 않습니다."})
+    }
+    res.status(200).json({ message: "상품이 찜 목록에서 삭제되었습니다."})
+  } catch (error) {
+    console.error("찜 목록 제거 오류: ", error)
+    res.status(500).json({ message: "서버 오류"})
+  }
+}
+
+// Md 상품 찜 목록 조회
+const getLike = async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const likes = await Like.find({ user: userId }).populate("likeMd");
+
+    res.status(200).json(likes.map(like => like.likeMd))
+  } catch (error) {
+    console.error("찜 목록 조회 오류: ", error)
+    res.status(500).json({ message: "서버 오류"})
+  }
+}
+
+export { seedMdProducts, getMdProduct, getMdProductById, addToLike, removeFromLike, getLike};
