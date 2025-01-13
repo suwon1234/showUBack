@@ -37,7 +37,7 @@ const upload = multer({
       const originalName = Buffer.from(file.originalname, "latin1").toString("utf-8");
       cb(null, `${uniqueSuffix}-${originalName}`);
     },
-  }),
+  }),//
   limits: { fileSize: 5 * 1024 * 1024 }, // 파일 크기 제한: 5MB
   fileFilter: (req, file, cb) => {
     const allowedTypes = ["image/jpeg", "image/png", "image/gif"];

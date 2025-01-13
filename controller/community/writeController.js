@@ -42,6 +42,16 @@ export const uploadFile = (req, res) => {
 
 // 모든 글 가져오기
 const getAllCommunityPosts = async (req, res) => {
+
+
+
+
+
+
+
+
+
+  
   let { page = 1, limit = 10 } = req.query;
 
   page = Math.max(parseInt(page), 1); 
