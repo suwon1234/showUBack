@@ -191,6 +191,7 @@ const updatePicture = async (req, res) => {
   const uploadFolder = "uploads/profiles";
   console.log("req.file", req.file)
   const relativePath = path.join(uploadFolder, req.file.filename).replaceAll("\\", "/")
+  console.log("relativePath", relativePath)
 
   const foundUser = await User.findOne({ email : email }).lean();
   console.log("foundUser", foundUser)
@@ -207,6 +208,7 @@ const updatePicture = async (req, res) => {
     message : "프로필 이미지 변경이 완료되었습니다",
     filePath : `/${relativePath}`
   })
+
 }
 
 export { register, login, modify, remove, findId, adminLogin, updatePicture }
