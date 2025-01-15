@@ -4,7 +4,7 @@ import multer from 'multer';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { register, login, remove, modify, findId, approveRequests, adminLogin, updatePicture } from '../../controller/user/userController.js';
+import { register, login, remove, modify, findId, adminLogin, updatePicture } from '../../controller/user/userController.js';
 
 // ES Modules에서 __dirname 설정
 const __filename = fileURLToPath(import.meta.url);
@@ -66,15 +66,8 @@ userRouter.delete("/remove", passport.authenticate('jwt', { session: false }), r
 //아이디 찾기
 userRouter.post("/find-id", findId)
 
-//관리자
-// userRouter.use("/admin", adminRouter)
-
 // 관리자 로그인
 userRouter.post("/admin/login", adminLogin)
-// 등급업 신청 내역 불러오기
-// userRouter.get("/admin/all-data", passport.authenticate('jwt', { session: false }), UpgradeAllData)
-// 등급업 승인 (관리자)
-userRouter.put("/admin/upgrade/:id", passport.authenticate('jwt', { session: false }), approveRequests)
 
 
 

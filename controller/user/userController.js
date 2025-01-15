@@ -3,6 +3,7 @@ import User from "../../models/users/userSchema.js";
 import bcrypt from 'bcrypt';
 import path from 'path';
 
+// const salt = await bcrypt.genSalt(10)
 const salt = await bcrypt.genSalt(10)
 
 // 회원가입
@@ -20,7 +21,7 @@ const register = async (req, res) => {
     
     // 2) 비밀번호를 암호화 한다
     const hashedPassword = await bcrypt.hash(req.body.password, salt)
-    // console.log("hashedPassword", hashedPassword)
+    console.log("hashedPassword", hashedPassword)
 
     // 3) 회원의 정보를 DB에 insert한다 
     await User.create({
@@ -78,7 +79,9 @@ const modify = async (req, res) => {
   const { email } = req.user;
 
   // 회원 정보를 수정한다.
-  const foundUser = await User.findOne({ email : email }).lean();  
+  const foundUser = await User.findOne({ email : email }).lean();
+  // const uploadFolder = 'uploads/profiles';
+  // const relativePath = path.join(uploadFolder, req.file.filename).replaceAll("\\", "/")  
 
   if (!foundUser) {
     return res.status(400).json({
@@ -180,10 +183,6 @@ const adminLogin = async (req, res) => {
 }
 
 
-//등급업 승인(관리자)
-const approveRequests = async (req, res) => {
-  
-}
 
 // 프로필 변경
 const updatePicture = async (req, res) => {
@@ -192,11 +191,10 @@ const updatePicture = async (req, res) => {
   const uploadFolder = "uploads/profiles";
   console.log("req.file", req.file)
   const relativePath = path.join(uploadFolder, req.file.filename).replaceAll("\\", "/")
+  console.log("relativePath", relativePath)
 
-  // mongDb에 저장
-  // 유저를 찾는다
   const foundUser = await User.findOne({ email : email }).lean();
-  // console.log("foundUser", foundUser)
+  console.log("foundUser", foundUser)
 
   // 유저를 .updateOne(foundUser, {picture})
   const updatedPicture = await User.updateOne(
@@ -207,9 +205,10 @@ const updatePicture = async (req, res) => {
   console.log("updatedPicture", updatedPicture)
 
   res.status(200).json({
-    message : "업로드 완료",
+    message : "프로필 이미지 변경이 완료되었습니다",
     filePath : `/${relativePath}`
   })
+
 }
 
-export { register, login, modify, remove, findId, approveRequests, adminLogin, updatePicture }
+export { register, login, modify, remove, findId, adminLogin, updatePicture }
