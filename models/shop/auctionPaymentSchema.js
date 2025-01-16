@@ -19,4 +19,5 @@ const auctionPaymentSchema = new Schema({
   paymentAt: { type: String, default: getCurrentTime },
 });
 
+
 export default model("AuctionPayment", auctionPaymentSchema, "auctionPayment");
