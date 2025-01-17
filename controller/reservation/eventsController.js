@@ -110,3 +110,22 @@ export const getAllSpaces = async (req, res) => {
       });
   }
 };
+
+// 특정 공간 데이터 가져오기
+export const getSpaceById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "유효하지 않은 ID 형식입니다." });
+    }
+    const space = await Space.findById(id);
+    if (!space) {
+      return res.status(404).json({ message: "공간을 찾을 수 없습니다." });
+    }
+    res.status(200).json(space);
+  } catch (error) {
+    console.error("공간 데이터를 가져오는 중 오류 발생:", error);
+    res.status(500).json({ message: "공간 데이터를 가져오는 중 오류 발생", error: error.message });
+  }
+};
+
