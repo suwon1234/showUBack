@@ -7,7 +7,7 @@ import vodInfoRouter from './vodInfoRouter.js';
 import vodcommentRouter from './vodcomment.js';
 import { upload, uploadVideo } from '../../controller/vod/vodInsertVideo.js';
 import passport from 'passport';
-import { deleteVodComment, getUserId } from '../../controller/vod/vodComment.js';
+import {getUserId } from '../../controller/vod/vodComment.js';
 
 const vodRouter = express.Router();
 vodRouter.get('/', getAllVideo);
@@ -26,6 +26,7 @@ vodRouter.post("/video",passport.authenticate("jwt", { session: false }), upload
 vodRouter.get("/user",passport.authenticate("jwt", { session: false }),getUserId)
 vodRouter.use("/delete",vodcommentRouter)
 vodRouter.use("/update",vodcommentRouter)
+
 
 
 
