@@ -1,7 +1,6 @@
 import express from 'express'
 import passport from 'passport';
 import { addVodComment, deleteVodComment, getVodCommentsByVideoId, updateVodComment } from '../../controller/vod/vodComment.js';
-import { upload, uploadVideo } from '../../controller/vod/vodInsertVideo.js';
 
 
 
@@ -19,6 +18,8 @@ vodcommentRouter.put("/comments/:id", passport.authenticate("jwt", { session: fa
 
 // 삭제
 vodcommentRouter.delete("/comments/:id", passport.authenticate("jwt", { session: false }), deleteVodComment);
+// 관심
+
 
 //비디오 썸네일 포스트
 
